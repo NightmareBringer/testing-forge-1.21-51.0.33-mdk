@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.block.custom.MagicBlock;
 import net.nbc.thetestermod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -41,6 +42,11 @@ public class ModBlocks
             () -> new DropExperienceBlock(UniformInt.of(4,7), BlockBehaviour.Properties.of()
                     .strength(10f).explosionResistance(15f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of()
+                    .strength(3f).explosionResistance(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

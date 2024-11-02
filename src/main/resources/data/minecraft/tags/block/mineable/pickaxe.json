@@ -4,6 +4,7 @@
     "testermod:nightmarite_block",
     "testermod:pure_nightmarite_block",
     "testermod:nightmarite_ore",
-    "testermod:nightmarite_deepslate_ore"
+    "testermod:nightmarite_deepslate_ore",
+    "testermod:magic_block"
   ]
 }
