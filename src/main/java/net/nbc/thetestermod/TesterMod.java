@@ -1,7 +1,6 @@
 package net.nbc.thetestermod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,7 +14,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.nbc.thetestermod.item.Moditems;
+import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -38,7 +38,8 @@ public class TesterMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        Moditems.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -57,9 +58,15 @@ public class TesterMod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(Moditems.NIGHTMARITE);
-            event.accept(Moditems.PURE_NIGHTMARITE);
+            event.accept(ModItems.NIGHTMARITE);
+            event.accept(ModItems.PURE_NIGHTMARITE);
         }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.PURE_NIGHTMARITE_BLOCK);
+            event.accept(ModBlocks.NIGHTMARITE_BLOCK);
+      ;  }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
