@@ -1,6 +1,9 @@
 {
+  "creativetab.testermod.the_tester_zone": "The Tester Zone",
+
   "item.testermod.nightmarite": "Nightmarite",
   "item.testermod.pure_nightmarite": "Pure Nightmarite",
+  "item.testermod.chisel": "Chisel",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite",
   "block.testermod.nightmarite_block": "Block of Nightmarite",
