@@ -14,7 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-// comment of comment
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TesterMod.MOD_ID)
 public class TesterMod
