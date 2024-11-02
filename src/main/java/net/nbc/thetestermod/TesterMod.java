@@ -66,6 +66,8 @@ public class TesterMod
         {
             event.accept(ModBlocks.PURE_NIGHTMARITE_BLOCK);
             event.accept(ModBlocks.NIGHTMARITE_BLOCK);
+            event.accept(ModBlocks.NIGHTMARITE_ORE);
+            event.accept(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE);
       ;  }
     }
 

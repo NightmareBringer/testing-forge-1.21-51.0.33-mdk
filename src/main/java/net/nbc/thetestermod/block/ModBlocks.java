@@ -1,9 +1,11 @@
 package net.nbc.thetestermod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,13 +24,23 @@ public class ModBlocks
 
     public static final RegistryObject<Block> PURE_NIGHTMARITE_BLOCK = registerBlock("pure_nightmarite_block",
         () -> new Block(BlockBehaviour.Properties.of()
-                .strength(10f).explosionResistance(15f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+                .strength(10f).explosionResistance(15f)
+                .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> NIGHTMARITE_BLOCK = registerBlock("nightmarite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(5f).explosionResistance(5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_ORE)));
+                    .strength(5f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_ORE)));
 
+    public static final RegistryObject<Block> NIGHTMARITE_ORE = registerBlock("nightmarite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(5f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
 
+    public static final RegistryObject<Block> NIGHTMARITE_DEEPSLATE_ORE = registerBlock("nightmarite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(4,7), BlockBehaviour.Properties.of()
+                    .strength(10f).explosionResistance(15f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

@@ -3,5 +3,7 @@
   "item.testermod.pure_nightmarite": "Pure Nightmarite",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite",
-  "block.testermod.nightmarite_block": "Block of Nightmarite"
+  "block.testermod.nightmarite_block": "Block of Nightmarite",
+  "block.testermod.nightmarite_ore": "Nightmarite Ore",
+  "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore"
 }
