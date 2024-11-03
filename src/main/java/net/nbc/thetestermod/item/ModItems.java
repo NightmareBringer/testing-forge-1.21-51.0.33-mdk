@@ -21,7 +21,14 @@ public class ModItems
 
     public static final RegistryObject<Item> NIGHTMARITE = ITEMS.register("nightmarite",
             () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> PURE_NIGHTMARITE = ITEMS.register("pure_nightmarite",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> NIGHTMARE_INGOT = ITEMS.register("nightmare_ingot",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> NIGHTMARE_NUGGET = ITEMS.register("nightmare_nugget",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",

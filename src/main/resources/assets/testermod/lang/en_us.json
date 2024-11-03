@@ -6,9 +6,13 @@
   "item.testermod.chisel": "Chisel",
   "item.testermod.krabs": "Mr. Krabs",
   "item.testermod.pure_eye": "Eye of Pureness",
+  "item.testermod.nightmare_ingot": "Nightmare Ingot",
+  "item.testermod.nightmare_nugget": "Night-Nugget",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite",
   "block.testermod.nightmarite_block": "Block of Nightmarite",
+  "block.testermod.nightmare_block": "Block of Nightmare",
+
   "block.testermod.nightmarite_ore": "Nightmarite Ore",
   "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore",
   "block.testermod.magic_block": "Purifier",

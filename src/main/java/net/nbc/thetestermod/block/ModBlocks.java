@@ -7,6 +7,7 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -47,6 +48,14 @@ public class ModBlocks
             () -> new MagicBlock(BlockBehaviour.Properties.of()
                     .strength(3f).explosionResistance(3f)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> NIGHTMARE_BLOCK = registerBlock("nightmare_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(20f).explosionResistance(25f)
+                    .requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
+
+    //public static final RegistryObject<StairBlock>
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
