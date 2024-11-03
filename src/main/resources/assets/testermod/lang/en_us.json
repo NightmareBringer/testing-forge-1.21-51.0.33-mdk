@@ -11,5 +11,11 @@
   "block.testermod.nightmarite_block": "Block of Nightmarite",
   "block.testermod.nightmarite_ore": "Nightmarite Ore",
   "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore",
-  "block.testermod.magic_block": "Purifier"
+  "block.testermod.magic_block": "Purifier",
+
+  "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
+  "tooltip.testermod.chisel.shift_down": "Has a §2unique§r effect on some blocks.",
+  "tooltip.testermod.chisel": "Press SHIFT for more info",
+  "tooltip.testermod.krabs1": "A particular§c crustacean§r from under the sea...",
+  "tooltip.testermod.krabs2": "Probably shouldn't eat it..."
 }
