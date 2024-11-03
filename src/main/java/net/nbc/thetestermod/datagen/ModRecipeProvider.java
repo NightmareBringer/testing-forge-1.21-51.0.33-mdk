@@ -24,8 +24,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> NIGHTMARITE_SMELTABLES = List.of(ModItems.NIGHTMARITE.get(),
                 ModBlocks.NIGHTMARITE_ORE.get(), ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
 
-        SmithingTransformRecipeBuilder.smithing(Ingredient.EMPTY, Ingredient.of(Items.GOLD_INGOT),
-                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()), RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get());
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(Items.GOLD_INGOT),  // Placeholder, try using Items.AIR instead of Ingredient.EMPTY
+                Ingredient.of(Items.FIRE_CHARGE),
+                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),
+                RecipeCategory.MISC,
+                ModItems.NIGHTMARE_INGOT.get())
+                .unlocks("has_pure_nightmarite", has(ModItems.PURE_NIGHTMARITE.get())) // Unlock condition
+                .save(pRecipeOutput, "nightmare_ingot_from_smithing");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
                 .pattern("AAA")
@@ -73,16 +79,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 9)
                 .requires(ModBlocks.NIGHTMARITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.NIGHTMARITE_BLOCK.get()), has(ModBlocks.NIGHTMARITE_BLOCK.get()));
+                .unlockedBy(getHasName(ModBlocks.NIGHTMARITE_BLOCK.get()), has(ModBlocks.NIGHTMARITE_BLOCK.get())).save(pRecipeOutput);
                 //.save(pRecipeOutput, TesterMod.MOD_ID + ":nightmarite_from_nightmarite_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get(), 9)
                 .requires(ModBlocks.NIGHTMARE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.NIGHTMARE_BLOCK.get()), has(ModBlocks.NIGHTMARE_BLOCK.get()));
+                .unlockedBy(getHasName(ModBlocks.NIGHTMARE_BLOCK.get()), has(ModBlocks.NIGHTMARE_BLOCK.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":nightmare_ingot_from_nightmare_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_NUGGET.get(), 9)
                 .requires(ModItems.NIGHTMARE_INGOT.get())
-                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()));
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 0.25f, 200, "alexandrite");
         oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 0.25f, 100, "alexandrite");
