@@ -7,6 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.item.custom.ChiselItem;
+import net.nbc.thetestermod.item.custom.FuelItem;
 
 public class ModItems
 {
@@ -20,6 +21,12 @@ public class ModItems
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(64)));
+
+    public static final RegistryObject<Item> KRABS = ITEMS.register("krabs",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KRABS)));
+
+    public static final RegistryObject<Item> PURE_EYE= ITEMS.register("pure_eye",
+            () -> new FuelItem(new Item.Properties(), 10000));
 
 
     public static void register(IEventBus eventBus)
