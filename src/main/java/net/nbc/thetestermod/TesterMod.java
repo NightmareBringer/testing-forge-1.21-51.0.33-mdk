@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import org.slf4j.Logger;
@@ -43,6 +44,8 @@ public class TesterMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
