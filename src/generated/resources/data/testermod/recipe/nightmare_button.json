@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "alexandrite",
+  "ingredients": [
+    {
+      "item": "testermod:nightmare_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:nightmare_button"
+  }
+}

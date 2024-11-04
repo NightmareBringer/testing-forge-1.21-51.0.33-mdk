@@ -73,6 +73,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.PURE_NIGHTMARITE.get()), has(ModItems.PURE_NIGHTMARITE.get())).save(pRecipeOutput);
 
 
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
                 .requires(ModBlocks.PURE_NIGHTMARITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.PURE_NIGHTMARITE_BLOCK.get()), has(ModBlocks.PURE_NIGHTMARITE_BLOCK.get())).save(pRecipeOutput);
@@ -89,6 +91,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_NUGGET.get(), 9)
                 .requires(ModItems.NIGHTMARE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        stairBuilder(ModBlocks.NIGHTMARE_STAIRS.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NIGHTMARE_SlAB.get(), ModItems.NIGHTMARE_INGOT.get());
+
+        buttonBuilder(ModBlocks.NIGHTMARE_BUTTON.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.NIGHTMARE_PRESSURE_PLATE.get(), ModItems.NIGHTMARE_INGOT.get());
+
+        fenceBuilder(ModBlocks.NIGHTMARE_FENCE.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.NIGHTMARE_FENCE_GATE.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NIGHTMARE_WALL.get(), ModItems.NIGHTMARE_INGOT.get());
+
+        doorBuilder(ModBlocks.NIGHTMARE_DOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.NIGHTMARE_TRAPDOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 0.25f, 200, "alexandrite");

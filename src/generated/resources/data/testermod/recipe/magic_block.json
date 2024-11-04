@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "F": {
+      "item": "minecraft:fire_charge"
+    },
+    "G": {
+      "item": "minecraft:amethyst_block"
+    }
+  },
+  "pattern": [
+    "#A#",
+    "DFD",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:magic_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testermod:nightmare_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "testermod:nightmare_nugget"
+  }
+}

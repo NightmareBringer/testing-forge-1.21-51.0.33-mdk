@@ -1,0 +1,20 @@
+{
+  "values": [
+    "testermod:nightmarite_block",
+    "testermod:pure_nightmarite_block",
+    "testermod:nightmare_block",
+    "testermod:nightmarite_ore",
+    "testermod:nightmarite_deepslate_ore",
+    "testermod:magic_block",
+    "testermod:nightmare_stairs",
+    "testermod:nightmare_slab",
+    "testermod:nightmare_wall",
+    "testermod:nightmare_fence",
+    "testermod:nightmare_fence_gate",
+    "testermod:nightmare_door",
+    "testermod:nightmare_trapdoor",
+    "testermod:nightmare_button",
+    "testermod:nightmare_pressure_plate",
+    "testermod:magic_block"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nightmarite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:nightmarite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:pure_nightmarite_from_blasting_nightmarite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nightmarite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:pure_nightmarite_from_blasting_nightmarite"
+    ]
+  }
+}

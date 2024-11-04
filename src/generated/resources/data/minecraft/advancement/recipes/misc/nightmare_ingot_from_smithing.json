@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pure_nightmarite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:pure_nightmarite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:nightmare_ingot_from_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pure_nightmarite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:nightmare_ingot_from_smithing"
+    ]
+  }
+}

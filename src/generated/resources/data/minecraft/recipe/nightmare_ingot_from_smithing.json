@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "testermod:pure_nightmarite"
+  },
+  "base": {
+    "item": "minecraft:fire_charge"
+  },
+  "result": {
+    "count": 1,
+    "id": "testermod:nightmare_ingot"
+  },
+  "template": {
+    "item": "minecraft:gold_ingot"
+  }
+}

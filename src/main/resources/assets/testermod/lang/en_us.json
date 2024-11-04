@@ -17,6 +17,16 @@
   "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore",
   "block.testermod.magic_block": "Purifier",
 
+  "block.testermod.nightmare_stairs": "Nightmare Stairs",
+  "block.testermod.nightmare_slab": "Nightmare Slab",
+  "block.testermod.nightmare_button": "Nightmare Button",
+  "block.testermod.nightmare_pressure_plate": "Nightmare Pressure Plate",
+  "block.testermod.nightmare_fence": "Nightmare Fence",
+  "block.testermod.nightmare_fence_gate": "Nightmare Fence Gate",
+  "block.testermod.nightmare_wall": "Nightmare Wall",
+  "block.testermod.nightmare_door": "Nightmare Door",
+  "block.testermod.nightmare_trapdoor": "Nightmare Trapdoor",
+
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
   "tooltip.testermod.chisel.shift_down": "Has a §2unique§r effect on some blocks.",
   "tooltip.testermod.chisel": "Press SHIFT for more info",

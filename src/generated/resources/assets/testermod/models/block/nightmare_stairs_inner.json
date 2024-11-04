@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "testermod:block/nightmare_block",
+    "side": "testermod:block/nightmare_block",
+    "top": "testermod:block/nightmare_block"
+  }
+}

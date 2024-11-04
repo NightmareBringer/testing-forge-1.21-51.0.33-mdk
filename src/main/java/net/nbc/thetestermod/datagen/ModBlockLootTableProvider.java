@@ -33,10 +33,25 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NIGHTMARE_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
 
+        dropSelf(ModBlocks.NIGHTMARE_STAIRS.get());
+        dropSelf(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.NIGHTMARE_BUTTON.get());
+        dropSelf(ModBlocks.NIGHTMARE_FENCE.get());
+        dropSelf(ModBlocks.NIGHTMARE_FENCE_GATE.get());
+        dropSelf(ModBlocks.NIGHTMARE_WALL.get());
+        dropSelf(ModBlocks.NIGHTMARE_TRAPDOOR.get());
+
+        this.add(ModBlocks.NIGHTMARE_SlAB.get(),
+                block -> createSlabItemTable(ModBlocks.NIGHTMARE_SlAB.get()));
+        this.add(ModBlocks.NIGHTMARE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.NIGHTMARE_DOOR.get()));
+
         this.add(ModBlocks.NIGHTMARITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.NIGHTMARITE_ORE.get(), ModItems.NIGHTMARITE.get()));
         this.add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 1, 4));
+
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

@@ -24,6 +24,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_BLOCK.get())
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.MAGIC_BLOCK.get())
+
+                .add(ModBlocks.NIGHTMARE_STAIRS.get())
+                .add(ModBlocks.NIGHTMARE_SlAB.get())
+                .add(ModBlocks.NIGHTMARE_WALL.get())
+                .add(ModBlocks.NIGHTMARE_FENCE.get())
+                .add(ModBlocks.NIGHTMARE_FENCE_GATE.get())
+                .add(ModBlocks.NIGHTMARE_DOOR.get())
+                .add(ModBlocks.NIGHTMARE_TRAPDOOR.get())
+                .add(ModBlocks.NIGHTMARE_BUTTON.get())
+                .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
@@ -32,10 +43,24 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.NIGHTMARE_BLOCK.get())
                 .add(ModBlocks.NIGHTMARITE_BLOCK.get())
-                .add(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
+                .add(ModBlocks.PURE_NIGHTMARITE_BLOCK.get())
+                .add(ModBlocks.NIGHTMARE_STAIRS.get())
+                .add(ModBlocks.NIGHTMARE_SlAB.get())
+                .add(ModBlocks.NIGHTMARE_WALL.get())
+                .add(ModBlocks.NIGHTMARE_FENCE.get())
+                .add(ModBlocks.NIGHTMARE_FENCE_GATE.get())
+                .add(ModBlocks.NIGHTMARE_DOOR.get())
+                .add(ModBlocks.NIGHTMARE_TRAPDOOR.get())
+                .add(ModBlocks.NIGHTMARE_BUTTON.get())
+                .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
+                .add(ModBlocks.MAGIC_BLOCK.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.NIGHTMARE_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
     }
 }
