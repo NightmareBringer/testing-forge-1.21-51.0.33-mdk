@@ -56,27 +56,32 @@ public class ModBlocks
 
     public static final RegistryObject<StairBlock> NIGHTMARE_STAIRS = registerBlock("nightmare_stairs",
             () -> new StairBlock(ModBlocks.NIGHTMARE_BLOCK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of().strength(15f).requiresCorrectToolForDrops()));
+                    BlockBehaviour.Properties.of().strength(7f).explosionResistance(25f)
+                            .sound(SoundType.METAL).requiresCorrectToolForDrops()));
     public static final RegistryObject<SlabBlock> NIGHTMARE_SlAB = registerBlock("nightmare_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(10f).requiresCorrectToolForDrops()));
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(5f).explosionResistance(25f)
+                    .sound(SoundType.METAL).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<PressurePlateBlock> NIGHTMARE_PRESSURE_PLATE = registerBlock("nightmare_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops()));
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<ButtonBlock> NIGHTMARE_BUTTON = registerBlock("nightmare_button",
-            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().strength(3f)
+            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().strength(2f)
                     .requiresCorrectToolForDrops().noCollission()));
 
     public static final RegistryObject<FenceBlock> NIGHTMARE_FENCE = registerBlock("nightmare_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(10f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(5f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
     public static final RegistryObject<FenceGateBlock> NIGHTMARE_FENCE_GATE = registerBlock("nightmare_fence_gate",
-            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(10f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(5f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
     public static final RegistryObject<WallBlock> NIGHTMARE_WALL = registerBlock("nightmare_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of().strength(15f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(25f)
+                    .explosionResistance(50f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<DoorBlock> NIGHTMARE_DOOR = registerBlock("nightmare_door",
-            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(12f).requiresCorrectToolForDrops().noOcclusion()));
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(8f)
+                    .explosionResistance(25f).requiresCorrectToolForDrops().noOcclusion()));
     public static final RegistryObject<TrapDoorBlock> NIGHTMARE_TRAPDOOR = registerBlock("nightmare_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(8f).requiresCorrectToolForDrops().noOcclusion()));
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f)
+                    .explosionResistance(25f).requiresCorrectToolForDrops().noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

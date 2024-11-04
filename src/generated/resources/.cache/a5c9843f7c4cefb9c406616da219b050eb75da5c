@@ -1,4 +1,4 @@
-// 1.21	2024-11-03T18:46:24.5249697	Block States: testermod
+// 1.21	2024-11-03T20:04:45.772336	Block States: testermod
 1f27762efd7370ad05d434746f0afe4952b5eb68 assets/testermod/blockstates/magic_block.json
 c390aea4935ddf67697c53fc9c90eb5a8b405cc4 assets/testermod/blockstates/nightmare_block.json
 b0fb0ae694fb8db3cf684fddfb95eacca0d35d7c assets/testermod/blockstates/nightmare_button.json
@@ -51,11 +51,11 @@ f1a68cc9cc5c69da53ca6f190a0dc59341610dfe assets/testermod/models/block/nightmari
 c308c6e68ecef4f02a170296caa2242cd31b7a2f assets/testermod/models/block/pure_nightmarite_block.json
 ffcffe7e55357758990c6404f9acaef0e164422a assets/testermod/models/item/magic_block.json
 45d1f8e804a04e221ca7b464d2fce16145a6f6bf assets/testermod/models/item/nightmare_block.json
-83dac07dc045e9214b95d9f17d8ac67958aebf5b assets/testermod/models/item/nightmare_fence_gate.json
-f79da36bb18b8341a3d1772796b3792b3bab3dc6 assets/testermod/models/item/nightmare_pressure_plate.json
-f6b5f8465ae45746c4e0925dbc2a331141f9dd6e assets/testermod/models/item/nightmare_slab.json
-48a61cb38b1f080e74f5fbe018139862f2f1b855 assets/testermod/models/item/nightmare_stairs.json
-3acc7393ce3f2703c86e56b6bf076c47b7c9f309 assets/testermod/models/item/nightmare_trapdoor.json
+1679f1ed7668b74e2bbe3d6d4241cf5b6895ab19 assets/testermod/models/item/nightmare_fence_gate.json
+59e8857f0682384b11f5c8990815b784bfe4e7c2 assets/testermod/models/item/nightmare_pressure_plate.json
+87ea4c7231a1e0b20430f80c2a601b8e1a5ece71 assets/testermod/models/item/nightmare_slab.json
+b943e3271dbe424b55f24299c34cffcbd03de010 assets/testermod/models/item/nightmare_stairs.json
+93860bf5bdac4a4218838153939560af6bba47e7 assets/testermod/models/item/nightmare_trapdoor.json
 9f570c978cb1c99e2fc35900653234040e282cb8 assets/testermod/models/item/nightmarite_block.json
 4c913688dcedc109112681d46647ee8d18040671 assets/testermod/models/item/nightmarite_deepslate_ore.json
 34814c1f9d3b7534b388452c0bf202a06e7ada8f assets/testermod/models/item/nightmarite_ore.json

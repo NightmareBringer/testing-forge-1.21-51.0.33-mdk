@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_nightmare_ingot": {
+    "has_nightmare_block": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:nightmare_ingot"
+            "items": "testermod:nightmare_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_nightmare_ingot"
+      "has_nightmare_block"
     ]
   ],
   "rewards": {
