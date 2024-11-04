@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "testermod:block/nightmare_lamp_off"
+    },
+    "clicked=true": {
+      "model": "testermod:block/nightmare_lamp_on"
+    }
+  }
+}

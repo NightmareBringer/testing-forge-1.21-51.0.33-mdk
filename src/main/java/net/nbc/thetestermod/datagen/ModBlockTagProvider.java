@@ -35,7 +35,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_TRAPDOOR.get())
                 .add(ModBlocks.NIGHTMARE_BUTTON.get())
                 .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
-                .add(ModBlocks.MAGIC_BLOCK.get());
+
+                .add(ModBlocks.NIGHTMARE_LAMP.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get());
@@ -53,7 +54,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_TRAPDOOR.get())
                 .add(ModBlocks.NIGHTMARE_BUTTON.get())
                 .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
-                .add(ModBlocks.MAGIC_BLOCK.get());
+                .add(ModBlocks.NIGHTMARE_LAMP.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.NIGHTMARITE_ORE.get())

@@ -1,21 +1,22 @@
 {
   "creativetab.testermod.the_tester_zone": "The Tester Zone",
 
-  "item.testermod.nightmarite": "Nightmarite",
-  "item.testermod.pure_nightmarite": "Pure Nightmarite",
+  "item.testermod.nightmarite": "Nightmare Essence",
+  "item.testermod.pure_nightmarite": "Pure Nightmare Essence",
   "item.testermod.chisel": "Chisel",
   "item.testermod.krabs": "Mr. Krabs",
   "item.testermod.pure_eye": "Eye of Pureness",
   "item.testermod.nightmare_ingot": "Nightmare Ingot",
   "item.testermod.nightmare_nugget": "Night-Nugget",
 
-  "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite",
-  "block.testermod.nightmarite_block": "Block of Nightmarite",
+  "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
+  "block.testermod.nightmarite_block": "Block of Nightmare Essence",
   "block.testermod.nightmare_block": "Block of Nightmare",
 
   "block.testermod.nightmarite_ore": "Nightmarite Ore",
   "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore",
   "block.testermod.magic_block": "Purifier",
+  "block.testermod.nightmare_lamp": "Nightmare Lamp",
 
   "block.testermod.nightmare_stairs": "Nightmare Stairs",
   "block.testermod.nightmare_slab": "Nightmare Slab",

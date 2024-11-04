@@ -41,6 +41,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NIGHTMARE_WALL.get());
         dropSelf(ModBlocks.NIGHTMARE_TRAPDOOR.get());
 
+        dropSelf(ModBlocks.NIGHTMARE_LAMP.get());
+
         this.add(ModBlocks.NIGHTMARE_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.NIGHTMARE_SlAB.get()));
         this.add(ModBlocks.NIGHTMARE_DOOR.get(),

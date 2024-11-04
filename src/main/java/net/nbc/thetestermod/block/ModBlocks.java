@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.custom.MagicBlock;
+import net.nbc.thetestermod.block.custom.NightmareLampBlock;
 import net.nbc.thetestermod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -82,6 +83,10 @@ public class ModBlocks
     public static final RegistryObject<TrapDoorBlock> NIGHTMARE_TRAPDOOR = registerBlock("nightmare_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(4f)
                     .explosionResistance(25f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> NIGHTMARE_LAMP = registerBlock("nightmare_lamp",
+            () -> new NightmareLampBlock(BlockBehaviour.Properties.of().strength(3.5f)
+                    .lightLevel(state -> state.getValue(NightmareLampBlock.CLICKED) ? 10 : 0)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

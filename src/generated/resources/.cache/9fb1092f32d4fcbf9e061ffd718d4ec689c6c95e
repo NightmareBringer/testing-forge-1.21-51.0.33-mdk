@@ -1,4 +1,4 @@
-// 1.21	2024-11-03T20:04:45.7693329	Recipes
+// 1.21	2024-11-03T21:25:36.8391065	Recipes
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
 ee0c4c777daa5bc0fe263360aa155301eaf2fcb0 data/minecraft/recipe/nightmare_ingot_from_smithing.json
 471d72be59c07cf46c77fa9df6a7967c59483c15 data/testermod/advancement/recipes/building_blocks/nightmare_slab.json
@@ -9,6 +9,7 @@ f01e1b036da96ad3576eb04b3913ce47cc9bfa3b data/testermod/advancement/recipes/misc
 899e19c6a51e59ddaf7f093760485e6427abf9f2 data/testermod/advancement/recipes/misc/nightmare_block.json
 b1b41659c348118528d31e7ecd3413d47e726ae7 data/testermod/advancement/recipes/misc/nightmare_ingot.json
 965f79246de2bbe8ee1898ee2f421d9b77b5172f data/testermod/advancement/recipes/misc/nightmare_ingot_from_nightmare_block.json
+7ff61094bd3dc67378228fa511b5efb5bba5fac7 data/testermod/advancement/recipes/misc/nightmare_lamp.json
 3cd8a8e028fa00e0358d27231fafd22ecf64e5a3 data/testermod/advancement/recipes/misc/nightmare_nugget.json
 7dfd1aab529a97704d9cb12c4e15be79dd20b8c7 data/testermod/advancement/recipes/misc/nightmarite.json
 87c0e4ff38b0c429fcd4b4f70eedc4ded3e8acee data/testermod/advancement/recipes/misc/nightmarite_block.json
@@ -33,6 +34,7 @@ b55dbd205ee98835f23560fcc42b3e20db6a182f data/testermod/recipe/nightmare_fence.j
 0240f54ae1eebe9fba816720ad13b14724e27bec data/testermod/recipe/nightmare_fence_gate.json
 a1c7def0a57129d2ea6122f74badbec3827de96a data/testermod/recipe/nightmare_ingot.json
 cffcc61a3b62c1987ec50aef77218394fbae52bb data/testermod/recipe/nightmare_ingot_from_nightmare_block.json
+a40f9cab671d2e8a4cef404c2f4c66bb5e8a62a5 data/testermod/recipe/nightmare_lamp.json
 248170def60fa432f20c8310238eb371e5125201 data/testermod/recipe/nightmare_nugget.json
 ff279370dd25be7d58ac8474fd8aedad36891c92 data/testermod/recipe/nightmare_pressure_plate.json
 24e860ac0576354cd662eef87522256f290f8b9f data/testermod/recipe/nightmare_slab.json

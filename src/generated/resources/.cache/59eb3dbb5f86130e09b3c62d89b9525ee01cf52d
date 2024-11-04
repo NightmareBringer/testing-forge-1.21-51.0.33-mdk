@@ -1,10 +1,11 @@
-// 1.21	2024-11-03T18:46:24.5209644	Loot Tables
+// 1.21	2024-11-03T21:25:36.8391065	Loot Tables
 d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_block.json
 6f0eb3c79ef8d792f4248ea9e28c4f5a6f45b461 data/testermod/loot_table/blocks/nightmare_block.json
 dfa101fd711f3cd4424ad1f68238137d2c57af84 data/testermod/loot_table/blocks/nightmare_button.json
 45c92b605c5e0d2942842982081decce71fbc863 data/testermod/loot_table/blocks/nightmare_door.json
 80aab38c2b61efcb4fd76d29752ecc7f976d9b87 data/testermod/loot_table/blocks/nightmare_fence.json
 e6426f00af101c7b1d98fd26f48eee4deb5baaff data/testermod/loot_table/blocks/nightmare_fence_gate.json
+dc396073e96f2ca188d5de5ddfb70a429d99d2fd data/testermod/loot_table/blocks/nightmare_lamp.json
 0d0027d4bde4aef07151a5056491c92a8eb6f290 data/testermod/loot_table/blocks/nightmare_pressure_plate.json
 7c1124abf80c451dcdbed3afec2836ca7849e16d data/testermod/loot_table/blocks/nightmare_slab.json
 17282e3bbb7bc317524d745fb624a0cb8a56fd09 data/testermod/loot_table/blocks/nightmare_stairs.json

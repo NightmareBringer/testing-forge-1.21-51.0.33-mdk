@@ -72,6 +72,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', Items.AMETHYST_BLOCK)
                 .unlockedBy(getHasName(ModItems.PURE_NIGHTMARITE.get()), has(ModItems.PURE_NIGHTMARITE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARE_LAMP.get())
+                .pattern("#t#")
+                .pattern("tRt")
+                .pattern("#t#")
+                .define('#', ModItems.PURE_NIGHTMARITE.get())
+                .define('t', ModItems.NIGHTMARE_INGOT.get())
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
 
 
 

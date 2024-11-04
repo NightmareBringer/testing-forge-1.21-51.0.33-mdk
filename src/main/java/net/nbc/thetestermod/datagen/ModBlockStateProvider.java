@@ -1,5 +1,7 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.nbc.thetestermod.TesterMod;
@@ -9,6 +11,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+import net.nbc.thetestermod.block.custom.NightmareLampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -46,6 +49,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.NIGHTMARE_FENCE_GATE);
         blockItem(ModBlocks.NIGHTMARE_TRAPDOOR, "_bottom");
 
+        customLamp();
+    }
+
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.NIGHTMARE_LAMP.get()).forAllStates(state -> {
+            if(state.getValue(NightmareLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("nightmare_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("nightmare_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_off")))};
+            }
+        });
+        simpleBlockItem(ModBlocks.NIGHTMARE_LAMP.get(), models().cubeAll("nightmare_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_on")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
