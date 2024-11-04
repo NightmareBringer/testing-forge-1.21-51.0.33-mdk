@@ -9,6 +9,12 @@
   "item.testermod.nightmare_ingot": "Nightmare Ingot",
   "item.testermod.nightmare_nugget": "Night-Nugget",
 
+  "item.testermod.nightmare_sword": "Nightmare Sword",
+  "item.testermod.nightmare_pickaxe": "Nightmare Pickaxe",
+  "item.testermod.nightmare_shovel": "Nightmare Shovel",
+  "item.testermod.nightmare_axe": "Nightmare Axe",
+  "item.testermod.nightmare_hoe": "Nightmare Hoe",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
   "block.testermod.nightmare_block": "Block of Nightmare",

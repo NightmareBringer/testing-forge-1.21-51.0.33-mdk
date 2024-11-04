@@ -33,6 +33,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlocks("has_pure_nightmarite", has(ModItems.PURE_NIGHTMARITE.get())) // Unlock condition
                 .save(pRecipeOutput, "nightmare_ingot_from_smithing");
 
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -80,6 +81,65 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('t', ModItems.NIGHTMARE_INGOT.get())
                 .define('R', Items.REDSTONE)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":left_nightmare_axe_craft_method");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_AXE.get())
+                .pattern(" ##")
+                .pattern(" S#")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":right_nightmare_axe_craft_method");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":left_nightmare_hoe_craft_method");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HOE.get())
+                .pattern(" ##")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":right_nightmare_hoe_craft_method");
 
 
 

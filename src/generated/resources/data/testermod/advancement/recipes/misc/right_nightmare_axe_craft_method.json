@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nightmare_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:nightmare_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:right_nightmare_axe_craft_method"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nightmare_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:right_nightmare_axe_craft_method"
+    ]
+  }
+}

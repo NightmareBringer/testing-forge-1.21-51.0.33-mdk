@@ -1,9 +1,7 @@
 package net.nbc.thetestermod.item;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -48,6 +46,22 @@ public class ModItems
 
     public static final RegistryObject<Item> PURE_EYE= ITEMS.register("pure_eye",
             () -> new FuelItem(new Item.Properties(), 10000));
+
+    public static final RegistryObject<Item> NIGHTMARE_SWORD = ITEMS.register("nightmare_sword",
+            () -> new SwordItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.NIGHTMARE, 4, -2.4f))));
+    public static final RegistryObject<Item> NIGHTMARE_PICKAXE = ITEMS.register("nightmare_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, 2, -2.8f))));
+    public static final RegistryObject<Item> NIGHTMARE_SHOVEL = ITEMS.register("nightmare_shovel",
+            () -> new ShovelItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.NIGHTMARE, 1.5f, -3.0f))));
+    public static final RegistryObject<Item> NIGHTMARE_AXE = ITEMS.register("nightmare_axe",
+            () -> new AxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.NIGHTMARE, 7.5f, -3.2f))));
+    public static final RegistryObject<Item> NIGHTMARE_HOE = ITEMS.register("nightmare_hoe",
+            () -> new HoeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.NIGHTMARE, 0.5f, -3.0f))));
 
 
     public static void register(IEventBus eventBus)

@@ -1,6 +1,7 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -33,6 +34,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.NIGHTMARE_WALL, ModBlocks.NIGHTMARE_BLOCK);
 
         simpleBlockItem(ModBlocks.NIGHTMARE_DOOR);
+
+        handheldItem(ModItems.NIGHTMARE_SWORD);
+        handheldItem(ModItems.NIGHTMARE_PICKAXE);
+        handheldItem(ModItems.NIGHTMARE_SHOVEL);
+        handheldItem(ModItems.NIGHTMARE_AXE);
+        handheldItem(ModItems.NIGHTMARE_HOE);
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

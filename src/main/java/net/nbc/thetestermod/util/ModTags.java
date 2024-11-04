@@ -12,6 +12,10 @@ public class ModTags
 {
     public static class Blocks
     {
+        public static final TagKey<Block> NEEDS_NIGHTMARE_TOOL = createTag("needs_nightmare_tool");
+        public static final TagKey<Block> INCORRECT_FOR_NIGHTMARE_TOOL = createTag("incorrect_for_nightmare_tool");
+
+
         private static TagKey<Block> createTag(String name)
         {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, name));

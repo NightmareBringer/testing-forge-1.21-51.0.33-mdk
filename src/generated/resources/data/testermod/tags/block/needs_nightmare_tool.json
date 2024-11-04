@@ -1,0 +1,8 @@
+{
+  "values": [
+    "testermod:nightmare_wall",
+    "minecraft:obsidian",
+    "minecraft:crying_obsidian",
+    "#minecraft:needs_diamond_tool"
+  ]
+}

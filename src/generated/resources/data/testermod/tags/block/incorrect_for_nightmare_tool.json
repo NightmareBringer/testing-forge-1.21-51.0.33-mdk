@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#testermod:needs_nightmare_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ]
+}
