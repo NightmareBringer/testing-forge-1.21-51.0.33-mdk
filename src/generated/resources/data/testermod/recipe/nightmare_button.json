@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
-  "group": "alexandrite",
+  "group": "nightmare_ingot",
   "ingredients": [
     {
       "item": "testermod:nightmare_ingot"

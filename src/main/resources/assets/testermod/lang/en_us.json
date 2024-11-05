@@ -14,6 +14,7 @@
   "item.testermod.nightmare_shovel": "Nightmare Shovel",
   "item.testermod.nightmare_axe": "Nightmare Axe",
   "item.testermod.nightmare_hoe": "Nightmare Hoe",
+  "item.testermod.nightmare_hammer": "Nightmare Hammer",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
@@ -38,5 +39,7 @@
   "tooltip.testermod.chisel.shift_down": "Has a §2unique§r effect on some blocks.",
   "tooltip.testermod.chisel": "Press SHIFT for more info",
   "tooltip.testermod.krabs1": "A particular§c crustacean§r from under the sea...",
-  "tooltip.testermod.krabs2": "Probably shouldn't eat it..."
+  "tooltip.testermod.krabs2": "Probably shouldn't eat it...",
+  "tooltip.testermod.nightmare_hammer1": "Breaks blocks in a 3x3 area",
+  "tooltip.testermod.nightmare_hammer2": "Also has a high damage output"
 }

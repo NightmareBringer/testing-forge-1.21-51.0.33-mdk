@@ -40,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.NIGHTMARE_SHOVEL);
         handheldItem(ModItems.NIGHTMARE_AXE);
         handheldItem(ModItems.NIGHTMARE_HOE);
+        handheldItem(ModItems.NIGHTMARE_HAMMER);
     }
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "nightmarite",
+  "ingredient": {
+    "item": "testermod:nightmarite_ore"
+  },
+  "result": {
+    "id": "testermod:nightmarite"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_nightmarite_ore": {
+    "has_nightmarite_deepslate_ore": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:nightmarite_ore"
+            "items": "testermod:nightmarite_deepslate_ore"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "testermod:pure_nightmarite_from_smelting_nightmarite_ore"
+        "recipe": "testermod:nightmarite_from_smelting_nightmarite_deepslate_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_nightmarite_ore"
+      "has_nightmarite_deepslate_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "testermod:pure_nightmarite_from_smelting_nightmarite_ore"
+      "testermod:nightmarite_from_smelting_nightmarite_deepslate_ore"
     ]
   }
 }

@@ -10,12 +10,12 @@
     }
   },
   "pattern": [
-    " ##",
-    " S#",
+    "###",
+    "#S#",
     " S "
   ],
   "result": {
     "count": 1,
-    "id": "testermod:nightmare_axe"
+    "id": "testermod:nightmare_hammer"
   }
 }

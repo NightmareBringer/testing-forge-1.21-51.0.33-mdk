@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
-  "group": "alexandrite",
+  "group": "nightmare_ingot",
   "key": {
     "#": {
       "item": "testermod:nightmare_ingot"

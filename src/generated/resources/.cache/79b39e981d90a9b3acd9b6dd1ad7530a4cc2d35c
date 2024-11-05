@@ -1,10 +1,11 @@
-// 1.21	2024-11-04T00:10:13.8565591	Item Models: testermod
+// 1.21	2024-11-04T18:23:04.8181357	Item Models: testermod
 d51a189dc2b1b88047ae59bd5569ee7bc4bcb7b2 assets/testermod/models/item/chisel.json
 0b84c82b685f3557a12c76dd9c2c385d9071aef7 assets/testermod/models/item/krabs.json
 0adaff6afb0189ff5570ae8c26055c601440a695 assets/testermod/models/item/nightmare_axe.json
 c7401dd7b0a390ccca0d5dc37a3f0f3753749c2b assets/testermod/models/item/nightmare_button.json
 ee0cec7417344e4841234e9d2752a5a93303d6b0 assets/testermod/models/item/nightmare_door.json
 2a30bedc913c12bff035368204e6f6be1ed50807 assets/testermod/models/item/nightmare_fence.json
+f5e0f6e55660364d76cc6b4c3d4056be5350716d assets/testermod/models/item/nightmare_hammer.json
 452ca60b8b07c8aa7ee4bf68a6effa3975d89829 assets/testermod/models/item/nightmare_hoe.json
 7ec499874198cadacd9c92b680658ab73c7c018f assets/testermod/models/item/nightmare_ingot.json
 d9fb0c8a8a9fdac4b15bdedfa038687b90f5535a assets/testermod/models/item/nightmare_nugget.json

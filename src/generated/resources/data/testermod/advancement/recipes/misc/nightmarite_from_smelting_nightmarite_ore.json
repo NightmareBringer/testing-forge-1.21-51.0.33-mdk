@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_nightmare_ingot": {
+    "has_nightmarite_ore": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:nightmare_ingot"
+            "items": "testermod:nightmarite_ore"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "testermod:right_nightmare_hoe_craft_method"
+        "recipe": "testermod:nightmarite_from_smelting_nightmarite_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_nightmare_ingot"
+      "has_nightmarite_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "testermod:right_nightmare_hoe_craft_method"
+      "testermod:nightmarite_from_smelting_nightmarite_ore"
     ]
   }
 }

@@ -3,11 +3,11 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.25,
-  "group": "alexandrite",
+  "group": "nightmarite",
   "ingredient": {
-    "item": "testermod:nightmarite_ore"
+    "item": "testermod:nightmarite"
   },
   "result": {
-    "id": "testermod:pure_nightmarite"
+    "id": "testermod:nightmarite"
   }
 }

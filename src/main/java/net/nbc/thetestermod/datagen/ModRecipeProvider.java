@@ -38,14 +38,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
-                .define('A', ModItems.NIGHTMARITE.get())
+                .define('A', ModBlocks.NIGHTMARITE_ORE.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARITE.get()), has(ModItems.NIGHTMARITE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURE_NIGHTMARITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
-                .define('A', ModItems.PURE_NIGHTMARITE.get())
+                .define('A', ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
                 .unlockedBy(getHasName(ModItems.PURE_NIGHTMARITE.get()), has(ModItems.PURE_NIGHTMARITE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARE_BLOCK.get())
@@ -115,14 +115,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":left_nightmare_axe_craft_method");
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_AXE.get())
+        /*ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_AXE.get())
                 .pattern(" ##")
                 .pattern(" S#")
                 .pattern(" S ")
                 .define('#', ModItems.NIGHTMARE_INGOT.get())
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
-                .save(pRecipeOutput, TesterMod.MOD_ID + ":right_nightmare_axe_craft_method");
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":right_nightmare_axe_craft_method");*/
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HOE.get())
                 .pattern("## ")
@@ -132,15 +132,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":left_nightmare_hoe_craft_method");
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HOE.get())
+        /*ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HOE.get())
                 .pattern(" ##")
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('#', ModItems.NIGHTMARE_INGOT.get())
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get()))
-                .save(pRecipeOutput, TesterMod.MOD_ID + ":right_nightmare_hoe_craft_method");
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":right_nightmare_hoe_craft_method");*/
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HAMMER.get())
+                .pattern("###")
+                .pattern("#S#")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
 
 
@@ -164,27 +171,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
-        stairBuilder(ModBlocks.NIGHTMARE_STAIRS.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+        stairBuilder(ModBlocks.NIGHTMARE_STAIRS.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
         slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NIGHTMARE_SlAB.get(), ModItems.NIGHTMARE_INGOT.get());
 
-        buttonBuilder(ModBlocks.NIGHTMARE_BUTTON.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+        buttonBuilder(ModBlocks.NIGHTMARE_BUTTON.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
         pressurePlate(pRecipeOutput, ModBlocks.NIGHTMARE_PRESSURE_PLATE.get(), ModItems.NIGHTMARE_INGOT.get());
 
-        fenceBuilder(ModBlocks.NIGHTMARE_FENCE.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+        fenceBuilder(ModBlocks.NIGHTMARE_FENCE.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
-        fenceGateBuilder(ModBlocks.NIGHTMARE_FENCE_GATE.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+        fenceGateBuilder(ModBlocks.NIGHTMARE_FENCE_GATE.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
         wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NIGHTMARE_WALL.get(), ModBlocks.NIGHTMARE_BLOCK.get());
 
-        doorBuilder(ModBlocks.NIGHTMARE_DOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+        doorBuilder(ModBlocks.NIGHTMARE_DOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
-        trapdoorBuilder(ModBlocks.NIGHTMARE_TRAPDOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("alexandrite")
+        trapdoorBuilder(ModBlocks.NIGHTMARE_TRAPDOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
-        oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 0.25f, 200, "alexandrite");
-        oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 0.25f, 100, "alexandrite");
+        oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.25f, 200, "nightmarite");
+        oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.25f, 100, "nightmarite");
 
     }
 

@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.item.custom.ChiselItem;
 import net.nbc.thetestermod.item.custom.FuelItem;
+import net.nbc.thetestermod.item.custom.HammerItem;
 
 import java.util.List;
 
@@ -42,26 +43,37 @@ public class ModItems
                     super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
                 }
             });
-            ;
+            //;
 
     public static final RegistryObject<Item> PURE_EYE= ITEMS.register("pure_eye",
             () -> new FuelItem(new Item.Properties(), 10000));
 
     public static final RegistryObject<Item> NIGHTMARE_SWORD = ITEMS.register("nightmare_sword",
             () -> new SwordItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.NIGHTMARE, 4, -2.4f))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.NIGHTMARE, 1, -1.65f))));
     public static final RegistryObject<Item> NIGHTMARE_PICKAXE = ITEMS.register("nightmare_pickaxe",
             () -> new PickaxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, 2, -2.8f))));
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, -1, -2.5f))));
     public static final RegistryObject<Item> NIGHTMARE_SHOVEL = ITEMS.register("nightmare_shovel",
             () -> new ShovelItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(ModToolTiers.NIGHTMARE, 1.5f, -3.0f))));
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.NIGHTMARE, -2, -3.0f))));
     public static final RegistryObject<Item> NIGHTMARE_AXE = ITEMS.register("nightmare_axe",
             () -> new AxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.NIGHTMARE, 7.5f, -3.2f))));
+                    .attributes(AxeItem.createAttributes(ModToolTiers.NIGHTMARE, 3.25f, -2.3f))));
     public static final RegistryObject<Item> NIGHTMARE_HOE = ITEMS.register("nightmare_hoe",
             () -> new HoeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(HoeItem.createAttributes(ModToolTiers.NIGHTMARE, 0.5f, -3.0f))));
+                    .attributes(HoeItem.createAttributes(ModToolTiers.NIGHTMARE, -7, 0f))));
+
+    public static final RegistryObject<Item> NIGHTMARE_HAMMER = ITEMS.register("nightmare_hammer",
+            () -> new HammerItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, 8f, -3.55f))) {
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer2"));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
 
     public static void register(IEventBus eventBus)

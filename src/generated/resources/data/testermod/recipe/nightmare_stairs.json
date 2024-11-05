@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "alexandrite",
+  "group": "nightmare_ingot",
   "key": {
     "#": {
       "item": "testermod:nightmare_ingot"
