@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.tags.ItemTags;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.item.ModItems;
@@ -32,5 +33,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.NETHER_STAR)
                 .add(Items.BLAZE_POWDER)
                 .add(Items.BLAZE_ROD);
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.NIGHTMARE_HELMET.get())
+                .add(ModItems.NIGHTMARE_CHESTPLATE.get())
+                .add(ModItems.NIGHTMARE_LEGGINGS.get())
+                .add(ModItems.NIGHTMARE_BOOTS.get());
     }
 }
