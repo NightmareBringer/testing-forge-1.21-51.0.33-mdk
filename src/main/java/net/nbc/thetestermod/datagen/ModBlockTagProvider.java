@@ -73,6 +73,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .remove(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL);
 
+        tag(ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL)
+                .addTag(BlockTags.NEEDS_STONE_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
+
         tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.NIGHTMARE_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());

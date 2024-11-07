@@ -45,6 +45,9 @@ public class ModItems
             });
             //;
 
+    public static final RegistryObject<Item> IMPURE_STICK = ITEMS.register("impure_stick",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> PURE_EYE= ITEMS.register("pure_eye",
             () -> new FuelItem(new Item.Properties(), 10000));
 
@@ -66,7 +69,7 @@ public class ModItems
 
     public static final RegistryObject<Item> NIGHTMARE_HAMMER = ITEMS.register("nightmare_hammer",
             () -> new HammerItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, 8f, -3.55f))) {
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, 8f, -3.5f))) {
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
                     pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1"));
@@ -77,16 +80,20 @@ public class ModItems
 
     public static final RegistryObject<Item> NIGHTMARE_HELMET = ITEMS.register("nightmare_helmet",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))));
     public static final RegistryObject<Item> NIGHTMARE_CHESTPLATE = ITEMS.register("nightmare_chestplate",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))));
     public static final RegistryObject<Item> NIGHTMARE_LEGGINGS = ITEMS.register("nightmare_leggings",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50))));
     public static final RegistryObject<Item> NIGHTMARE_BOOTS = ITEMS.register("nightmare_boots",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))));
+
+    public static final RegistryObject<Item> DEVILSKNIFE = ITEMS.register("devilsknife",
+            () -> new AxeItem(ModToolTiers.DEVILSKNIFE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.DEVILSKNIFE, 4f, -2.1f))));
 
 
     public static void register(IEventBus eventBus)

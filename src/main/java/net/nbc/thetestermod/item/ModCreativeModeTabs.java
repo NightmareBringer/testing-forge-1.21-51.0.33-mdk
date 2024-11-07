@@ -33,6 +33,7 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
                         output.accept(ModBlocks.NIGHTMARITE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
+                        output.accept(ModItems.IMPURE_STICK.get());
                         output.accept(ModItems.NIGHTMARE_INGOT.get());
                         output.accept(ModItems.NIGHTMARE_NUGGET.get());
                         output.accept(ModBlocks.NIGHTMARE_BLOCK.get());
@@ -55,6 +56,7 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.NIGHTMARE_CHESTPLATE.get());
                         output.accept(ModItems.NIGHTMARE_LEGGINGS.get());
                         output.accept(ModItems.NIGHTMARE_BOOTS.get());
+                        output.accept(ModItems.DEVILSKNIFE.get());
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.KRABS.get());
 

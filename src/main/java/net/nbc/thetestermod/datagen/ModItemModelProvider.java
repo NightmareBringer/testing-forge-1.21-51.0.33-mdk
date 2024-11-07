@@ -50,6 +50,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.KRABS.get());
         basicItem(ModItems.PURE_EYE.get());
+        basicItem(ModItems.IMPURE_STICK.get());
 
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);
         fenceItem(ModBlocks.NIGHTMARE_FENCE, ModBlocks.NIGHTMARE_BLOCK);
@@ -63,6 +64,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.NIGHTMARE_AXE);
         handheldItem(ModItems.NIGHTMARE_HOE);
         handheldItem(ModItems.NIGHTMARE_HAMMER);
+
+        handheldItem(ModItems.DEVILSKNIFE);
 
         trimmedArmorItem(ModItems.NIGHTMARE_HELMET);
         trimmedArmorItem(ModItems.NIGHTMARE_CHESTPLATE);

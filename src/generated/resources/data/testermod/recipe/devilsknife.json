@@ -3,19 +3,22 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "testermod:nightmare_ingot"
+      "item": "minecraft:iron_ingot"
     },
-    "S": {
+    "I": {
       "item": "testermod:impure_stick"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "pattern": [
-    "###",
-    "#S#",
-    " S "
+    "##N",
+    "NI ",
+    " I "
   ],
   "result": {
     "count": 1,
-    "id": "testermod:nightmare_hammer"
+    "id": "testermod:devilsknife"
   }
 }
