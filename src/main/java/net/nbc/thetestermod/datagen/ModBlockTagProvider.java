@@ -105,7 +105,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
 
         tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
+        tag(BlockTags.FENCES).add(ModBlocks.STORM_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.NIGHTMARE_FENCE_GATE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.STORM_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());
     }
 }
