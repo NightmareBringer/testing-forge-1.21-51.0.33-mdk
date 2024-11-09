@@ -2,20 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
+    "/": {
+      "item": "testermod:devils_snath"
     },
-    "I": {
-      "item": "testermod:impure_stick"
-    },
-    "N": {
-      "item": "minecraft:gold_nugget"
+    "T": {
+      "item": "testermod:devils_blade"
     }
   },
   "pattern": [
-    "##N",
-    "NI ",
-    " I "
+    "  T",
+    " / ",
+    "   "
   ],
   "result": {
     "count": 1,

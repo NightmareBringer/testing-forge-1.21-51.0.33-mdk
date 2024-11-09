@@ -28,6 +28,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
+                .add(ModBlocks.ANTI_MAGIC_BLOCK.get())
 
                 .add(ModBlocks.NIGHTMARE_STAIRS.get())
                 .add(ModBlocks.NIGHTMARE_SlAB.get())
@@ -39,7 +40,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_BUTTON.get())
                 .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
 
-                .add(ModBlocks.NIGHTMARE_LAMP.get());
+                .add(ModBlocks.NIGHTMARE_LAMP.get())
+
+                .add(ModBlocks.STORM_BLOCK.get())
+                .add(ModBlocks.STORM_STAIRS.get())
+                .add(ModBlocks.STORM_SlAB.get())
+                .add(ModBlocks.STORM_WALL.get())
+                .add(ModBlocks.STORM_FENCE.get())
+                .add(ModBlocks.STORM_FENCE_GATE.get())
+                .add(ModBlocks.STORM_DOOR.get())
+                .add(ModBlocks.STORM_TRAPDOOR.get())
+                .add(ModBlocks.STORM_BUTTON.get())
+                .add(ModBlocks.STORM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STORM_LAMP.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get());
@@ -57,7 +70,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_TRAPDOOR.get())
                 .add(ModBlocks.NIGHTMARE_BUTTON.get())
                 .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
-                .add(ModBlocks.NIGHTMARE_LAMP.get());
+                .add(ModBlocks.NIGHTMARE_LAMP.get())
+                .add(ModBlocks.ANTI_MAGIC_BLOCK.get())
+                .add(ModBlocks.STORM_BLOCK.get())
+                .add(ModBlocks.STORM_STAIRS.get())
+                .add(ModBlocks.STORM_SlAB.get())
+                .add(ModBlocks.STORM_WALL.get())
+                .add(ModBlocks.STORM_FENCE.get())
+                .add(ModBlocks.STORM_FENCE_GATE.get())
+                .add(ModBlocks.STORM_DOOR.get())
+                .add(ModBlocks.STORM_TRAPDOOR.get())
+                .add(ModBlocks.STORM_BUTTON.get())
+                .add(ModBlocks.STORM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STORM_LAMP.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.NIGHTMARITE_ORE.get())

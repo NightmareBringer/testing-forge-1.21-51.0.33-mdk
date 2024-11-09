@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pure_nightmarite": {
+    "has_pure_eye": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:pure_nightmarite"
+            "items": "testermod:pure_eye"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pure_nightmarite"
+      "has_pure_eye"
     ]
   ],
   "rewards": {

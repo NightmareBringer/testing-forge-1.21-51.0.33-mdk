@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE);
 
         blockWithItem(ModBlocks.MAGIC_BLOCK);
+        blockWithItem(ModBlocks.ANTI_MAGIC_BLOCK);
 
         stairsBlock(ModBlocks.NIGHTMARE_STAIRS.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
         slabBlock(ModBlocks.NIGHTMARE_SlAB.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
@@ -49,10 +50,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.NIGHTMARE_FENCE_GATE);
         blockItem(ModBlocks.NIGHTMARE_TRAPDOOR, "_bottom");
 
-        customLamp();
+        blockWithItem(ModBlocks.STORM_BLOCK);
+
+        stairsBlock(ModBlocks.STORM_STAIRS.get(), blockTexture(ModBlocks.STORM_BLOCK.get()));
+        slabBlock(ModBlocks.STORM_SlAB.get(), blockTexture(ModBlocks.STORM_BLOCK.get()), blockTexture(ModBlocks.STORM_BLOCK.get()));
+
+        buttonBlock(ModBlocks.STORM_BUTTON.get(), blockTexture(ModBlocks.STORM_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.STORM_PRESSURE_PLATE.get(), blockTexture(ModBlocks.STORM_BLOCK.get()));
+
+        fenceBlock(ModBlocks.STORM_FENCE.get(), blockTexture(ModBlocks.STORM_BLOCK.get()));
+        fenceGateBlock(ModBlocks.STORM_FENCE_GATE.get(), blockTexture(ModBlocks.STORM_BLOCK.get()));
+        wallBlock(ModBlocks.STORM_WALL.get(), blockTexture(ModBlocks.STORM_BLOCK.get()));
+
+        doorBlockWithRenderType(ModBlocks.STORM_DOOR.get(), modLoc("block/storm_door_bottom"), modLoc("block/storm_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.STORM_TRAPDOOR.get(), modLoc("block/storm_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.STORM_STAIRS);
+        blockItem(ModBlocks.STORM_SlAB);
+        blockItem(ModBlocks.STORM_PRESSURE_PLATE);
+        blockItem(ModBlocks.STORM_FENCE_GATE);
+        blockItem(ModBlocks.STORM_TRAPDOOR, "_bottom");
+
+        customNightmareLamp();
+        customStormLamp();
     }
 
-    private void customLamp() {
+    private void customNightmareLamp() {
         getVariantBuilder(ModBlocks.NIGHTMARE_LAMP.get()).forAllStates(state -> {
             if(state.getValue(NightmareLampBlock.CLICKED)) {
                 return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("nightmare_lamp_on",
@@ -64,6 +87,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         simpleBlockItem(ModBlocks.NIGHTMARE_LAMP.get(), models().cubeAll("nightmare_lamp_on",
                 ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_on")));
+    }
+    private void customStormLamp() {
+        getVariantBuilder(ModBlocks.STORM_LAMP.get()).forAllStates(state -> {
+            if(state.getValue(NightmareLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("storm_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "storm_lamp_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("storm_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "storm_lamp_off")))};
+            }
+        });
+        simpleBlockItem(ModBlocks.STORM_LAMP.get(), models().cubeAll("storm_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "storm_lamp_on")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

@@ -26,13 +26,16 @@ public class ModCreativeModeTabs
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PURE_NIGHTMARITE.get()))
                     .title(Component.translatable("creativetab.testermod.the_tester_zone"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.PURE_EYE.get());
                         output.accept(ModItems.NIGHTMARITE.get());
                         output.accept(ModItems.PURE_NIGHTMARITE.get());
                         output.accept(ModBlocks.NIGHTMARITE_BLOCK.get());
                         output.accept(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
                         output.accept(ModBlocks.NIGHTMARITE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
+                        output.accept(ModItems.PURE_EYE.get());
+                        output.accept(ModBlocks.MAGIC_BLOCK.get());
+                        output.accept(ModItems.IMPURE_EYE.get());
+                        output.accept(ModBlocks.ANTI_MAGIC_BLOCK.get());
                         output.accept(ModItems.IMPURE_STICK.get());
                         output.accept(ModItems.NIGHTMARE_INGOT.get());
                         output.accept(ModItems.NIGHTMARE_NUGGET.get());
@@ -46,6 +49,7 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.NIGHTMARE_BUTTON.get());
                         output.accept(ModBlocks.NIGHTMARE_DOOR.get());
                         output.accept(ModBlocks.NIGHTMARE_TRAPDOOR.get());
+                        output.accept(ModBlocks.NIGHTMARE_LAMP.get());
                         output.accept(ModItems.NIGHTMARE_SWORD.get());
                         output.accept(ModItems.NIGHTMARE_PICKAXE.get());
                         output.accept(ModItems.NIGHTMARE_AXE.get());
@@ -56,6 +60,22 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.NIGHTMARE_CHESTPLATE.get());
                         output.accept(ModItems.NIGHTMARE_LEGGINGS.get());
                         output.accept(ModItems.NIGHTMARE_BOOTS.get());
+                        output.accept(ModItems.STORM_INGOT.get());
+                        output.accept(ModItems.STORM_NUGGET.get());
+                        output.accept(ModBlocks.STORM_BLOCK.get());
+                        output.accept(ModBlocks.STORM_WALL.get());
+                        output.accept(ModBlocks.STORM_STAIRS.get());
+                        output.accept(ModBlocks.STORM_SlAB.get());
+                        output.accept(ModBlocks.STORM_FENCE.get());
+                        output.accept(ModBlocks.STORM_FENCE_GATE.get());
+                        output.accept(ModBlocks.STORM_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.STORM_BUTTON.get());
+                        output.accept(ModBlocks.STORM_DOOR.get());
+                        output.accept(ModBlocks.STORM_TRAPDOOR.get());
+                        output.accept(ModBlocks.STORM_LAMP.get());
+
+                        output.accept(ModItems.DEVILS_SNATH.get());
+                        output.accept(ModItems.DEVILS_BLADE.get());
                         output.accept(ModItems.DEVILSKNIFE.get());
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.KRABS.get());

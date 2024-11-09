@@ -1,9 +1,9 @@
-// 1.21	2024-11-06T21:43:08.7822243	Tags for minecraft:block mod id testermod
+// 1.21	2024-11-08T23:15:45.8800778	Tags for minecraft:block mod id testermod
 e652ffd6b7a36d7d2b9626e0481ae31b8dc9db6a data/minecraft/tags/block/fences.json
 c4f7efcc9d701b76c51015e8a2a2e86140d745ab data/minecraft/tags/block/fence_gates.json
-b88ec198a89e35c4d8d32d074ec657d637daac9c data/minecraft/tags/block/mineable/pickaxe.json
+3765429315200798723cf0b9825e43ec8b1ca81f data/minecraft/tags/block/mineable/pickaxe.json
 02256e6ae081e4ea58c46e98164480aa3589e491 data/minecraft/tags/block/needs_diamond_tool.json
-8a22c95fd1babf0f17b275b56d583e31dc844d0b data/minecraft/tags/block/needs_iron_tool.json
+43bb87807ceb84ac5c75b709af68de8a47526269 data/minecraft/tags/block/needs_iron_tool.json
 db9b254a9b59fe4e8419d5e308be3f607d2ae568 data/minecraft/tags/block/needs_stone_tool.json
 fd12ed747602140856f274578064352fdf6f19c5 data/minecraft/tags/block/walls.json
 f57a1c0d935679dbbcab3f2e8a06cae2238a6735 data/testermod/tags/block/incorrect_for_devilsknife_tool.json

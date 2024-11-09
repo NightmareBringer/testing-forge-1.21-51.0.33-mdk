@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_nightmare_ingot": {
+    "has_storm_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:nightmare_ingot"
+            "items": "testermod:storm_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "testermod:nightmare_door"
+        "recipe": "testermod:storm_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_nightmare_ingot"
+      "has_storm_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "testermod:nightmare_door"
+      "testermod:storm_door"
     ]
   }
 }

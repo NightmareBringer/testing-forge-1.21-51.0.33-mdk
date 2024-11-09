@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "  N",
+    "###",
+    "N  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:devils_blade"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "testermod:impure_stick"
+    },
+    "L": {
+      "item": "minecraft:lime_dye"
+    },
+    "P": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "pattern": [
+    " LI",
+    "PIP",
+    "IL "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:devils_snath"
+  }
+}

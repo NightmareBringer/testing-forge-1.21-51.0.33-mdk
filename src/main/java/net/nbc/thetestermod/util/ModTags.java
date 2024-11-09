@@ -15,6 +15,9 @@ public class ModTags
         public static final TagKey<Block> NEEDS_NIGHTMARE_TOOL = createTag("needs_nightmare_tool");
         public static final TagKey<Block> INCORRECT_FOR_NIGHTMARE_TOOL = createTag("incorrect_for_nightmare_tool");
 
+        public static final TagKey<Block> NEEDS_STORM_TOOL = createTag("needs_storm_tool");
+        public static final TagKey<Block> INCORRECT_FOR_STORM_TOOL = createTag("incorrect_for_storm_tool");
+
         public static final TagKey<Block> NEEDS_DEVILSKNIFE_TOOL = createTag("needs_devilsknife_tool");
         public static final TagKey<Block> INCORRECT_FOR_DEVILSKNIFE_TOOL = createTag("incorrect_for_devilsknife_tool");
 

@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
-  "group": "nightmare_ingot",
   "key": {
     "#": {
-      "item": "testermod:nightmare_ingot"
+      "item": "testermod:storm_ingot"
     }
   },
   "pattern": [
-    "##",
-    "##",
     "##"
   ],
   "result": {
-    "count": 3,
-    "id": "testermod:nightmare_door"
+    "count": 1,
+    "id": "testermod:storm_pressure_plate"
   }
 }

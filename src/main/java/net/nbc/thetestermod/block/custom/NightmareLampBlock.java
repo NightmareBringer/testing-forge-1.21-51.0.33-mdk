@@ -1,6 +1,8 @@
 package net.nbc.thetestermod.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -27,6 +29,7 @@ public class NightmareLampBlock extends Block
             boolean currentState = pState.getValue(CLICKED);
             pLevel.setBlockAndUpdate(pPos, pState.setValue(CLICKED, !currentState));
         }
+        pLevel.playSound(pPlayer, pPos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 1f, 1f);
 
         return InteractionResult.SUCCESS;
     }

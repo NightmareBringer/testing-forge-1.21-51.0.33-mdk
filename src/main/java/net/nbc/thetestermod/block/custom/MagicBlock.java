@@ -30,7 +30,7 @@ public class MagicBlock extends Block
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
-        pLevel.playSound(pPlayer, pPos, SoundEvents.BELL_RESONATE, SoundSource.BLOCKS, 1f, 1f);
+        pLevel.playSound(pPlayer, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         return InteractionResult.SUCCESS;
     }
 

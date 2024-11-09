@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/storm_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/storm_block"
+    },
+    "type=top": {
+      "model": "testermod:block/storm_slab_top"
+    }
+  }
+}

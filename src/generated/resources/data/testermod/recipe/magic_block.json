@@ -11,16 +11,16 @@
     "D": {
       "item": "minecraft:diamond_block"
     },
-    "F": {
-      "item": "minecraft:fire_charge"
-    },
     "G": {
       "item": "minecraft:amethyst_block"
+    },
+    "U": {
+      "item": "testermod:pure_eye"
     }
   },
   "pattern": [
     "#A#",
-    "DFD",
+    "DUD",
     "GGG"
   ],
   "result": {

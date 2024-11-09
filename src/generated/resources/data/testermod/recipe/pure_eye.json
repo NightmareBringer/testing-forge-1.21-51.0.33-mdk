@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "F": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "pattern": [
+    "#F#",
+    "BEB",
+    "F#F"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:pure_eye"
+  }
+}

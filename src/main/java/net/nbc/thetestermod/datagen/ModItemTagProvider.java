@@ -24,7 +24,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .add(ModItems.PURE_EYE.get())
                 .add(ModItems.NIGHTMARE_INGOT.get())
                 .add(ModItems.NIGHTMARE_NUGGET.get())
                 .add(Items.DIRT)

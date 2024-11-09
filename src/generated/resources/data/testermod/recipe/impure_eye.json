@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "F": {
+      "item": "minecraft:fermented_spider_eye"
+    }
+  },
+  "pattern": [
+    "#F#",
+    "BEB",
+    "FBF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:impure_eye"
+  }
+}

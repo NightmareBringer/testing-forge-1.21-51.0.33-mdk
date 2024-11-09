@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:warped_wart_block"
+    },
+    "C": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    },
+    "S": {
+      "item": "minecraft:sculk"
+    },
+    "U": {
+      "item": "testermod:impure_eye"
+    }
+  },
+  "pattern": [
+    "#E#",
+    "SUS",
+    "CLC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:anti_magic_block"
+  }
+}

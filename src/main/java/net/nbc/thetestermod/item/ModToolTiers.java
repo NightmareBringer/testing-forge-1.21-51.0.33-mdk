@@ -11,7 +11,11 @@ public class ModToolTiers
             ModTags.Blocks.NEEDS_NIGHTMARE_TOOL, () -> Ingredient.of(ModItems.NIGHTMARE_INGOT.get()),
             ModTags.Blocks.INCORRECT_FOR_NIGHTMARE_TOOL);
 
-    public static final Tier DEVILSKNIFE = new ForgeTier(1300, 20f, 5f, 50,
+    public static final Tier STORM = new ForgeTier(3215, 34f, 15.69f, 40,
+            ModTags.Blocks.NEEDS_STORM_TOOL, () -> Ingredient.of(ModItems.STORM_INGOT.get()),
+            ModTags.Blocks.INCORRECT_FOR_STORM_TOOL);
+
+    public static final Tier DEVILSKNIFE = new ForgeTier(1366, 25f, 5f, 50,
             ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL, () -> Ingredient.of(ModItems.IMPURE_STICK.get()),
             ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL);
 }

@@ -46,17 +46,26 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PURE_NIGHTMARITE.get());
         basicItem(ModItems.NIGHTMARE_INGOT.get());
         basicItem(ModItems.NIGHTMARE_NUGGET.get());
+        basicItem(ModItems.STORM_INGOT.get());
+        basicItem(ModItems.STORM_NUGGET.get());
 
         basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.KRABS.get());
         basicItem(ModItems.PURE_EYE.get());
+        basicItem(ModItems.IMPURE_EYE.get());
         basicItem(ModItems.IMPURE_STICK.get());
+        basicItem(ModItems.DEVILS_SNATH.get());
+        basicItem(ModItems.DEVILS_BLADE.get());
 
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);
         fenceItem(ModBlocks.NIGHTMARE_FENCE, ModBlocks.NIGHTMARE_BLOCK);
         wallItem(ModBlocks.NIGHTMARE_WALL, ModBlocks.NIGHTMARE_BLOCK);
-
         simpleBlockItem(ModBlocks.NIGHTMARE_DOOR);
+
+        buttonItem(ModBlocks.STORM_BUTTON, ModBlocks.STORM_BLOCK);
+        fenceItem(ModBlocks.STORM_FENCE, ModBlocks.STORM_BLOCK);
+        wallItem(ModBlocks.STORM_WALL, ModBlocks.STORM_BLOCK);
+        simpleBlockItem(ModBlocks.STORM_DOOR);
 
         handheldItem(ModItems.NIGHTMARE_SWORD);
         handheldItem(ModItems.NIGHTMARE_PICKAXE);

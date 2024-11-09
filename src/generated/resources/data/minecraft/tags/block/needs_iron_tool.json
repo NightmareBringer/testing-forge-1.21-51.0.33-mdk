@@ -12,6 +12,18 @@
     "testermod:nightmare_trapdoor",
     "testermod:nightmare_button",
     "testermod:nightmare_pressure_plate",
-    "testermod:nightmare_lamp"
+    "testermod:nightmare_lamp",
+    "testermod:anti_magic_block",
+    "testermod:storm_block",
+    "testermod:storm_stairs",
+    "testermod:storm_slab",
+    "testermod:storm_wall",
+    "testermod:storm_fence",
+    "testermod:storm_fence_gate",
+    "testermod:storm_door",
+    "testermod:storm_trapdoor",
+    "testermod:storm_button",
+    "testermod:storm_pressure_plate",
+    "testermod:storm_lamp"
   ]
 }

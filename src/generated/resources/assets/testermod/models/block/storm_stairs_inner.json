@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "testermod:block/storm_block",
+    "side": "testermod:block/storm_block",
+    "top": "testermod:block/storm_block"
+  }
+}

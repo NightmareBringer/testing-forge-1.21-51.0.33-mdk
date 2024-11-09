@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "storm_ingot",
+  "ingredients": [
+    {
+      "item": "testermod:storm_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:storm_button"
+  }
+}

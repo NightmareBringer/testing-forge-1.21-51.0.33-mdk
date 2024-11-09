@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
         dropSelf(ModBlocks.NIGHTMARE_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        dropSelf(ModBlocks.ANTI_MAGIC_BLOCK.get());
 
         dropSelf(ModBlocks.NIGHTMARE_STAIRS.get());
         dropSelf(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get());
@@ -43,10 +44,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.NIGHTMARE_LAMP.get());
 
+        dropSelf(ModBlocks.STORM_BLOCK.get());
+
+        dropSelf(ModBlocks.STORM_STAIRS.get());
+        dropSelf(ModBlocks.STORM_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.STORM_BUTTON.get());
+        dropSelf(ModBlocks.STORM_FENCE.get());
+        dropSelf(ModBlocks.STORM_FENCE_GATE.get());
+        dropSelf(ModBlocks.STORM_WALL.get());
+        dropSelf(ModBlocks.STORM_TRAPDOOR.get());
+
+        dropSelf(ModBlocks.STORM_LAMP.get());
+
         this.add(ModBlocks.NIGHTMARE_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.NIGHTMARE_SlAB.get()));
         this.add(ModBlocks.NIGHTMARE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.NIGHTMARE_DOOR.get()));
+
+        this.add(ModBlocks.STORM_SlAB.get(),
+                block -> createSlabItemTable(ModBlocks.STORM_SlAB.get()));
+        this.add(ModBlocks.STORM_DOOR.get(),
+                block -> createDoorTable(ModBlocks.STORM_DOOR.get()));
 
         this.add(ModBlocks.NIGHTMARITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.NIGHTMARITE_ORE.get(), ModItems.NIGHTMARITE.get()));

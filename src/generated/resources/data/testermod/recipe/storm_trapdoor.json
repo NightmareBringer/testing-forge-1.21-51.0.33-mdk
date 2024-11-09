@@ -1,10 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
-  "group": "nightmare_ingot",
+  "group": "storm_ingot",
   "key": {
     "#": {
-      "item": "testermod:nightmare_ingot"
+      "item": "testermod:storm_ingot"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 2,
-    "id": "testermod:nightmare_trapdoor"
+    "id": "testermod:storm_trapdoor"
   }
 }

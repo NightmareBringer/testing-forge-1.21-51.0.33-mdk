@@ -13,8 +13,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.block.custom.AntiMagicBlock;
 import net.nbc.thetestermod.block.custom.MagicBlock;
 import net.nbc.thetestermod.block.custom.NightmareLampBlock;
+import net.nbc.thetestermod.block.custom.StormLampBlock;
 import net.nbc.thetestermod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -48,12 +50,15 @@ public class ModBlocks
             () -> new MagicBlock(BlockBehaviour.Properties.of()
                     .strength(3f).explosionResistance(3f)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> ANTI_MAGIC_BLOCK = registerBlock("anti_magic_block",
+            () -> new AntiMagicBlock(BlockBehaviour.Properties.of()
+                    .strength(4f).explosionResistance(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> NIGHTMARE_BLOCK = registerBlock("nightmare_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(20f).explosionResistance(25f)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL)));
-
 
     public static final RegistryObject<StairBlock> NIGHTMARE_STAIRS = registerBlock("nightmare_stairs",
             () -> new StairBlock(ModBlocks.NIGHTMARE_BLOCK.get().defaultBlockState(),
@@ -87,6 +92,46 @@ public class ModBlocks
     public static final RegistryObject<Block> NIGHTMARE_LAMP = registerBlock("nightmare_lamp",
             () -> new NightmareLampBlock(BlockBehaviour.Properties.of().strength(3.5f)
                     .lightLevel(state -> state.getValue(NightmareLampBlock.CLICKED) ? 10 : 0)));
+
+
+    public static final RegistryObject<Block> STORM_BLOCK = registerBlock("storm_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(35f).explosionResistance(35f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+
+    public static final RegistryObject<StairBlock> STORM_STAIRS = registerBlock("storm_stairs",
+            () -> new StairBlock(ModBlocks.STORM_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(15f).explosionResistance(34f)
+                            .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<SlabBlock> STORM_SlAB = registerBlock("storm_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(8f).explosionResistance(34f)
+                    .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> STORM_PRESSURE_PLATE = registerBlock("storm_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(5f)
+                    .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<ButtonBlock> STORM_BUTTON = registerBlock("storm_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().strength(3f)
+                    .sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> STORM_FENCE = registerBlock("storm_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(15f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<FenceGateBlock> STORM_FENCE_GATE = registerBlock("storm_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(12f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<WallBlock> STORM_WALL = registerBlock("storm_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(50f)
+                    .explosionResistance(70f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> STORM_DOOR = registerBlock("storm_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(20f)
+                    .explosionResistance(25f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<TrapDoorBlock> STORM_TRAPDOOR = registerBlock("storm_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(10f)
+                    .explosionResistance(25f).sound(SoundType.NETHERITE_BLOCK).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> STORM_LAMP = registerBlock("storm_lamp",
+            () -> new NightmareLampBlock(BlockBehaviour.Properties.of().strength(7f)
+                    .lightLevel(state -> state.getValue(NightmareLampBlock.CLICKED) ? 3 : 0)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
