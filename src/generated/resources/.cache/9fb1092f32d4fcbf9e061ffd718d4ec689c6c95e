@@ -1,4 +1,4 @@
-// 1.21	2024-11-08T23:15:45.8831156	Recipes
+// 1.21	2024-11-08T23:28:17.9084356	Recipes
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
 ee0c4c777daa5bc0fe263360aa155301eaf2fcb0 data/minecraft/recipe/nightmare_ingot_from_smithing.json
 471d72be59c07cf46c77fa9df6a7967c59483c15 data/testermod/advancement/recipes/building_blocks/nightmare_slab.json
@@ -47,8 +47,10 @@ ee352d9ef20de1a52255610de47bd2d6cb5e2ede data/testermod/advancement/recipes/misc
 a3b49e7593868471118900f53994dfad4cdb67ba data/testermod/advancement/recipes/misc/storm_lamp.json
 6cab9d056a9895706e71e7d6e2d24967735eeeb2 data/testermod/advancement/recipes/misc/storm_nugget.json
 235a3ce6e06a24ebefe77db980040f4edcde6549 data/testermod/advancement/recipes/redstone/nightmare_button.json
+e58da6f69fcd7cd7cd95fca620459018fa87e50c data/testermod/advancement/recipes/redstone/nightmare_door.json
 2e6262ed3873e07d173609e4598e4c783843bcf6 data/testermod/advancement/recipes/redstone/nightmare_fence_gate.json
 795f26d19bc9222d796bbf6603a44ca4eba2dd1c data/testermod/advancement/recipes/redstone/nightmare_pressure_plate.json
+5f2c5627237ff344c682dc8c7f099758f507589b data/testermod/advancement/recipes/redstone/nightmare_trapdoor.json
 e6d045ff6e6410b9f0a561cb21d19af7907f8c30 data/testermod/advancement/recipes/redstone/storm_button.json
 05d2dc6014e533e3782aa5bd3573ad331d212e56 data/testermod/advancement/recipes/redstone/storm_door.json
 27fe04bc2b3e8ed8d743b32d9a14bc495cb7488b data/testermod/advancement/recipes/redstone/storm_fence_gate.json
@@ -66,6 +68,7 @@ c8ccfce0fc98e0f36a39b48040a478043a2fc475 data/testermod/recipe/devils_snath.json
 b3d8c41a1d2cbe6ebb2b2347ed1e6ca836ac5379 data/testermod/recipe/nightmare_boots.json
 9d2f1464849a69b0f761f5e5fb62b6819c2d96d7 data/testermod/recipe/nightmare_button.json
 3ef869cff28b483a40ab85db15fdbe92d0c75447 data/testermod/recipe/nightmare_chestplate.json
+d03514be7030ed7a1508e87f6b1e379c96c6de12 data/testermod/recipe/nightmare_door.json
 d1375bedfe64bdefbfe66f130c8468b76bdc2239 data/testermod/recipe/nightmare_fence.json
 c56858f59e7d5a8f8f452465fa5d6c7222b50c19 data/testermod/recipe/nightmare_fence_gate.json
 cf0eef266dd4a5901a538790724ccc543cf48d6d data/testermod/recipe/nightmare_hammer.json
@@ -81,6 +84,7 @@ ff279370dd25be7d58ac8474fd8aedad36891c92 data/testermod/recipe/nightmare_pressur
 24e860ac0576354cd662eef87522256f290f8b9f data/testermod/recipe/nightmare_slab.json
 a05ab83f7d7c19cd31cdcebb56e14f1988c58012 data/testermod/recipe/nightmare_stairs.json
 b98a36bd7de64a28c68dff3cb94b42f8f134224e data/testermod/recipe/nightmare_sword.json
+3ab28c1483fce0178935ed469a0addcb46c90693 data/testermod/recipe/nightmare_trapdoor.json
 97c70a1c1cbb2cb6b065e2a5b242642a07eaecb7 data/testermod/recipe/nightmare_wall.json
 eb85dd5d7544c3f2a3477d879cbbea64e62c6ee0 data/testermod/recipe/nightmarite.json
 8a80b7403a356a664d364c44c28ca48b7bc403ea data/testermod/recipe/nightmarite_block.json
