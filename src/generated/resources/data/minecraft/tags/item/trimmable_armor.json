@@ -3,6 +3,10 @@
     "testermod:nightmare_helmet",
     "testermod:nightmare_chestplate",
     "testermod:nightmare_leggings",
-    "testermod:nightmare_boots"
+    "testermod:nightmare_boots",
+    "testermod:storm_helmet",
+    "testermod:storm_chestplate",
+    "testermod:storm_leggings",
+    "testermod:storm_boots"
   ]
 }

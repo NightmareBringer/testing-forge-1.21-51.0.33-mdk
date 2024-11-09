@@ -225,6 +225,82 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.IMPURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.IMPURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.IMPURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.IMPURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":left_storm_axe_craft_method");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.IMPURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":left_storm_hoe_craft_method");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_HAMMER.get())
+                .pattern("###")
+                .pattern("#S#")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.IMPURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.STORM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_BOOTS.get())
+                .pattern("# #")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.STORM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DEVILS_BLADE.get())
                 .pattern("  N")
                 .pattern("###")

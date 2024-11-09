@@ -98,6 +98,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .remove(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL);
 
+        tag(ModTags.Blocks.NEEDS_STORM_TOOL)
+                .add(ModBlocks.STORM_WALL.get())
+                .add(Blocks.REINFORCED_DEEPSLATE)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_STORM_TOOL)
+                .remove(ModTags.Blocks.NEEDS_STORM_TOOL);
+
         tag(ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL)
                 .addTag(BlockTags.NEEDS_STONE_TOOL);
 

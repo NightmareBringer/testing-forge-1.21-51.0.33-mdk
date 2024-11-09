@@ -22,11 +22,21 @@
   "item.testermod.nightmare_axe": "Nightmare Axe",
   "item.testermod.nightmare_hoe": "Nightmare Hoe",
   "item.testermod.nightmare_hammer": "Nightmare Hammer",
+  "item.testermod.storm_sword": "Storm Sword",
+  "item.testermod.storm_pickaxe": "Storm Pickaxe",
+  "item.testermod.storm_shovel": "Storm Shovel",
+  "item.testermod.storm_axe": "Storm Axe",
+  "item.testermod.storm_hoe": "Storm Hoe",
+  "item.testermod.storm_hammer": "Storm Hammer",
 
   "item.testermod.nightmare_helmet": "Nightmare Helmet",
   "item.testermod.nightmare_chestplate": "Nightmare Chestplate",
   "item.testermod.nightmare_leggings": "Nightmare Leggings",
   "item.testermod.nightmare_boots": "Nightmare Boots",
+  "item.testermod.storm_helmet": "Storm Helmet",
+  "item.testermod.storm_chestplate": "Storm Chestplate",
+  "item.testermod.storm_leggings": "Storm Leggings",
+  "item.testermod.storm_boots": "Storm Boots",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
@@ -67,5 +77,7 @@
   "tooltip.testermod.krabs1": "A particular§c crustacean§r from under the sea...",
   "tooltip.testermod.krabs2": "Probably shouldn't eat it...",
   "tooltip.testermod.nightmare_hammer1": "Breaks blocks in a 3x3 area",
-  "tooltip.testermod.nightmare_hammer2": "Also has a high damage output"
+  "tooltip.testermod.nightmare_hammer2": "Also has a high damage output",
+  "tooltip.testermod.storm_hammer1": "Breaks blocks in a 3x3 area",
+  "tooltip.testermod.storm_hammer2": "Also has a very high damage output"
 }

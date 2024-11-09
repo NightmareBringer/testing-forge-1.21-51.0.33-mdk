@@ -29,7 +29,7 @@ public class NightmareLampBlock extends Block
             boolean currentState = pState.getValue(CLICKED);
             pLevel.setBlockAndUpdate(pPos, pState.setValue(CLICKED, !currentState));
         }
-        pLevel.playSound(pPlayer, pPos, SoundEvents.LEVER_CLICK, SoundSource.BLOCKS, 1f, 1f);
+        pLevel.playSound(pPlayer, pPos, SoundEvents.COMPARATOR_CLICK, SoundSource.BLOCKS, 1f, 0.75f);
 
         return InteractionResult.SUCCESS;
     }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "testermod:storm_ingot"
+    },
+    "S": {
+      "item": "testermod:impure_stick"
+    }
+  },
+  "pattern": [
+    " # ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:storm_shovel"
+  }
+}

@@ -73,6 +73,16 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.STORM_DOOR.get());
                         output.accept(ModBlocks.STORM_TRAPDOOR.get());
                         output.accept(ModBlocks.STORM_LAMP.get());
+                        output.accept(ModItems.STORM_SWORD.get());
+                        output.accept(ModItems.STORM_PICKAXE.get());
+                        output.accept(ModItems.STORM_AXE.get());
+                        output.accept(ModItems.STORM_SHOVEL.get());
+                        output.accept(ModItems.STORM_HOE.get());
+                        output.accept(ModItems.STORM_HAMMER.get());
+                        output.accept(ModItems.STORM_HELMET.get());
+                        output.accept(ModItems.STORM_CHESTPLATE.get());
+                        output.accept(ModItems.STORM_LEGGINGS.get());
+                        output.accept(ModItems.STORM_BOOTS.get());
 
                         output.accept(ModItems.DEVILS_SNATH.get());
                         output.accept(ModItems.DEVILS_BLADE.get());

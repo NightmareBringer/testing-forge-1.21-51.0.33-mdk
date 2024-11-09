@@ -37,6 +37,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NIGHTMARE_HELMET.get())
                 .add(ModItems.NIGHTMARE_CHESTPLATE.get())
                 .add(ModItems.NIGHTMARE_LEGGINGS.get())
-                .add(ModItems.NIGHTMARE_BOOTS.get());
+                .add(ModItems.NIGHTMARE_BOOTS.get())
+                .add(ModItems.STORM_HELMET.get())
+                .add(ModItems.STORM_CHESTPLATE.get())
+                .add(ModItems.STORM_LEGGINGS.get())
+                .add(ModItems.STORM_BOOTS.get())
+
+        ;
+
+
     }
 }

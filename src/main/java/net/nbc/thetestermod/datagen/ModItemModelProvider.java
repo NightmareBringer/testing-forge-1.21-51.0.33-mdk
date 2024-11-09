@@ -74,12 +74,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.NIGHTMARE_HOE);
         handheldItem(ModItems.NIGHTMARE_HAMMER);
 
+        handheldItem(ModItems.STORM_SWORD);
+        handheldItem(ModItems.STORM_PICKAXE);
+        handheldItem(ModItems.STORM_SHOVEL);
+        handheldItem(ModItems.STORM_AXE);
+        handheldItem(ModItems.STORM_HOE);
+        handheldItem(ModItems.STORM_HAMMER);
+
         handheldItem(ModItems.DEVILSKNIFE);
 
         trimmedArmorItem(ModItems.NIGHTMARE_HELMET);
         trimmedArmorItem(ModItems.NIGHTMARE_CHESTPLATE);
         trimmedArmorItem(ModItems.NIGHTMARE_LEGGINGS);
         trimmedArmorItem(ModItems.NIGHTMARE_BOOTS);
+
+        trimmedArmorItem(ModItems.STORM_HELMET);
+        trimmedArmorItem(ModItems.STORM_CHESTPLATE);
+        trimmedArmorItem(ModItems.STORM_LEGGINGS);
+        trimmedArmorItem(ModItems.STORM_BOOTS);
     }
 
     // Shoutout to El_Redstoniano for making this
