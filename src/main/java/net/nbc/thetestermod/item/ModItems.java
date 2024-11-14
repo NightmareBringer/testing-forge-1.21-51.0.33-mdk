@@ -93,6 +93,12 @@ public class ModItems
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))));
 
+    public static final RegistryObject<Item> STORMITE = ITEMS.register("stormite",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> IMPURE_STORMITE = ITEMS.register("impure_stormite",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> STORM_INGOT = ITEMS.register("storm_ingot",
             () -> new Item(new Item.Properties()));
 

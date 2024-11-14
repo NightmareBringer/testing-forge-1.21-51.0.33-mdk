@@ -30,7 +30,7 @@ public class AntiMagicBlock extends Block
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
-        pLevel.playSound(pPlayer, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 1f);
+        //pLevel.playSound(pPlayer, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 1f);
         return InteractionResult.SUCCESS;
     }
 
@@ -38,19 +38,28 @@ public class AntiMagicBlock extends Block
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if(pEntity instanceof ItemEntity itemEntity)
         {
+            if(itemEntity.getItem().getItem() == ModItems.STORMITE.get())
+            {
+                itemEntity.setItem(new ItemStack(ModItems.IMPURE_STORMITE.get(), itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 0.7f);
+            }
+
             if(isValidItem(itemEntity.getItem()))
             {
                 itemEntity.setItem(new ItemStack(Items.COAL_BLOCK, itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 1.5f);
             }
 
             if(itemEntity.getItem().getItem() == ModItems.NIGHTMARITE.get())
             {
                 itemEntity.setItem(new ItemStack(ModItems.PURE_NIGHTMARITE.get(), itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 0.7f);
             }
 
             if(itemEntity.getItem().getItem() == Items.LEATHER)
             {
                 itemEntity.setItem(new ItemStack(Items.ROTTEN_FLESH, itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 1f);
             }
 
         }

@@ -94,6 +94,16 @@ public class ModBlocks
                     .lightLevel(state -> state.getValue(NightmareLampBlock.CLICKED) ? 10 : 0)));
 
 
+    public static final RegistryObject<Block> STORMITE_ORE = registerBlock("stormite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of()
+                    .strength(8f).explosionResistance(1f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> STORMITE_DEEPSLATE_ORE = registerBlock("stormite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(5,9), BlockBehaviour.Properties.of()
+                    .strength(16f).explosionResistance(10f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
     public static final RegistryObject<Block> STORM_BLOCK = registerBlock("storm_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(35f).explosionResistance(35f)

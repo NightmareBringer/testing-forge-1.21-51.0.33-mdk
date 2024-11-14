@@ -24,14 +24,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> NIGHTMARITE_SMELTABLES = List.of(ModItems.NIGHTMARITE.get(),
                 ModBlocks.NIGHTMARITE_ORE.get(), ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
 
+        List<ItemLike> STORMITE_SMELTABLES = List.of(ModItems.STORMITE.get(),
+                ModBlocks.STORMITE_ORE.get(), ModBlocks.STORMITE_DEEPSLATE_ORE.get());
+
         SmithingTransformRecipeBuilder.smithing(
-                Ingredient.of(Items.GOLD_INGOT),  // Placeholder, try using Items.AIR instead of Ingredient.EMPTY
-                Ingredient.of(Items.FIRE_CHARGE),
-                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),
+                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  //Template (first slot)
+                Ingredient.of(Items.FIRE_CHARGE), //Addition (second slot)
+                Ingredient.of(Items.GOLD_INGOT),  //Ingot (third slot)
                 RecipeCategory.MISC,
-                ModItems.NIGHTMARE_INGOT.get())
+                ModItems.NIGHTMARE_INGOT.get()) //Result
                 .unlocks("has_pure_nightmarite", has(ModItems.PURE_NIGHTMARITE.get())) // Unlock condition
                 .save(pRecipeOutput, "nightmare_ingot_from_smithing");
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(ModItems.IMPURE_STORMITE.get()),  // Placeholder, try using Items.AIR instead of Ingredient.EMPTY <- for empty slots I think
+                        Ingredient.of(Items.BLAZE_POWDER),
+                        Ingredient.of(Items.COPPER_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.STORM_INGOT.get())
+                .unlocks("has_impure_stormite", has(ModItems.IMPURE_STORMITE.get())) // Unlock condition
+                .save(pRecipeOutput, "storm_ingot_from_smithing");
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
@@ -394,7 +406,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.25f, 200, "nightmarite");
-        oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.25f, 100, "nightmarite");
+        oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.50f, 100, "nightmarite");
+
+        oreSmelting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.20f, 250, "stormite");
+        oreBlasting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.40f, 150, "stormite");
 
     }
 

@@ -27,7 +27,7 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.BODY, 15);
             }), 25, 5f, 0.0375f, () -> ModItems.NIGHTMARE_INGOT.get());
 
-    public static final Holder<ArmorMaterial> STORM_ARMOR_MATERIAL = register("nightmare", Util.make(new EnumMap<>(ArmorItem.Type.class),
+    public static final Holder<ArmorMaterial> STORM_ARMOR_MATERIAL = register("storm", Util.make(new EnumMap<>(ArmorItem.Type.class),
             attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 2);
                 attribute.put(ArmorItem.Type.LEGGINGS, 4);

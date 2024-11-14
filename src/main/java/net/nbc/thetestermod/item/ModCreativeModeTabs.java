@@ -60,6 +60,10 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.NIGHTMARE_CHESTPLATE.get());
                         output.accept(ModItems.NIGHTMARE_LEGGINGS.get());
                         output.accept(ModItems.NIGHTMARE_BOOTS.get());
+                        output.accept(ModItems.STORMITE.get());
+                        output.accept(ModItems.IMPURE_STORMITE.get());
+                        output.accept(ModBlocks.STORMITE_ORE.get());
+                        output.accept(ModBlocks.STORMITE_DEEPSLATE_ORE.get());
                         output.accept(ModItems.STORM_INGOT.get());
                         output.accept(ModItems.STORM_NUGGET.get());
                         output.accept(ModBlocks.STORM_BLOCK.get());
@@ -83,6 +87,7 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.STORM_CHESTPLATE.get());
                         output.accept(ModItems.STORM_LEGGINGS.get());
                         output.accept(ModItems.STORM_BOOTS.get());
+
 
                         output.accept(ModItems.DEVILS_SNATH.get());
                         output.accept(ModItems.DEVILS_BLADE.get());

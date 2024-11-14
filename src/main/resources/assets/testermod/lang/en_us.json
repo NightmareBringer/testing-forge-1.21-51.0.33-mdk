@@ -3,6 +3,8 @@
 
   "item.testermod.nightmarite": "Nightmare Essence",
   "item.testermod.pure_nightmarite": "Pure Nightmare Essence",
+  "item.testermod.stormite": "Storm Essence",
+  "item.testermod.impure_stormite": "Impure Storm Essence",
   "item.testermod.chisel": "Chisel",
   "item.testermod.krabs": "Mr. Krabs",
   "item.testermod.pure_eye": "Eye of Pureness",
@@ -45,6 +47,8 @@
 
   "block.testermod.nightmarite_ore": "Nightmarite Ore",
   "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore",
+  "block.testermod.stormite_ore": "Stormite Ore",
+  "block.testermod.stormite_deepslate_ore": "Deepslate Stormite Ore",
   "block.testermod.magic_block": "Purifier",
   "block.testermod.anti_magic_block": "Impurifier",
   "block.testermod.nightmare_lamp": "Nightmare Lamp",

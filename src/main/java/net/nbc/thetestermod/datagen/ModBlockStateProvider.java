@@ -27,6 +27,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NIGHTMARITE_ORE);
         blockWithItem(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE);
 
+        blockWithItem(ModBlocks.STORMITE_ORE);
+        blockWithItem(ModBlocks.STORMITE_DEEPSLATE_ORE);
+
         blockWithItem(ModBlocks.MAGIC_BLOCK);
         blockWithItem(ModBlocks.ANTI_MAGIC_BLOCK);
 

@@ -1,7 +1,9 @@
 package net.nbc.thetestermod.block.custom;
 
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.commands.PlaySoundCommand;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -12,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.enchantment.effects.PlaySoundEffect;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -30,7 +33,7 @@ public class MagicBlock extends Block
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
-        pLevel.playSound(pPlayer, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
+        //pLevel.playSound(pPlayer, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         return InteractionResult.SUCCESS;
     }
 
@@ -41,21 +44,25 @@ public class MagicBlock extends Block
             if(isValidItem(itemEntity.getItem()))
             {
                 itemEntity.setItem(new ItemStack(Items.MUD, itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
             }
 
             if(itemEntity.getItem().getItem() == ModItems.NIGHTMARITE.get())
             {
                 itemEntity.setItem(new ItemStack(ModItems.PURE_NIGHTMARITE.get(), itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
             }
 
             if(itemEntity.getItem().getItem() == Items.ROTTEN_FLESH)
             {
                 itemEntity.setItem(new ItemStack(Items.LEATHER, itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
             }
 
             if(itemEntity.getItem().getItem() == Items.DIAMOND_BLOCK)
             {
                 itemEntity.setItem(new ItemStack(Items.EMERALD, itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
             }
         }
 

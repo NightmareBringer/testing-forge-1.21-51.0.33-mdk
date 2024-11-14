@@ -46,6 +46,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PURE_NIGHTMARITE.get());
         basicItem(ModItems.NIGHTMARE_INGOT.get());
         basicItem(ModItems.NIGHTMARE_NUGGET.get());
+        basicItem(ModItems.STORMITE.get());
+        basicItem(ModItems.IMPURE_STORMITE.get());
         basicItem(ModItems.STORM_INGOT.get());
         basicItem(ModItems.STORM_NUGGET.get());
 

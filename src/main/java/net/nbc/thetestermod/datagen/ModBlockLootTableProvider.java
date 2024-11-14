@@ -69,7 +69,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.NIGHTMARITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.NIGHTMARITE_ORE.get(), ModItems.NIGHTMARITE.get()));
         this.add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 1, 4));
+                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 2, 3));
+
+        this.add(ModBlocks.STORMITE_ORE.get(),
+                block -> createOreDrop(ModBlocks.STORMITE_ORE.get(), ModItems.STORMITE.get()));
+        this.add(ModBlocks.STORMITE_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.STORMITE_DEEPSLATE_ORE.get(), ModItems.STORMITE.get(), 0, 1.5f));
 
 
     }

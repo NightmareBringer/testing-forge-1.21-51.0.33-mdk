@@ -1,6 +1,8 @@
 {
   "values": [
     "testermod:nightmare_wall",
+    "testermod:stormite_deepslate_ore",
+    "testermod:stormite_ore",
     "minecraft:obsidian",
     "minecraft:crying_obsidian",
     "#minecraft:needs_diamond_tool"

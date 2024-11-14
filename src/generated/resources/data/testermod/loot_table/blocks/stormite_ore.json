@@ -26,20 +26,11 @@
                   }
                 }
               ],
-              "name": "testermod:nightmarite_deepslate_ore"
+              "name": "testermod:stormite_ore"
             },
             {
               "type": "minecraft:item",
               "functions": [
-                {
-                  "add": false,
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "max": 3.0,
-                    "min": 2.0
-                  },
-                  "function": "minecraft:set_count"
-                },
                 {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops",
@@ -49,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "testermod:nightmarite"
+              "name": "testermod:stormite"
             }
           ]
         }
@@ -57,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "testermod:blocks/nightmarite_deepslate_ore"
+  "random_sequence": "testermod:blocks/stormite_ore"
 }

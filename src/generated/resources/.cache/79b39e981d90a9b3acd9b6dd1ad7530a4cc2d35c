@@ -1,10 +1,11 @@
-// 1.21	2024-11-09T01:21:15.4201874	Item Models: testermod
+// 1.21	2024-11-13T23:54:33.815729	Item Models: testermod
 d51a189dc2b1b88047ae59bd5569ee7bc4bcb7b2 assets/testermod/models/item/chisel.json
 1e409a0420e89b564aaf5f4cd6c8717b07187696 assets/testermod/models/item/devilsknife.json
 b6e5a22d9900a24a01968f59b7e92885f4dbb03c assets/testermod/models/item/devils_blade.json
 67d2f3e11d3b5eae55e4d2f089680b761c10a43e assets/testermod/models/item/devils_snath.json
 89d2eeef9ea1e974e33a880dad94cc209ff8c4d7 assets/testermod/models/item/impure_eye.json
 463b714fece54cae324ba3cc8dec19ccd208dd90 assets/testermod/models/item/impure_stick.json
+cf7da4a3b1acb2b07a0e82b2059ae129e8df97a3 assets/testermod/models/item/impure_stormite.json
 0b84c82b685f3557a12c76dd9c2c385d9071aef7 assets/testermod/models/item/krabs.json
 0adaff6afb0189ff5570ae8c26055c601440a695 assets/testermod/models/item/nightmare_axe.json
 fb71e9be16f2d76b7f65353dbbe769ba150375d4 assets/testermod/models/item/nightmare_boots.json
@@ -65,6 +66,7 @@ b04bb7060aab6a6bba318b68c42c98b0e3016257 assets/testermod/models/item/nightmare_
 1a57fca234efb293139e7a88a9ffcc4df060f0ba assets/testermod/models/item/nightmarite.json
 956212e94f0ff9f62e198309e9f2b2dc13429f76 assets/testermod/models/item/pure_eye.json
 d0193c666eb94f75192817dbb8f67389fa0b9faa assets/testermod/models/item/pure_nightmarite.json
+365fe2ae2ce63446e83cecd7b225d54bf0a84dfb assets/testermod/models/item/stormite.json
 e47d7a369022c6ca05fd84d5a4f3bff619cfd6a0 assets/testermod/models/item/storm_axe.json
 d7672c2cf747c8dc0c5a2a13272e6cbc821f9b3a assets/testermod/models/item/storm_boots.json
 be909639469b715031b046eeec68b8678ff40da4 assets/testermod/models/item/storm_boots_amethyst_trim.json

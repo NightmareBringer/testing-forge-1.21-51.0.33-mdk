@@ -1,4 +1,4 @@
-// 1.21	2024-11-08T23:15:45.8870745	Block States: testermod
+// 1.21	2024-11-13T23:54:33.8167309	Block States: testermod
 215997a7997109d775aab79b09a30b6c1c544667 assets/testermod/blockstates/anti_magic_block.json
 1f27762efd7370ad05d434746f0afe4952b5eb68 assets/testermod/blockstates/magic_block.json
 c390aea4935ddf67697c53fc9c90eb5a8b405cc4 assets/testermod/blockstates/nightmare_block.json
@@ -16,6 +16,8 @@ d1a151acc035db856aaf1ec62836ab1a191dca15 assets/testermod/blockstates/nightmarit
 91139e8082fa2301c16595ef5e334ed25db15ed7 assets/testermod/blockstates/nightmarite_deepslate_ore.json
 5bec8bfa1116eb9dd00ddb4e152b98f809d49195 assets/testermod/blockstates/nightmarite_ore.json
 3cfcfb63642525c3e44c5469fbd7356d41d6fec0 assets/testermod/blockstates/pure_nightmarite_block.json
+247ba9e0997e38bde511ac4e3dc58d58aaa7fd38 assets/testermod/blockstates/stormite_deepslate_ore.json
+5ec9d269f73aaa329fb1a60579a5197b74d29f00 assets/testermod/blockstates/stormite_ore.json
 b1fd8576c7193ff3b69db7eaada104f34917115d assets/testermod/blockstates/storm_block.json
 694b8216dd80171cdbc02c664bede50f2f95f7af assets/testermod/blockstates/storm_button.json
 8644ea2c58a451401ecccfb5de7eb692a338bb9a assets/testermod/blockstates/storm_door.json
@@ -65,6 +67,8 @@ c59d16c91e6ca99dceeb4331a0db22b48ea00f63 assets/testermod/models/block/nightmare
 f1a68cc9cc5c69da53ca6f190a0dc59341610dfe assets/testermod/models/block/nightmarite_deepslate_ore.json
 17751ea933cbebb15ab4da52da3181d9817b0376 assets/testermod/models/block/nightmarite_ore.json
 c308c6e68ecef4f02a170296caa2242cd31b7a2f assets/testermod/models/block/pure_nightmarite_block.json
+fe9f2229e7700bbacfd04be7ca01054d8733abbb assets/testermod/models/block/stormite_deepslate_ore.json
+a3a84d655d6cb19c58d2c16454d25395390ec371 assets/testermod/models/block/stormite_ore.json
 3dbcd6ef6b26f447a3daf5098b635b3638c58226 assets/testermod/models/block/storm_block.json
 c5fdf1ebe1791d1b5933bc432b4c47bcf8802574 assets/testermod/models/block/storm_button.json
 2d6f00a5dd1205d8c616780da71b1541836c0061 assets/testermod/models/block/storm_button_pressed.json
@@ -110,6 +114,8 @@ b943e3271dbe424b55f24299c34cffcbd03de010 assets/testermod/models/item/nightmare_
 4c913688dcedc109112681d46647ee8d18040671 assets/testermod/models/item/nightmarite_deepslate_ore.json
 34814c1f9d3b7534b388452c0bf202a06e7ada8f assets/testermod/models/item/nightmarite_ore.json
 072cc799b9bf19af8b68abee1d121945e62e08e1 assets/testermod/models/item/pure_nightmarite_block.json
+39461b272bfd2be13745cebeed593c4a7205424c assets/testermod/models/item/stormite_deepslate_ore.json
+37ca496952f216f38ba3cd30fb81b9d117e6e0ed assets/testermod/models/item/stormite_ore.json
 51441ed449621dd5fc201e603b9f21763728f1c3 assets/testermod/models/item/storm_block.json
 f3726105f3a056be79257bb0900b73d7a24ea65b assets/testermod/models/item/storm_fence_gate.json
 5bc95e82e471f9e6674516d8425e06393d7afad7 assets/testermod/models/item/storm_lamp.json
