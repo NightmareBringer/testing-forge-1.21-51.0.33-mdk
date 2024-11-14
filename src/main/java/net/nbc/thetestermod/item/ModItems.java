@@ -10,6 +10,7 @@ import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.item.custom.ChiselItem;
 import net.nbc.thetestermod.item.custom.FuelItem;
 import net.nbc.thetestermod.item.custom.HammerItem;
+import net.nbc.thetestermod.item.custom.ModArmorItem;
 
 import java.util.List;
 
@@ -84,7 +85,7 @@ public class ModItems
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))));
     public static final RegistryObject<Item> NIGHTMARE_CHESTPLATE = ITEMS.register("nightmare_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))));
     public static final RegistryObject<Item> NIGHTMARE_LEGGINGS = ITEMS.register("nightmare_leggings",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
@@ -136,7 +137,7 @@ public class ModItems
             () -> new ArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(30))));
     public static final RegistryObject<Item> STORM_CHESTPLATE = ITEMS.register("storm_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(30))));
     public static final RegistryObject<Item> STORM_LEGGINGS = ITEMS.register("storm_leggings",
             () -> new ArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
