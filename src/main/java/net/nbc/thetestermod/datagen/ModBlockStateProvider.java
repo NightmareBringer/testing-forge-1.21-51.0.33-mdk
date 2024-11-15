@@ -1,6 +1,7 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -52,6 +53,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.NIGHTMARE_PRESSURE_PLATE);
         blockItem(ModBlocks.NIGHTMARE_FENCE_GATE);
         blockItem(ModBlocks.NIGHTMARE_TRAPDOOR, "_bottom");
+
 
         blockWithItem(ModBlocks.STORM_BLOCK);
 

@@ -44,13 +44,13 @@ public class MagicBlock extends Block
             if(isValidItem(itemEntity.getItem()))
             {
                 itemEntity.setItem(new ItemStack(Items.MUD, itemEntity.getItem().getCount()));
-                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
+                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 0.75f);
             }
 
             if(itemEntity.getItem().getItem() == ModItems.NIGHTMARITE.get())
             {
                 itemEntity.setItem(new ItemStack(ModItems.PURE_NIGHTMARITE.get(), itemEntity.getItem().getCount()));
-                pLevel.playSound(pEntity, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
+                pLevel.playSound(pEntity, pPos, SoundEvents.PLAYER_BREATH, SoundSource.BLOCKS, 1f, 1f);
             }
 
             if(itemEntity.getItem().getItem() == Items.ROTTEN_FLESH)

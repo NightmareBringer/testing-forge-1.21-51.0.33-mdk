@@ -13,10 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
-import net.nbc.thetestermod.block.custom.AntiMagicBlock;
-import net.nbc.thetestermod.block.custom.MagicBlock;
-import net.nbc.thetestermod.block.custom.NightmareLampBlock;
-import net.nbc.thetestermod.block.custom.StormLampBlock;
+import net.nbc.thetestermod.block.custom.*;
 import net.nbc.thetestermod.item.ModItems;
 
 import java.util.function.Supplier;

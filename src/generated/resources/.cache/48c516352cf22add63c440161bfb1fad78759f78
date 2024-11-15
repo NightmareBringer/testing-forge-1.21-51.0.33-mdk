@@ -1,7 +1,7 @@
-// 1.21	2024-11-13T23:54:33.8117364	Tags for minecraft:block mod id testermod
+// 1.21	2024-11-15T16:29:44.2439259	Tags for minecraft:block mod id testermod
 7372f78e9faaf3cdf04ca6a22c316e4f95178e4b data/minecraft/tags/block/fences.json
 9f5607e18cdcf13b32d92bd14ef06bfcc8f363ae data/minecraft/tags/block/fence_gates.json
-40b679029ac1d9b197633a8fb9bb2c40dd3b3bc4 data/minecraft/tags/block/mineable/pickaxe.json
+7d8234d47860fb95073ed7b84f81a200c199b836 data/minecraft/tags/block/mineable/pickaxe.json
 02256e6ae081e4ea58c46e98164480aa3589e491 data/minecraft/tags/block/needs_diamond_tool.json
 43bb87807ceb84ac5c75b709af68de8a47526269 data/minecraft/tags/block/needs_iron_tool.json
 db9b254a9b59fe4e8419d5e308be3f607d2ae568 data/minecraft/tags/block/needs_stone_tool.json

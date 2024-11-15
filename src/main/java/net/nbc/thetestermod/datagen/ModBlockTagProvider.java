@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.nbc.thetestermod.TesterMod;
@@ -22,6 +23,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(Blocks.REINFORCED_DEEPSLATE)
                 .add(ModBlocks.NIGHTMARITE_BLOCK.get())
                 .add(ModBlocks.PURE_NIGHTMARITE_BLOCK.get())
                 .add(ModBlocks.NIGHTMARE_BLOCK.get())

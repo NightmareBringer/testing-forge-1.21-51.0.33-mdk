@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.world.level.block.Blocks;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.item.ModItems;
 import net.minecraft.core.HolderLookup;
@@ -69,12 +70,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.NIGHTMARITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.NIGHTMARITE_ORE.get(), ModItems.NIGHTMARITE.get()));
         this.add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 2, 3));
+                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 1, 3));
 
         this.add(ModBlocks.STORMITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.STORMITE_ORE.get(), ModItems.STORMITE.get()));
         this.add(ModBlocks.STORMITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.STORMITE_DEEPSLATE_ORE.get(), ModItems.STORMITE.get(), 0, 1.5f));
+                block -> createMultipleOreDrops(ModBlocks.STORMITE_DEEPSLATE_ORE.get(), ModItems.STORMITE.get(), 0, 1));
 
 
     }
