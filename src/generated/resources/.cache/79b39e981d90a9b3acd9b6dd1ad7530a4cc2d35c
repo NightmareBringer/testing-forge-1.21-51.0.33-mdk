@@ -1,4 +1,4 @@
-// 1.21	2024-11-13T23:54:33.815729	Item Models: testermod
+// 1.21	2024-11-17T01:16:50.7714874	Item Models: testermod
 d51a189dc2b1b88047ae59bd5569ee7bc4bcb7b2 assets/testermod/models/item/chisel.json
 1e409a0420e89b564aaf5f4cd6c8717b07187696 assets/testermod/models/item/devilsknife.json
 b6e5a22d9900a24a01968f59b7e92885f4dbb03c assets/testermod/models/item/devils_blade.json
@@ -46,6 +46,7 @@ bb356a0dffdd8d58157fa929ed4805341f8b27e4 assets/testermod/models/item/nightmare_
 9b5c92be99786386aa63f7b84f55df5253fae527 assets/testermod/models/item/nightmare_helmet_quartz_trim.json
 959d4300363b47597e117b779d87e208c5e01dca assets/testermod/models/item/nightmare_helmet_redstone_trim.json
 452ca60b8b07c8aa7ee4bf68a6effa3975d89829 assets/testermod/models/item/nightmare_hoe.json
+8b881c433f58185f35df94f796d7e5d2a230cb26 assets/testermod/models/item/nightmare_horse_armor.json
 7ec499874198cadacd9c92b680658ab73c7c018f assets/testermod/models/item/nightmare_ingot.json
 0679619f086486919999e5aa5114d0100065ac9b assets/testermod/models/item/nightmare_leggings.json
 d16ad8b268770ee96905b386fe2b573e8011abf3 assets/testermod/models/item/nightmare_leggings_amethyst_trim.json
@@ -106,6 +107,7 @@ fba1438ca80b42450cf4aed1daf881301058ec11 assets/testermod/models/item/storm_helm
 e6641861da098416d7a34c9c30a166036cc7d4ed assets/testermod/models/item/storm_helmet_quartz_trim.json
 dc96fab44aed8837c59d109d42294a83b632193a assets/testermod/models/item/storm_helmet_redstone_trim.json
 b93dc61c0bc608dd7dc76f39c152ce395349b287 assets/testermod/models/item/storm_hoe.json
+9f1375044cf950608d4b97c3ec863b1ebf6fe6f2 assets/testermod/models/item/storm_horse_armor.json
 127e4019e6e2d4c5fe8fd59d1818fc7cd9416b79 assets/testermod/models/item/storm_ingot.json
 64d9915ba8cfca77bd6eec1d1c1818e87fc30f64 assets/testermod/models/item/storm_leggings.json
 5c4005179a5778aea6608f45caee73db909b4ab8 assets/testermod/models/item/storm_leggings_amethyst_trim.json

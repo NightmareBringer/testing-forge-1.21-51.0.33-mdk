@@ -35,10 +35,12 @@
   "item.testermod.nightmare_chestplate": "Nightmare Chestplate",
   "item.testermod.nightmare_leggings": "Nightmare Leggings",
   "item.testermod.nightmare_boots": "Nightmare Boots",
+  "item.testermod.nightmare_horse_armor": "Nightmare Horse Armor",
   "item.testermod.storm_helmet": "Storm Helmet",
   "item.testermod.storm_chestplate": "Storm Chestplate",
   "item.testermod.storm_leggings": "Storm Leggings",
   "item.testermod.storm_boots": "Storm Boots",
+  "item.testermod.storm_horse_armor": "Storm Horse Armor",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",

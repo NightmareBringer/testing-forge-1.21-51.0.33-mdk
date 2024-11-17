@@ -51,6 +51,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.STORM_INGOT.get());
         basicItem(ModItems.STORM_NUGGET.get());
 
+        basicItem(ModItems.NIGHTMARE_HORSE_ARMOR.get());
+        basicItem(ModItems.STORM_HORSE_ARMOR.get());
+
         basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.KRABS.get());
         basicItem(ModItems.PURE_EYE.get());

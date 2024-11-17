@@ -155,6 +155,14 @@ public class ModItems
             () -> new AxeItem(ModToolTiers.DEVILSKNIFE, new Item.Properties()
                     .attributes(AxeItem.createAttributes(ModToolTiers.DEVILSKNIFE, 7.66f, -2.9f))));
 
+    public  static final RegistryObject<Item> NIGHTMARE_HORSE_ARMOR = ITEMS.register("nightmare_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(64)));
+
+    public  static final RegistryObject<Item> STORM_HORSE_ARMOR = ITEMS.register("storm_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(64)));
+
 
     public static void register(IEventBus eventBus)
     {
