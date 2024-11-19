@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
@@ -336,6 +337,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModItems.DEVILS_SNATH.get())
                 .unlockedBy(getHasName(ModItems.IMPURE_STICK.get()), has(ModItems.IMPURE_STICK.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_HORSE_ARMOR.get())
+                .pattern("  #")
+                .pattern("###")
+                .pattern("# #")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_HORSE_ARMOR.get())
+                .pattern("  #")
+                .pattern("###")
+                .pattern("# #")
+                .define('#', ModItems.STORM_INGOT.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
@@ -410,6 +424,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.20f, 250, "stormite");
         oreBlasting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.40f, 150, "stormite");
+
+        trimSmithing(pRecipeOutput, ModItems.NIGHTEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "nighten"));
+        trimSmithing(pRecipeOutput, ModItems.STORMEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen"));
 
     }
 

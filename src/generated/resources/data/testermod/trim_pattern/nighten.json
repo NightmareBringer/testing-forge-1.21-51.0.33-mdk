@@ -1,0 +1,8 @@
+{
+  "asset_id": "testermod:nighten",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.testermod.nighten"
+  },
+  "template_item": "testermod:nighten_armor_trim_smithing_template"
+}

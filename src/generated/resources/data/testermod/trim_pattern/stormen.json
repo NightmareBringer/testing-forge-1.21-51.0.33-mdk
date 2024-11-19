@@ -1,0 +1,8 @@
+{
+  "asset_id": "testermod:stormen",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.testermod.stormen"
+  },
+  "template_item": "testermod:stormen_armor_trim_smithing_template"
+}

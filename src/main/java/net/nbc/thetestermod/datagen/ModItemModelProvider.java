@@ -62,6 +62,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DEVILS_SNATH.get());
         basicItem(ModItems.DEVILS_BLADE.get());
 
+        basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
+        basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
+
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);
         fenceItem(ModBlocks.NIGHTMARE_FENCE, ModBlocks.NIGHTMARE_BLOCK);
         wallItem(ModBlocks.NIGHTMARE_WALL, ModBlocks.NIGHTMARE_BLOCK);

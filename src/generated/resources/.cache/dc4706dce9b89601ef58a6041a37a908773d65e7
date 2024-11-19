@@ -1,3 +1,5 @@
-// 1.21	2024-11-09T01:21:15.4221841	Tags for minecraft:item mod id testermod
+// 1.21	2024-11-19T12:46:28.8032713	Tags for minecraft:item mod id testermod
 7f6c2199d742159bd90fb74c9009af6c5b592afa data/minecraft/tags/item/trimmable_armor.json
+a09287d70abc53cb69f5ccaf96465da6fc2c0320 data/minecraft/tags/item/trim_materials.json
+a332e1f5ef1d67c744936d2bf102cadd12d09b0f data/minecraft/tags/item/trim_templates.json
 bee2780716372f58b678beefbc393d5bf0b730b9 data/testermod/tags/item/transformable_items.json

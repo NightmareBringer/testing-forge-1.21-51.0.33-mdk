@@ -1,6 +1,8 @@
 package net.nbc.thetestermod.item;
 
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -162,6 +164,12 @@ public class ModItems
     public  static final RegistryObject<Item> STORM_HORSE_ARMOR = ITEMS.register("storm_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> NIGHTEN_SMITHING_TEMPLATE = ITEMS.register("nighten_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "nighten")));
+
+    public static final RegistryObject<Item> STORMEN_SMITHING_TEMPLATE = ITEMS.register("stormen_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen")));
 
 
     public static void register(IEventBus eventBus)

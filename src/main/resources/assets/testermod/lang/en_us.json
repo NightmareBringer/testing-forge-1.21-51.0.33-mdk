@@ -36,11 +36,14 @@
   "item.testermod.nightmare_leggings": "Nightmare Leggings",
   "item.testermod.nightmare_boots": "Nightmare Boots",
   "item.testermod.nightmare_horse_armor": "Nightmare Horse Armor",
+  "item.testermod.nighten_armor_trim_smithing_template": "Nighten Trim Template",
+
   "item.testermod.storm_helmet": "Storm Helmet",
   "item.testermod.storm_chestplate": "Storm Chestplate",
   "item.testermod.storm_leggings": "Storm Leggings",
   "item.testermod.storm_boots": "Storm Boots",
   "item.testermod.storm_horse_armor": "Storm Horse Armor",
+  "item.testermod.stormen_armor_trim_smithing_template": "Stormen Trim Template",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
@@ -75,6 +78,11 @@
   "block.testermod.storm_wall": "Storm Wall",
   "block.testermod.storm_door": "Storm Door",
   "block.testermod.storm_trapdoor": "Storm Trapdoor",
+
+  "trim_pattern.testermod.nighten": "Nighten Armor Trim",
+  "trim_material.testermod.nightmare_ingot": "Nightmare Ingot Material",
+  "trim_pattern.testermod.stormen": "Stormen Armor Trim",
+  "trim_material.testermod.storm_ingot": "Storm Ingot Material",
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
   "tooltip.testermod.anti_magic_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
