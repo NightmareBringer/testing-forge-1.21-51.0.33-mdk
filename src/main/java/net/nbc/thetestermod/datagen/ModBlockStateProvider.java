@@ -24,6 +24,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NIGHTMARITE_BLOCK);
         blockWithItem(ModBlocks.PURE_NIGHTMARITE_BLOCK);
         blockWithItem(ModBlocks.NIGHTMARE_BLOCK);
+        blockWithItem(ModBlocks.REFINED_NIGHTMARE_BLOCK);
 
         blockWithItem(ModBlocks.NIGHTMARITE_ORE);
         blockWithItem(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE);
@@ -47,13 +48,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(ModBlocks.NIGHTMARE_DOOR.get(), modLoc("block/nightmare_door_bottom"), modLoc("block/nightmare_door_top"), "cutout");
         trapdoorBlockWithRenderType(ModBlocks.NIGHTMARE_TRAPDOOR.get(), modLoc("block/nightmare_trapdoor"), true, "cutout");
 
-
         blockItem(ModBlocks.NIGHTMARE_STAIRS);
         blockItem(ModBlocks.NIGHTMARE_SlAB);
         blockItem(ModBlocks.NIGHTMARE_PRESSURE_PLATE);
         blockItem(ModBlocks.NIGHTMARE_FENCE_GATE);
         blockItem(ModBlocks.NIGHTMARE_TRAPDOOR, "_bottom");
 
+        // Refined Variant of NIGHTMARE BLOCKS
+        stairsBlock(ModBlocks.REFINED_NIGHTMARE_STAIRS.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+        slabBlock(ModBlocks.REFINED_NIGHTMARE_SlAB.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+
+        buttonBlock(ModBlocks.REFINED_NIGHTMARE_BUTTON.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+
+        fenceBlock(ModBlocks.REFINED_NIGHTMARE_FENCE.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+        fenceGateBlock(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+        wallBlock(ModBlocks.REFINED_NIGHTMARE_WALL.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
+
+        blockItem(ModBlocks.REFINED_NIGHTMARE_STAIRS);
+        blockItem(ModBlocks.REFINED_NIGHTMARE_SlAB);
+        blockItem(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE);
+        blockItem(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE);
 
         blockWithItem(ModBlocks.STORM_BLOCK);
 

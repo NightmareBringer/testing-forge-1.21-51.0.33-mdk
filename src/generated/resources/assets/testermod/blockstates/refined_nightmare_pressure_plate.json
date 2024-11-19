@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "testermod:block/refined_nightmare_pressure_plate"
+    },
+    "powered=true": {
+      "model": "testermod:block/refined_nightmare_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "testermod:block/refined_nightmare_block"
+  }
+}

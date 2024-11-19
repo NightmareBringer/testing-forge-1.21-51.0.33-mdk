@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "refined_nightmare_block",
+  "key": {
+    "#": {
+      "item": "testermod:refined_nightmare_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:refined_nightmare_stairs"
+  }
+}

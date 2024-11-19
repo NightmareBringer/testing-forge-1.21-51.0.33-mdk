@@ -64,7 +64,8 @@ public class ChiselItem extends Item
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown())
         {
-            pTooltipComponents.add(Component.translatable("tooltip.testermod.chisel.shift_down"));
+            pTooltipComponents.add(Component.translatable("tooltip.testermod.chisel.shift_down1"));
+            pTooltipComponents.add(Component.translatable("tooltip.testermod.chisel.shift_down2"));
         }
         else
         {

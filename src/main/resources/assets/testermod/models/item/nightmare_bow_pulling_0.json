@@ -1,0 +1,6 @@
+{
+  "parent": "testermod:item/nightmare_bow",
+  "textures": {
+    "layer0": "testermod:item/nightmare_bow_pulling_0"
+  }
+}

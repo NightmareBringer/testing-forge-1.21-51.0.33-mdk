@@ -44,6 +44,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_BUTTON.get())
                 .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
 
+                .add(ModBlocks.REFINED_NIGHTMARE_STAIRS.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_SlAB.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_WALL.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_FENCE.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_BUTTON.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get())
+
                 .add(ModBlocks.NIGHTMARE_LAMP.get())
 
                 .add(ModBlocks.STORM_BLOCK.get())
@@ -56,7 +64,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_TRAPDOOR.get())
                 .add(ModBlocks.STORM_BUTTON.get())
                 .add(ModBlocks.STORM_PRESSURE_PLATE.get())
-                .add(ModBlocks.STORM_LAMP.get());
+                .add(ModBlocks.STORM_LAMP.get())
+
+                .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
+
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get());
@@ -75,6 +86,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_BUTTON.get())
                 .add(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get())
                 .add(ModBlocks.NIGHTMARE_LAMP.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_STAIRS.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_SlAB.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_WALL.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_FENCE.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_BUTTON.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get())
                 .add(ModBlocks.ANTI_MAGIC_BLOCK.get())
                 .add(ModBlocks.STORM_BLOCK.get())
                 .add(ModBlocks.STORM_STAIRS.get())
@@ -86,7 +104,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_TRAPDOOR.get())
                 .add(ModBlocks.STORM_BUTTON.get())
                 .add(ModBlocks.STORM_PRESSURE_PLATE.get())
-                .add(ModBlocks.STORM_LAMP.get());
+                .add(ModBlocks.STORM_LAMP.get())
+                .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
@@ -119,10 +138,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
 
         tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
+        tag(BlockTags.FENCES).add(ModBlocks.REFINED_NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCES).add(ModBlocks.STORM_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.NIGHTMARE_FENCE_GATE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.STORM_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.REFINED_NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());
     }
 }

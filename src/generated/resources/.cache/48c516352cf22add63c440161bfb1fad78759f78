@@ -1,11 +1,11 @@
-// 1.21	2024-11-15T16:29:44.2439259	Tags for minecraft:block mod id testermod
-7372f78e9faaf3cdf04ca6a22c316e4f95178e4b data/minecraft/tags/block/fences.json
-9f5607e18cdcf13b32d92bd14ef06bfcc8f363ae data/minecraft/tags/block/fence_gates.json
-7d8234d47860fb95073ed7b84f81a200c199b836 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21	2024-11-19T15:39:52.9137589	Tags for minecraft:block mod id testermod
+00af605287dd2de90adab1c8d1ce640bb651d51e data/minecraft/tags/block/fences.json
+7b66a353839c7cfec90fa813e106d067974e6166 data/minecraft/tags/block/fence_gates.json
+db02512131c0b748abd84924b8e97567bc9584e6 data/minecraft/tags/block/mineable/pickaxe.json
 02256e6ae081e4ea58c46e98164480aa3589e491 data/minecraft/tags/block/needs_diamond_tool.json
-43bb87807ceb84ac5c75b709af68de8a47526269 data/minecraft/tags/block/needs_iron_tool.json
+79dafd6dd853af4b91a5fcc83a949d8b2109a1ce data/minecraft/tags/block/needs_iron_tool.json
 db9b254a9b59fe4e8419d5e308be3f607d2ae568 data/minecraft/tags/block/needs_stone_tool.json
-7193d04c0aca7963b52cef3d30a91aa16a2db029 data/minecraft/tags/block/walls.json
+6730169d4a38b0662fe09057f2d1163114e296bf data/minecraft/tags/block/walls.json
 f57a1c0d935679dbbcab3f2e8a06cae2238a6735 data/testermod/tags/block/incorrect_for_devilsknife_tool.json
 1782b3f222780c3057740cdad0b90e002244d4fd data/testermod/tags/block/incorrect_for_nightmare_tool.json
 7bf8814a3131f1ebaef28bdf36a733a935951f3e data/testermod/tags/block/incorrect_for_storm_tool.json

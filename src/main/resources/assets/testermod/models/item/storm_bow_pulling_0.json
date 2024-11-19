@@ -1,0 +1,6 @@
+{
+  "parent": "testermod:item/storm_bow",
+  "textures": {
+    "layer0": "testermod:item/storm_bow_pulling_0"
+  }
+}

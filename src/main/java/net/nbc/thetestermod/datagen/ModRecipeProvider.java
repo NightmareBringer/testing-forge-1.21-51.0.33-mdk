@@ -47,6 +47,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput, "storm_ingot_from_smithing");
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHISEL.get())
+                .pattern("NAN")
+                .pattern(" I ")
+                .pattern(" I ")
+                .define('N', ModItems.NIGHTMARE_NUGGET.get())
+                .define('A', ModItems.NIGHTMARE_INGOT.get())
+                .define('I', Items.STICK)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -350,6 +359,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', ModItems.STORM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.REFINED_NIGHTMARE_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.NIGHTMARE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.NIGHTMARE_BLOCK.get()), has(ModBlocks.NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
@@ -397,6 +413,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
         trapdoorBuilder(ModBlocks.NIGHTMARE_TRAPDOOR.get(), Ingredient.of(ModItems.NIGHTMARE_INGOT.get())).group("nightmare_ingot")
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+
+        stairBuilder(ModBlocks.REFINED_NIGHTMARE_STAIRS.get(), Ingredient.of(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).group("refined_nightmare_block")
+                .unlockedBy(getHasName(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()), has(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.REFINED_NIGHTMARE_SlAB.get(), ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
+
+        buttonBuilder(ModBlocks.REFINED_NIGHTMARE_BUTTON.get(), Ingredient.of(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).group("refined_nightmare_block")
+                .unlockedBy(getHasName(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()), has(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get(), ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
+
+        fenceBuilder(ModBlocks.REFINED_NIGHTMARE_FENCE.get(), Ingredient.of(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).group("refined_nightmare_block")
+                .unlockedBy(getHasName(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()), has(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get(), Ingredient.of(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).group("refined_nightmare_block")
+                .unlockedBy(getHasName(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()), has(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.REFINED_NIGHTMARE_WALL.get(), ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
 
 

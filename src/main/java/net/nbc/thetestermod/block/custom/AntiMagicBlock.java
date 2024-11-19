@@ -44,6 +44,12 @@ public class AntiMagicBlock extends Block
                 pLevel.playSound(pEntity, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 0.7f);
             }
 
+            if(itemEntity.getItem().getItem() == Items.STICK)
+            {
+                itemEntity.setItem(new ItemStack(ModItems.IMPURE_STICK.get(), itemEntity.getItem().getCount()));
+                pLevel.playSound(pEntity, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1f, 0.7f);
+            }
+
             if(isValidItem(itemEntity.getItem()))
             {
                 itemEntity.setItem(new ItemStack(Items.COAL_BLOCK, itemEntity.getItem().getCount()));

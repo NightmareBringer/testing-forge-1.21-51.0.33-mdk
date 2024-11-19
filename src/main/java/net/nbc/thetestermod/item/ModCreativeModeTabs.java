@@ -49,7 +49,16 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.NIGHTMARE_BUTTON.get());
                         output.accept(ModBlocks.NIGHTMARE_DOOR.get());
                         output.accept(ModBlocks.NIGHTMARE_TRAPDOOR.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_WALL.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_STAIRS.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_SlAB.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_FENCE.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.REFINED_NIGHTMARE_BUTTON.get());
                         output.accept(ModBlocks.NIGHTMARE_LAMP.get());
+                        output.accept(ModItems.NIGHTMARE_BOW.get());
                         output.accept(ModItems.NIGHTMARE_SWORD.get());
                         output.accept(ModItems.NIGHTMARE_PICKAXE.get());
                         output.accept(ModItems.NIGHTMARE_AXE.get());
@@ -79,6 +88,7 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.STORM_DOOR.get());
                         output.accept(ModBlocks.STORM_TRAPDOOR.get());
                         output.accept(ModBlocks.STORM_LAMP.get());
+                        output.accept(ModItems.STORM_BOW.get());
                         output.accept(ModItems.STORM_SWORD.get());
                         output.accept(ModItems.STORM_PICKAXE.get());
                         output.accept(ModItems.STORM_AXE.get());

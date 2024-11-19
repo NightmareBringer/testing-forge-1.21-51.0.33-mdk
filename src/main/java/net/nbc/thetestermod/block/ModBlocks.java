@@ -140,6 +140,33 @@ public class ModBlocks
             () -> new NightmareLampBlock(BlockBehaviour.Properties.of().strength(7f)
                     .lightLevel(state -> state.getValue(NightmareLampBlock.CLICKED) ? 3 : 0)));
 
+    public static final RegistryObject<Block> REFINED_NIGHTMARE_BLOCK = registerBlock("refined_nightmare_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(180f).explosionResistance(225f)
+                    .requiresCorrectToolForDrops().sound(SoundType.TUFF)));
+
+    public static final RegistryObject<StairBlock> REFINED_NIGHTMARE_STAIRS = registerBlock("refined_nightmare_stairs",
+            () -> new StairBlock(ModBlocks.REFINED_NIGHTMARE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(63f).explosionResistance(225f)
+                            .sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+    public static final RegistryObject<SlabBlock> REFINED_NIGHTMARE_SlAB = registerBlock("refined_nightmare_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(45f).explosionResistance(225f)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> REFINED_NIGHTMARE_PRESSURE_PLATE = registerBlock("refined_nightmare_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.GOLD, BlockBehaviour.Properties.of().strength(27f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+    public static final RegistryObject<ButtonBlock> REFINED_NIGHTMARE_BUTTON = registerBlock("refined_nightmare_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 20, BlockBehaviour.Properties.of().strength(18f)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> REFINED_NIGHTMARE_FENCE = registerBlock("refined_nightmare_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(45f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+    public static final RegistryObject<FenceGateBlock> REFINED_NIGHTMARE_FENCE_GATE = registerBlock("refined_nightmare_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of().strength(45f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+    public static final RegistryObject<WallBlock> REFINED_NIGHTMARE_WALL = registerBlock("refined_nightmare_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(225f)
+                    .explosionResistance(450f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

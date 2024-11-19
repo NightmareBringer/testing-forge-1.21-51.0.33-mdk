@@ -24,12 +24,15 @@
   "item.testermod.nightmare_axe": "Nightmare Axe",
   "item.testermod.nightmare_hoe": "Nightmare Hoe",
   "item.testermod.nightmare_hammer": "Nightmare Hammer",
+  "item.testermod.nightmare_bow": "Nightmare Bow",
+
   "item.testermod.storm_sword": "Storm Sword",
   "item.testermod.storm_pickaxe": "Storm Pickaxe",
   "item.testermod.storm_shovel": "Storm Shovel",
   "item.testermod.storm_axe": "Storm Axe",
   "item.testermod.storm_hoe": "Storm Hoe",
   "item.testermod.storm_hammer": "Storm Hammer",
+  "item.testermod.storm_bow": "Storm Bow",
 
   "item.testermod.nightmare_helmet": "Nightmare Helmet",
   "item.testermod.nightmare_chestplate": "Nightmare Chestplate",
@@ -48,6 +51,7 @@
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
   "block.testermod.nightmare_block": "Block of Nightmare",
+  "block.testermod.refined_nightmare_block": "Refined Block of Nightmare",
   "block.testermod.storm_block": "Block of Storm",
 
   "block.testermod.nightmarite_ore": "Nightmarite Ore",
@@ -68,6 +72,13 @@
   "block.testermod.nightmare_wall": "Nightmare Wall",
   "block.testermod.nightmare_door": "Nightmare Door",
   "block.testermod.nightmare_trapdoor": "Nightmare Trapdoor",
+  "block.testermod.refined_nightmare_stairs": "Refined Nightmare Stairs",
+  "block.testermod.refined_nightmare_slab": "Refined Nightmare Slab",
+  "block.testermod.refined_nightmare_button": "Refined Nightmare Button",
+  "block.testermod.refined_nightmare_pressure_plate": "Refined Nightmare Pressure Plate",
+  "block.testermod.refined_nightmare_fence": "Refined Nightmare Fence",
+  "block.testermod.refined_nightmare_fence_gate": "Refined Nightmare Fence Gate",
+  "block.testermod.refined_nightmare_wall": "Refined Nightmare Wall",
 
   "block.testermod.storm_stairs": "Storm Stairs",
   "block.testermod.storm_slab": "Storm Slab",
@@ -86,7 +97,8 @@
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
   "tooltip.testermod.anti_magic_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
-  "tooltip.testermod.chisel.shift_down": "Has a §2unique§r effect on some blocks.",
+  "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks.",
+  "tooltip.testermod.chisel.shift_down2": "Only has two uses however",
   "tooltip.testermod.chisel": "Press SHIFT for more info",
   "tooltip.testermod.krabs1": "A particular§c crustacean§r from under the sea...",
   "tooltip.testermod.krabs2": "Probably shouldn't eat it...",

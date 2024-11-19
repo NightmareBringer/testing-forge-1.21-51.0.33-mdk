@@ -19,6 +19,13 @@
     "testermod:nightmare_trapdoor",
     "testermod:nightmare_button",
     "testermod:nightmare_pressure_plate",
+    "testermod:refined_nightmare_stairs",
+    "testermod:refined_nightmare_slab",
+    "testermod:refined_nightmare_wall",
+    "testermod:refined_nightmare_fence",
+    "testermod:refined_nightmare_fence_gate",
+    "testermod:refined_nightmare_button",
+    "testermod:refined_nightmare_pressure_plate",
     "testermod:nightmare_lamp",
     "testermod:storm_block",
     "testermod:storm_stairs",
@@ -30,6 +37,7 @@
     "testermod:storm_trapdoor",
     "testermod:storm_button",
     "testermod:storm_pressure_plate",
-    "testermod:storm_lamp"
+    "testermod:storm_lamp",
+    "testermod:refined_nightmare_block"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/refined_nightmare_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/refined_nightmare_block"
+    },
+    "type=top": {
+      "model": "testermod:block/refined_nightmare_slab_top"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "refined_nightmare_block",
+  "ingredients": [
+    {
+      "item": "testermod:refined_nightmare_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:refined_nightmare_button"
+  }
+}

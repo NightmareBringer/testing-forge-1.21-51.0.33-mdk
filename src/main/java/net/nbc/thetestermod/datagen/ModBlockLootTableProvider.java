@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NIGHTMARITE_BLOCK.get());
         dropSelf(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
         dropSelf(ModBlocks.NIGHTMARE_BLOCK.get());
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
         dropSelf(ModBlocks.ANTI_MAGIC_BLOCK.get());
 
@@ -42,6 +43,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NIGHTMARE_FENCE_GATE.get());
         dropSelf(ModBlocks.NIGHTMARE_WALL.get());
         dropSelf(ModBlocks.NIGHTMARE_TRAPDOOR.get());
+
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_STAIRS.get());
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_BUTTON.get());
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_FENCE.get());
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get());
+        dropSelf(ModBlocks.REFINED_NIGHTMARE_WALL.get());
 
         dropSelf(ModBlocks.NIGHTMARE_LAMP.get());
 
@@ -59,6 +67,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.NIGHTMARE_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.NIGHTMARE_SlAB.get()));
+        this.add(ModBlocks.REFINED_NIGHTMARE_SlAB.get(),
+                block -> createSlabItemTable(ModBlocks.REFINED_NIGHTMARE_SlAB.get()));
         this.add(ModBlocks.NIGHTMARE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.NIGHTMARE_DOOR.get()));
 

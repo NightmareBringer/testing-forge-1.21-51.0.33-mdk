@@ -34,7 +34,7 @@ public class ModItems
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
-            () -> new ChiselItem(new Item.Properties().durability(64)));
+            () -> new ChiselItem(new Item.Properties().durability(2)));
 
     public static final RegistryObject<Item> KRABS = ITEMS.register("krabs",
             () -> new Item(new Item.Properties().food(ModFoodProperties.KRABS)) {
@@ -167,9 +167,13 @@ public class ModItems
 
     public static final RegistryObject<Item> NIGHTEN_SMITHING_TEMPLATE = ITEMS.register("nighten_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "nighten")));
-
     public static final RegistryObject<Item> STORMEN_SMITHING_TEMPLATE = ITEMS.register("stormen_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen")));
+
+    public static final RegistryObject<Item> NIGHTMARE_BOW = ITEMS.register("nightmare_bow",
+            () -> new BowItem(new Item.Properties().durability(500)));
+    public static final RegistryObject<Item> STORM_BOW = ITEMS.register("storm_bow",
+            () -> new BowItem(new Item.Properties().durability(250)));
 
 
     public static void register(IEventBus eventBus)
