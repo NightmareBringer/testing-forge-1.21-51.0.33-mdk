@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.custom.*;
 import net.nbc.thetestermod.item.ModItems;
+import net.nbc.thetestermod.sound.ModSounds;
 
 import java.util.function.Supplier;
 
@@ -46,11 +47,11 @@ public class ModBlocks
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of()
                     .strength(3f).explosionResistance(3f)
-                    .requiresCorrectToolForDrops().sound(SoundType.METAL)));
+                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
     public static final RegistryObject<Block> ANTI_MAGIC_BLOCK = registerBlock("anti_magic_block",
             () -> new AntiMagicBlock(BlockBehaviour.Properties.of()
                     .strength(4f).explosionResistance(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.METAL)));
+                    .requiresCorrectToolForDrops().sound(ModSounds.ANTI_MAGIC_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> NIGHTMARE_BLOCK = registerBlock("nightmare_block",
             () -> new Block(BlockBehaviour.Properties.of()

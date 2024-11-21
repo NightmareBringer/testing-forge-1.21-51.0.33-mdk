@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -15,21 +16,34 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GrassBlock;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.component.ModDataComponentTypes;
+import net.nbc.thetestermod.sound.ModSounds;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class ChiselItem extends Item
 {
+    private static final Random RANDOM = new Random();
+
+    public static Block getChiseledBlock(Block originalBlock) {
+        if (originalBlock == Blocks.GRASS_BLOCK) {
+            return RANDOM.nextBoolean() ? ModBlocks.NIGHTMARITE_ORE.get() : ModBlocks.STORMITE_ORE.get();
+        }
+
+        return CHISEL_MAP.getOrDefault(originalBlock, originalBlock);
+    }
+
     private static final Map<Block, Block> CHISEL_MAP =
             Map.of(
                     Blocks.STONE, Blocks.STONE_BRICKS,
                     Blocks.END_STONE, Blocks.END_STONE_BRICKS,
                     Blocks.DEEPSLATE, Blocks.DEEPSLATE_BRICKS,
-                    Blocks.TUFF, Blocks.TUFF_BRICKS,
-                    Blocks.GRASS_BLOCK, ModBlocks.NIGHTMARITE_ORE.get()
+                    Blocks.TUFF, Blocks.TUFF_BRICKS
+
             );
 
     public ChiselItem(Properties pProperties)
@@ -41,19 +55,24 @@ public class ChiselItem extends Item
     public InteractionResult useOn(UseOnContext pContext) {
         Level level = pContext.getLevel();
         Block clickedBlock = level.getBlockState(pContext.getClickedPos()).getBlock();
+        Player player = pContext.getPlayer();
 
-        if(CHISEL_MAP.containsKey(clickedBlock))
-        {
-            if(!level.isClientSide())
-            {
-                level.setBlockAndUpdate(pContext.getClickedPos(), CHISEL_MAP.get(clickedBlock).defaultBlockState());
+        Block chiseledBlock = getChiseledBlock(clickedBlock);
+
+        if (chiseledBlock != clickedBlock) {
+            if (!level.isClientSide()) {
+                // Update the block in the world
+                level.setBlockAndUpdate(pContext.getClickedPos(), chiseledBlock.defaultBlockState());
 
                 pContext.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) pContext.getPlayer()),
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
-                level.playSound(null, pContext.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+                level.playSound(null, pContext.getClickedPos(), ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
 
-                pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
+                if (player != null && !player.getAbilities().instabuild)
+                {
+                    pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
+                }
             }
         }
 

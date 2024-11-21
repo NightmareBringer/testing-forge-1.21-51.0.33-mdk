@@ -366,6 +366,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModBlocks.NIGHTMARE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NIGHTMARE_BLOCK.get()), has(ModBlocks.NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_BOW.get())
+                .pattern(" TS")
+                .pattern("# S")
+                .pattern(" TS")
+                .define('T', Items.STICK)
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', Items.STRING)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_BOW.get())
+                .pattern(" TS")
+                .pattern("# S")
+                .pattern(" TS")
+                .define('T', Items.STICK)
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', Items.STRING)
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)

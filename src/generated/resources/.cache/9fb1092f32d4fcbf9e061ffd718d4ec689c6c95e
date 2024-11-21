@@ -1,4 +1,4 @@
-// 1.21	2024-11-19T15:47:12.3391745	Recipes
+// 1.21	2024-11-20T14:40:57.4335932	Recipes
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
 abe784193be9f31ab6e6d37da4d22b031592b9ec data/minecraft/advancement/recipes/misc/storm_ingot_from_smithing.json
 0f747dd0d3a8a60ad29d8d3a705e67d10ec5ee38 data/minecraft/recipe/nightmare_ingot_from_smithing.json
@@ -29,6 +29,7 @@ d42a633d104db74dce15e9aebcfd90e3a5e2f5b8 data/testermod/advancement/recipes/misc
 2f635b082d50a9681fc589a8023a47fd30a418b2 data/testermod/advancement/recipes/misc/nighten.json
 899e19c6a51e59ddaf7f093760485e6427abf9f2 data/testermod/advancement/recipes/misc/nightmare_block.json
 c680c8e79d92fcf3d610e7ca01d2d8e5cd9b5609 data/testermod/advancement/recipes/misc/nightmare_boots.json
+313c073d49f01f69181488da64f7ff984ab0a8b9 data/testermod/advancement/recipes/misc/nightmare_bow.json
 e34342c2ef16ad1e6d109dcb1655725db1335d9a data/testermod/advancement/recipes/misc/nightmare_chestplate.json
 3b4f503a362c22c9663ce4db8c2973dbd9924c97 data/testermod/advancement/recipes/misc/nightmare_hammer.json
 869bc9d2067d80add451cbd31287a9073f17be54 data/testermod/advancement/recipes/misc/nightmare_helmet.json
@@ -62,6 +63,7 @@ c83c5675a97bf334e0ff81a55d4ed495362a2038 data/testermod/advancement/recipes/misc
 b71a52eb9a8501a5bc69379169b86f251fb44a67 data/testermod/advancement/recipes/misc/stormite_from_smelting_stormite_ore.json
 774decfd9455fb8a09358c8f5fd2dc2bd709c364 data/testermod/advancement/recipes/misc/storm_block.json
 252f5d91b2be2bcb4c6c006ae1bb1b773d4bba30 data/testermod/advancement/recipes/misc/storm_boots.json
+d4c2614095dffee3aea1b0af2d602b9b746a71fa data/testermod/advancement/recipes/misc/storm_bow.json
 2527adc135f2b6c10d41c00d038f0663f454b921 data/testermod/advancement/recipes/misc/storm_chestplate.json
 d4827805a93b2731af5c0a4e4bbd6af311b97235 data/testermod/advancement/recipes/misc/storm_hammer.json
 332f1a9ce27d13a8a477e6305f6b5e8b4099e554 data/testermod/advancement/recipes/misc/storm_helmet.json
@@ -101,6 +103,7 @@ c8ccfce0fc98e0f36a39b48040a478043a2fc475 data/testermod/recipe/devils_snath.json
 d0c85cfb5d0476b3a9e7ddc9da9fb6a7117d4833 data/testermod/recipe/nighten.json
 1b62ab26db22258b3516c7242306ab6c1bb167e0 data/testermod/recipe/nightmare_block.json
 b3d8c41a1d2cbe6ebb2b2347ed1e6ca836ac5379 data/testermod/recipe/nightmare_boots.json
+b22d90f8d3a40fd1f2a2bcdbc631ceccb343ff62 data/testermod/recipe/nightmare_bow.json
 9d2f1464849a69b0f761f5e5fb62b6819c2d96d7 data/testermod/recipe/nightmare_button.json
 3ef869cff28b483a40ab85db15fdbe92d0c75447 data/testermod/recipe/nightmare_chestplate.json
 d03514be7030ed7a1508e87f6b1e379c96c6de12 data/testermod/recipe/nightmare_door.json
@@ -150,6 +153,7 @@ caae54ee691c0b97b45bb17b8c01ca1c9baebffd data/testermod/recipe/stormen.json
 0b486f690f82c79706c1e7c67b333b0103c74a7e data/testermod/recipe/stormite_from_smelting_stormite_ore.json
 fb5c4c6155f0f8e63821e53b94191687d6c42ae1 data/testermod/recipe/storm_block.json
 dc47d73d002205c536833f6a0eac30afb5d91f5a data/testermod/recipe/storm_boots.json
+dca1e0a39221f276854efe792329cd46c780e06d data/testermod/recipe/storm_bow.json
 bcb0344cb420608c243e10b1a794327e84e2959d data/testermod/recipe/storm_button.json
 c3a80f5b345969b3b51ce66fdacf51f64b4e5583 data/testermod/recipe/storm_chestplate.json
 c5e466f4c2fb250a56575014627194beb529517a data/testermod/recipe/storm_door.json
