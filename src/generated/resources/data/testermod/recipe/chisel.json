@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "testermod:nightmare_ingot"
+      "item": "minecraft:pink_dye"
     },
     "I": {
       "item": "minecraft:stick"
     },
     "N": {
-      "item": "testermod:nightmare_nugget"
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [

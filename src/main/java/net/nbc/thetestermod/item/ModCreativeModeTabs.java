@@ -9,13 +9,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
-
-import java.awt.*;
-import java.util.Comparator;
 
 public class ModCreativeModeTabs
 {
@@ -108,6 +104,7 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.DEVILSKNIFE.get());
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.KRABS.get());
+                        output.accept(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
 
                     }).build());
 

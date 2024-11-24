@@ -51,8 +51,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("NAN")
                 .pattern(" I ")
                 .pattern(" I ")
-                .define('N', ModItems.NIGHTMARE_NUGGET.get())
-                .define('A', ModItems.NIGHTMARE_INGOT.get())
+                .define('N', Items.DIAMOND) // BETA RECIPE CHANGE TO NIGHTMARE_INGOT WHEN WORLD GEN IS PUT IN!!!
+                .define('A', Items.PINK_DYE)
                 .define('I', Items.STICK)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
@@ -339,7 +339,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('P', Items.PURPLE_DYE)
                 .unlockedBy(getHasName(ModItems.IMPURE_STICK.get()), has(ModItems.IMPURE_STICK.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DEVILSKNIFE.get())
-                .pattern("  T")
+                .pattern(" T ")
                 .pattern(" / ")
                 .pattern("   ")
                 .define('T', ModItems.DEVILS_BLADE.get())

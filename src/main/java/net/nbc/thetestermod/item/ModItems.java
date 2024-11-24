@@ -1,6 +1,5 @@
 package net.nbc.thetestermod.item;
 
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -13,6 +12,7 @@ import net.nbc.thetestermod.item.custom.ChiselItem;
 import net.nbc.thetestermod.item.custom.FuelItem;
 import net.nbc.thetestermod.item.custom.HammerItem;
 import net.nbc.thetestermod.item.custom.ModArmorItem;
+import net.nbc.thetestermod.sound.ModSounds;
 
 import java.util.List;
 
@@ -174,6 +174,9 @@ public class ModItems
             () -> new BowItem(new Item.Properties().durability(500)));
     public static final RegistryObject<Item> STORM_BOW = ITEMS.register("storm_bow",
             () -> new BowItem(new Item.Properties().durability(250)));
+
+    public static final RegistryObject<Item> HAIL_SQUIDWARD_MUSIC_DISC = ITEMS.register("all_hail_squidward_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.HAIL_SQUIDWARD_KEY).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus)

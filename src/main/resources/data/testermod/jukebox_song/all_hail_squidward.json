@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.testermod.all_hail_squidward_music_disc.desc"
+  },
+  "length_in_seconds": 443.0,
+  "sound_event": "testermod:all_hail_squidward"
+}

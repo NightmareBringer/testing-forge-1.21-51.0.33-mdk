@@ -95,6 +95,9 @@
   "trim_pattern.testermod.stormen": "Stormen Armor Trim",
   "trim_material.testermod.storm_ingot": "Storm Ingot Material",
 
+  "item.testermod.all_hail_squidward_music_disc": "All Hail Shadow Music Disc",
+  "item.testermod.all_hail_squidward_music_disc.desc": "All Hail Shadow (Shadow Generations) Squidward AI Cover",
+
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
   "tooltip.testermod.anti_magic_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
   "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks.",

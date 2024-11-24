@@ -1,7 +1,10 @@
 package net.nbc.thetestermod.sound;
 
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.item.JukeboxSong;
 import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,6 +30,11 @@ public class ModSounds
 
     public static final ForgeSoundType ANTI_MAGIC_BLOCK_SOUNDS = new ForgeSoundType(1f, 0.75f,
             ModSounds.MAGIC_BLOCK_BREAK, ModSounds.MAGIC_BLOCK_STEP, ModSounds.MAGIC_BLOCK_PLACE, ModSounds.MAGIC_BLOCK_HIT, ModSounds.MAGIC_BLOCK_FALL);
+
+    public static final RegistryObject<SoundEvent> HAIL_SQUIDWARD = registerSoundEvent("all_hail_squidward");
+    public static final ResourceKey<JukeboxSong> HAIL_SQUIDWARD_KEY = ResourceKey.create(Registries.JUKEBOX_SONG,
+            ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "all_hail_squidward"));
+
 
 
 

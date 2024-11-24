@@ -65,6 +65,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
+        basicItem(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
+
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);
         fenceItem(ModBlocks.NIGHTMARE_FENCE, ModBlocks.NIGHTMARE_BLOCK);
         wallItem(ModBlocks.NIGHTMARE_WALL, ModBlocks.NIGHTMARE_BLOCK);
