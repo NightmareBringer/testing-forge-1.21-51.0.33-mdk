@@ -1,6 +1,7 @@
 package net.nbc.thetestermod.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.item.ModArmorMaterials;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -19,13 +20,10 @@ public class ModArmorItem extends ArmorItem
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
                     .put(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false),
-                                    new MobEffectInstance(MobEffects.SATURATION, 200, 0, false, false)))
+                            List.of(new MobEffectInstance(ModEffects.PURIFICATION_EFFECT.getHolder().get(), 1, 0, false, false)))
 
                     .put(ModArmorMaterials.STORM_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.ABSORPTION, 200, 2, false, false),
-                                    new MobEffectInstance(MobEffects.WITHER, 200, 4, false, false),
-                                    new MobEffectInstance(MobEffects.POISON, 200, 4, false, false)))
+                            List.of(new MobEffectInstance(ModEffects.IMPURIFICATION_EFFECT.getHolder().get(), 1, 0, false, false)))
                     .build();
 
     public ModArmorItem(Holder<ArmorMaterial> pMaterial, Type pType, Properties pProperties) {

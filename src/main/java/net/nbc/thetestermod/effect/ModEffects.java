@@ -20,7 +20,7 @@ public class ModEffects
             () -> new PurificationEffect(MobEffectCategory.BENEFICIAL, 0x00ffb3));
 
     public static final RegistryObject<MobEffect> IMPURIFICATION_EFFECT = MOB_EFFECTS.register("impurification",
-            () -> new ImpurificationEffect(MobEffectCategory.HARMFUL, 0x3c017a));
+            () -> new ImpurificationEffect(MobEffectCategory.NEUTRAL, 0x3c017a));
 
 
     public static void register(IEventBus eventBus) {

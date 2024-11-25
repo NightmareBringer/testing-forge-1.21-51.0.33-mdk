@@ -19,6 +19,7 @@ import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
+import net.nbc.thetestermod.potion.ModPotions;
 import net.nbc.thetestermod.sound.ModSounds;
 import net.nbc.thetestermod.util.ModItemProperties;
 import org.slf4j.Logger;
@@ -52,6 +53,7 @@ public class TesterMod
         ModSounds.register(modEventBus);
 
         ModEffects.register((modEventBus));
+        ModPotions.register((modEventBus));
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

@@ -101,6 +101,22 @@
   "effect.testermod.purification": "Purification",
   "effect.testermod.impurification": "Impurification",
 
+  "item.minecraft.potion.effect.purification_potion": "Potion of Purification",
+  "item.minecraft.splash_potion.effect.purification_potion": "Splash Potion of Purification",
+  "item.minecraft.lingering_potion.effect.purification_potion": "Lingering Potion of Purification",
+
+  "item.minecraft.potion.effect.impurification_potion": "Potion of Impurification",
+  "item.minecraft.splash_potion.effect.impurification_potion": "Splash Potion of Impurification",
+  "item.minecraft.lingering_potion.effect.impurification_potion": "Lingering Potion of Impurification",
+
+  "painting.testermod.movie_shadow.title": "Movie Shadow",
+  "painting.testermod.movie_shadow.author": "SEGA",
+  "painting.testermod.trash_friends.title": "Trash Friends",
+  "painting.testermod.trash_friends.author": "NamesStorm",
+  "painting.testermod.knowing_smile.title": "Knowing Smile :)",
+  "painting.testermod.knowing_smile.author": "Twitch HQ",
+
+
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
   "tooltip.testermod.anti_magic_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
   "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks.",

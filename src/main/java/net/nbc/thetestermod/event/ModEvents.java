@@ -1,6 +1,12 @@
 package net.nbc.thetestermod.event;
 
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.custom.HammerItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -9,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.nbc.thetestermod.potion.ModPotions;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -40,5 +47,13 @@ public class ModEvents {
                 HARVESTED_BLOCKS.remove(pos);
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) {
+        PotionBrewing.Builder builder = event.getBuilder();
+
+        builder.addMix(Potions.AWKWARD, ModItems.PURE_EYE.get(), ModPotions.PURIFICATION_POTION.getHolder().get());
+        builder.addMix(Potions.THICK, ModItems.IMPURE_EYE.get(), ModPotions.IMPURIFICATION_POTION.getHolder().get());
     }
 }
