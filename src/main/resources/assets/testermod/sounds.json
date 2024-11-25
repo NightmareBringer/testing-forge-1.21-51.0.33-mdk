@@ -38,7 +38,7 @@
   "all_hail_squidward": {
     "sounds": [
       {
-        "name": "testermod.all_hail_squidward",
+        "name": "testermod:all_hail_squidward",
         "stream": true
       }
     ]
