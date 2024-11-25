@@ -1,9 +1,12 @@
 package net.nbc.thetestermod.event;
 
+import net.minecraft.client.renderer.EffectInstance;
+import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.commands.PlaySoundCommand;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.animal.IronGolem;
@@ -17,14 +20,21 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
 import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.item.ModItems;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod.EventBusSubscriber(modid = TesterMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModClientEvents
 {
+    private static final Logger LOGGER = LogManager.getLogger();
+
     @SubscribeEvent
     public static void onComputerFovModifierEvent(ComputeFovModifierEvent event) {
         if(event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == ModItems.NIGHTMARE_BOW.get()) {
@@ -78,6 +88,28 @@ public class ModClientEvents
             player.sendSystemMessage(Component.literal("towards"));
             player.sendSystemMessage(Component.literal("me"));
             player.sendSystemMessage(Component.literal("why"));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onMobEffect(MobEffectEvent.Added event) {
+        if (event.getEntity() instanceof Player player) {
+            boolean hasPurification = player.getActiveEffects().stream()
+                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == ModEffects.PURIFICATION_EFFECT.get());
+
+            boolean hasImpurification = player.getActiveEffects().stream()
+                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == ModEffects.IMPURIFICATION_EFFECT.get());
+
+            if (hasPurification && !event.getEffectInstance().getEffect().get().isBeneficial()) {
+                player.removeEffect(event.getEffectInstance().getEffect());
+            }
+            else if (hasImpurification && event.getEffectInstance().getEffect().get().isBeneficial()) {
+                player.removeEffect(event.getEffectInstance().getEffect());
+            }
+
+            /*LOGGER.debug("The bool hasPurification is: {}", hasPurification);
+            player.getActiveEffects().forEach(effectInstance ->
+                    System.out.println("Active effect: " + effectInstance.getEffect()));*/
         }
     }
 }
