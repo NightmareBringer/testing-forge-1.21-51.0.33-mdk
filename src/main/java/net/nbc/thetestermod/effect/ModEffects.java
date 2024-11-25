@@ -17,10 +17,10 @@ public class ModEffects
             DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, TesterMod.MOD_ID);
 
     public static final RegistryObject<MobEffect> PURIFICATION_EFFECT = MOB_EFFECTS.register("purification",
-            () -> new PurificationEffect(MobEffectCategory.NEUTRAL, 0x00ffb3));
+            () -> new PurificationEffect(MobEffectCategory.BENEFICIAL, 0x00ffb3));
 
     public static final RegistryObject<MobEffect> IMPURIFICATION_EFFECT = MOB_EFFECTS.register("impurification",
-            () -> new ImpurificationEffect(MobEffectCategory.NEUTRAL, 0x3c017a));
+            () -> new ImpurificationEffect(MobEffectCategory.HARMFUL, 0x3c017a));
 
 
     public static void register(IEventBus eventBus) {

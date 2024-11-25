@@ -7,16 +7,16 @@ import net.nbc.thetestermod.util.ModTags;
 
 public class ModToolTiers
 {
-    public static final Tier NIGHTMARE = new ForgeTier(2150, 15f, 7f, 30,
+    public static final Tier NIGHTMARE = new ForgeTier(2150, 15f, 7f, 10,
             ModTags.Blocks.NEEDS_NIGHTMARE_TOOL, () -> Ingredient.of(ModItems.NIGHTMARE_INGOT.get()),
             ModTags.Blocks.INCORRECT_FOR_NIGHTMARE_TOOL);
 
-    public static final Tier STORM = new ForgeTier(3215, 40f, 9f, 40,
+    public static final Tier STORM = new ForgeTier(3215, 40f, 9f, 15,
             ModTags.Blocks.NEEDS_STORM_TOOL, () -> Ingredient.of(ModItems.STORM_INGOT.get()),
             ModTags.Blocks.INCORRECT_FOR_STORM_TOOL);
 
 
-    public static final Tier DEVILSKNIFE = new ForgeTier(1366, 25f, 5f, 50,
+    public static final Tier DEVILSKNIFE = new ForgeTier(1366, 25f, 5f, 22,
             ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL, () -> Ingredient.of(ModItems.IMPURE_STICK.get()),
             ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL);
 }
