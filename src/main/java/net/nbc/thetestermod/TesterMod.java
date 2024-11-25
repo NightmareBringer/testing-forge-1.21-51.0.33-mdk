@@ -17,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.effect.ModEffects;
+import net.nbc.thetestermod.enchantment.ModEnchantmentEffects;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import net.nbc.thetestermod.potion.ModPotions;
@@ -54,6 +55,8 @@ public class TesterMod
 
         ModEffects.register((modEventBus));
         ModPotions.register((modEventBus));
+
+        ModEnchantmentEffects.register((modEventBus));
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
