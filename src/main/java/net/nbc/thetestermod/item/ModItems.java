@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.item.custom.ChiselItem;
 import net.nbc.thetestermod.item.custom.FuelItem;
 import net.nbc.thetestermod.item.custom.HammerItem;
@@ -47,6 +48,17 @@ public class ModItems
                 }
             });
             //;
+
+    public static final RegistryObject<Item> WHITE_CARROT = ITEMS.register("white_carrot",
+            () -> new ItemNameBlockItem(ModBlocks.WHITE_CARROT_CROP.get(), new Item.Properties().food(ModFoodProperties.WHITE_CARROT)));
+
+    public static final RegistryObject<Item> CRIMSON_BLUE_BERRIES = ITEMS.register("crimson_blue_berries",
+            () -> new ItemNameBlockItem(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.CRIMSON_BLUE_BERRIES)));
+
+    public static final RegistryObject<Item> GLISTERING_CARROT = ITEMS.register("glistering_carrot",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GLISTERING_CARROT)));
+
+
 
     public static final RegistryObject<Item> IMPURE_STICK = ITEMS.register("impure_stick",
             () -> new Item(new Item.Properties()));

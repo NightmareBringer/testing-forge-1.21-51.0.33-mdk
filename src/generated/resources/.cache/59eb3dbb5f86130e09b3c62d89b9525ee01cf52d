@@ -1,5 +1,6 @@
-// 1.21.1	2024-12-05T22:20:27.1262938	Loot Tables
+// 1.21.1	2024-12-06T02:56:32.1191231	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
+58a5305d71914ec94856fd849971f02273fd21b9 data/testermod/loot_table/blocks/crimson_blue_berry_bush.json
 d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_block.json
 6f0eb3c79ef8d792f4248ea9e28c4f5a6f45b461 data/testermod/loot_table/blocks/nightmare_block.json
 dfa101fd711f3cd4424ad1f68238137d2c57af84 data/testermod/loot_table/blocks/nightmare_button.json
@@ -37,3 +38,4 @@ bae46d2392aad0cd14e0a2839df02feb9698eb82 data/testermod/loot_table/blocks/storm_
 72ee474a2c045efb8e5eaf8312e67b22a698ea32 data/testermod/loot_table/blocks/storm_stairs.json
 aa9672d162aa84c0e6623e1201ea85d69974f2e2 data/testermod/loot_table/blocks/storm_trapdoor.json
 52b922516efa2073d3189dd058c5d0de95fe75aa data/testermod/loot_table/blocks/storm_wall.json
+b316bcd16c37ea36a34604b0a90b3b64c79b207d data/testermod/loot_table/blocks/white_carrot_crop.json

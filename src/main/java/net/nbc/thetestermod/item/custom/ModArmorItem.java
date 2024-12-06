@@ -20,7 +20,7 @@ public class ModArmorItem extends ArmorItem
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
                     .put(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(ModEffects.PURIFICATION_EFFECT.getHolder().get(), 300, 0, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.ABSORPTION, 300, 1, false, false)))
 
                     .put(ModArmorMaterials.STORM_ARMOR_MATERIAL,
                             List.of(new MobEffectInstance(ModEffects.IMPURIFICATION_EFFECT.getHolder().get(), 300, 0, false, false)))

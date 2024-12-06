@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "testermod:nightmare_nugget"
+    },
+    "T": {
+      "item": "testermod:white_carrot"
+    }
+  },
+  "pattern": [
+    "###",
+    "#T#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:glistering_carrot"
+  }
+}

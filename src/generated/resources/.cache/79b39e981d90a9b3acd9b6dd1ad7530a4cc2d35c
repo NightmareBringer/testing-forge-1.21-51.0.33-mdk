@@ -1,8 +1,10 @@
-// 1.21.1	2024-12-05T22:20:27.12929	Item Models: testermod
+// 1.21.1	2024-12-06T02:56:32.1210917	Item Models: testermod
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
+377e9a2d3899acb05952bb7898c26d3eabd45de5 assets/testermod/models/item/crimson_blue_berries.json
 1e409a0420e89b564aaf5f4cd6c8717b07187696 assets/testermod/models/item/devilsknife.json
 b6e5a22d9900a24a01968f59b7e92885f4dbb03c assets/testermod/models/item/devils_blade.json
 67d2f3e11d3b5eae55e4d2f089680b761c10a43e assets/testermod/models/item/devils_snath.json
+14841aef3008742b0db0bc0f8023c1d8c17592ba assets/testermod/models/item/glistering_carrot.json
 89d2eeef9ea1e974e33a880dad94cc209ff8c4d7 assets/testermod/models/item/impure_eye.json
 463b714fece54cae324ba3cc8dec19ccd208dd90 assets/testermod/models/item/impure_stick.json
 cf7da4a3b1acb2b07a0e82b2059ae129e8df97a3 assets/testermod/models/item/impure_stormite.json
@@ -130,3 +132,4 @@ ccf0a5cb8086c62a106fb68bb5ae7ac947436e71 assets/testermod/models/item/storm_pick
 444f7009cc22cb3a760a223f2c4a2c8e512f9395 assets/testermod/models/item/storm_shovel.json
 6e3ec39270764a81982ba97533c4ba45c2bd78a7 assets/testermod/models/item/storm_sword.json
 4a0de4234976ba63b1c84887c7cf36564cfe9daf assets/testermod/models/item/storm_wall.json
+8360149cc327223b7839a95c05dfc4942184fa6f assets/testermod/models/item/white_carrot.json

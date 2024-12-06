@@ -2,6 +2,9 @@ package net.nbc.thetestermod.datagen;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,7 +15,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+import net.nbc.thetestermod.block.custom.CrimsonBlueBerryBushBlock;
 import net.nbc.thetestermod.block.custom.NightmareLampBlock;
+import net.nbc.thetestermod.block.custom.WhiteCarrotCropBlock;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -93,6 +100,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customNightmareLamp();
         customStormLamp();
+
+        makeCrop(((CropBlock) ModBlocks.WHITE_CARROT_CROP.get()), "white_carrot_crop_stage", "white_carrot_crop_stage");
+        makeBush(((SweetBerryBushBlock) ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get()), "crimson_blue_berry_bush_stage", "crimson_blue_berry_bush_stage");
+
+
+    }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(CrimsonBlueBerryBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + textureName + state.getValue(CrimsonBlueBerryBushBlock.AGE))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((WhiteCarrotCropBlock) block).getAgeProperty()),
+                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + textureName + state.getValue(((WhiteCarrotCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void customNightmareLamp() {

@@ -97,6 +97,9 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.STORM_BOOTS.get());
                         output.accept(ModItems.STORMEN_SMITHING_TEMPLATE.get());
                         output.accept(ModItems.STORM_HORSE_ARMOR.get());
+                        output.accept((ModItems.WHITE_CARROT.get()));
+                        output.accept((ModItems.GLISTERING_CARROT.get()));
+                        output.accept((ModItems.CRIMSON_BLUE_BERRIES.get()));
 
 
                         output.accept(ModItems.DEVILS_SNATH.get());

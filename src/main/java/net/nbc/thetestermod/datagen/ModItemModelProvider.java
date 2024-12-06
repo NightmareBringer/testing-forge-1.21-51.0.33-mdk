@@ -56,6 +56,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.KRABS.get());
+        basicItem(ModItems.WHITE_CARROT.get());
+        basicItem(ModItems.GLISTERING_CARROT.get());
+        basicItem(ModItems.CRIMSON_BLUE_BERRIES.get());
         basicItem(ModItems.PURE_EYE.get());
         basicItem(ModItems.IMPURE_EYE.get());
         basicItem(ModItems.IMPURE_STICK.get());
