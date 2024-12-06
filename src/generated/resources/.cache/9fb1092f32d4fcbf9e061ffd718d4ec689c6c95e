@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-05T22:20:27.1272914	Recipes
+// 1.21.1	2024-12-06T01:01:30.3146845	Recipes
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
 abe784193be9f31ab6e6d37da4d22b031592b9ec data/minecraft/advancement/recipes/misc/storm_ingot_from_smithing.json
 0f747dd0d3a8a60ad29d8d3a705e67d10ec5ee38 data/minecraft/recipe/nightmare_ingot_from_smithing.json
@@ -20,6 +20,7 @@ efaf77595b5597e5538ea99c77379146d3a98f3f data/testermod/advancement/recipes/misc
 866d97d36bf98b928a6b4050553abd734fecf9a4 data/testermod/advancement/recipes/misc/devilsknife.json
 b4fcd634384be741ad33c712056e7b5ac7dbe477 data/testermod/advancement/recipes/misc/devils_blade.json
 8da686586466bffa7c5ede6547b5de18f171c34f data/testermod/advancement/recipes/misc/devils_snath.json
+02bd0db23236f33847f7a023161bd32207ab14cd data/testermod/advancement/recipes/misc/glistering_carrot.json
 1e50a4d685a917e1de475709db011e2053ae7b14 data/testermod/advancement/recipes/misc/impure_eye.json
 6a36cce076d5a90ec16df5e38c160ed9b7e623fc data/testermod/advancement/recipes/misc/left_nightmare_axe_craft_method.json
 7da19bf577c1f394fb7a35bf38107aa98c5c1271 data/testermod/advancement/recipes/misc/left_nightmare_hoe_craft_method.json
@@ -94,6 +95,7 @@ c37b69331c72dcbf99f56aab195736c5a3eee234 data/testermod/recipe/chisel.json
 0817e447e020c23e298de5639993df4a22c4321e data/testermod/recipe/devilsknife.json
 424356af33f1c00de88ce7ae06a7b22eca14cfcc data/testermod/recipe/devils_blade.json
 c8ccfce0fc98e0f36a39b48040a478043a2fc475 data/testermod/recipe/devils_snath.json
+84901ea54f2047629f9d7c789a1c16b73bff8bc2 data/testermod/recipe/glistering_carrot.json
 992146f7bd62516ef06305fb9fb9331fdf3ae6a2 data/testermod/recipe/impure_eye.json
 34fb3c6ff818287352f580712dd02fc265b0002c data/testermod/recipe/left_nightmare_axe_craft_method.json
 0a7b30e0952689604bcfb6eda87af99309031b63 data/testermod/recipe/left_nightmare_hoe_craft_method.json

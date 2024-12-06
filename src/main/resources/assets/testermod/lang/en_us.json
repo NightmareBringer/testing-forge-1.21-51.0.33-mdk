@@ -7,6 +7,9 @@
   "item.testermod.impure_stormite": "Impure Storm Essence",
   "item.testermod.chisel": "Chisel",
   "item.testermod.krabs": "Mr. Krabs",
+  "item.testermod.white_carrot": "White Carrot",
+  "item.testermod.glistering_carrot": "Glistering Carrot",
+  "item.testermod.crimson_blue_berries": "Crimson Blueberries",
   "item.testermod.pure_eye": "Eye of Pureness",
   "item.testermod.impure_eye": "Eye of Impureness",
   "item.testermod.impure_stick": "Impure Stick",
@@ -117,6 +120,9 @@
   "painting.testermod.trash_friends.author": "NamesStorm",
   "painting.testermod.knowing_smile.title": "Knowing Smile :)",
   "painting.testermod.knowing_smile.author": "Twitch HQ",
+
+  "block.testermod.white_carrot_crop": "White Carrot Crop",
+  "block.testermod.crimson_blue_berry_bush": "Crimson Blueberry Bush",
 
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",

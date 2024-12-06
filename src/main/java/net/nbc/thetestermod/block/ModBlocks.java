@@ -168,6 +168,12 @@ public class ModBlocks
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(225f)
                     .explosionResistance(450f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> WHITE_CARROT_CROP = BLOCKS.register("white_carrot_crop",
+            () -> new WhiteCarrotCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CARROTS)));
+
+    public static final RegistryObject<Block> CRIMSON_BLUE_BERRY_BUSH = BLOCKS.register("crimson_blue_berry_bush",
+            () -> new CrimsonBlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

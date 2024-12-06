@@ -1,7 +1,13 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.block.custom.WhiteCarrotCropBlock;
 import net.nbc.thetestermod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -87,7 +93,28 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.STORMITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.STORMITE_DEEPSLATE_ORE.get(), ModItems.STORMITE.get(), 0, 1));
 
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.WHITE_CARROT_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(WhiteCarrotCropBlock.AGE, WhiteCarrotCropBlock.MAX_AGE));
 
+        this.add(ModBlocks.WHITE_CARROT_CROP.get(), this.createCropDrops(ModBlocks.WHITE_CARROT_CROP.get(),
+                ModItems.WHITE_CARROT.get(), ModItems.WHITE_CARROT.get(), lootItemConditionBuilder));
+
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
+        this.add(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get(), block -> this.applyExplosionDecay(
+                block,LootTable.lootTable().withPool(LootPool.lootPool().when(
+                                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get())
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SweetBerryBushBlock.AGE, 3))
+                                ).add(LootItem.lootTableItem(ModItems.CRIMSON_BLUE_BERRIES.get()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                ).withPool(LootPool.lootPool().when(
+                                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get())
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SweetBerryBushBlock.AGE, 2))
+                                ).add(LootItem.lootTableItem(ModItems.CRIMSON_BLUE_BERRIES.get()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                )));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
