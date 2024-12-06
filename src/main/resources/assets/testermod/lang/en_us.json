@@ -59,8 +59,14 @@
 
   "block.testermod.nightmarite_ore": "Nightmarite Ore",
   "block.testermod.nightmarite_deepslate_ore": "Deepslate Nightmarite Ore",
+  "block.testermod.nightmarite_nether_ore": "Nether Nightmarite Ore",
+  "block.testermod.nightmarite_end_ore": "End Nightmarite Ore",
+
   "block.testermod.stormite_ore": "Stormite Ore",
   "block.testermod.stormite_deepslate_ore": "Deepslate Stormite Ore",
+  "block.testermod.stormite_nether_ore": "Nether Stormite Ore",
+  "block.testermod.stormite_end_ore": "End Stormite Ore",
+
   "block.testermod.magic_block": "Purifier",
   "block.testermod.anti_magic_block": "Impurifier",
   "block.testermod.nightmare_lamp": "Nightmare Lamp",

@@ -37,12 +37,23 @@ public class ModBlocks
     public static final RegistryObject<Block> NIGHTMARITE_ORE = registerBlock("nightmarite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
                     .strength(5f).explosionResistance(5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> NIGHTMARITE_DEEPSLATE_ORE = registerBlock("nightmarite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(4,7), BlockBehaviour.Properties.of()
                     .strength(10f).explosionResistance(15f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> NIGHTMARITE_NETHER_ORE = registerBlock("nightmarite_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(5f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
+    public static final RegistryObject<Block> NIGHTMARITE_END_ORE = registerBlock("nightmarite_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(5f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
 
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of()
@@ -101,6 +112,15 @@ public class ModBlocks
             () -> new DropExperienceBlock(UniformInt.of(5,9), BlockBehaviour.Properties.of()
                     .strength(16f).explosionResistance(10f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> STORM_NETHER_ORE = registerBlock("stormite_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(8f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
+    public static final RegistryObject<Block> STORM_END_ORE = registerBlock("stormite_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
+                    .strength(8f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> STORM_BLOCK = registerBlock("storm_block",
             () -> new Block(BlockBehaviour.Properties.of()

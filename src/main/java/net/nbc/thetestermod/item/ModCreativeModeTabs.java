@@ -28,6 +28,8 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
                         output.accept(ModBlocks.NIGHTMARITE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
+                        output.accept(ModBlocks.NIGHTMARITE_END_ORE.get());
                         output.accept(ModItems.PURE_EYE.get());
                         output.accept(ModBlocks.MAGIC_BLOCK.get());
                         output.accept(ModItems.IMPURE_EYE.get());
@@ -71,6 +73,8 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.IMPURE_STORMITE.get());
                         output.accept(ModBlocks.STORMITE_ORE.get());
                         output.accept(ModBlocks.STORMITE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.STORM_NETHER_ORE.get());
+                        output.accept(ModBlocks.STORM_END_ORE.get());
                         output.accept(ModItems.STORM_INGOT.get());
                         output.accept(ModItems.STORM_NUGGET.get());
                         output.accept(ModBlocks.STORM_BLOCK.get());

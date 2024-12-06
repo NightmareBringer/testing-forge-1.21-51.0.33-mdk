@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-06T02:56:32.1191231	Loot Tables
+// 1.21.1	2024-12-06T04:34:48.0967094	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 58a5305d71914ec94856fd849971f02273fd21b9 data/testermod/loot_table/blocks/crimson_blue_berry_bush.json
 d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_block.json
@@ -15,6 +15,8 @@ f0b61499d980b8b1bae37ab44195cb6e5844841a data/testermod/loot_table/blocks/nightm
 5defcadd35804e75df9740079d7d1b3d7c1ff8b2 data/testermod/loot_table/blocks/nightmare_wall.json
 ca1bf1f24d7b447e8f042df84d884b7ffeee77c7 data/testermod/loot_table/blocks/nightmarite_block.json
 2935b3d10023044a79027b14902f6dfcd1c68a4f data/testermod/loot_table/blocks/nightmarite_deepslate_ore.json
+a98ee44b5598bf6c347b3c4cff6122932584ff7a data/testermod/loot_table/blocks/nightmarite_end_ore.json
+30a6d4069fc1d10416123796d0edd1a09d08fd2b data/testermod/loot_table/blocks/nightmarite_nether_ore.json
 82a7478e2ea0d7f6c46a725c7a8154002f05528a data/testermod/loot_table/blocks/nightmarite_ore.json
 e968ade1ed65f63cd0092418f7c510578240f491 data/testermod/loot_table/blocks/pure_nightmarite_block.json
 b57b74a7efa39792a959f90bb30bca2674f05966 data/testermod/loot_table/blocks/refined_nightmare_block.json
@@ -26,6 +28,8 @@ edb8e91665fe4a87165de6d6b3def866ce988205 data/testermod/loot_table/blocks/refine
 e68d591af7275f57c6f21ddad207764ba140332d data/testermod/loot_table/blocks/refined_nightmare_stairs.json
 b146d72767ed682965996ecd5d647c40fc19dfdf data/testermod/loot_table/blocks/refined_nightmare_wall.json
 518013a34a3aa900309bdf1ab450b00422683a9c data/testermod/loot_table/blocks/stormite_deepslate_ore.json
+53fe30eaec53dca2fda20c3b6dcc4b7fa99ddaf3 data/testermod/loot_table/blocks/stormite_end_ore.json
+324107a060671c246ef7f73702cc78aaceaeaeb4 data/testermod/loot_table/blocks/stormite_nether_ore.json
 bdb8852effe9682ae6723be828f214f67a11c273 data/testermod/loot_table/blocks/stormite_ore.json
 39d79bdb7805d58358ac4db940d4489390eef104 data/testermod/loot_table/blocks/storm_block.json
 1ba54726a25c57af2a8d4c7e527889d6fc506d67 data/testermod/loot_table/blocks/storm_button.json

@@ -1,6 +1,8 @@
 {
   "values": [
     "testermod:nightmarite_ore",
-    "testermod:nightmarite_deepslate_ore"
+    "testermod:nightmarite_deepslate_ore",
+    "testermod:nightmarite_end_ore",
+    "testermod:nightmarite_nether_ore"
   ]
 }

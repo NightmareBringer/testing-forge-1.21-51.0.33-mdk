@@ -29,8 +29,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARE_BLOCK.get())
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.ANTI_MAGIC_BLOCK.get())
 
@@ -109,12 +113,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
-                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
 
         tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)
                 .add(ModBlocks.NIGHTMARE_WALL.get())
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get())
                 .add(Blocks.OBSIDIAN)
                 .add(Blocks.CRYING_OBSIDIAN)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
