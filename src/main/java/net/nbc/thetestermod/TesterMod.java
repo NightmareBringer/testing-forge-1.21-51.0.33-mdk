@@ -26,7 +26,6 @@ import net.nbc.thetestermod.util.ModItemProperties;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@SuppressWarnings("removal")
 @Mod(TesterMod.MOD_ID)
 public class TesterMod
 {
@@ -38,7 +37,7 @@ public class TesterMod
 
     public TesterMod()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus(); //FIX THIS LINE IF YOU WANT TO UPDATE PAST 1.21.1
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -63,7 +62,7 @@ public class TesterMod
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);  //FIX THIS LINE IF YOU WANT TO UPDATE PAST 1.21.1
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
