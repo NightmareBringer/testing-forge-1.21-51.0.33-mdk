@@ -105,6 +105,15 @@
   "block.testermod.stripped_corrupted_oak_wood": "Stripped Corrupted Oak Wood",
   "block.testermod.corrupted_oak_planks": "Corrupted Oak Planks",
 
+  "block.testermod.corrupted_oak_stairs": "Corrupted Oak Stairs",
+  "block.testermod.corrupted_oak_slab": "Corrupted Oak Slab",
+  "block.testermod.corrupted_oak_button": "Corrupted Oak Button",
+  "block.testermod.corrupted_oak_pressure_plate": "Corrupted Oak Pressure Plate",
+  "block.testermod.corrupted_oak_fence": "Corrupted Oak Fence",
+  "block.testermod.corrupted_oak_fence_gate": "Corrupted Oak Fence Gate",
+  "block.testermod.corrupted_oak_door": "Corrupted Oak Door",
+  "block.testermod.corrupted_oak_trapdoor": "Corrupted Oak Trapdoor",
+
   "block.testermod.corrupted_oak_leaves": "Corrupted Oak Leaves",
   "block.testermod.corrupted_oak_sapling": "Corrupted Oak Sapling",
 

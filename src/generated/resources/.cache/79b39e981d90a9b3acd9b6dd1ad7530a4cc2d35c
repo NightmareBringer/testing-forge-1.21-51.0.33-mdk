@@ -1,5 +1,8 @@
-// 1.21.1	2025-02-28T12:25:10.7491609	Item Models: testermod
+// 1.21.1	2025-02-28T13:30:17.5816909	Item Models: testermod
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
+39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
+e8bf8fd1e98d6d9e85a968f3e69cf04abb106bfd assets/testermod/models/item/corrupted_oak_door.json
+dfabb4ca9230e75633bcf16ce427033c1dc86160 assets/testermod/models/item/corrupted_oak_fence.json
 ffbff123a84d18ed04987866f61924be6c825872 assets/testermod/models/item/corrupted_oak_sapling.json
 377e9a2d3899acb05952bb7898c26d3eabd45de5 assets/testermod/models/item/crimson_blue_berries.json
 1e409a0420e89b564aaf5f4cd6c8717b07187696 assets/testermod/models/item/devilsknife.json

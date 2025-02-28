@@ -123,6 +123,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.CORRUPTED_OAK_LEAVES);
         saplingBlock(ModBlocks.CORRUPTED_OAK_SAPLING);
 
+        stairsBlock(ModBlocks.CORRUPTED_OAK_STAIRS.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+        slabBlock(ModBlocks.CORRUPTED_OAK_SLAB.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+
+        buttonBlock(ModBlocks.CORRUPTED_OAK_BUTTON.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+
+        fenceBlock(ModBlocks.CORRUPTED_OAK_FENCE.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+        fenceGateBlock(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.CORRUPTED_OAK_DOOR.get(), modLoc("block/corrupted_oak_door_bottom"), modLoc("block/corrupted_oak_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get(), modLoc("block/corrupted_oak_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.CORRUPTED_OAK_STAIRS);
+        blockItem(ModBlocks.CORRUPTED_OAK_SLAB);
+        blockItem(ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE);
+        blockItem(ModBlocks.CORRUPTED_OAK_FENCE_GATE);
+        blockItem(ModBlocks.CORRUPTED_OAK_TRAPDOOR, "_bottom");
+
 
 
     }

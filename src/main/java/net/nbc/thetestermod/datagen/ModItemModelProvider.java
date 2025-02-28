@@ -110,6 +110,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.STORM_LEGGINGS);
         trimmedArmorItem(ModItems.STORM_BOOTS);
 
+        buttonItem(ModBlocks.CORRUPTED_OAK_BUTTON, ModBlocks.CORRUPTED_OAK_PLANKS);
+        fenceItem(ModBlocks.CORRUPTED_OAK_FENCE, ModBlocks.CORRUPTED_OAK_PLANKS);
+        simpleBlockItem(ModBlocks.CORRUPTED_OAK_DOOR);
+
         saplingItem(ModBlocks.CORRUPTED_OAK_SAPLING);
     }
 

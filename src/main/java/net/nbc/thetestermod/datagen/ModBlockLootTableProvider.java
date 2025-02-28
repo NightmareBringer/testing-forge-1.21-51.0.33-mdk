@@ -131,6 +131,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CORRUPTED_OAK_PLANKS.get());
         this.dropSelf(ModBlocks.CORRUPTED_OAK_SAPLING.get());
 
+        dropSelf(ModBlocks.CORRUPTED_OAK_STAIRS.get());
+        dropSelf(ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.CORRUPTED_OAK_BUTTON.get());
+        dropSelf(ModBlocks.CORRUPTED_OAK_FENCE.get());
+        dropSelf(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get());
+        dropSelf(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get());
+
+        this.add(ModBlocks.CORRUPTED_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CORRUPTED_OAK_SLAB.get()));
+        this.add(ModBlocks.CORRUPTED_OAK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.CORRUPTED_OAK_DOOR.get()));
+
         this.add(ModBlocks.CORRUPTED_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
     }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/corrupted_oak_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/corrupted_oak_planks"
+    },
+    "type=top": {
+      "model": "testermod:block/corrupted_oak_slab_top"
+    }
+  }
+}

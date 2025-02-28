@@ -22,6 +22,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.CORRUPTED_OAK_PLANKS.get())
+                .add(ModBlocks.CORRUPTED_OAK_STAIRS.get())
+                .add(ModBlocks.CORRUPTED_OAK_SLAB.get())
+                .add(ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE.get())
+                .add(ModBlocks.CORRUPTED_OAK_BUTTON.get())
+                .add(ModBlocks.CORRUPTED_OAK_DOOR.get())
+                .add(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get())
+                .add(ModBlocks.CORRUPTED_OAK_FENCE.get())
+                .add(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get());
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Blocks.REINFORCED_DEEPSLATE)
                 .add(ModBlocks.NIGHTMARITE_BLOCK.get())
@@ -148,9 +159,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCES).add(ModBlocks.REFINED_NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCES).add(ModBlocks.STORM_FENCE.get());
+        tag(BlockTags.FENCES).add(ModBlocks.CORRUPTED_OAK_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.NIGHTMARE_FENCE_GATE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.STORM_FENCE_GATE.get());
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.REFINED_NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());

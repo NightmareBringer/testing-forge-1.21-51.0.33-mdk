@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "testermod:block/corrupted_oak_planks"
+  }
+}

@@ -23,11 +23,19 @@ public class ModCreativeModeTabs
                     .title(Component.translatable("creativetab.testermod.the_tester_zone"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.CORRUPTED_OAK_LOG.get());
-                        output.accept(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_WOOD.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+                        output.accept(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get());
                         output.accept(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_PLANKS.get());
-                        output.accept(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_STAIRS.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_SLAB.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_FENCE.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_BUTTON.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_DOOR.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get());
                         output.accept(ModItems.NIGHTMARITE.get());
                         output.accept(ModItems.PURE_NIGHTMARITE.get());
                         output.accept(ModBlocks.NIGHTMARITE_BLOCK.get());

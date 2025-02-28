@@ -205,12 +205,12 @@ public class ModBlocks
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_CORRUPTED_OAK_LOG = registerBlock("stripped_corrupted_oak_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_LOG)));
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_CORRUPTED_OAK_WOOD = registerBlock("stripped_corrupted_oak_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_WOOD)));
 
     public static final RegistryObject<Block> CORRUPTED_OAK_PLANKS = registerBlock("corrupted_oak_planks",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return super.isFlammable(state, level, pos, direction);
@@ -247,6 +247,27 @@ public class ModBlocks
 
     public static final RegistryObject<Block> CORRUPTED_OAK_SAPLING = registerBlock("corrupted_oak_sapling",
             () -> new SaplingBlock(ModTreeGrowers.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<StairBlock> CORRUPTED_OAK_STAIRS = registerBlock("corrupted_oak_stairs",
+            () -> new StairBlock(ModBlocks.CORRUPTED_OAK_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
+    public static final RegistryObject<SlabBlock> CORRUPTED_OAK_SLAB = registerBlock("corrupted_oak_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
+
+    public static final RegistryObject<PressurePlateBlock> CORRUPTED_OAK_PRESSURE_PLATE = registerBlock("corrupted_oak_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE)));
+    public static final RegistryObject<ButtonBlock> CORRUPTED_OAK_BUTTON = registerBlock("corrupted_oak_button",
+            () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON)));
+
+    public static final RegistryObject<FenceBlock> CORRUPTED_OAK_FENCE = registerBlock("corrupted_oak_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE)));
+    public static final RegistryObject<FenceGateBlock> CORRUPTED_OAK_FENCE_GATE = registerBlock("corrupted_oak_fence_gate",
+            () -> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE_GATE)));
+
+    public static final RegistryObject<DoorBlock> CORRUPTED_OAK_DOOR = registerBlock("corrupted_oak_door",
+            () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_DOOR)));
+    public static final RegistryObject<TrapDoorBlock> CORRUPTED_OAK_TRAPDOOR = registerBlock("corrupted_oak_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_TRAPDOOR)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
