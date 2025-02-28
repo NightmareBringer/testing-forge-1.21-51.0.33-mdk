@@ -1,11 +1,15 @@
 package net.nbc.thetestermod.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,6 +20,7 @@ import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.custom.*;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.sound.ModSounds;
+import net.nbc.thetestermod.worldgen.tree.ModTreeGrowers;
 
 import java.util.function.Supplier;
 
@@ -193,6 +198,55 @@ public class ModBlocks
 
     public static final RegistryObject<Block> CRIMSON_BLUE_BERRY_BUSH = BLOCKS.register("crimson_blue_berry_bush",
             () -> new CrimsonBlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final RegistryObject<RotatedPillarBlock> CORRUPTED_OAK_LOG = registerBlock("corrupted_oak_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> CORRUPTED_OAK_WOOD = registerBlock("corrupted_oak_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_CORRUPTED_OAK_LOG = registerBlock("stripped_corrupted_oak_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_CORRUPTED_OAK_WOOD = registerBlock("stripped_corrupted_oak_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> CORRUPTED_OAK_PLANKS = registerBlock("corrupted_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return super.isFlammable(state, level, pos, direction);
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 25;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+
+    public static final RegistryObject<Block> CORRUPTED_OAK_LEAVES = registerBlock("corrupted_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return super.isFlammable(state, level, pos, direction);
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 50;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 35;
+                }
+            });
+
+    public static final RegistryObject<Block> CORRUPTED_OAK_SAPLING = registerBlock("corrupted_oak_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
@@ -52,6 +53,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NIGHTEN_SMITHING_TEMPLATE.get())
                 .add(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CORRUPTED_OAK_LOG.get().asItem())
+                .add(ModBlocks.CORRUPTED_OAK_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.CORRUPTED_OAK_PLANKS.get().asItem());
 
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "testermod:block/stripped_corrupted_oak_log",
+    "side": "testermod:block/stripped_corrupted_oak_log"
+  }
+}

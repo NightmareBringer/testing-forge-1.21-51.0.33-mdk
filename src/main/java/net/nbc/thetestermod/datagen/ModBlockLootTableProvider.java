@@ -123,6 +123,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
+
+        this.dropSelf(ModBlocks.CORRUPTED_OAK_LOG.get());
+        this.dropSelf(ModBlocks.CORRUPTED_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.CORRUPTED_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.CORRUPTED_OAK_SAPLING.get());
+
+        this.add(ModBlocks.CORRUPTED_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block, Blocks.OAK_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

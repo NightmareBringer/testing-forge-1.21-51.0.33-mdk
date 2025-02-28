@@ -99,6 +99,15 @@
   "block.testermod.storm_door": "Storm Door",
   "block.testermod.storm_trapdoor": "Storm Trapdoor",
 
+  "block.testermod.corrupted_oak_log": "Corrupted Oak Log",
+  "block.testermod.corrupted_oak_wood": "Corrupted Oak Wood",
+  "block.testermod.stripped_corrupted_oak_log": "Stripped Corrupted Oak Log",
+  "block.testermod.stripped_corrupted_oak_wood": "Stripped Corrupted Oak Wood",
+  "block.testermod.corrupted_oak_planks": "Corrupted Oak Planks",
+
+  "block.testermod.corrupted_oak_leaves": "Corrupted Oak Leaves",
+  "block.testermod.corrupted_oak_sapling": "Corrupted Oak Sapling",
+
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmare Ingot Material",
   "trim_pattern.testermod.stormen": "Stormen Armor Trim",

@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
@@ -108,7 +109,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeCrop(((CropBlock) ModBlocks.WHITE_CARROT_CROP.get()), "white_carrot_crop_stage", "white_carrot_crop_stage");
         makeBush(((SweetBerryBushBlock) ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get()), "crimson_blue_berry_bush_stage", "crimson_blue_berry_bush_stage");
 
+        logBlock(ModBlocks.CORRUPTED_OAK_LOG.get());
+        axisBlock(ModBlocks.CORRUPTED_OAK_WOOD.get(), blockTexture(ModBlocks.CORRUPTED_OAK_LOG.get()), blockTexture(ModBlocks.CORRUPTED_OAK_LOG.get()));
+        logBlock(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get(), blockTexture(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get()), blockTexture(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get()));
 
+        blockItem(ModBlocks.CORRUPTED_OAK_LOG);
+        blockItem(ModBlocks.CORRUPTED_OAK_WOOD);
+        blockItem(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG);
+        blockItem(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD);
+        blockWithItem(ModBlocks.CORRUPTED_OAK_PLANKS);
+
+        leavesBlock(ModBlocks.CORRUPTED_OAK_LEAVES);
+        saplingBlock(ModBlocks.CORRUPTED_OAK_SAPLING);
+
+
+
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {

@@ -390,6 +390,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', ModItems.WHITE_CARROT.get())
                 .define('#', ModItems.NIGHTMARE_NUGGET.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_NUGGET.get()), has(ModItems.NIGHTMARE_NUGGET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHITE_CARROT.get())
+                .pattern("###")
+                .pattern("#T#")
+                .pattern("###")
+                .define('T', Items.CARROT)
+                .define('#', Items.SUGAR)
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_NUGGET.get()), has(ModItems.NIGHTMARE_NUGGET.get())).save(pRecipeOutput);
 
 
 

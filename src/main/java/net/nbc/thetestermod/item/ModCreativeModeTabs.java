@@ -22,6 +22,12 @@ public class ModCreativeModeTabs
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PURE_NIGHTMARITE.get()))
                     .title(Component.translatable("creativetab.testermod.the_tester_zone"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.CORRUPTED_OAK_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_PLANKS.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_LEAVES.get());
                         output.accept(ModItems.NIGHTMARITE.get());
                         output.accept(ModItems.PURE_NIGHTMARITE.get());
                         output.accept(ModBlocks.NIGHTMARITE_BLOCK.get());
@@ -111,6 +117,7 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.DEVILSKNIFE.get());
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.KRABS.get());
+                        output.accept(ModBlocks.CORRUPTED_OAK_SAPLING.get());
                         output.accept(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
 
                     }).build());

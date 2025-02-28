@@ -109,6 +109,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.STORM_CHESTPLATE);
         trimmedArmorItem(ModItems.STORM_LEGGINGS);
         trimmedArmorItem(ModItems.STORM_BOOTS);
+
+        saplingItem(ModBlocks.CORRUPTED_OAK_SAPLING);
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     // Shoutout to El_Redstoniano for making this

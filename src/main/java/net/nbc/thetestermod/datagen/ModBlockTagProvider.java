@@ -154,5 +154,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.REFINED_NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CORRUPTED_OAK_LOG.get())
+                .add(ModBlocks.CORRUPTED_OAK_WOOD.get())
+                .add(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get());
     }
 }

@@ -1,5 +1,10 @@
-// 1.21.1	2024-12-06T04:34:48.0967094	Loot Tables
+// 1.21.1	2025-02-28T12:25:10.748162	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
+1227319f7d8b95cc31781add17b7ffdc5830a579 data/testermod/loot_table/blocks/corrupted_oak_leaves.json
+7a5d811f490a01e2aa1818071633983bf3e20fa8 data/testermod/loot_table/blocks/corrupted_oak_log.json
+dd0e6e304af01642d6122895e8b168c5ee873046 data/testermod/loot_table/blocks/corrupted_oak_planks.json
+f1d69c75e57d561b0ada97a5c0817b6ff77ff920 data/testermod/loot_table/blocks/corrupted_oak_sapling.json
+25c2896cd50a75b16b49f63194d2960be4c2bb44 data/testermod/loot_table/blocks/corrupted_oak_wood.json
 58a5305d71914ec94856fd849971f02273fd21b9 data/testermod/loot_table/blocks/crimson_blue_berry_bush.json
 d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_block.json
 6f0eb3c79ef8d792f4248ea9e28c4f5a6f45b461 data/testermod/loot_table/blocks/nightmare_block.json
@@ -42,4 +47,6 @@ bae46d2392aad0cd14e0a2839df02feb9698eb82 data/testermod/loot_table/blocks/storm_
 72ee474a2c045efb8e5eaf8312e67b22a698ea32 data/testermod/loot_table/blocks/storm_stairs.json
 aa9672d162aa84c0e6623e1201ea85d69974f2e2 data/testermod/loot_table/blocks/storm_trapdoor.json
 52b922516efa2073d3189dd058c5d0de95fe75aa data/testermod/loot_table/blocks/storm_wall.json
+855adb193c53840fa4159514a4edd5f58aab80ac data/testermod/loot_table/blocks/stripped_corrupted_oak_log.json
+cc3b404c26b2496bea4306c6e0eacae8e629419c data/testermod/loot_table/blocks/stripped_corrupted_oak_wood.json
 b316bcd16c37ea36a34604b0a90b3b64c79b207d data/testermod/loot_table/blocks/white_carrot_crop.json
