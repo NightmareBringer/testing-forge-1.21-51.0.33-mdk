@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/mysterious_dust_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/mysterious_dust_block"
+    },
+    "type=top": {
+      "model": "testermod:block/mysterious_dust_slab_top"
+    }
+  }
+}

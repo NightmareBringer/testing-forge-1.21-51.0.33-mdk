@@ -190,6 +190,11 @@ public class ModItems
     public static final RegistryObject<Item> HAIL_SQUIDWARD_MUSIC_DISC = ITEMS.register("all_hail_squidward_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.HAIL_SQUIDWARD_KEY).stacksTo(1)));
 
+    public static final RegistryObject<Item> MYSTERIOUS_DUST = ITEMS.register("mysterious_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> STRANGE_STICK = ITEMS.register("strange_stick",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

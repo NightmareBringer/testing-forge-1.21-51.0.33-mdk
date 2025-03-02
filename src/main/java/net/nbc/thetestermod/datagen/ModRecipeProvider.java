@@ -397,6 +397,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', Items.CARROT)
                 .define('#', Items.SUGAR)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_NUGGET.get()), has(ModItems.NIGHTMARE_NUGGET.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRANGE_STICK.get())
+                .pattern(" T ")
+                .pattern(" T ")
+                .pattern("   ")
+                .define('T', ModBlocks.CORRUPTED_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IMPURE_STICK.get())
+                .pattern("///")
+                .pattern("/M/")
+                .pattern("///")
+                .define('/', ModItems.MYSTERIOUS_DUST.get())
+                .define('M', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
 
 
 
@@ -424,6 +437,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STORM_NUGGET.get(), 9)
                 .requires(ModItems.STORM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTERIOUS_DUST.get(), 2)
+                .requires(ModBlocks.MYSTERIOUS_DUST_SLAB.get())
+                .unlockedBy(getHasName(ModBlocks.MYSTERIOUS_DUST_SLAB.get()), has(ModBlocks.MYSTERIOUS_DUST_SLAB.get())).save(pRecipeOutput);
 
 
 
@@ -481,6 +497,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
         trapdoorBuilder(ModBlocks.STORM_TRAPDOOR.get(), Ingredient.of(ModItems.STORM_INGOT.get())).group("storm_ingot")
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+
+
+        stairBuilder(ModBlocks.CORRUPTED_OAK_STAIRS.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CORRUPTED_OAK_SLAB.get(), ModBlocks.CORRUPTED_OAK_PLANKS.get());
+
+        buttonBuilder(ModBlocks.CORRUPTED_OAK_BUTTON.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE.get(), ModBlocks.CORRUPTED_OAK_PLANKS.get());
+
+        fenceBuilder(ModBlocks.CORRUPTED_OAK_FENCE.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+
+        doorBuilder(ModBlocks.CORRUPTED_OAK_DOOR.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.25f, 200, "nightmarite");
         oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.50f, 100, "nightmarite");

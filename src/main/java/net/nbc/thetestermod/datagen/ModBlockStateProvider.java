@@ -47,6 +47,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.MAGIC_BLOCK);
         blockWithItem(ModBlocks.ANTI_MAGIC_BLOCK);
 
+        blockWithItem(ModBlocks.MYSTERIOUS_DUST_BLOCK);
+
         stairsBlock(ModBlocks.NIGHTMARE_STAIRS.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
         slabBlock(ModBlocks.NIGHTMARE_SlAB.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
 
@@ -140,6 +142,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.CORRUPTED_OAK_PRESSURE_PLATE);
         blockItem(ModBlocks.CORRUPTED_OAK_FENCE_GATE);
         blockItem(ModBlocks.CORRUPTED_OAK_TRAPDOOR, "_bottom");
+
+        slabBlock(ModBlocks.MYSTERIOUS_DUST_SLAB.get(), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()));
+        blockItem(ModBlocks.MYSTERIOUS_DUST_SLAB);
 
 
 

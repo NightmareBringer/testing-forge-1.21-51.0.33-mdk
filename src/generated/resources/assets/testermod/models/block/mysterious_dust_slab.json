@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "testermod:block/mysterious_dust_block",
+    "side": "testermod:block/mysterious_dust_block",
+    "top": "testermod:block/mysterious_dust_block"
+  }
+}

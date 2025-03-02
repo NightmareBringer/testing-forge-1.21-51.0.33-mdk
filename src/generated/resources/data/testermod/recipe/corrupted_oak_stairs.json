@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "corrupted_oak_planks",
+  "key": {
+    "#": {
+      "item": "testermod:corrupted_oak_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:corrupted_oak_stairs"
+  }
+}

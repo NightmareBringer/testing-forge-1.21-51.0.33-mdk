@@ -51,6 +51,9 @@
   "item.testermod.storm_horse_armor": "Storm Horse Armor",
   "item.testermod.stormen_armor_trim_smithing_template": "Stormen Trim Template",
 
+  "item.testermod.mysterious_dust": "Mysterious Dust",
+  "item.testermod.strange_stick": "Strange Stick",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
   "block.testermod.nightmare_block": "Block of Nightmare",
@@ -116,6 +119,8 @@
 
   "block.testermod.corrupted_oak_leaves": "Corrupted Oak Leaves",
   "block.testermod.corrupted_oak_sapling": "Corrupted Oak Sapling",
+  "block.testermod.mysterious_dust_block": "Mysterious Dust Block",
+  "block.testermod.mysterious_dust_slab": "Slab of Mysterious Dust",
 
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmare Ingot Material",

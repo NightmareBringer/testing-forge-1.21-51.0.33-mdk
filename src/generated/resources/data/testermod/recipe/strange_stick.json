@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "testermod:corrupted_oak_planks"
+    }
+  },
+  "pattern": [
+    " T ",
+    " T ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:strange_stick"
+  }
+}

@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -61,9 +62,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CRIMSON_BLUE_BERRIES.get());
         basicItem(ModItems.PURE_EYE.get());
         basicItem(ModItems.IMPURE_EYE.get());
-        basicItem(ModItems.IMPURE_STICK.get());
-        basicItem(ModItems.DEVILS_SNATH.get());
+        basicHandheldItem(ModItems.IMPURE_STICK.get());
+        basicHandheldItem(ModItems.DEVILS_SNATH.get());
         basicItem(ModItems.DEVILS_BLADE.get());
+
+        basicItem(ModItems.MYSTERIOUS_DUST.get());
+        basicHandheldItem(ModItems.STRANGE_STICK.get());
 
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
@@ -173,6 +177,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder basicHandheldItem(Item item) {
+        // Get the registry name for the item using ForgeRegistries
+        ResourceLocation itemRegistryName = ForgeRegistries.ITEMS.getKey(item);
+
+        // Ensure that the registry name is valid (this helps to avoid NPE)
+        if (itemRegistryName == null) {
+            throw new IllegalArgumentException("Item not found in registry: " + item);
+        }
+
+        // Use the item's registry name path for the item model
+        String modelPath = itemRegistryName.getPath();
+
+        // Correctly construct the texture path using the MOD_ID and the item path
+        return withExistingParent(modelPath, ResourceLocation.parse("item/handheld"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "item/" + modelPath));
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

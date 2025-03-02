@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "testermod:mysterious_dust"
+    },
+    "M": {
+      "item": "testermod:strange_stick"
+    }
+  },
+  "pattern": [
+    "///",
+    "/M/",
+    "///"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:impure_stick"
+  }
+}

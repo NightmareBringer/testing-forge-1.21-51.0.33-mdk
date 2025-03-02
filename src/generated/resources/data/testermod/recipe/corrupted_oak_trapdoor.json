@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "corrupted_oak_planks",
+  "key": {
+    "#": {
+      "item": "testermod:corrupted_oak_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "testermod:corrupted_oak_trapdoor"
+  }
+}
