@@ -6,10 +6,10 @@
       "item": "testermod:nightmare_ingot"
     },
     "S": {
-      "item": "minecraft:string"
+      "item": "testermod:mysterious_string"
     },
     "T": {
-      "item": "minecraft:stick"
+      "item": "testermod:impure_stick"
     }
   },
   "pattern": [

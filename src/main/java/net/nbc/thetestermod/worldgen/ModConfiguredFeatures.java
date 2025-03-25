@@ -2,16 +2,16 @@ package net.nbc.thetestermod.worldgen;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -19,7 +19,6 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlace
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
-import net.minecraftforge.fml.common.Mod;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 
@@ -35,6 +34,9 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_STORMITE_ORE_KEY = registerKey("stormite_end_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> CORRUPTED_OAK_KEY = registerKey("corrupted_oak");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_CRIMSON_BLUE_BERRY_BUSH_KEY = registerKey("overworld_crimson_blue_berry_bush");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_CRIMSON_BLUE_BERRY_BUSH_KEY = registerKey("nether_crimson_blue_berry_bush");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -71,6 +73,28 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+                // FOR TREE THAT DOESN'T GROW ON GRASS/DIRT
+                // new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.GRAVEL)).build());
+
+        register(context, OVERWORLD_CRIMSON_BLUE_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get()
+                                        .defaultBlockState().setValue(SweetBerryBushBlock.AGE, Integer.valueOf(0)))),
+                        List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)
+                )
+        );
+
+        register(context, NETHER_CRIMSON_BLUE_BERRY_BUSH_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get()
+                                        .defaultBlockState().setValue(SweetBerryBushBlock.AGE, Integer.valueOf(2)))),
+                        List.of(Blocks.CRIMSON_NYLIUM)
+                )
+        );
+
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

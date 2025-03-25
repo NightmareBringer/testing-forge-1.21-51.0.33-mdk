@@ -56,17 +56,22 @@ public class FallingSlabBlock extends SlabBlock {
 
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
-        // Check if it should fall
-        tickFalling(state, world, pos);
+        checkFall(state, world, pos);
     }
 
-    // Drop mysterious dust when the block lands
-    private static void dropMysteriousDust(Level world, BlockPos pos) {
+    @Override
+    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
         if (!world.isClientSide) {
-            ItemStack dustItem = new ItemStack(ModItems.MYSTERIOUS_DUST.get());
-            net.minecraft.world.entity.item.ItemEntity itemEntity = new net.minecraft.world.entity.item.ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), dustItem);
-            world.addFreshEntity(itemEntity);
+            checkFall(state, world, pos);
         }
     }
+
+    // Checks if the slab should fall
+    private void checkFall(BlockState state, Level world, BlockPos pos) {
+        if (world.isEmptyBlock(pos.below())) {
+            FallingBlockEntity.fall(world, pos, state);
+        }
+    }
+
 
 }

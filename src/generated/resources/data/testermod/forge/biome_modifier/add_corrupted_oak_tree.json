@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:forest",
+    "minecraft:dark_forest",
+    "minecraft:taiga",
+    "minecraft:windswept_forest"
+  ],
+  "features": "testermod:corrupted_oak_placed",
+  "step": "vegetal_decoration"
+}

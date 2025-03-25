@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "testermod:impure_stick"
+        "recipe": "testermod:mysterious_string"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "testermod:impure_stick"
+      "testermod:mysterious_string"
     ]
   }
 }

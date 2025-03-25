@@ -36,8 +36,9 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.CORRUPTED_OAK_DOOR.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_LEAVES.get());
-                        output.accept(ModItems.MYSTERIOUS_DUST.get());
                         output.accept(ModBlocks.MYSTERIOUS_DUST_SLAB.get());
+                        output.accept(ModItems.MYSTERIOUS_DUST.get());
+                        output.accept(ModItems.MYSTERIOUS_STRING.get());
                         output.accept(ModItems.NIGHTMARITE.get());
                         output.accept(ModItems.PURE_NIGHTMARITE.get());
                         output.accept(ModBlocks.NIGHTMARITE_BLOCK.get());
@@ -123,6 +124,7 @@ public class ModCreativeModeTabs
                         output.accept((ModItems.CRIMSON_BLUE_BERRIES.get()));
 
 
+                        output.accept(ModItems.TESTER_SPAWN_EGG.get());
                         output.accept(ModItems.DEVILS_SNATH.get());
                         output.accept(ModItems.DEVILS_BLADE.get());
                         output.accept(ModItems.DEVILSKNIFE.get());

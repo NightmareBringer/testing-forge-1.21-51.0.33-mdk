@@ -52,7 +52,10 @@
   "item.testermod.stormen_armor_trim_smithing_template": "Stormen Trim Template",
 
   "item.testermod.mysterious_dust": "Mysterious Dust",
+  "item.testermod.mysterious_string": "Mysterious String",
   "item.testermod.strange_stick": "Strange Stick",
+
+  "item.testermod.tester_spawn_egg": "Spawn Tester",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
@@ -152,6 +155,8 @@
 
   "block.testermod.white_carrot_crop": "White Carrot Crop",
   "block.testermod.crimson_blue_berry_bush": "Crimson Blueberry Bush",
+
+  "entity.testermod.tester_mob": "Tester",
 
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",

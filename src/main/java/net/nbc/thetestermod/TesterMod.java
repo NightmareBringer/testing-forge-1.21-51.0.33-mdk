@@ -1,6 +1,7 @@
 package net.nbc.thetestermod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,6 +20,8 @@ import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.enchantment.ModEnchantmentEffects;
+import net.nbc.thetestermod.entity.ModEntities;
+import net.nbc.thetestermod.entity.client.TesterRenderer;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import net.nbc.thetestermod.potion.ModPotions;
@@ -59,6 +62,7 @@ public class TesterMod
         ModPotions.register((modEventBus));
 
         ModEnchantmentEffects.register((modEventBus));
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -108,6 +112,7 @@ public class TesterMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             ModItemProperties.addCustomItemProperties();
+            EntityRenderers.register(ModEntities.TESTER_MOB.get(), TesterRenderer::new);
         }
     }
 }

@@ -370,24 +370,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" TS")
                 .pattern("# S")
                 .pattern(" TS")
-                .define('T', Items.STICK)
+                .define('T', ModItems.IMPURE_STICK.get())
                 .define('#', ModItems.NIGHTMARE_INGOT.get())
-                .define('S', Items.STRING)
+                .define('S', ModItems.MYSTERIOUS_STRING.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORM_BOW.get())
                 .pattern(" TS")
                 .pattern("# S")
                 .pattern(" TS")
-                .define('T', Items.STICK)
+                .define('T', ModItems.IMPURE_STICK.get())
                 .define('#', ModItems.STORM_INGOT.get())
-                .define('S', Items.STRING)
+                .define('S', ModItems.MYSTERIOUS_STRING.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLISTERING_CARROT.get())
-                .pattern("###")
+                .pattern("D#D")
                 .pattern("#T#")
-                .pattern("###")
+                .pattern("D#D")
                 .define('T', ModItems.WHITE_CARROT.get())
+                .define('D', ModItems.MYSTERIOUS_DUST.get())
                 .define('#', ModItems.NIGHTMARE_NUGGET.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_NUGGET.get()), has(ModItems.NIGHTMARE_NUGGET.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHITE_CARROT.get())
@@ -397,18 +398,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', Items.CARROT)
                 .define('#', Items.SUGAR)
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_NUGGET.get()), has(ModItems.NIGHTMARE_NUGGET.get())).save(pRecipeOutput);
+
+        /*
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRANGE_STICK.get())
                 .pattern(" T ")
                 .pattern(" T ")
                 .pattern("   ")
                 .define('T', ModBlocks.CORRUPTED_OAK_PLANKS.get())
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IMPURE_STICK.get())
+         */
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
+                .pattern("   ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('S', ModBlocks.CORRUPTED_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":sticks_from_corrupted_oak_planks");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRANGE_STICK.get())
                 .pattern("///")
                 .pattern("/M/")
                 .pattern("///")
                 .define('/', ModItems.MYSTERIOUS_DUST.get())
-                .define('M', ModItems.STRANGE_STICK.get())
+                .define('M', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTERIOUS_STRING.get())
+                .pattern(" / ")
+                .pattern("/M/")
+                .pattern(" / ")
+                .define('/', ModItems.MYSTERIOUS_DUST.get())
+                .define('M', Items.STRING)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
 
 
@@ -440,6 +460,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTERIOUS_DUST.get(), 2)
                 .requires(ModBlocks.MYSTERIOUS_DUST_SLAB.get())
                 .unlockedBy(getHasName(ModBlocks.MYSTERIOUS_DUST_SLAB.get()), has(ModBlocks.MYSTERIOUS_DUST_SLAB.get())).save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CORRUPTED_OAK_PLANKS.get(), 4)
+                .requires(ModBlocks.CORRUPTED_OAK_WOOD.get())
+                .requires(ModBlocks.CORRUPTED_OAK_LOG.get())
+                .requires(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get())
+                .requires(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get())).save(pRecipeOutput);
 
 
 

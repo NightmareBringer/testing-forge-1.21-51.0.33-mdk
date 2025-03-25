@@ -7,8 +7,10 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -24,6 +26,26 @@ public class CrimsonBlueBerryBushBlock extends SweetBerryBushBlock {
     public ItemStack getCloneItemStack(LevelReader pLevel, BlockPos pPos, BlockState pState) {
         return new ItemStack(ModItems.CRIMSON_BLUE_BERRIES.get());
     }
+
+    
+
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockState belowBlock = level.getBlockState(pos.below());
+
+        // Allow placement on Grass, Dirt, Netherrack, or Crimson Nylium
+        return belowBlock.is(Blocks.GRASS_BLOCK) ||
+                belowBlock.is(Blocks.DIRT) ||
+                belowBlock.is(Blocks.NETHERRACK) ||
+                belowBlock.is(Blocks.CRIMSON_NYLIUM);
+    }
+
+    @Override
+    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return pState.is(Blocks.GRASS_BLOCK) ||
+                pState.is(Blocks.DIRT) ||
+                pState.is(Blocks.NETHERRACK) ||
+                pState.is(Blocks.CRIMSON_NYLIUM);    }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {

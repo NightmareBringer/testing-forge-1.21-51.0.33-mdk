@@ -6,6 +6,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -247,6 +248,10 @@ public class ModBlocks
 
     public static final RegistryObject<Block> CORRUPTED_OAK_SAPLING = registerBlock("corrupted_oak_sapling",
             () -> new SaplingBlock(ModTreeGrowers.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+    // FOR TREE THAT DOESN'T GROW ON GRASS/DIRT
+    // public static final RegistryObject<Block> CORRUPTED_OAK_SAPLING = registerBlock("corrupted_oak_sapling",
+    //         () -> new ModSaplingBlock(ModTreeGrowers.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), () -> Blocks.GRAVEL));
 
     public static final RegistryObject<StairBlock> CORRUPTED_OAK_STAIRS = registerBlock("corrupted_oak_stairs",
             () -> new StairBlock(ModBlocks.CORRUPTED_OAK_PLANKS.get().defaultBlockState(),

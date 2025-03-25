@@ -6,16 +6,16 @@
       "item": "testermod:mysterious_dust"
     },
     "M": {
-      "item": "testermod:strange_stick"
+      "item": "minecraft:string"
     }
   },
   "pattern": [
-    "///",
+    " / ",
     "/M/",
-    "///"
+    " / "
   ],
   "result": {
     "count": 1,
-    "id": "testermod:impure_stick"
+    "id": "testermod:mysterious_string"
   }
 }

@@ -5,14 +5,17 @@
     "#": {
       "item": "testermod:nightmare_nugget"
     },
+    "D": {
+      "item": "testermod:mysterious_dust"
+    },
     "T": {
       "item": "testermod:white_carrot"
     }
   },
   "pattern": [
-    "###",
+    "D#D",
     "#T#",
-    "###"
+    "D#D"
   ],
   "result": {
     "count": 1,

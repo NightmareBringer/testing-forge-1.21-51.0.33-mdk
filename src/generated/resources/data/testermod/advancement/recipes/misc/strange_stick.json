@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_corrupted_oak_planks": {
+    "has_mysterious_dust": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:corrupted_oak_planks"
+            "items": "testermod:mysterious_dust"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_corrupted_oak_planks"
+      "has_mysterious_dust"
     ]
   ],
   "rewards": {

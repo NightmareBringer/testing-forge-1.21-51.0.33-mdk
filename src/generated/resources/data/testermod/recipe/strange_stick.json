@@ -2,14 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "T": {
-      "item": "testermod:corrupted_oak_planks"
+    "/": {
+      "item": "testermod:mysterious_dust"
+    },
+    "M": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    " T ",
-    " T ",
-    "   "
+    "///",
+    "/M/",
+    "///"
   ],
   "result": {
     "count": 1,

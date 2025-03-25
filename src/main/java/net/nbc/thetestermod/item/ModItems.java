@@ -3,12 +3,14 @@ package net.nbc.thetestermod.item;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.entity.ModEntities;
 import net.nbc.thetestermod.item.custom.ChiselItem;
 import net.nbc.thetestermod.item.custom.FuelItem;
 import net.nbc.thetestermod.item.custom.HammerItem;
@@ -193,8 +195,14 @@ public class ModItems
     public static final RegistryObject<Item> MYSTERIOUS_DUST = ITEMS.register("mysterious_dust",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> MYSTERIOUS_STRING = ITEMS.register("mysterious_string",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> STRANGE_STICK = ITEMS.register("strange_stick",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TESTER_SPAWN_EGG = ITEMS.register("tester_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.TESTER_MOB, 0xebebeb, 0x1a1a1a , new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

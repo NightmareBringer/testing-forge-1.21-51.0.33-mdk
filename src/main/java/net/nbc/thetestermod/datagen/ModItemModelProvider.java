@@ -67,6 +67,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.DEVILS_BLADE.get());
 
         basicItem(ModItems.MYSTERIOUS_DUST.get());
+        basicItem(ModItems.MYSTERIOUS_STRING.get());
         basicHandheldItem(ModItems.STRANGE_STICK.get());
 
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
@@ -119,6 +120,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.CORRUPTED_OAK_DOOR);
 
         saplingItem(ModBlocks.CORRUPTED_OAK_SAPLING);
+
+        withExistingParent(ModItems.TESTER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
