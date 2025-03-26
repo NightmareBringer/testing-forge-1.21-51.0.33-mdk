@@ -202,7 +202,7 @@ public class ModItems
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> TESTER_SPAWN_EGG = ITEMS.register("tester_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.TESTER_MOB, 0xebebeb, 0x1a1a1a , new Item.Properties()));
+            () -> new ForgeSpawnEggItem(ModEntities.TESTER_MOB, 0xfafafa, 0x00b1ff , new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {
