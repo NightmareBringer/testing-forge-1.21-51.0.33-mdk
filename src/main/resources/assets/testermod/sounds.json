@@ -36,25 +36,25 @@
     ]
   },
   "tester_death_1": {
-    "subtitle": "§kTester§r dies",
+    "subtitle": " dies",
     "sounds": [
       "testermod:tester_death_1"
     ]
   },
   "tester_hurt_1": {
-    "subtitle": "§kTester§r hurts",
+    "subtitle": " hurts",
     "sounds": [
       "testermod:tester_hurt_1"
     ]
   },
   "tester_hurt_2": {
-    "subtitle": "§kTester§r hurts more",
+    "subtitle": " hurts more",
     "sounds": [
       "testermod:tester_hurt_2"
     ]
   },
   "tester_idle_1": {
-    "subtitle": "§kTester§r drones",
+    "subtitle": " drones",
     "sounds": [
       "testermod:tester_idle_1"
     ]

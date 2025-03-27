@@ -35,14 +35,17 @@ import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class TesterEntity extends Monster {
 
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(TesterEntity.class, EntityDataSerializers.INT);
 
-
+    private boolean isReinforcement = false;
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
@@ -52,6 +55,7 @@ public class TesterEntity extends Monster {
 
     public TesterEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.setPersistenceRequired();
     }
 
     @Override
@@ -116,7 +120,13 @@ public class TesterEntity extends Monster {
                 .add(Attributes.ATTACK_SPEED, 4D);
     }
 
+    public void setAsReinforcement(boolean bool) {
+        this.isReinforcement = bool;
+    }
 
+    public boolean isReinforcement() {
+        return isReinforcement;
+    }
 
     @Override
     public boolean hurt(DamageSource source, float amount) {
@@ -126,7 +136,7 @@ public class TesterEntity extends Monster {
         // Check if the mob is hurt and if the spawn reinforcement chance is triggered
         if (hurt && source.getEntity() instanceof Player) {
             double baseSpawnChance = this.getAttributeValue(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
-            double adjustedSpawnChance = Math.min(1.0, baseSpawnChance + (amount * 0.01575)); // Increase chance based on damage taken
+            double adjustedSpawnChance = Math.min(1.0, baseSpawnChance + (amount * 0.01255075)); // Increase chance based on damage taken
 
             System.out.println("Base spawn chance: " + baseSpawnChance + ", Adjusted spawn chance: " + adjustedSpawnChance);
 
@@ -161,8 +171,7 @@ public class TesterEntity extends Monster {
                 if (reinforcement != null) {
                     // Set the reinforcement's position
                     reinforcement.setPos(spawnLocation.x, spawnLocation.y, spawnLocation.z);
-
-                    // Add the reinforcement to the world
+                    reinforcement.setAsReinforcement(true); // Mark as reinforcement
                     this.level().addFreshEntity(reinforcement);
                     System.out.println("Reinforcement successfully spawned at: " + spawnLocation);
                 } else {
@@ -261,6 +270,35 @@ public class TesterEntity extends Monster {
     }
 
     @Override
+    public void checkDespawn() {
+        if (!this.level().isClientSide && this.level() instanceof ServerLevel serverLevel) {
+            List<TesterEntity> mobs = serverLevel.getEntities(ModEntities.TESTER_MOB.get(), e -> !e.isReinforcement())
+                    .stream()
+                    .filter(Objects::nonNull)
+                    .map(TesterEntity.class::cast)
+                    .toList();
+
+            if (!mobs.isEmpty()) {
+                TesterEntity firstSpawned = mobs.get(0); // Get the first mob that spawned
+                if (this != firstSpawned && !isReinforcement()) {
+                    this.discard(); // Despawn this mob if it's not the first one spawned
+                }
+            }
+        }
+    }
+
+    @Override
+    public boolean removeWhenFarAway(double pDistanceToClosestPlayer) {
+        return false;
+    }
+
+    @Override
+    public boolean isPersistenceRequired() {
+        return true;
+    }
+
+
+    @Override
     protected boolean shouldDespawnInPeaceful() {
         return false;
     }
@@ -281,10 +319,7 @@ public class TesterEntity extends Monster {
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
 
-        // Example: 50% chance to cancel the spawn
-        if (random.nextBoolean()) {
-            return null; // Prevent the mob from spawning
-        }
+
 
         // If the mob hasn't spawned yet, proceed with the spawn logic
         TesterVariant variant = TesterVariant.WHITE; // Default variant
@@ -299,7 +334,12 @@ public class TesterEntity extends Monster {
         MobManager.setTesterMobSpawned(true);
         System.out.println("Spawned TesterEntity with variant: " + variant);
 
-        return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
+        // Example: 50% chance to cancel the spawn
+        if (random.nextBoolean()) {
+            return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, null);
+        } else {
+            return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
+        }
     }
 
     @Override
