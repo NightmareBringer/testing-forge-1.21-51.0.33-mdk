@@ -25,11 +25,20 @@ public class ModSounds
     public static final RegistryObject<SoundEvent> MAGIC_BLOCK_HIT = registerSoundEvent("magic_block_hit");
     public static final RegistryObject<SoundEvent> MAGIC_BLOCK_FALL = registerSoundEvent("magic_block_fall");
 
+    public static final RegistryObject<SoundEvent> TESTER_AMBIENT_1 = registerSoundEvent("tester_idle_1");
+    public static final RegistryObject<SoundEvent> TESTER_AMBIENT_2 = registerSoundEvent("tester_idle_2");
+    public static final RegistryObject<SoundEvent> TESTER_HURT_1 = registerSoundEvent("tester_hurt_1");
+    public static final RegistryObject<SoundEvent> TESTER_HURT_2 = registerSoundEvent("tester_hurt_2");
+    public static final RegistryObject<SoundEvent> TESTER_DEATH_1 = registerSoundEvent("tester_death_1");
+
     public static final ForgeSoundType MAGIC_BLOCK_SOUNDS = new ForgeSoundType(1f, 1f,
             ModSounds.MAGIC_BLOCK_BREAK, ModSounds.MAGIC_BLOCK_STEP, ModSounds.MAGIC_BLOCK_PLACE, ModSounds.MAGIC_BLOCK_HIT, ModSounds.MAGIC_BLOCK_FALL);
 
     public static final ForgeSoundType ANTI_MAGIC_BLOCK_SOUNDS = new ForgeSoundType(1f, 0.75f,
             ModSounds.MAGIC_BLOCK_BREAK, ModSounds.MAGIC_BLOCK_STEP, ModSounds.MAGIC_BLOCK_PLACE, ModSounds.MAGIC_BLOCK_HIT, ModSounds.MAGIC_BLOCK_FALL);
+
+    //public static final ForgeSoundType TESTER_AMBIENT = new ForgeSoundType(1f, 1f,
+    //        ModSounds.TESTER_AMBIENT_1, ModSounds.TESTER_AMBIENT_2, ModSounds.TESTER_HURT_1, ModSounds.TESTER_HURT_2, ModSounds.TESTER_DEATH_1);
 
     public static final RegistryObject<SoundEvent> HAIL_SQUIDWARD = registerSoundEvent("all_hail_squidward");
     public static final ResourceKey<JukeboxSong> HAIL_SQUIDWARD_KEY = ResourceKey.create(Registries.JUKEBOX_SONG,

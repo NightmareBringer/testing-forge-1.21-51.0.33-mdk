@@ -7,11 +7,15 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.entity.ModEntities;
+
+import java.util.List;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NIGHTMARITE_ORE = registerKey("add_nightmarite_ore");
@@ -27,6 +31,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_CRIMSON_BLUE_BERRY_BUSH_OVERWORLD = registerKey("add_crimson_blue_berry_bush_overworld");
     public static final ResourceKey<BiomeModifier> ADD_CRIMSON_BLUE_BERRY_BUSH_NETHER = registerKey("add_crimson_blue_berry_bush_nether");
 
+    public static final ResourceKey<BiomeModifier> SPAWN_TESTER = registerKey("spawn_tester");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -75,12 +80,10 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.NETHER_CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-
-        // Individual Biomes (example)
-        // context.register(ADD_ALEXANDRITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-        //         HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BAMBOO_JUNGLE)),
-        //         HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.ALEXANDRITE_ORE_PLACED_KEY)),
-        //         GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(SPAWN_TESTER, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST),
+                        biomes.getOrThrow(Biomes.CRIMSON_FOREST), biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 1,0, 1)))); // Never make pWeight too high!
 
     }
 

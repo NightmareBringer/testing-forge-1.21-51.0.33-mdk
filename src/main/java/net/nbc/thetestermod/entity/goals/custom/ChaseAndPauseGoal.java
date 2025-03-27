@@ -26,10 +26,10 @@ public class ChaseAndPauseGoal extends Goal {
             cooldown--;
             return false;
         }
-        this.target = this.mob.level().getNearestPlayer(this.mob, 128.0D);
+        this.target = this.mob.level().getNearestPlayer(this.mob, 256.0D);
 
         if (this.target != null) {
-            System.out.println("ChaseAndPauseGoal activated! Target: " + this.target.getName().getString());
+            //System.out.println("ChaseAndPauseGoal activated! Target: " + this.target.getName().getString());
         }
 
         return this.target != null;
@@ -49,27 +49,32 @@ public class ChaseAndPauseGoal extends Goal {
         // If player is too close, retreat
         if (mob.swinging) {
             retreatGoal.forceRetreat();
-            System.out.println("Force Retreat!!");
+            //System.out.println("Force Retreat!!");
             return;
         }
 
         // If the mob is moving, decrease moveTicks and move
         if (moveTicks > 0) {
             moveTicks--;
+            this.mob.setSprinting(true);
             this.mob.getNavigation().moveTo(this.target, this.speed);
-            System.out.println("Moving for " + moveTicks + " more ticks");
+            //System.out.println("Moving for " + moveTicks + " more ticks");
 
             // When movement finishes, set cooldown
             if (moveTicks == 0) {
+                this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
+                this.mob.setSprinting(false);
                 cooldown = 120 + this.mob.getRandom().nextInt(120);  // Increased cooldown
-                System.out.println("Cooldown activated: " + cooldown + " ticks");
+                //System.out.println("Cooldown activated: " + cooldown + " ticks");
                 this.mob.getNavigation().stop();
             }
         } else {
             // Decrease cooldown, ensuring the mob pauses
             if (cooldown > 0) {
+                this.mob.setSprinting(false);
+                this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
                 cooldown--;
-                System.out.println("Cooldown ticking down: " + cooldown);
+                //System.out.println("Cooldown ticking down: " + cooldown);
                 return;
             }
 
@@ -79,7 +84,7 @@ public class ChaseAndPauseGoal extends Goal {
             // 10% chance per second to start moving
             if (this.mob.getRandom().nextFloat() < 0.1F) {
                 moveTicks = 8 + this.mob.getRandom().nextInt(8);  // Random movement duration
-                System.out.println("Starting movement for " + moveTicks + " ticks");
+                //System.out.println("Starting movement for " + moveTicks + " ticks");
             }
         }
     }

@@ -20,7 +20,7 @@ public class RetreatGoal extends Goal {
 
     @Override
     public boolean canUse() {
-        this.target = this.mob.level().getNearestPlayer(this.mob, 128.0D);
+        this.target = this.mob.level().getNearestPlayer(this.mob, 256.0D);
         return shouldRetreat || (target != null && this.mob.getLastHurtByMob() instanceof Player);
     }
 
@@ -35,6 +35,7 @@ public class RetreatGoal extends Goal {
         if (mob.swinging) {
             mob.swinging = false;
         }
+        this.mob.setSprinting(true);
         this.shouldRetreat = true;
         this.mob.getNavigation().stop(); // Stop any other movement immediately
 
@@ -60,6 +61,7 @@ public class RetreatGoal extends Goal {
 
         // Stop retreating when far enough
         if (distance > retreatDistance * 1.5) {
+            this.mob.setSprinting(false);
             shouldRetreat = false;
             this.mob.getNavigation().stop();
             return;
