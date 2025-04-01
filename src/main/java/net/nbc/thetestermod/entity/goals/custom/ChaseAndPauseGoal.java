@@ -26,7 +26,7 @@ public class ChaseAndPauseGoal extends Goal {
             cooldown--;
             return false;
         }
-        this.target = this.mob.level().getNearestPlayer(this.mob, 256.0D);
+        this.target = this.mob.level().getNearestPlayer(this.mob, 96.0D);
 
         if (this.target != null) {
             //System.out.println("ChaseAndPauseGoal activated! Target: " + this.target.getName().getString());

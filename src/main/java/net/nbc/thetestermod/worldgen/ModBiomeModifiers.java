@@ -81,9 +81,9 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SPAWN_TESTER, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST),
+                HolderSet.direct(biomes.getOrThrow(Biomes.TAIGA), biomes.getOrThrow(Biomes.FOREST),
                         biomes.getOrThrow(Biomes.CRIMSON_FOREST), biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 1,0, 1)))); // Never make pWeight too high!
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 5,1, 1)))); // Never make pWeight too high!
 
     }
 

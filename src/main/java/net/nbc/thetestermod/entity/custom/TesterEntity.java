@@ -66,10 +66,10 @@ public class TesterEntity extends Monster {
         // Panic when attacked
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.5));
 
-        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 256.0F));
+        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 96.0F));
 
         // Create RetreatGoal first so we can pass it to ChaseAndPauseGoal
-        RetreatGoal retreatGoal = new RetreatGoal(this, 64.0, 2.5);
+        RetreatGoal retreatGoal = new RetreatGoal(this, 48.0, 2.5);
         ChaseAndPauseGoal chaseGoal = new ChaseAndPauseGoal(this, 1.0, retreatGoal);
 
         // Add goals
@@ -107,7 +107,7 @@ public class TesterEntity extends Monster {
         return PathfinderMob.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 20D)
                 .add(Attributes.MOVEMENT_SPEED, 0.5D)
-                .add(Attributes.FOLLOW_RANGE, 256D)
+                .add(Attributes.FOLLOW_RANGE, 96D)
                 .add(Attributes.ARMOR, 20D)
                 .add(Attributes.ARMOR_TOUGHNESS, 20D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
@@ -233,6 +233,13 @@ public class TesterEntity extends Monster {
     @Override
     public void tick() {
         super.tick();
+
+        if (!this.level().isClientSide) {
+            Player nearestPlayer = this.level().getNearestPlayer(this, 256);
+
+            // Enable AI when player gets close
+            this.setNoAi(nearestPlayer == null || this.distanceTo(nearestPlayer) > 128);  // Disable AI when far away
+        }
 
         if(this.level().isClientSide()) {
             this.setupAnimationStates();
