@@ -11,10 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.entity.ModEntities;
-import net.nbc.thetestermod.item.custom.ChiselItem;
-import net.nbc.thetestermod.item.custom.FuelItem;
-import net.nbc.thetestermod.item.custom.HammerItem;
-import net.nbc.thetestermod.item.custom.ModArmorItem;
+import net.nbc.thetestermod.item.custom.*;
 import net.nbc.thetestermod.sound.ModSounds;
 
 import java.util.List;
@@ -203,6 +200,9 @@ public class ModItems
 
     public static final RegistryObject<Item> TESTER_SPAWN_EGG = ITEMS.register("tester_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.TESTER_MOB, 0xfafafa, 0x00b1ff , new Item.Properties()));
+
+    public static final RegistryObject<Item> THROWING_KNIFE = ITEMS.register("throwing_knife",
+            () -> new ThrowingKnifeItem(new Item.Properties().stacksTo(4)));
 
     public static void register(IEventBus eventBus)
     {

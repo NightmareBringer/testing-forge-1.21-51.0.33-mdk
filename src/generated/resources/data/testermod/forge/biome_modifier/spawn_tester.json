@@ -2,7 +2,7 @@
   "type": "forge:add_spawns",
   "biomes": [
     "minecraft:taiga",
-    "minecraft:forest",
+    "minecraft:birch_forest",
     "minecraft:crimson_forest",
     "minecraft:small_end_islands"
   ],

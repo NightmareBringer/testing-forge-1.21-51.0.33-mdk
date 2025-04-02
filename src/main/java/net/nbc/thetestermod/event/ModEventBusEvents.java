@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.entity.ModEntities;
 import net.nbc.thetestermod.entity.client.TesterModel;
+import net.nbc.thetestermod.entity.client.ThrowingKnifeProjectileModel;
 import net.nbc.thetestermod.entity.custom.TesterEntity;
 
 @Mod.EventBusSubscriber(modid = TesterMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -20,6 +21,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(TesterModel.LAYER_LOCATION, TesterModel::createBodyLayer);
+        event.registerLayerDefinition(ThrowingKnifeProjectileModel.LAYER_LOCATION, ThrowingKnifeProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent

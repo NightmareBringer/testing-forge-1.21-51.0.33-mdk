@@ -56,6 +56,7 @@
   "item.testermod.strange_stick": "Strange Stick",
 
   "item.testermod.tester_spawn_egg": "Spawn Tester",
+  "item.testermod.throwing_knife": "Throwing Knife",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
@@ -157,6 +158,7 @@
   "block.testermod.crimson_blue_berry_bush": "Crimson Blueberry Bush",
 
   "entity.testermod.tester_mob": "Tester",
+  "entity.testermod.throwing_knife": "Thrown Knife",
 
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",

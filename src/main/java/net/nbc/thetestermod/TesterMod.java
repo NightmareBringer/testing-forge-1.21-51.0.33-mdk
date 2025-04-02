@@ -22,6 +22,7 @@ import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.enchantment.ModEnchantmentEffects;
 import net.nbc.thetestermod.entity.ModEntities;
 import net.nbc.thetestermod.entity.client.TesterRenderer;
+import net.nbc.thetestermod.entity.client.ThrowingKnifeProjectileRenderer;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import net.nbc.thetestermod.potion.ModPotions;
@@ -113,6 +114,7 @@ public class TesterMod
         {
             ModItemProperties.addCustomItemProperties();
             EntityRenderers.register(ModEntities.TESTER_MOB.get(), TesterRenderer::new);
+            EntityRenderers.register(ModEntities.THROWING_KNIFE.get(), ThrowingKnifeProjectileRenderer::new);
         }
     }
 }
