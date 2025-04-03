@@ -126,6 +126,9 @@
   "block.testermod.mysterious_dust_block": "Mysterious Dust Block",
   "block.testermod.mysterious_dust_slab": "Slab of Mysterious Dust",
 
+  "block.testermod.gaming_chair_red": "Red Gaming Chair",
+  "block.testermod.gaming_chair_blue": "Blue Gaming Chair",
+
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmare Ingot Material",
   "trim_pattern.testermod.stormen": "Stormen Armor Trim",
@@ -159,6 +162,7 @@
 
   "entity.testermod.tester_mob": "Tester",
   "entity.testermod.throwing_knife": "Thrown Knife",
+  "entity.testermod.chair_entity": "Gaming Chair",
 
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
@@ -171,5 +175,13 @@
   "tooltip.testermod.nightmare_hammer1": "Breaks blocks in a 3x3 area",
   "tooltip.testermod.nightmare_hammer2": "Also has a high damage output",
   "tooltip.testermod.storm_hammer1": "Breaks blocks in a 3x3 area",
-  "tooltip.testermod.storm_hammer2": "Also has a very high damage output"
+  "tooltip.testermod.storm_hammer2": "Also has a very high damage output",
+
+  "tooltip.testermod.red_gc1.tooltip": "An ordinary §cred§r gaming chair.",
+  "tooltip.testermod.red_gc2.tooltip": "Apparently, a certain doctor §lcan§r fix",
+  "tooltip.testermod.red_gc3.tooltip": "the chair if it starts to squeak...",
+
+  "tooltip.testermod.blue_gc1.tooltip": "An ordinary §9blue§r gaming chair.",
+  "tooltip.testermod.blue_gc2.tooltip": "Apparently, a certain doctor §ncan't§r fix",
+  "tooltip.testermod.blue_gc3.tooltip": "the chair if it starts to squeak..."
 }

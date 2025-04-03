@@ -280,6 +280,12 @@ public class ModBlocks
     public static final RegistryObject<FallingSlabBlock> MYSTERIOUS_DUST_SLAB = registerBlock("mysterious_dust_slab",
             () -> new FallingSlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SAND).strength(0.1f)));
 
+    public static final RegistryObject<Block> RED_GAMING_CHAIR = registerBlock("gaming_chair_red",
+            () -> new GamingChairRedBlock(BlockBehaviour.Properties.of().strength(0.25f).noOcclusion()));
+
+    public static final RegistryObject<Block> BLUE_GAMING_CHAIR = registerBlock("gaming_chair_blue",
+            () -> new GamingChairBlueBlock(BlockBehaviour.Properties.of().strength(0.25f).noOcclusion()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

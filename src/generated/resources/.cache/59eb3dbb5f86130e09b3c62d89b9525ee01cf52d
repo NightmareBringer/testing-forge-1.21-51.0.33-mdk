@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-01T14:06:20.0091651	Loot Tables
+// 1.21.1	2025-04-03T02:41:49.9073796	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -14,6 +14,8 @@ f1d69c75e57d561b0ada97a5c0817b6ff77ff920 data/testermod/loot_table/blocks/corrup
 a488a27acbadf12ac217acead46614ca49c37221 data/testermod/loot_table/blocks/corrupted_oak_trapdoor.json
 25c2896cd50a75b16b49f63194d2960be4c2bb44 data/testermod/loot_table/blocks/corrupted_oak_wood.json
 58a5305d71914ec94856fd849971f02273fd21b9 data/testermod/loot_table/blocks/crimson_blue_berry_bush.json
+3ca7982f909351669aaf7df6ef3c49dd17fcfc4b data/testermod/loot_table/blocks/gaming_chair_blue.json
+cf0e1dc76faa2b6a6e33ca52ab8072a2315a25f9 data/testermod/loot_table/blocks/gaming_chair_red.json
 d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_block.json
 01c1817cf96ae43fed9b468e6ec51c4723bc214f data/testermod/loot_table/blocks/mysterious_dust_block.json
 288ca1c5eee99f978363ee46c1c5a343a3750c77 data/testermod/loot_table/blocks/mysterious_dust_slab.json

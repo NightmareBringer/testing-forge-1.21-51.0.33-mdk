@@ -125,10 +125,13 @@ public class ModCreativeModeTabs
                         output.accept((ModItems.THROWING_KNIFE.get()));
 
 
+
                         output.accept(ModItems.TESTER_SPAWN_EGG.get());
                         output.accept(ModItems.DEVILS_SNATH.get());
                         output.accept(ModItems.DEVILS_BLADE.get());
                         output.accept(ModItems.DEVILSKNIFE.get());
+                        output.accept(ModBlocks.RED_GAMING_CHAIR.get());
+                        output.accept(ModBlocks.BLUE_GAMING_CHAIR.get());
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.KRABS.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_SAPLING.get());

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "testermod:block/gaming_chair_blue"
+    },
+    "facing=south": {
+      "model": "testermod:block/gaming_chair_blue",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "testermod:block/gaming_chair_blue",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "testermod:block/gaming_chair_blue",
+      "y": 270
+    }
+  }
+}

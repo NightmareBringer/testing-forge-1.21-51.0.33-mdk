@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.entity.custom.ChairEntity;
 import net.nbc.thetestermod.entity.custom.TesterEntity;
 import net.nbc.thetestermod.entity.custom.ThrowingKnifeProjectileEntity;
 
@@ -21,6 +22,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<ThrowingKnifeProjectileEntity>> THROWING_KNIFE =
             ENTITY_TYPES.register("throwing_knife", () -> EntityType.Builder.<ThrowingKnifeProjectileEntity>of(ThrowingKnifeProjectileEntity::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).build("throwing_knife"));
+
+    public static final RegistryObject<EntityType<ChairEntity>> CHAIR_ENT =
+            ENTITY_TYPES.register("chair_entity", () -> EntityType.Builder.of(ChairEntity::new, MobCategory.MISC)
+                    .sized(0.75f, 0.5f).build("chair_entity"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
