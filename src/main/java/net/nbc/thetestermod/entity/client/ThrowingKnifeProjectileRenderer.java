@@ -26,10 +26,17 @@ public class ThrowingKnifeProjectileRenderer extends EntityRenderer<ThrowingKnif
         poseStack.pushPose();
 
         if(!pEntity.isGrounded()) {
-            poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, pEntity.yRotO, pEntity.getYRot())));
-            poseStack.mulPose(Axis.XP.rotationDegrees(pEntity.getRenderingRotation() * 5f));
+            // Interpolate yaw and pitch for smooth movement
+            float interpolatedYaw = Mth.lerp(partialTicks, pEntity.yRotO, pEntity.getYRot());
+            float interpolatedPitch = Mth.lerp(partialTicks, pEntity.xRotO, pEntity.getXRot());
+
+            // **Fix: Adjust the initial orientation correctly**
+            poseStack.mulPose(Axis.YP.rotationDegrees(interpolatedYaw));
+            poseStack.mulPose(Axis.XP.rotationDegrees(-interpolatedPitch - 90)); // Align blade FORWARD
+
             poseStack.translate(0, -1.0f, 0);
         } else {
+            // Use grounded offsets for correct embedding
             poseStack.mulPose(Axis.YP.rotationDegrees(pEntity.groundedOffset.y));
             poseStack.mulPose(Axis.XP.rotationDegrees(pEntity.groundedOffset.x));
             poseStack.translate(0, -1.0f, 0);

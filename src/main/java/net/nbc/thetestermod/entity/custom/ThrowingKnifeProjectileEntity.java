@@ -10,12 +10,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.Vec3;
 import net.nbc.thetestermod.entity.ModEntities;
 import net.nbc.thetestermod.item.ModItems;
 
 public class ThrowingKnifeProjectileEntity extends AbstractArrow {
     private float rotation;
     public Vec2 groundedOffset;
+    private float initialPitch;
 
     public ThrowingKnifeProjectileEntity(EntityType<? extends AbstractArrow> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -23,6 +25,7 @@ public class ThrowingKnifeProjectileEntity extends AbstractArrow {
 
     public ThrowingKnifeProjectileEntity(LivingEntity shooter, Level level) {
         super(ModEntities.THROWING_KNIFE.get(), shooter, level, new ItemStack(ModItems.THROWING_KNIFE.get()), null);
+        this.initialPitch = shooter.getXRot(); // Capture the throw angle
     }
 
     @Override
@@ -31,11 +34,8 @@ public class ThrowingKnifeProjectileEntity extends AbstractArrow {
     }
 
     public float getRenderingRotation() {
-        rotation += 0.5f;
-        if(rotation >= 360) {
-            rotation = 0;
-        }
-        return rotation;
+        Vec3 velocity = this.getDeltaMovement();
+        return (float) Math.toDegrees(Math.atan2(velocity.y, velocity.horizontalDistance()));
     }
 
     public boolean isGrounded() {
@@ -58,24 +58,16 @@ public class ThrowingKnifeProjectileEntity extends AbstractArrow {
     protected void onHitBlock(BlockHitResult result) {
         super.onHitBlock(result);
 
-        if(result.getDirection() == Direction.SOUTH) {
-            groundedOffset = new Vec2(215f,180f);
-        }
-        if(result.getDirection() == Direction.NORTH) {
-            groundedOffset = new Vec2(215f, 0f);
-        }
-        if(result.getDirection() == Direction.EAST) {
-            groundedOffset = new Vec2(215f,-90f);
-        }
-        if(result.getDirection() == Direction.WEST) {
-            groundedOffset = new Vec2(215f,90f);
-        }
+        Direction hitDirection = result.getDirection();
 
-        if(result.getDirection() == Direction.DOWN) {
-            groundedOffset = new Vec2(115f,180f);
-        }
-        if(result.getDirection() == Direction.UP) {
-            groundedOffset = new Vec2(285f,180f);
+        // Corrected offsets for realistic sticking angles
+        switch (hitDirection) {
+            case SOUTH -> groundedOffset = new Vec2(90f, 0f);  // Blade sticks into SOUTH wall
+            case NORTH -> groundedOffset = new Vec2(90f, 180f);    // Blade sticks into NORTH wall
+            case EAST -> groundedOffset = new Vec2(90f, 90f);    // Blade sticks into EAST wall
+            case WEST -> groundedOffset = new Vec2(90f, -90f);   // Blade sticks into WEST wall
+            case DOWN -> groundedOffset = new Vec2(180f, 0f);    // Blade sticks into the ground
+            case UP -> groundedOffset = new Vec2(0f, 0f);        // Blade sticks into ceiling
         }
     }
 }
