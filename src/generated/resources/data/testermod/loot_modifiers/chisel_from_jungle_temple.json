@@ -1,0 +1,19 @@
+{
+  "type": "testermod:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "minecraft:chests/jungle_temple"
+        },
+        {
+          "chance": 0.15,
+          "condition": "minecraft:random_chance"
+        }
+      ]
+    }
+  ],
+  "item": "testermod:chisel"
+}

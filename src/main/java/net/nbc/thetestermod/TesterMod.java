@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -26,9 +27,13 @@ import net.nbc.thetestermod.entity.client.TesterRenderer;
 import net.nbc.thetestermod.entity.client.ThrowingKnifeProjectileRenderer;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
+import net.nbc.thetestermod.loot.ModLootModifiers;
+import net.nbc.thetestermod.particle.ModParticles;
+import net.nbc.thetestermod.particle.ShineParticles;
 import net.nbc.thetestermod.potion.ModPotions;
 import net.nbc.thetestermod.sound.ModSounds;
 import net.nbc.thetestermod.util.ModItemProperties;
+import net.nbc.thetestermod.villager.ModVillagers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -65,6 +70,10 @@ public class TesterMod
 
         ModEnchantmentEffects.register((modEventBus));
         ModEntities.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -111,12 +120,16 @@ public class TesterMod
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             ModItemProperties.addCustomItemProperties();
             EntityRenderers.register(ModEntities.TESTER_MOB.get(), TesterRenderer::new);
             EntityRenderers.register(ModEntities.THROWING_KNIFE.get(), ThrowingKnifeProjectileRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR_ENT.get(), ChairEntRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.SHINE_PARTICLES.get(), ShineParticles.Provider::new);
         }
     }
 }

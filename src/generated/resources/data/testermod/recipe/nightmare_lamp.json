@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "testermod:pure_nightmarite"
+      "item": "testermod:nightmare_ingot"
     },
     "R": {
-      "item": "minecraft:redstone"
+      "item": "testermod:pure_nightmarite"
     },
     "t": {
-      "item": "testermod:nightmare_ingot"
+      "item": "minecraft:glass"
     }
   },
   "pattern": [

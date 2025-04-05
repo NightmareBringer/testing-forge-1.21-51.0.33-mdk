@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.nbc.thetestermod.item.ModItems;
+import net.nbc.thetestermod.particle.ModParticles;
 import net.nbc.thetestermod.util.ModTags;
 
 import java.util.List;
@@ -33,6 +34,7 @@ public class MagicBlock extends Block
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
+        pLevel.addParticle(ModParticles.SHINE_PARTICLES.get(), pPos.getX()+0.5, pPos.getY()+1, pPos.getZ()+0.5, 0, 1, 0);
         //pLevel.playSound(pPlayer, pPos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
         return InteractionResult.SUCCESS;
     }

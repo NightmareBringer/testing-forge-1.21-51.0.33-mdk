@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:blue_dye"
+    },
+    "I": {
+      "item": "minecraft:iron_bars"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "P": {
+      "item": "minecraft:polished_blackstone_stairs"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "#L#",
+    "LPL",
+    "iIi"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:gaming_chair_blue"
+  }
+}

@@ -3,17 +3,20 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:pink_dye"
+      "item": "testermod:mysterious_dust"
     },
     "I": {
-      "item": "minecraft:stick"
+      "item": "testermod:impure_stick"
     },
     "N": {
-      "item": "minecraft:diamond"
+      "item": "testermod:nightmare_nugget"
+    },
+    "S": {
+      "item": "testermod:storm_nugget"
     }
   },
   "pattern": [
-    "NAN",
+    "NAS",
     " I ",
     " I "
   ],

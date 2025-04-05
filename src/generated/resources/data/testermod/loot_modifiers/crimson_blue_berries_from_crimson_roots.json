@@ -1,0 +1,14 @@
+{
+  "type": "testermod:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:crimson_roots",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "chance": 0.1,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "testermod:crimson_blue_berries"
+}

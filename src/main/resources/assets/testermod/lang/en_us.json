@@ -57,6 +57,7 @@
 
   "item.testermod.tester_spawn_egg": "Spawn Tester",
   "item.testermod.throwing_knife": "Throwing Knife",
+  "item.testermod.orb_of_energy": "Orb of Energy",
 
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
@@ -163,6 +164,9 @@
   "entity.testermod.tester_mob": "Tester",
   "entity.testermod.throwing_knife": "Thrown Knife",
   "entity.testermod.chair_entity": "Gaming Chair",
+
+  "entity.minecraft.villager.testermod.gaming_villager_n": "Gaming Villager",
+  "entity.minecraft.villager.testermod.gaming_villager_s": "Gaming Villager",
 
 
   "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",

@@ -48,12 +48,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHISEL.get())
-                .pattern("NAN")
+                .pattern("NAS")
                 .pattern(" I ")
                 .pattern(" I ")
-                .define('N', Items.DIAMOND) // BETA RECIPE CHANGE TO NIGHTMARE_INGOT WHEN WORLD GEN IS PUT IN!!!
-                .define('A', Items.PINK_DYE)
-                .define('I', Items.STICK)
+                .define('A', ModItems.MYSTERIOUS_DUST.get())
+                .define('N', ModItems.NIGHTMARE_NUGGET.get())
+                .define('S', ModItems.STORM_NUGGET.get())
+                .define('I', ModItems.IMPURE_STICK.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
@@ -130,28 +131,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK.get())
                 .pattern("#A#")
                 .pattern("DUD")
-                .pattern("GGG")
-                .define('#', Items.GOLD_BLOCK)
+                .pattern("GLG")
+                .define('D', Items.GOLD_BLOCK)
                 .define('A', Items.AMETHYST_SHARD)
-                .define('D', Items.DIAMOND_BLOCK)
+                .define('#', Items.DIAMOND_BLOCK)
                 .define('U', ModItems.PURE_EYE.get())
                 .define('G', Items.AMETHYST_BLOCK)
+                .define('L', Items.LAPIS_BLOCK)
                 .unlockedBy(getHasName(ModItems.PURE_EYE.get()), has(ModItems.PURE_EYE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARE_LAMP.get())
                 .pattern("#t#")
                 .pattern("tRt")
                 .pattern("#t#")
-                .define('#', ModItems.PURE_NIGHTMARITE.get())
-                .define('t', ModItems.NIGHTMARE_INGOT.get())
-                .define('R', Items.REDSTONE)
+                .define('t', Items.GLASS)
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('R', ModItems.PURE_NIGHTMARITE.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STORM_LAMP.get())
-                .pattern("ttt")
+                .pattern("#t#")
                 .pattern("tRt")
-                .pattern("ttt")
-                .define('t', ModBlocks.STORM_BLOCK.get())
-                .define('R', Items.REDSTONE)
+                .pattern("#t#")
+                .define('t', Items.GLASS)
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('R', ModItems.IMPURE_STORMITE.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
 
 
@@ -431,6 +434,65 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('M', Items.STRING)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_GAMING_CHAIR.get())
+                .pattern("#L#")
+                .pattern("LPL")
+                .pattern("iIi")
+                .define('#', Items.RED_DYE)
+                .define('L', Items.LEATHER)
+                .define('P', Items.POLISHED_BLACKSTONE_STAIRS)
+                .define('i', Items.IRON_INGOT)
+                .define('I', Items.IRON_BARS)
+                .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":rgc_from_full_craft");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_GAMING_CHAIR.get())
+                .pattern("#L#")
+                .pattern("LPL")
+                .pattern("iIi")
+                .define('#', Items.BLUE_DYE)
+                .define('L', Items.LEATHER)
+                .define('P', Items.POLISHED_BLACKSTONE_STAIRS)
+                .define('i', Items.IRON_INGOT)
+                .define('I', Items.IRON_BARS)
+                .unlockedBy(getHasName(Items.BLUE_DYE), has(Items.BLUE_DYE))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":bgc_from_full_craft");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_GAMING_CHAIR.get())
+                .pattern(" L ")
+                .pattern("LPL")
+                .pattern(" L ")
+                .define('L', Items.RED_DYE)
+                .define('P', ModBlocks.BLUE_GAMING_CHAIR.get())
+                .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":rgc_from_bgc");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_GAMING_CHAIR.get())
+                .pattern(" L ")
+                .pattern("LPL")
+                .pattern(" L ")
+                .define('L', Items.BLUE_DYE)
+                .define('P', ModBlocks.RED_GAMING_CHAIR.get())
+                .unlockedBy(getHasName(Items.BLUE_DYE), has(Items.BLUE_DYE))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":bgc_from_rgc");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.THROWING_KNIFE.get())
+                .pattern(" I ")
+                .pattern(" / ")
+                .pattern("   ")
+                .define('I', Items.IRON_INGOT)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":throwing_knife_from_iron_ingot_and_stick");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MYSTERIOUS_DUST_BLOCK.get())
+                .pattern(" I ")
+                .pattern(" I ")
+                .pattern("   ")
+                .define('I', ModBlocks.MYSTERIOUS_DUST_SLAB.get())
+                .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_block_from_mysterious_slab");
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
@@ -457,9 +519,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STORM_NUGGET.get(), 9)
                 .requires(ModItems.STORM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTERIOUS_DUST.get(), 2)
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTERIOUS_DUST.get(), 1)
                 .requires(ModBlocks.MYSTERIOUS_DUST_SLAB.get())
-                .unlockedBy(getHasName(ModBlocks.MYSTERIOUS_DUST_SLAB.get()), has(ModBlocks.MYSTERIOUS_DUST_SLAB.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModBlocks.MYSTERIOUS_DUST_SLAB.get()), has(ModBlocks.MYSTERIOUS_DUST_SLAB.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_from_dust_slab");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTERIOUS_DUST.get(), 2)
+                .requires(ModBlocks.MYSTERIOUS_DUST_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.MYSTERIOUS_DUST_SLAB.get()), has(ModBlocks.MYSTERIOUS_DUST_SLAB.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_from_dust_block");
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CORRUPTED_OAK_PLANKS.get(), 4)
                 .requires(ModBlocks.CORRUPTED_OAK_WOOD.get())
                 .requires(ModBlocks.CORRUPTED_OAK_LOG.get())

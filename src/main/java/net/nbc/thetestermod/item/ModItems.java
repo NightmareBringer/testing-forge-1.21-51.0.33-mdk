@@ -202,7 +202,12 @@ public class ModItems
             () -> new ForgeSpawnEggItem(ModEntities.TESTER_MOB, 0xfafafa, 0x00b1ff , new Item.Properties()));
 
     public static final RegistryObject<Item> THROWING_KNIFE = ITEMS.register("throwing_knife",
-            () -> new ThrowingKnifeItem(new Item.Properties().stacksTo(4)));
+            () -> new ThrowingKnifeItem(new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.KNIFE, 1, -2.2f))
+                    .stacksTo(4)));
+
+    public static final RegistryObject<Item> ENERGY_ORB = ITEMS.register("orb_of_energy",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

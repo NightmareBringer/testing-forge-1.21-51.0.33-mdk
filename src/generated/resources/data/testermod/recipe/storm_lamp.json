@@ -2,17 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "testermod:storm_ingot"
+    },
     "R": {
-      "item": "minecraft:redstone"
+      "item": "testermod:impure_stormite"
     },
     "t": {
-      "item": "testermod:storm_block"
+      "item": "minecraft:glass"
     }
   },
   "pattern": [
-    "ttt",
+    "#t#",
     "tRt",
-    "ttt"
+    "#t#"
   ],
   "result": {
     "count": 1,

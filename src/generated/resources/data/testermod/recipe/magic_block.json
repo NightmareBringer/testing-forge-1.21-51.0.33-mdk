@@ -3,16 +3,19 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:diamond_block"
     },
     "A": {
       "item": "minecraft:amethyst_shard"
     },
     "D": {
-      "item": "minecraft:diamond_block"
+      "item": "minecraft:gold_block"
     },
     "G": {
       "item": "minecraft:amethyst_block"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
     },
     "U": {
       "item": "testermod:pure_eye"
@@ -21,7 +24,7 @@
   "pattern": [
     "#A#",
     "DUD",
-    "GGG"
+    "GLG"
   ],
   "result": {
     "count": 1,

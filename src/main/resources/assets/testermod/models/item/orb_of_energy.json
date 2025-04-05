@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "testermod:item/orb_of_energy_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "testermod:item/orb_of_energy_2d"
+    },
+    "ground": {
+      "parent": "testermod:item/orb_of_energy_2d"
+    },
+    "fixed": {
+      "parent": "testermod:item/orb_of_energy_2d"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.item;
 
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
@@ -18,5 +19,9 @@ public class ModToolTiers
 
     public static final Tier DEVILSKNIFE = new ForgeTier(1366, 25f, 5f, 22,
             ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL, () -> Ingredient.of(ModItems.IMPURE_STICK.get()),
+            ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL);
+
+    public static final Tier KNIFE = new ForgeTier(200, 15f, 3f, 22,
+            ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL, () -> Ingredient.of(Items.STICK),
             ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL);
 }

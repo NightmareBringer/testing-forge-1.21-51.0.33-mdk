@@ -61,7 +61,7 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(256), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
         register(context, NETHER_CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_CRIMSON_BLUE_BERRY_BUSH_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome()));
+                List.of(RarityFilter.onAverageOnceEvery(2), InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome()));
 
     }
 

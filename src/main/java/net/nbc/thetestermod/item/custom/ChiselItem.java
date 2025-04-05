@@ -1,11 +1,14 @@
 package net.nbc.thetestermod.item.custom;
 
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -19,6 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.GrassBlock;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.component.ModDataComponentTypes;
+import net.nbc.thetestermod.particle.ModParticles;
 import net.nbc.thetestermod.sound.ModSounds;
 
 import java.util.List;
@@ -65,9 +69,22 @@ public class ChiselItem extends Item
                 level.setBlockAndUpdate(pContext.getClickedPos(), chiseledBlock.defaultBlockState());
 
                 pContext.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) pContext.getPlayer()),
-                        item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
+                        item -> {
+                            EquipmentSlot slot = pContext.getHand() == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
+                            pContext.getPlayer().onEquippedItemBroken(item, slot);
+                        });
 
                 level.playSound(null, pContext.getClickedPos(), ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
+
+                /* For just producing the clicked block particles
+                ((ServerLevel) level).sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, clickedBlock.defaultBlockState()),
+                        pContext.getClickedPos().getX() + 0.5, pContext.getClickedPos().getY() + 1.0,
+                        pContext.getClickedPos().getZ() + 0.5, 10, 0, 0 ,0 ,1);
+                 */
+
+                ((ServerLevel) level).sendParticles(ModParticles.SHINE_PARTICLES.get(),
+                        pContext.getClickedPos().getX() + 0.5, pContext.getClickedPos().getY() + 1.0,
+                        pContext.getClickedPos().getZ() + 0.5, 15, 0.5, 0 ,0.5 ,0.5);
 
                 if (player != null && !player.getAbilities().instabuild)
                 {

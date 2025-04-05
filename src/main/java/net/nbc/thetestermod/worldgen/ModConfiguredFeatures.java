@@ -90,7 +90,7 @@ public class ModConfiguredFeatures {
                 FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(
                                 BlockStateProvider.simple(ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get()
-                                        .defaultBlockState().setValue(SweetBerryBushBlock.AGE, Integer.valueOf(2)))),
+                                        .defaultBlockState().setValue(SweetBerryBushBlock.AGE, Integer.valueOf(3)))),
                         List.of(Blocks.CRIMSON_NYLIUM)
                 )
         );

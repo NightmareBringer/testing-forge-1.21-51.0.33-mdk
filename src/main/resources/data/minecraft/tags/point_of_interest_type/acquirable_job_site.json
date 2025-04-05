@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "testermod:gaming_villager_n_poi",
+      "required": false
+    },
+    {
+      "id": "testermod:gaming_villager_s_poi",
+      "required": false
+    }
+  ]
+}
