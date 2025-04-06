@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-04T17:43:05.7903684	Recipes
+// 1.21.1	2025-04-06T00:15:17.1715051	Recipes
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
 abe784193be9f31ab6e6d37da4d22b031592b9ec data/minecraft/advancement/recipes/misc/storm_ingot_from_smithing.json
 0f747dd0d3a8a60ad29d8d3a705e67d10ec5ee38 data/minecraft/recipe/nightmare_ingot_from_smithing.json
@@ -61,6 +61,7 @@ c68e561b8f6fab3bbeacdb7fe1b4d6998aabc2ab data/testermod/advancement/recipes/misc
 5181c6c88026bc06cd8871a91addc3c8cb64bb21 data/testermod/advancement/recipes/misc/nightmarite_from_smelting_nightmarite.json
 4f70c2b01e403a4a08a75835115f3d33968e0eb9 data/testermod/advancement/recipes/misc/nightmarite_from_smelting_nightmarite_deepslate_ore.json
 b86a5adb92e88572f5c3a993ec644bb9f3ad8081 data/testermod/advancement/recipes/misc/nightmarite_from_smelting_nightmarite_ore.json
+83d4d1f788a42ebef72807cd329101ec76a4e6d9 data/testermod/advancement/recipes/misc/pedestal.json
 5a6ac3e47e65a4f9d06b1710eb123ad42c80b472 data/testermod/advancement/recipes/misc/pure_eye.json
 5b6215a308f658c992a612987c74f5e8625f87ac data/testermod/advancement/recipes/misc/pure_nightmarite.json
 bc07d8eb98c622a89300a960308fe6fce6fc5d7d data/testermod/advancement/recipes/misc/pure_nightmarite_block.json
@@ -171,6 +172,7 @@ e07b4db4e0f895ecf00ca867e75782267528e89f data/testermod/recipe/nightmarite_from_
 eb2fbe6386fcf073625f424c19746b946726596c data/testermod/recipe/nightmarite_from_smelting_nightmarite.json
 bfc77a113301312ea183ea5346cb3672dac785b9 data/testermod/recipe/nightmarite_from_smelting_nightmarite_deepslate_ore.json
 6da54e611b23ef3ca714f10e4dcbe00eb1372e19 data/testermod/recipe/nightmarite_from_smelting_nightmarite_ore.json
+0590ec06f8fd4f2513cdc8d579f12326e64829f6 data/testermod/recipe/pedestal.json
 6094baf3aa69b25aaba87f3f9f5f203837bec111 data/testermod/recipe/pure_eye.json
 5ab0e78f66b4b897f62469f59eec9a0d000f2e16 data/testermod/recipe/pure_nightmarite.json
 e1108e2c1fb122c20f86970dbe10a1edb83452bc data/testermod/recipe/pure_nightmarite_block.json

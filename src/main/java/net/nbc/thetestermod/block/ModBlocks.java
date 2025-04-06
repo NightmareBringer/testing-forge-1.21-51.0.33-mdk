@@ -286,6 +286,9 @@ public class ModBlocks
     public static final RegistryObject<Block> BLUE_GAMING_CHAIR = registerBlock("gaming_chair_blue",
             () -> new GamingChairBlueBlock(BlockBehaviour.Properties.of().strength(0.25f).noOcclusion()));
 
+    public static final RegistryObject<Block> PEDESTAL_BLOCK = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().strength(10f).noOcclusion()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

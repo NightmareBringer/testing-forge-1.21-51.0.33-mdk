@@ -48,6 +48,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_NETHER_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.ANTI_MAGIC_BLOCK.get())
+                .add(ModBlocks.PEDESTAL_BLOCK.get())
 
                 .add(ModBlocks.NIGHTMARE_STAIRS.get())
                 .add(ModBlocks.NIGHTMARE_SlAB.get())

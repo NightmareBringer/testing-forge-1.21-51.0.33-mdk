@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-03T02:41:49.9073796	Loot Tables
+// 1.21.1	2025-04-05T23:57:59.9832211	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -35,6 +35,7 @@ ca1bf1f24d7b447e8f042df84d884b7ffeee77c7 data/testermod/loot_table/blocks/nightm
 a98ee44b5598bf6c347b3c4cff6122932584ff7a data/testermod/loot_table/blocks/nightmarite_end_ore.json
 30a6d4069fc1d10416123796d0edd1a09d08fd2b data/testermod/loot_table/blocks/nightmarite_nether_ore.json
 82a7478e2ea0d7f6c46a725c7a8154002f05528a data/testermod/loot_table/blocks/nightmarite_ore.json
+5608f5a4043d16b3c0ade0a784833606691627a2 data/testermod/loot_table/blocks/pedestal.json
 e968ade1ed65f63cd0092418f7c510578240f491 data/testermod/loot_table/blocks/pure_nightmarite_block.json
 b57b74a7efa39792a959f90bb30bca2674f05966 data/testermod/loot_table/blocks/refined_nightmare_block.json
 e7c7f336fe874e33e9b80a6bb7e95e8979079606 data/testermod/loot_table/blocks/refined_nightmare_button.json

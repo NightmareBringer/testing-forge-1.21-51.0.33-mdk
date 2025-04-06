@@ -41,6 +41,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
         dropSelf(ModBlocks.ANTI_MAGIC_BLOCK.get());
+        dropSelf(ModBlocks.PEDESTAL_BLOCK.get());
 
         dropSelf(ModBlocks.NIGHTMARE_STAIRS.get());
         dropSelf(ModBlocks.NIGHTMARE_PRESSURE_PLATE.get());

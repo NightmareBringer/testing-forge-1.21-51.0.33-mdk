@@ -124,6 +124,7 @@ public class ModCreativeModeTabs
                         output.accept((ModItems.CRIMSON_BLUE_BERRIES.get()));
                         output.accept((ModItems.ENERGY_ORB.get()));
                         output.accept((ModItems.THROWING_KNIFE.get()));
+                        output.accept((ModBlocks.PEDESTAL_BLOCK.get()));
 
 
 

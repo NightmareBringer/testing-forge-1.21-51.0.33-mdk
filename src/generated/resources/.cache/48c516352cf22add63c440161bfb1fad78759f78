@@ -1,9 +1,9 @@
-// 1.21.1	2025-02-28T13:30:17.5786931	Tags for minecraft:block mod id testermod
+// 1.21.1	2025-04-06T00:07:03.1685579	Tags for minecraft:block mod id testermod
 d5bac7e436aa9d566ba2d615a38f1f6947079302 data/minecraft/tags/block/fences.json
 0524ca1661a3a6cd4226023964c682555b590785 data/minecraft/tags/block/fence_gates.json
 b452c1747036e07f62ef5411f54d35d21b415b69 data/minecraft/tags/block/logs_that_burn.json
 a8319d6acc733d298b1c4b5acbbf7b1181a6996b data/minecraft/tags/block/mineable/axe.json
-cb65b705f0b8f52eef2e73b5968e64c4c3325b5c data/minecraft/tags/block/mineable/pickaxe.json
+5f045b725e53f2ad9399120b57427baf6616b6af data/minecraft/tags/block/mineable/pickaxe.json
 afae7adf991dbfd68b44ee2025f73440b245f314 data/minecraft/tags/block/needs_diamond_tool.json
 79dafd6dd853af4b91a5fcc83a949d8b2109a1ce data/minecraft/tags/block/needs_iron_tool.json
 db9b254a9b59fe4e8419d5e308be3f607d2ae568 data/minecraft/tags/block/needs_stone_tool.json

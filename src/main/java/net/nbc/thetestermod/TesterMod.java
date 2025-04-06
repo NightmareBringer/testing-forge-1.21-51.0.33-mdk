@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,6 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.block.entity.ModBlockEntities;
+import net.nbc.thetestermod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.enchantment.ModEnchantmentEffects;
@@ -73,7 +76,9 @@ public class TesterMod
 
         ModVillagers.register(modEventBus);
         ModParticles.register(modEventBus);
+
         ModLootModifiers.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -130,6 +135,11 @@ public class TesterMod
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.SHINE_PARTICLES.get(), ShineParticles.Provider::new);
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }

@@ -493,6 +493,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_block_from_mysterious_slab");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PEDESTAL_BLOCK.get())
+                .pattern("/ /")
+                .pattern(" M ")
+                .pattern("   ")
+                .define('/', ModItems.STORM_INGOT.get())
+                .define('M', ModBlocks.REFINED_NIGHTMARE_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
