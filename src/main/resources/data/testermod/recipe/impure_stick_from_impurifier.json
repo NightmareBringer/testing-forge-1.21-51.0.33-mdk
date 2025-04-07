@@ -1,0 +1,9 @@
+{
+  "type": "testermod:impurifier_block",
+  "ingredient": {
+    "item": "testermod:strange_stick"
+  },
+  "result": {
+    "id": "testermod:impure_stick"
+  }
+}

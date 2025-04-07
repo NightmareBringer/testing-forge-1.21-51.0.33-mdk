@@ -88,20 +88,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createDoorTable(ModBlocks.STORM_DOOR.get()));
 
         this.add(ModBlocks.NIGHTMARITE_ORE.get(),
-                block -> createOreDrop(ModBlocks.NIGHTMARITE_ORE.get(), ModItems.NIGHTMARITE.get()));
+                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_ORE.get(), ModItems.NIGHTMARITE.get(), 0, 2));
         this.add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 1, 3));
+                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get(), ModItems.NIGHTMARITE.get(), 0, 2));
         this.add(ModBlocks.NIGHTMARITE_NETHER_ORE.get(),
-                block -> createOreDrop(ModBlocks.NIGHTMARITE_NETHER_ORE.get(), ModItems.NIGHTMARITE.get()));
+                block -> createMultipleOreDrops(ModBlocks.NIGHTMARITE_NETHER_ORE.get(), ModItems.NIGHTMARITE.get(), 0, 1));
         this.add(ModBlocks.NIGHTMARITE_END_ORE.get(),
                 block -> createOreDrop(ModBlocks.NIGHTMARITE_END_ORE.get(), ModItems.NIGHTMARITE.get()));
 
         this.add(ModBlocks.STORMITE_ORE.get(),
-                block -> createOreDrop(ModBlocks.STORMITE_ORE.get(), ModItems.STORMITE.get()));
+                block -> createMultipleOreDrops(ModBlocks.STORMITE_ORE.get(), ModItems.STORMITE.get(), 0, 1));
         this.add(ModBlocks.STORMITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.STORMITE_DEEPSLATE_ORE.get(), ModItems.STORMITE.get(), 0, 1));
         this.add(ModBlocks.STORM_NETHER_ORE.get(),
-                block -> createOreDrop(ModBlocks.STORM_NETHER_ORE.get(), ModItems.STORMITE.get()));
+                block -> createMultipleOreDrops(ModBlocks.STORM_NETHER_ORE.get(), ModItems.STORMITE.get(), 0, 2));
         this.add(ModBlocks.STORM_END_ORE.get(),
                 block -> createOreDrop(ModBlocks.STORM_END_ORE.get(), ModItems.STORMITE.get()));
 

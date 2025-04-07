@@ -1,5 +1,6 @@
-// 1.21.1	2025-04-04T23:51:23.8587643	Global Loot Modifiers : testermod
-247d2cd6b54c7c8dc19a066dbb11dfd7eb8111ce data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.21.1	2025-04-06T23:03:26.3038269	Global Loot Modifiers : testermod
+53c4b4364bccb50f9833076aa1a3e5b417b5f504 data/forge/loot_modifiers/global_loot_modifiers.json
 ab424c03277edd52192a69ed9e9e1a7c3ede5552 data/testermod/loot_modifiers/chisel_from_jungle_temple.json
-a01c162e2508f3690ff5558a512481ba0c73c40a data/testermod/loot_modifiers/crimson_blue_berries_from_crimson_roots.json
+4a9871672382abf82418af59f59b099c9a7b20dc data/testermod/loot_modifiers/crimson_blue_berries_from_crimson_roots.json
+7b03d965b8f02a2879a70102c661fb6a420c7f49 data/testermod/loot_modifiers/lightning_shot_from_skeleton.json
 c35deaade07fb2c49197da3ebe82b4e6be461581 data/testermod/loot_modifiers/squidward_music_disk_from_creeper.json

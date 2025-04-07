@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-04T17:43:05.7943684	Registries
+// 1.21.1	2025-04-06T23:03:26.264827	Registries
 a2ae8a0f8dc757904d27d33a2a6fe128fd076b83 data/testermod/enchantment/lightning_striker.json
 725a5dcf6815a7389423457f2896116dff1a427e data/testermod/forge/biome_modifier/add_corrupted_oak_tree.json
 00b0a8885e8ae9d03f21d308fe1e8b0583e11643 data/testermod/forge/biome_modifier/add_crimson_blue_berry_bush_nether.json
@@ -9,7 +9,7 @@ f5ab072e00847c8d11ca90e41219fd5ee604f497 data/testermod/forge/biome_modifier/add
 a94431f8ac2b30260e4d8b2e22b76b0f861803a6 data/testermod/forge/biome_modifier/add_stormite_end_ore.json
 9a530b24bc8e7f855d9bb9fe7c06f933555ca48c data/testermod/forge/biome_modifier/add_stormite_nether_ore.json
 28c9e57d80f5343fca7e1b17b515802cd109c80b data/testermod/forge/biome_modifier/add_stormite_ore.json
-3602e95203745c972c7c8be48230fcbb527fcbe4 data/testermod/forge/biome_modifier/spawn_tester.json
+ba89785b389f1ffdeb05a25cbc693d18b1d63043 data/testermod/forge/biome_modifier/spawn_tester.json
 8e1efd551dc707cdb91cf1ee8486ff70a376275a data/testermod/trim_material/nightmare_ingot.json
 7a21fe99dd960f28ba67c66a0259da579b95b516 data/testermod/trim_material/storm_ingot.json
 3cd295a2b2ca4ac4c5bed8be62a98a35870744ec data/testermod/trim_pattern/nighten.json
