@@ -77,6 +77,10 @@
 
   "block.testermod.magic_block": "Purifier",
   "block.testermod.anti_magic_block": "Impurifier",
+
+  "block.testermod.purifier_block": "Purifier",
+  "block.testermod.impurifier_block": "Impurifier",
+
   "block.testermod.nightmare_lamp": "Nightmare Lamp",
   "block.testermod.storm_lamp": "Storm Lamp",
 
@@ -171,8 +175,8 @@
   "entity.minecraft.villager.testermod.gaming_villager_s": "Gaming Villager",
 
 
-  "tooltip.testermod.magic_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
-  "tooltip.testermod.anti_magic_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
+  "tooltip.testermod.purifier_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
+  "tooltip.testermod.impurifier_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
   "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks.",
   "tooltip.testermod.chisel.shift_down2": "Only has two uses however",
   "tooltip.testermod.chisel": "Press SHIFT for more info",

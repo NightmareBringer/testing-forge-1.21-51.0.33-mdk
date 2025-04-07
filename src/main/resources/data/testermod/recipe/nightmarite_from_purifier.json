@@ -1,0 +1,9 @@
+{
+  "type": "testermod:purifier_block",
+  "ingredient": {
+    "item": "testermod:nightmarite"
+  },
+  "result": {
+    "id": "testermod:pure_nightmarite"
+  }
+}

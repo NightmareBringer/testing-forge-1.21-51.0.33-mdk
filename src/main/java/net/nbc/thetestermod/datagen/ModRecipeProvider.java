@@ -117,7 +117,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.ENDER_EYE), has(Items.ENDER_EYE)).save(pRecipeOutput);
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ANTI_MAGIC_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.IMPURIFIER_BLOCK.get())
                 .pattern("#E#")
                 .pattern("SUS")
                 .pattern("CLC")
@@ -128,7 +128,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.CRYING_OBSIDIAN)
                 .define('L', Items.LAPIS_BLOCK)
                 .unlockedBy(getHasName(ModItems.IMPURE_EYE.get()), has(ModItems.IMPURE_EYE.get())).save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURIFIER_BLOCK.get())
                 .pattern("#A#")
                 .pattern("DUD")
                 .pattern("GLG")

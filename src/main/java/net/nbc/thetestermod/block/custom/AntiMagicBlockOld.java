@@ -21,9 +21,9 @@ import net.nbc.thetestermod.util.ModTags;
 
 import java.util.List;
 
-public class AntiMagicBlock extends Block
+public class AntiMagicBlockOld extends Block
 {
-    public AntiMagicBlock(Properties p_49795_) {
+    public AntiMagicBlockOld(Properties p_49795_) {
         super(p_49795_);
     }
 
@@ -78,10 +78,4 @@ public class AntiMagicBlock extends Block
         return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
-    @Override
-    public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-        pTooltipComponents.add(Component.translatable("tooltip.testermod.anti_magic_block.tooltip"));
-        //for a new line in the tooltip, copy the same line as above and just replace the pKey
-        super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
-    }
 }

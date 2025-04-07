@@ -1,9 +1,7 @@
 package net.nbc.thetestermod.block.custom;
 
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.commands.PlaySoundCommand;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -14,7 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.enchantment.effects.PlaySoundEffect;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,12 +22,29 @@ import net.nbc.thetestermod.util.ModTags;
 
 import java.util.List;
 
-public class MagicBlock extends Block
-{
+public class MagicBlockOld extends Block {
+
+    public MagicBlockOld(Properties pProperties) {
+        super(pProperties);
+    }
+
+    /*
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return null;
+    }
+
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+        return null;
+    }
+
+
     public MagicBlock(Properties p_49795_) {
         super(p_49795_);
     }
-
+*/
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
@@ -76,10 +90,4 @@ public class MagicBlock extends Block
         return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
-    @Override
-    public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-        pTooltipComponents.add(Component.translatable("tooltip.testermod.magic_block.tooltip"));
-        //for a new line in the tooltip, copy the same line as above and just replace the pKey
-        super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
-    }
 }

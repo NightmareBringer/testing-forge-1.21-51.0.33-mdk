@@ -48,9 +48,9 @@ public class ModCreativeModeTabs
                         output.accept(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_END_ORE.get());
                         output.accept(ModItems.PURE_EYE.get());
-                        output.accept(ModBlocks.MAGIC_BLOCK.get());
+                        output.accept(ModBlocks.PURIFIER_BLOCK.get());
                         output.accept(ModItems.IMPURE_EYE.get());
-                        output.accept(ModBlocks.ANTI_MAGIC_BLOCK.get());
+                        output.accept(ModBlocks.IMPURIFIER_BLOCK.get());
                         output.accept(ModItems.STRANGE_STICK.get());
                         output.accept(ModItems.IMPURE_STICK.get());
                         output.accept(ModItems.NIGHTMARE_INGOT.get());

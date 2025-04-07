@@ -1,6 +1,7 @@
 package net.nbc.thetestermod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -34,6 +35,10 @@ import net.nbc.thetestermod.loot.ModLootModifiers;
 import net.nbc.thetestermod.particle.ModParticles;
 import net.nbc.thetestermod.particle.ShineParticles;
 import net.nbc.thetestermod.potion.ModPotions;
+import net.nbc.thetestermod.recipe.ModRecipes;
+import net.nbc.thetestermod.screen.ModMenuTypes;
+import net.nbc.thetestermod.screen.custom.PurifierBlockScreen;
+import net.nbc.thetestermod.screen.custom.ImpurifierBlockScreen;
 import net.nbc.thetestermod.sound.ModSounds;
 import net.nbc.thetestermod.util.ModItemProperties;
 import net.nbc.thetestermod.villager.ModVillagers;
@@ -79,6 +84,9 @@ public class TesterMod
 
         ModLootModifiers.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -130,6 +138,9 @@ public class TesterMod
             EntityRenderers.register(ModEntities.TESTER_MOB.get(), TesterRenderer::new);
             EntityRenderers.register(ModEntities.THROWING_KNIFE.get(), ThrowingKnifeProjectileRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR_ENT.get(), ChairEntRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.PURIFIER_BLOCK_MENU.get(), PurifierBlockScreen::new);
+            MenuScreens.register(ModMenuTypes.IMPURIFIER_BLOCK_MENU.get(), ImpurifierBlockScreen::new);
         }
 
         @SubscribeEvent

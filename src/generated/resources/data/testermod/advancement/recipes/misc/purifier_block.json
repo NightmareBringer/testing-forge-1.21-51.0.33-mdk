@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "testermod:magic_block"
+        "recipe": "testermod:purifier_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "testermod:magic_block"
+      "testermod:purifier_block"
     ]
   }
 }

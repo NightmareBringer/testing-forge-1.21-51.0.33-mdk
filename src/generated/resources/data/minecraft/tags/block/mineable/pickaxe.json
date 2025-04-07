@@ -14,6 +14,8 @@
     "testermod:stormite_nether_ore",
     "testermod:magic_block",
     "testermod:anti_magic_block",
+    "testermod:purifier_block",
+    "testermod:impurifier_block",
     "testermod:pedestal",
     "testermod:nightmare_stairs",
     "testermod:nightmare_slab",

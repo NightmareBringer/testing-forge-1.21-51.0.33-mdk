@@ -5,8 +5,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -59,16 +57,6 @@ public class ModBlocks
                     .strength(5f).explosionResistance(5f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-
-
-    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
-            () -> new MagicBlock(BlockBehaviour.Properties.of()
-                    .strength(3f).explosionResistance(3f)
-                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
-    public static final RegistryObject<Block> ANTI_MAGIC_BLOCK = registerBlock("anti_magic_block",
-            () -> new AntiMagicBlock(BlockBehaviour.Properties.of()
-                    .strength(4f).explosionResistance(4f)
-                    .requiresCorrectToolForDrops().sound(ModSounds.ANTI_MAGIC_BLOCK_SOUNDS)));
 
     public static final RegistryObject<Block> NIGHTMARE_BLOCK = registerBlock("nightmare_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -288,6 +276,22 @@ public class ModBlocks
 
     public static final RegistryObject<Block> PEDESTAL_BLOCK = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().strength(10f).noOcclusion()));
+
+    public static final RegistryObject<Block> PURIFIER_BLOCK = registerBlock("purifier_block",
+            () -> new PurifierBlock(BlockBehaviour.Properties.of().strength(3.5f).explosionResistance(3.5f)
+                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
+    public static final RegistryObject<Block> IMPURIFIER_BLOCK = registerBlock("impurifier_block",
+            () -> new ImpurifierBlock(BlockBehaviour.Properties.of().strength(5f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(ModSounds.ANTI_MAGIC_BLOCK_SOUNDS)));
+
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlockOld(BlockBehaviour.Properties.of()
+                    .strength(3.5f).explosionResistance(3.5f)
+                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
+    public static final RegistryObject<Block> ANTI_MAGIC_BLOCK = registerBlock("anti_magic_block",
+            () -> new AntiMagicBlockOld(BlockBehaviour.Properties.of()
+                    .strength(5f).explosionResistance(5f)
+                    .requiresCorrectToolForDrops().sound(ModSounds.ANTI_MAGIC_BLOCK_SOUNDS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

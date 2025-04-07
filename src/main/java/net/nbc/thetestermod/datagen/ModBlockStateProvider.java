@@ -1,13 +1,11 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
@@ -48,6 +46,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ANTI_MAGIC_BLOCK);
 
         blockWithItem(ModBlocks.MYSTERIOUS_DUST_BLOCK);
+
+        blockWithItem(ModBlocks.PURIFIER_BLOCK);
+        blockWithItem(ModBlocks.IMPURIFIER_BLOCK);
 
         stairsBlock(ModBlocks.NIGHTMARE_STAIRS.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
         slabBlock(ModBlocks.NIGHTMARE_SlAB.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
