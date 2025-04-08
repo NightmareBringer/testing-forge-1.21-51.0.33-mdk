@@ -11,8 +11,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ToolAction;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.neoforged.neoforge.common.ItemAbility;
 import org.jetbrains.annotations.Nullable;
 
 public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
@@ -36,7 +36,8 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
     }
 
     @Override
-    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context,
+                                                     ItemAbility itemAbility, boolean simulate) {
         if(context.getItemInHand().getItem() instanceof AxeItem) {
             Level level = context.getLevel();
             BlockPos pos = context.getClickedPos();
@@ -54,7 +55,7 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
         }
 
 
-        return super.getToolModifiedState(state, context, toolAction, simulate);
+        return super.getToolModifiedState(state, context, itemAbility, simulate);
     }
 
     private void playStrippingSound(Level level, BlockPos pos, @Nullable Player player) {

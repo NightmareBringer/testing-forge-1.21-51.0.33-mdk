@@ -1,40 +1,44 @@
 package net.nbc.thetestermod.event;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.item.ModItems;
+import net.nbc.thetestermod.item.custom.HammerItem;
+import net.nbc.thetestermod.potion.ModPotions;
+import net.nbc.thetestermod.villager.ModVillagers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
-import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
-import net.minecraftforge.event.village.VillagerTradesEvent;
-import net.minecraftforge.event.village.WandererTradesEvent;
-import net.nbc.thetestermod.TesterMod;
-import net.nbc.thetestermod.block.ModBlocks;
-import net.nbc.thetestermod.item.ModItems;
-import net.nbc.thetestermod.item.custom.HammerItem;
-import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.event.level.BlockEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.nbc.thetestermod.potion.ModPotions;
-import net.nbc.thetestermod.villager.ModVillagers;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Mod.EventBusSubscriber(modid = TesterMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@EventBusSubscriber(modid = TesterMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
-    // Done with the help of https://github.com/CoFH/CoFHCore/blob/1.19.x/src/main/java/cofh/core/event/AreaEffectEvents.java
-    // Don't be a jerk License
     @SubscribeEvent
     public static void onHammerUsage(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
@@ -59,17 +63,28 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) {
+    public static void livingDamage(LivingDamageEvent.Pre event) {
+        if(event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
+            if(player.getMainHandItem().getItem() == Items.END_ROD) {
+                player.sendSystemMessage(Component.literal(player.getName().getString() + " just hit a sheep with an END ROD? YOU SICK FRICK!"));
+                sheep.addEffect(new MobEffectInstance(MobEffects.POISON, 600, 6));
+                player.getMainHandItem().shrink(1);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
         PotionBrewing.Builder builder = event.getBuilder();
 
-        builder.addMix(Potions.AWKWARD, ModItems.PURE_EYE.get(), ModPotions.PURIFICATION_POTION.getHolder().get());
-        builder.addMix(Potions.THICK, ModItems.IMPURE_EYE.get(), ModPotions.IMPURIFICATION_POTION.getHolder().get());
+        builder.addMix(Potions.AWKWARD, ModItems.PURE_EYE.get(), ModPotions.PURIFICATION_POTION);
+        builder.addMix(Potions.THICK, ModItems.IMPURE_EYE.get(), ModPotions.IMPURIFICATION_POTION);
     }
 
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
         if(event.getType() == VillagerProfession.FARMER) {
-            var trades = event.getTrades();
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.CARROT, 5),
@@ -82,10 +97,9 @@ public class ModEvents {
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.FLOWER_POT, 1),
                     new ItemStack(ModItems.STRANGE_STICK.get(), 2), 4, 2, 0.01f));
-
         }
         if(event.getType() == VillagerProfession.LIBRARIAN) {
-            var trades = event.getTrades();
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.BOOK, 12),
@@ -98,10 +112,9 @@ public class ModEvents {
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 18),
                     new ItemStack(ModItems.ENERGY_ORB.get(), 1), 6, 15, 0.05f));
-
         }
-        if(event.getType() == ModVillagers.GAMING_VILLAGER_N.get()) {
-            var trades = event.getTrades();
+        if(event.getType() == ModVillagers.GAMING_VILLAGER_N.value()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 18),
@@ -134,10 +147,9 @@ public class ModEvents {
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 25),
                     new ItemStack(ModBlocks.NIGHTMARE_LAMP.get(), 1), 5, 5, 0.7f));
-
         }
-        if(event.getType() == ModVillagers.GAMING_VILLAGER_S.get()) {
-            var trades = event.getTrades();
+        if(event.getType() == ModVillagers.GAMING_VILLAGER_S.value()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 18),
@@ -170,10 +182,10 @@ public class ModEvents {
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 24),
                     new ItemStack(ModBlocks.STORM_LAMP.get(), 1), 5, 5, 0.85f));
-
         }
     }
 
+    @SubscribeEvent
     public static void addWanderingTrades(WandererTradesEvent event) {
         List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
         List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();

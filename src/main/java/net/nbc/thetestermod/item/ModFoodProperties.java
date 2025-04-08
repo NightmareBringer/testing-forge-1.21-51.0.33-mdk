@@ -17,5 +17,5 @@ public class ModFoodProperties
     public static final FoodProperties GLISTERING_CARROT = new FoodProperties.Builder().nutrition(7).saturationModifier(1.2f)
             .effect(new MobEffectInstance(MobEffects.REGENERATION, 1800, 2), 1.0f)
             .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 800, 1), 0.75f)
-            .effect(new MobEffectInstance(ModEffects.PURIFICATION_EFFECT.getHolder().get(), 800, 0), 0.50f).build();
+            .effect(new MobEffectInstance(ModEffects.PURIFICATION_EFFECT, 800, 0), 0.50f).build();
 }

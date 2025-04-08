@@ -1,5 +1,8 @@
 package net.nbc.thetestermod.screen.custom;
 
+import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.block.entity.custom.ImpurifierBlockEntity;
+import net.nbc.thetestermod.screen.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -7,11 +10,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.SlotItemHandler;
-import net.nbc.thetestermod.block.ModBlocks;
-import net.nbc.thetestermod.block.entity.custom.ImpurifierBlockEntity;
-import net.nbc.thetestermod.block.entity.custom.PurifierBlockEntity;
-import net.nbc.thetestermod.screen.ModMenuTypes;
+import net.neoforged.neoforge.items.SlotItemHandler;  // NeoForge SlotItemHandler
 
 public class ImpurifierBlockMenu extends AbstractContainerMenu {
     public final ImpurifierBlockEntity blockEntity;
@@ -31,8 +30,8 @@ public class ImpurifierBlockMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 54, 34));
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 104, 34));
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 54, 34));  // NeoForge version of SlotItemHandler
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 104, 34));  // NeoForge version of SlotItemHandler
 
         addDataSlots(data);
     }
@@ -64,32 +63,32 @@ public class ImpurifierBlockMenu extends AbstractContainerMenu {
     private static final int VANILLA_FIRST_SLOT_INDEX = 0;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
-    // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
+    // Define the TileEntity (TE) inventory slots
+    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // Adjust this to the number of slots in the TE
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;  //EMPTY_ITEM
+        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
-        // Check if the slot clicked is one of the vanilla container slots
+        // Check if the clicked slot is a vanilla container slot
         if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
-            // This is a vanilla container slot so merge the stack into the tile inventory
+            // Merge the stack into the TileEntity inventory
             if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
                     + TE_INVENTORY_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;  // EMPTY_ITEM
+                return ItemStack.EMPTY;
             }
         } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
-            // This is a TE slot so merge the stack into the players inventory
+            // Merge the stack into the player's inventory
             if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
         } else {
-            System.out.println("Invalid slotIndex:" + pIndex);
             return ItemStack.EMPTY;
         }
-        // If stack size == 0 (the entire stack was moved) set slot contents to null
+
+        // If the stack size is 0, set the slot contents to null
         if (sourceStack.getCount() == 0) {
             sourceSlot.set(ItemStack.EMPTY);
         } else {

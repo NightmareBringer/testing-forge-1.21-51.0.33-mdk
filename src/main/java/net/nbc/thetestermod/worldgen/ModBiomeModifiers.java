@@ -9,11 +9,11 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraftforge.common.world.BiomeModifier;
-import net.minecraftforge.common.world.ForgeBiomeModifiers;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.entity.ModEntities;
+import net.neoforged.neoforge.common.world.BiomeModifier;
+import net.neoforged.neoforge.common.world.BiomeModifiers;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import java.util.List;
 
@@ -34,60 +34,75 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> SPAWN_TESTER = registerKey("spawn_tester");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
-        var placedFeature = context.lookup(Registries.PLACED_FEATURE);
+        var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_NIGHTMARITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_NIGHTMARITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.NIGHTMARITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_NETHER_NIGHTMARITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.NETHER_NIGHTMARITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_END_NIGHTMARITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_END),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.END_NIGHTMARITE_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NIGHTMARITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_STORMITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_NETHER_NIGHTMARITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_NIGHTMARITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_END_NIGHTMARITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_NIGHTMARITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_STORMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.STORMITE_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.STORMITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_NETHER_STORMITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+
+        context.register(ADD_NETHER_STORMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.NETHER_STORMITE_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_STORMITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_END_STORMITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+
+        context.register(ADD_END_STORMITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.END_STORMITE_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_STORMITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_CORRUPTED_OAK_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.DARK_FOREST),
-                        biomes.getOrThrow(Biomes.TAIGA), biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.CORRUPTED_OAK_PLACED_KEY)),
+        context.register(ADD_CORRUPTED_OAK_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(
+                        biomes.getOrThrow(Biomes.FOREST),
+                        biomes.getOrThrow(Biomes.DARK_FOREST),
+                        biomes.getOrThrow(Biomes.TAIGA),
+                        biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)
+                ),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CORRUPTED_OAK_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_CRIMSON_BLUE_BERRY_BUSH_OVERWORLD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.DARK_FOREST),
-                        biomes.getOrThrow(Biomes.TAIGA), biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
+        context.register(ADD_CRIMSON_BLUE_BERRY_BUSH_OVERWORLD, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(
+                        biomes.getOrThrow(Biomes.FOREST),
+                        biomes.getOrThrow(Biomes.DARK_FOREST),
+                        biomes.getOrThrow(Biomes.TAIGA),
+                        biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)
+                ),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_CRIMSON_BLUE_BERRY_BUSH_NETHER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_CRIMSON_BLUE_BERRY_BUSH_NETHER, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.NETHER_CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(SPAWN_TESTER, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.TAIGA), biomes.getOrThrow(Biomes.BIRCH_FOREST),
-                        biomes.getOrThrow(Biomes.CRIMSON_FOREST), biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 15,1, 1)))); // Never make pWeight too high!
-
+        context.register(SPAWN_TESTER, new BiomeModifiers.AddSpawnsBiomeModifier(
+                HolderSet.direct(
+                        biomes.getOrThrow(Biomes.TAIGA),
+                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
+                        biomes.getOrThrow(Biomes.CRIMSON_FOREST),
+                        biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)
+                ),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 15, 1, 1)))); // Keep spawn weights reasonable!
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, name));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, name));
     }
 }

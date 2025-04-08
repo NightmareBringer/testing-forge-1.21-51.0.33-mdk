@@ -1,5 +1,10 @@
 package net.nbc.thetestermod.block.entity.custom;
 
+import net.nbc.thetestermod.block.entity.ModBlockEntities;
+import net.nbc.thetestermod.recipe.ModRecipes;
+import net.nbc.thetestermod.recipe.PurifierBlockRecipe;
+import net.nbc.thetestermod.recipe.PurifierBlockRecipeInput;
+import net.nbc.thetestermod.screen.custom.PurifierBlockMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -14,21 +19,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import net.nbc.thetestermod.block.entity.ModBlockEntities;
-import net.nbc.thetestermod.item.ModItems;
-import net.nbc.thetestermod.recipe.ModRecipes;
-import net.nbc.thetestermod.recipe.PurifierBlockRecipe;
-import net.nbc.thetestermod.recipe.PurifierBlockRecipeInput;
-import net.nbc.thetestermod.screen.custom.PurifierBlockMenu;
+import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -39,7 +35,7 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
-            if(!level.isClientSide()) {
+            if (!level.isClientSide()) {
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         }
@@ -48,14 +44,12 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
     private static final int INPUT_SLOT = 0;
     private static final int OUTPUT_SLOT = 1;
 
-    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 225;
 
-    public PurifierBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.PURIFIER_BLOCK_BE.get(), pPos, pBlockState);
+    public PurifierBlockEntity(BlockPos pos, BlockState blockState) {
+        super(ModBlockEntities.PURIFIER_BLOCK_BE.get(), pos, blockState);
         data = new ContainerData() {
             @Override
             public int get(int i) {
@@ -69,8 +63,8 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
             @Override
             public void set(int i, int value) {
                 switch (i) {
-                    case 0: PurifierBlockEntity.this.progress = value;
-                    case 1: PurifierBlockEntity.this.maxProgress = value;
+                    case 0 -> PurifierBlockEntity.this.progress = value;
+                    case 1 -> PurifierBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -82,15 +76,14 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     @Override
-    public void onLoad() {
-        super.onLoad();
-        lazyItemHandler = LazyOptional.of(() -> itemHandler);
+    public Component getDisplayName() {
+        return Component.translatable("block.testermod.purifier_block");
     }
 
+    @Nullable
     @Override
-    public void invalidateCaps() {
-        super.invalidateCaps();
-        lazyItemHandler.invalidate();
+    public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new PurifierBlockMenu(i, inventory, this, this.data);
     }
 
     public void drops() {
@@ -120,19 +113,8 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
         maxProgress = pTag.getInt("purifier_block.max_progress");
     }
 
-    @Override
-    public Component getDisplayName() {
-        return Component.translatable("block.testermod.purifier_block");
-    }
-
-    @Nullable
-    @Override
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new PurifierBlockMenu(pContainerId, pPlayerInventory, this, this.data);
-    }
-
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
-        if(hasRecipe()) {
+        if (hasRecipe()) {
             increaseCraftingProgress();
             setChanged(level, blockPos, blockState);
 
@@ -145,11 +127,6 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
         }
     }
 
-    private void resetProgress() {
-        this.progress = 0;
-        this.maxProgress = 225;
-    }
-
     private void craftItem() {
         Optional<RecipeHolder<PurifierBlockRecipe>> recipe = getCurrentRecipe();
         ItemStack output = recipe.get().value().output();
@@ -157,6 +134,11 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
         itemHandler.extractItem(INPUT_SLOT, 1, false);
         itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
+    }
+
+    private void resetProgress() {
+        progress = 0;
+        maxProgress = 225;
     }
 
     private boolean hasCraftingFinished() {
@@ -169,20 +151,17 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
 
     private boolean hasRecipe() {
         Optional<RecipeHolder<PurifierBlockRecipe>> recipe = getCurrentRecipe();
-        if(recipe.isEmpty()) {
+        if (recipe.isEmpty()) {
             return false;
         }
 
         ItemStack output = recipe.get().value().output();
-
-        return canInsertItemIntoOutputSlot(output)
-                && canInsertAmountIntoOutputSlot(output.getCount());
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
 
     private Optional<RecipeHolder<PurifierBlockRecipe>> getCurrentRecipe() {
         return this.level.getRecipeManager()
-                .getRecipeFor(ModRecipes.PURIFIER_BLOCK_TYPE.get(),
-                        new PurifierBlockRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
+                .getRecipeFor(ModRecipes.PURIFIER_BLOCK_TYPE, new PurifierBlockRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

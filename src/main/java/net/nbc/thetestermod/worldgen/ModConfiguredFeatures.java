@@ -59,7 +59,7 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceables, ModBlocks.STORMITE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.STORMITE_DEEPSLATE_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_STORMITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldNightmariteOres, 9));
+        register(context, OVERWORLD_STORMITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldStormiteOres, 9));
         register(context, NETHER_STORMITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
                 ModBlocks.STORM_NETHER_ORE.get().defaultBlockState(), 9));
         register(context, END_STORMITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,

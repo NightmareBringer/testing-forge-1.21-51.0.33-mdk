@@ -1,5 +1,8 @@
 package net.nbc.thetestermod.screen.custom;
 
+import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.block.entity.custom.PurifierBlockEntity;
+import net.nbc.thetestermod.screen.ModMenuTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -7,12 +10,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.SlotItemHandler;
-
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.nbc.thetestermod.block.ModBlocks;
-import net.nbc.thetestermod.block.entity.custom.PurifierBlockEntity;
-import net.nbc.thetestermod.screen.ModMenuTypes;
+import net.neoforged.neoforge.items.SlotItemHandler;
 
 public class PurifierBlockMenu extends AbstractContainerMenu {
     public final PurifierBlockEntity blockEntity;

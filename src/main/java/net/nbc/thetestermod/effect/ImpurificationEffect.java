@@ -13,7 +13,7 @@ public class ImpurificationEffect extends MobEffect{
 
     @Override
     public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.getActiveEffects().removeIf(mobEffectInstance -> (mobEffectInstance.getEffect().get().isBeneficial()));
+        pLivingEntity.getActiveEffects().removeIf(mobEffectInstance -> isBeneficial());
 
         return super.applyEffectTick(pLivingEntity, pAmplifier);
     }
