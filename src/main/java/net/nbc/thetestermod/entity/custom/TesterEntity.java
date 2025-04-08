@@ -77,7 +77,7 @@ public class TesterEntity extends Monster {
         this.goalSelector.addGoal(4, retreatGoal);
 
         // Attack when close
-        this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.0D, true) {
+        this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2D, true) {
             @Override
             public boolean canUse() {
                 // Only allow the melee attack goal if the mob is not in pause state (moveTicks > 0)
@@ -100,7 +100,7 @@ public class TesterEntity extends Monster {
             }
         });
 
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true, false));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, false, true));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -233,10 +233,9 @@ public class TesterEntity extends Monster {
     @Override
     public void tick() {
         super.tick();
-
+/*
         if (!this.level().isClientSide) {
             Player nearestPlayer = this.level().getNearestPlayer(this, 256);
-
             if (nearestPlayer == null || this.distanceTo(nearestPlayer) > 192) {
                 this.getNavigation().stop(); // Stop active pathfinding, but don't freeze AI
                 this.setNoAi(false);  // Keep AI on so it doesn't fully freeze
@@ -244,6 +243,7 @@ public class TesterEntity extends Monster {
                 this.setNoAi(false); // Ensure AI is on when the player is nearby
             }
         }
+ */
 
         if(this.level().isClientSide()) {
             this.setupAnimationStates();
@@ -297,7 +297,7 @@ public class TesterEntity extends Monster {
             }
         }
     }
-
+    /*
     @Override
     public boolean removeWhenFarAway(double pDistanceToClosestPlayer) {
         return false;
@@ -307,6 +307,7 @@ public class TesterEntity extends Monster {
     public boolean isPersistenceRequired() {
         return true;
     }
+     */
 
 
     @Override
