@@ -1,6 +1,5 @@
 {
-  "remove": [
-    "#testermod:needs_storm_tool"
-  ],
-  "values": []
+  "values": [
+    "minecraft:bedrock"
+  ]
 }

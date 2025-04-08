@@ -86,6 +86,62 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
 
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
+
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get());
+
+        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
+
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get());
+
+        tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
+
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get());
+
+        tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
+
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get());
+
+        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get());
+
+        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORM_END_ORE.get())
+                .add(ModBlocks.STORM_NETHER_ORE.get());
+
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get());
 
@@ -130,27 +186,24 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARITE_END_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
 
+        // NIGHTMARE tool can only break stormite ores
         tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)
-                .add(ModBlocks.NIGHTMARE_WALL.get())
-                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
+                .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORM_END_ORE.get())
-                .add(ModBlocks.STORM_NETHER_ORE.get())
-                .add(Blocks.OBSIDIAN)
-                .add(Blocks.CRYING_OBSIDIAN)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .add(ModBlocks.STORM_NETHER_ORE.get());
 
+// Everything else should be incorrect for NIGHTMARE_TOOL
         tag(ModTags.Blocks.INCORRECT_FOR_NIGHTMARE_TOOL)
-                .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
-                .remove(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL);
+                .add(ModBlocks.STORM_WALL.get());
 
         tag(ModTags.Blocks.NEEDS_STORM_TOOL)
                 .add(ModBlocks.STORM_WALL.get())
-                .add(Blocks.REINFORCED_DEEPSLATE)
-                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+                .add(Blocks.REINFORCED_DEEPSLATE);
 
         tag(ModTags.Blocks.INCORRECT_FOR_STORM_TOOL)
-                .remove(ModTags.Blocks.NEEDS_STORM_TOOL);
+                //.addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+                .add(Blocks.BEDROCK);
 
         tag(ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL)
                 .addTag(BlockTags.NEEDS_STONE_TOOL);

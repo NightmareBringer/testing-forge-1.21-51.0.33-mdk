@@ -1,6 +1,12 @@
-// 1.21.1	2025-04-06T20:39:41.6153569	Tags for minecraft:block mod id testermod
+// 1.21.1	2025-04-08T06:25:12.3435605	Tags for minecraft:block mod id testermod
 d5bac7e436aa9d566ba2d615a38f1f6947079302 data/minecraft/tags/block/fences.json
 0524ca1661a3a6cd4226023964c682555b590785 data/minecraft/tags/block/fence_gates.json
+97f3c13d765872b5c398c30d7ed5806fe9cbaf99 data/minecraft/tags/block/incorrect_for_diamond_tool.json
+56e3f7e6b488485e7158f7cf9ab3919b4a402016 data/minecraft/tags/block/incorrect_for_gold_tool.json
+56e3f7e6b488485e7158f7cf9ab3919b4a402016 data/minecraft/tags/block/incorrect_for_iron_tool.json
+97f3c13d765872b5c398c30d7ed5806fe9cbaf99 data/minecraft/tags/block/incorrect_for_netherite_tool.json
+56e3f7e6b488485e7158f7cf9ab3919b4a402016 data/minecraft/tags/block/incorrect_for_stone_tool.json
+56e3f7e6b488485e7158f7cf9ab3919b4a402016 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 b452c1747036e07f62ef5411f54d35d21b415b69 data/minecraft/tags/block/logs_that_burn.json
 a8319d6acc733d298b1c4b5acbbf7b1181a6996b data/minecraft/tags/block/mineable/axe.json
 18874748519b40b4d6901f0151910079a9b5f02d data/minecraft/tags/block/mineable/pickaxe.json
@@ -9,8 +15,8 @@ afae7adf991dbfd68b44ee2025f73440b245f314 data/minecraft/tags/block/needs_diamond
 db9b254a9b59fe4e8419d5e308be3f607d2ae568 data/minecraft/tags/block/needs_stone_tool.json
 6730169d4a38b0662fe09057f2d1163114e296bf data/minecraft/tags/block/walls.json
 f57a1c0d935679dbbcab3f2e8a06cae2238a6735 data/testermod/tags/block/incorrect_for_devilsknife_tool.json
-1782b3f222780c3057740cdad0b90e002244d4fd data/testermod/tags/block/incorrect_for_nightmare_tool.json
-7bf8814a3131f1ebaef28bdf36a733a935951f3e data/testermod/tags/block/incorrect_for_storm_tool.json
+8b150d38d3e8818fd35c31de66d1b63842c983d7 data/testermod/tags/block/incorrect_for_nightmare_tool.json
+cfab2ab481bf476a645d326b87627918009b9e50 data/testermod/tags/block/incorrect_for_storm_tool.json
 781d959bb6bbea7b36ae6b2d4a71ced43fd662b9 data/testermod/tags/block/needs_devilsknife_tool.json
-c768599a298d4a2940dc8fe4887edae4ab5f5da1 data/testermod/tags/block/needs_nightmare_tool.json
-b04f1d64b5c3b32c110131bd87b5251547e50626 data/testermod/tags/block/needs_storm_tool.json
+51317e52c4e08755d71323c45703b9899cef5f23 data/testermod/tags/block/needs_nightmare_tool.json
+1889c10606bb306744b4ab327d6adb69bae16df4 data/testermod/tags/block/needs_storm_tool.json

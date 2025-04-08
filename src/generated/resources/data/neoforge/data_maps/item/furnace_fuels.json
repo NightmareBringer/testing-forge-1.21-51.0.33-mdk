@@ -1,0 +1,10 @@
+{
+  "values": {
+    "testermod:impure_eye": {
+      "burn_time": 2400
+    },
+    "testermod:pure_eye": {
+      "burn_time": 1200
+    }
+  }
+}

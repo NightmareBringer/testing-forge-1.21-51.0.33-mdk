@@ -1,7 +1,6 @@
 {
   "values": [
     "testermod:storm_wall",
-    "minecraft:reinforced_deepslate",
-    "#minecraft:needs_diamond_tool"
+    "minecraft:reinforced_deepslate"
   ]
 }

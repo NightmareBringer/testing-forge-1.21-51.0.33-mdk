@@ -1,0 +1,10 @@
+{
+  "values": {
+    "testermod:glistering_carrot": {
+      "chance": 0.99
+    },
+    "testermod:white_carrot": {
+      "chance": 0.25
+    }
+  }
+}
