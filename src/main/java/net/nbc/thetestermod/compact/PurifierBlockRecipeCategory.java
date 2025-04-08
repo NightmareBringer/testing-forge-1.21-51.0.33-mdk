@@ -48,9 +48,23 @@ public class PurifierBlockRecipeCategory implements IRecipeCategory<PurifierBloc
     }
 
     @Override
+    public int getWidth()
+    {
+        return 176;
+    }
+
+    @Override
+    public int getHeight()
+    {
+        return 85;
+    }
+
+/*
+    @Override
     public @Nullable IDrawable getBackground() {
         return background;
     }
+ */
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder iRecipeLayoutBuilder, PurifierBlockRecipe purifierBlockRecipe, IFocusGroup iFocusGroup) {

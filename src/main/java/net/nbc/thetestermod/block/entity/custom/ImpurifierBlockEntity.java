@@ -161,7 +161,7 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
 
     private Optional<RecipeHolder<ImpurifierBlockRecipe>> getCurrentRecipe() {
         return this.level.getRecipeManager()
-                .getRecipeFor(ModRecipes.IMPURIFIER_BLOCK_TYPE, new ImpurifierBlockRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
+                .getRecipeFor(ModRecipes.IMPURIFIER_BLOCK_TYPE.get(), new ImpurifierBlockRecipeInput(itemHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

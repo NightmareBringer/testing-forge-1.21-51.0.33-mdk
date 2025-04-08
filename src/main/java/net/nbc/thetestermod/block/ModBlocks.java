@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -181,10 +182,10 @@ public class ModBlocks
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(225f)
                     .explosionResistance(450f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
 
-    public static final DeferredBlock<Block> WHITE_CARROT_CROP = BLOCKS.register("white_carrot_crop",
+    public static final DeferredHolder<Block, WhiteCarrotCropBlock> WHITE_CARROT_CROP = BLOCKS.register("white_carrot_crop",
             () -> new WhiteCarrotCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CARROTS)));
 
-    public static final DeferredBlock<Block> CRIMSON_BLUE_BERRY_BUSH = BLOCKS.register("crimson_blue_berry_bush",
+    public static final DeferredHolder<Block, CrimsonBlueBerryBushBlock> CRIMSON_BLUE_BERRY_BUSH = BLOCKS.register("crimson_blue_berry_bush",
             () -> new CrimsonBlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     public static final DeferredBlock<RotatedPillarBlock> CORRUPTED_OAK_LOG = registerBlock("corrupted_oak_log",
@@ -295,7 +296,7 @@ public class ModBlocks
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        DeferredBlock<T> toReturn = (DeferredBlock<T>) BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }

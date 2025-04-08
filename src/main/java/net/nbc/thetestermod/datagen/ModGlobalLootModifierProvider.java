@@ -13,8 +13,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraftforge.common.data.GlobalLootModifierProvider;
-import net.minecraftforge.common.loot.LootTableIdCondition;
+import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
+import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.enchantment.ModEnchantments;
 import net.nbc.thetestermod.item.ModItems;
@@ -26,11 +26,11 @@ import java.util.concurrent.CompletableFuture;
 public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
     public ModGlobalLootModifierProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, TesterMod.MOD_ID, registries);
+        super(output, registries, TesterMod.MOD_ID);
     }
 
     @Override
-    protected void start(HolderLookup.Provider provider) {
+    protected void start() {
 
         this.add("crimson_blue_berries_from_crimson_roots",
                 new AddItemModifier(new LootItemCondition[] {

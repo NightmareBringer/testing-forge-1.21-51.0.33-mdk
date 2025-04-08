@@ -42,7 +42,7 @@ public class JEITutorialModPlugin implements IModPlugin {
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(PurifierBlockScreen.class, 70, 30, 25, 20,
+        registration.addRecipeClickArea(PurifierBlockScreen.class, 70, 30, 22, 20,
                 PurifierBlockRecipeCategory.PURIFIER_BLOCK_RECIPE_RECIPE_TYPE);
     }
 

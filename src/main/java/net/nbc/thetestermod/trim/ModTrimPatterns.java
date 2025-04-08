@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimPattern;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModTrimPatterns
 {
@@ -21,12 +21,12 @@ public class ModTrimPatterns
             ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen"));
 
     public static void bootstrap(BootstrapContext<TrimPattern> context) {
-        register(context, ModItems.NIGHTEN_SMITHING_TEMPLATE.get(), NIGHTEN);
-        register(context, ModItems.STORMEN_SMITHING_TEMPLATE.get(), STORMEN);
+        register(context, ModItems.NIGHTEN_SMITHING_TEMPLATE, NIGHTEN);
+        register(context, ModItems.STORMEN_SMITHING_TEMPLATE, STORMEN);
     }
 
-    private static void register(BootstrapContext<TrimPattern> context, Item item, ResourceKey<TrimPattern> key) {
-        TrimPattern trimPattern = new TrimPattern(key.location(), ForgeRegistries.ITEMS.getHolder(item).get(),
+    private static void register(BootstrapContext<TrimPattern> context, DeferredItem<Item> item, ResourceKey<TrimPattern> key) {
+        TrimPattern trimPattern = new TrimPattern(key.location(), item.getDelegate(),
                 Component.translatable(Util.makeDescriptionId("trim_pattern", key.location())), false);
         context.register(key, trimPattern);
     }

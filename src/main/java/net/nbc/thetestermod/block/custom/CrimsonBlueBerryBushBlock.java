@@ -27,8 +27,6 @@ public class CrimsonBlueBerryBushBlock extends SweetBerryBushBlock {
         return new ItemStack(ModItems.CRIMSON_BLUE_BERRIES.get());
     }
 
-    
-
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState belowBlock = level.getBlockState(pos.below());

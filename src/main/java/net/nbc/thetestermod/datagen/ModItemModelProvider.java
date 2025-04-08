@@ -1,6 +1,9 @@
 package net.nbc.thetestermod.datagen;
 
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.item.ModItems;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
@@ -9,21 +12,17 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-import net.nbc.thetestermod.TesterMod;
-import net.nbc.thetestermod.block.ModBlocks;
-import net.nbc.thetestermod.item.ModItems;
-import net.minecraft.data.PackOutput;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.LinkedHashMap;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+    private static final LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
         trimMaterials.put(TrimMaterials.IRON, 0.2F);
@@ -43,6 +42,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        // Basic items
         basicItem(ModItems.NIGHTMARITE.get());
         basicItem(ModItems.PURE_NIGHTMARITE.get());
         basicItem(ModItems.NIGHTMARE_INGOT.get());
@@ -55,26 +55,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.NIGHTMARE_HORSE_ARMOR.get());
         basicItem(ModItems.STORM_HORSE_ARMOR.get());
 
-        //basicItem(ModItems.CHISEL.get());
+        // Handheld items
+        // basicItem(ModItems.CHISEL.get()); // (Commented out)
         basicItem(ModItems.KRABS.get());
         basicItem(ModItems.WHITE_CARROT.get());
         basicItem(ModItems.GLISTERING_CARROT.get());
         basicItem(ModItems.CRIMSON_BLUE_BERRIES.get());
         basicItem(ModItems.PURE_EYE.get());
         basicItem(ModItems.IMPURE_EYE.get());
-        basicHandheldItem(ModItems.IMPURE_STICK.get());
-        basicHandheldItem(ModItems.DEVILS_SNATH.get());
+        handheldItem(ModItems.IMPURE_STICK.get());
+        handheldItem(ModItems.DEVILS_SNATH.get());
         basicItem(ModItems.DEVILS_BLADE.get());
 
         basicItem(ModItems.MYSTERIOUS_DUST.get());
         basicItem(ModItems.MYSTERIOUS_STRING.get());
-        basicHandheldItem(ModItems.STRANGE_STICK.get());
+        handheldItem(ModItems.STRANGE_STICK.get());
 
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
         basicItem(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
 
+        // Block-derived items
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);
         fenceItem(ModBlocks.NIGHTMARE_FENCE, ModBlocks.NIGHTMARE_BLOCK);
         wallItem(ModBlocks.NIGHTMARE_WALL, ModBlocks.NIGHTMARE_BLOCK);
@@ -89,6 +91,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.STORM_WALL, ModBlocks.STORM_BLOCK);
         simpleBlockItem(ModBlocks.STORM_DOOR);
 
+        // Handheld tools
         handheldItem(ModItems.NIGHTMARE_SWORD);
         handheldItem(ModItems.NIGHTMARE_PICKAXE);
         handheldItem(ModItems.NIGHTMARE_SHOVEL);
@@ -105,6 +108,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.DEVILSKNIFE);
 
+        // Armor with trimming support
         trimmedArmorItem(ModItems.NIGHTMARE_HELMET);
         trimmedArmorItem(ModItems.NIGHTMARE_CHESTPLATE);
         trimmedArmorItem(ModItems.NIGHTMARE_LEGGINGS);
@@ -115,6 +119,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.STORM_LEGGINGS);
         trimmedArmorItem(ModItems.STORM_BOOTS);
 
+        // Other block-based item models
         buttonItem(ModBlocks.CORRUPTED_OAK_BUTTON, ModBlocks.CORRUPTED_OAK_PLANKS);
         fenceItem(ModBlocks.CORRUPTED_OAK_FENCE, ModBlocks.CORRUPTED_OAK_PLANKS);
         simpleBlockItem(ModBlocks.CORRUPTED_OAK_DOOR);
@@ -124,17 +129,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.TESTER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
-    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"block/" + item.getId().getPath()));
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> block) {
+        return withExistingParent(block.getId().getPath(), ResourceLocation.parse("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + block.getId().getPath()));
     }
 
-    // Shoutout to El_Redstoniano for making this
-    private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MOD_ID = TesterMod.MOD_ID; // Change this to your mod id
+    // Shoutout to El_Redstoniano for making this trimmed armor support
+    private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferred) {
+        final String MOD_ID = TesterMod.MOD_ID; // Change this to your mod id if needed
 
-        if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
+        if (itemDeferred.get() instanceof ArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
                 float trimValue = value;
 
@@ -149,77 +153,55 @@ public class ModItemModelProvider extends ItemModelProvider {
                 String armorItemPath = armorItem.toString();
                 String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
                 String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
-                ResourceLocation armorItemResLoc = ResourceLocation.parse(armorItemPath);
-                ResourceLocation trimResLoc = ResourceLocation.parse(trimPath); // minecraft namespace
-                ResourceLocation trimNameResLoc = ResourceLocation.parse(currentTrimName);
+                ResourceLocation armorItemResLoc = ResourceLocation.tryParse(armorItemPath);
+                ResourceLocation trimResLoc = ResourceLocation.tryParse(trimPath);
+                ResourceLocation trimNameResLoc = ResourceLocation.tryParse(currentTrimName);
 
-                // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
-                // avoid an IllegalArgumentException
+                // Ensure the texture is recognized (this avoids potential IllegalArgumentExceptions)
                 existingFileHelper.trackGenerated(trimResLoc, PackType.CLIENT_RESOURCES, ".png", "textures");
 
-                // Trimmed armorItem files
+                // Build the trimmed armor model
                 getBuilder(currentTrimName)
                         .parent(new ModelFile.UncheckedModelFile("item/generated"))
                         .texture("layer0", armorItemResLoc.getNamespace() + ":item/" + armorItemResLoc.getPath())
                         .texture("layer1", trimResLoc);
 
-                // Non-trimmed armorItem file (normal variant)
-                this.withExistingParent(itemRegistryObject.getId().getPath(),
-                                mcLoc("item/generated"))
+                // Set up the override for the non-trimmed (normal) variant
+                this.withExistingParent(itemDeferred.getId().getPath(), mcLoc("item/generated"))
                         .override()
-                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace()  + ":item/" + trimNameResLoc.getPath()))
-                        .predicate(mcLoc("trim_type"), trimValue).end()
-                        .texture("layer0",
-                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
-                                        "item/" + itemRegistryObject.getId().getPath()));
+                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace() + ":item/" + trimNameResLoc.getPath()))
+                        .predicate(mcLoc("trim_type"), trimValue)
+                        .end()
+                        .texture("layer0", ResourceLocation.fromNamespaceAndPath(MOD_ID, "item/" + itemDeferred.getId().getPath()));
             });
         }
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
-                ResourceLocation.parse("item/handheld")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"item/" + item.getId().getPath()));
+    private ItemModelBuilder handheldItem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(), ResourceLocation.parse("item/handheld"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder basicHandheldItem(Item item) {
-        // Get the registry name for the item using ForgeRegistries
-        ResourceLocation itemRegistryName = ForgeRegistries.ITEMS.getKey(item);
-
-        // Ensure that the registry name is valid (this helps to avoid NPE)
-        if (itemRegistryName == null) {
-            throw new IllegalArgumentException("Item not found in registry: " + item);
-        }
-
-        // Use the item's registry name path for the item model
-        String modelPath = itemRegistryName.getPath();
-
-        // Correctly construct the texture path using the MOD_ID and the item path
-        return withExistingParent(modelPath, ResourceLocation.parse("item/handheld"))
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "item/" + modelPath));
+    public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 
-    public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
-                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 
-    public void fenceItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
-                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 
-    public void wallItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
-                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
-    }
-
-    private ItemModelBuilder simpleBlockItem(RegistryObject<? extends Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                ResourceLocation.parse("item/generated")).texture("layer0",
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"item/" + item.getId().getPath()));
+    private ItemModelBuilder simpleBlockItem(DeferredBlock<?> block) {
+        return withExistingParent(block.getId().getPath(), ResourceLocation.parse("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "item/" + block.getId().getPath()));
     }
 }

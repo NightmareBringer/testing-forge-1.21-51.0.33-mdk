@@ -1,6 +1,7 @@
 package net.nbc.thetestermod.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.world.entity.Entity;
 import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.item.ModArmorMaterials;
 import net.minecraft.core.Holder;
@@ -31,8 +32,8 @@ public class ModArmorItem extends ArmorItem
     }
 
     @Override
-    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
-        if(!level.isClientSide() && hasFullSuitOfArmorOn(player)) {
+    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+        if(entity instanceof Player player && !level.isClientSide() && hasFullSuitOfArmorOn(player)) {
             evaluateArmorEffects(player);
         }
     }

@@ -1,24 +1,22 @@
-
-
-
 package net.nbc.thetestermod.item;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.item.ModItems;
 
-public class ModCreativeModeTabs
-{
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+import java.util.function.Supplier;
+
+public class ModCreativeModeTabs {
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TesterMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> THE_TESTER_ZONE_TAB = CREATIVE_MODE_TABS.register("the_tester_zone_tab",
+    public static final Supplier<CreativeModeTab> THE_TESTER_ZONE_TAB = CREATIVE_MODE_TAB.register("the_tester_zone_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PURE_NIGHTMARITE.get()))
                     .title(Component.translatable("creativetab.testermod.the_tester_zone"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -119,15 +117,12 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.STORM_BOOTS.get());
                         output.accept(ModItems.STORMEN_SMITHING_TEMPLATE.get());
                         output.accept(ModItems.STORM_HORSE_ARMOR.get());
-                        output.accept((ModItems.WHITE_CARROT.get()));
-                        output.accept((ModItems.GLISTERING_CARROT.get()));
-                        output.accept((ModItems.CRIMSON_BLUE_BERRIES.get()));
-                        output.accept((ModItems.ENERGY_ORB.get()));
-                        output.accept((ModItems.THROWING_KNIFE.get()));
-                        output.accept((ModBlocks.PEDESTAL_BLOCK.get()));
-
-
-
+                        output.accept(ModItems.WHITE_CARROT.get());
+                        output.accept(ModItems.GLISTERING_CARROT.get());
+                        output.accept(ModItems.CRIMSON_BLUE_BERRIES.get());
+                        output.accept(ModItems.ENERGY_ORB.get());
+                        output.accept(ModItems.THROWING_KNIFE.get());
+                        output.accept(ModBlocks.PEDESTAL_BLOCK.get());
                         output.accept(ModItems.TESTER_SPAWN_EGG.get());
                         output.accept(ModItems.DEVILS_SNATH.get());
                         output.accept(ModItems.DEVILS_BLADE.get());
@@ -138,12 +133,9 @@ public class ModCreativeModeTabs
                         output.accept(ModItems.KRABS.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_SAPLING.get());
                         output.accept(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
-
                     }).build());
 
-    public static void register(IEventBus eventBus)
-    {
-        CREATIVE_MODE_TABS.register((eventBus));
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TAB.register(eventBus);
     }
-
 }

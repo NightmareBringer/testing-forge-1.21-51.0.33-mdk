@@ -92,16 +92,16 @@ public class ModItems
                 }
             });
 
-    public static final DeferredItem<Item> NIGHTMARE_HELMET = ITEMS.register("nightmare_helmet",
+    public static final DeferredItem<ArmorItem> NIGHTMARE_HELMET = ITEMS.register("nightmare_helmet",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))));
-    public static final DeferredItem<Item> NIGHTMARE_CHESTPLATE = ITEMS.register("nightmare_chestplate",
+    public static final DeferredItem<ArmorItem> NIGHTMARE_CHESTPLATE = ITEMS.register("nightmare_chestplate",
             () -> new ModArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))));
-    public static final DeferredItem<Item> NIGHTMARE_LEGGINGS = ITEMS.register("nightmare_leggings",
+    public static final DeferredItem<ArmorItem> NIGHTMARE_LEGGINGS = ITEMS.register("nightmare_leggings",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50))));
-    public static final DeferredItem<Item> NIGHTMARE_BOOTS = ITEMS.register("nightmare_boots",
+    public static final DeferredItem<ArmorItem> NIGHTMARE_BOOTS = ITEMS.register("nightmare_boots",
             () -> new ArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))));
 
@@ -144,16 +144,16 @@ public class ModItems
                 }
             });
 
-    public static final DeferredItem<Item> STORM_HELMET = ITEMS.register("storm_helmet",
+    public static final DeferredItem<ArmorItem> STORM_HELMET = ITEMS.register("storm_helmet",
             () -> new ArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(30))));
-    public static final DeferredItem<Item> STORM_CHESTPLATE = ITEMS.register("storm_chestplate",
+    public static final DeferredItem<ArmorItem> STORM_CHESTPLATE = ITEMS.register("storm_chestplate",
             () -> new ModArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(30))));
-    public static final DeferredItem<Item> STORM_LEGGINGS = ITEMS.register("storm_leggings",
+    public static final DeferredItem<ArmorItem> STORM_LEGGINGS = ITEMS.register("storm_leggings",
             () -> new ArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(30))));
-    public static final DeferredItem<Item> STORM_BOOTS = ITEMS.register("storm_boots",
+    public static final DeferredItem<ArmorItem> STORM_BOOTS = ITEMS.register("storm_boots",
             () -> new ArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(30))));
 

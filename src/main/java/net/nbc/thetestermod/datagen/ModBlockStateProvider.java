@@ -1,22 +1,22 @@
 package net.nbc.thetestermod.datagen;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
-import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
 import net.nbc.thetestermod.block.custom.CrimsonBlueBerryBushBlock;
 import net.nbc.thetestermod.block.custom.NightmareLampBlock;
 import net.nbc.thetestermod.block.custom.WhiteCarrotCropBlock;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.function.Function;
 
@@ -27,6 +27,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        // Blocks with item form models
         blockWithItem(ModBlocks.NIGHTMARITE_BLOCK);
         blockWithItem(ModBlocks.PURE_NIGHTMARITE_BLOCK);
         blockWithItem(ModBlocks.NIGHTMARE_BLOCK);
@@ -69,7 +70,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.NIGHTMARE_FENCE_GATE);
         blockItem(ModBlocks.NIGHTMARE_TRAPDOOR, "_bottom");
 
-        // Refined Variant of NIGHTMARE BLOCKS
+        // Refined variant of NIGHTMARE blocks
         stairsBlock(ModBlocks.REFINED_NIGHTMARE_STAIRS.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
         slabBlock(ModBlocks.REFINED_NIGHTMARE_SlAB.get(), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()), blockTexture(ModBlocks.REFINED_NIGHTMARE_BLOCK.get()));
 
@@ -109,8 +110,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         customNightmareLamp();
         customStormLamp();
 
-        makeCrop(((CropBlock) ModBlocks.WHITE_CARROT_CROP.get()), "white_carrot_crop_stage", "white_carrot_crop_stage");
-        makeBush(((SweetBerryBushBlock) ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get()), "crimson_blue_berry_bush_stage", "crimson_blue_berry_bush_stage");
+        makeCrop((CropBlock) ModBlocks.WHITE_CARROT_CROP.get(), "white_carrot_crop_stage", "white_carrot_crop_stage");
+        makeBush((SweetBerryBushBlock) ModBlocks.CRIMSON_BLUE_BERRY_BUSH.get(), "crimson_blue_berry_bush_stage", "crimson_blue_berry_bush_stage");
 
         logBlock(ModBlocks.CORRUPTED_OAK_LOG.get());
         axisBlock(ModBlocks.CORRUPTED_OAK_WOOD.get(), blockTexture(ModBlocks.CORRUPTED_OAK_LOG.get()), blockTexture(ModBlocks.CORRUPTED_OAK_LOG.get()));
@@ -146,88 +147,119 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         slabBlock(ModBlocks.MYSTERIOUS_DUST_SLAB.get(), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()));
         blockItem(ModBlocks.MYSTERIOUS_DUST_SLAB);
-
-
-
     }
 
-    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+    private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
-                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+                models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get()))
+                        .renderType("cutout"));
     }
 
-    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+    private void leavesBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
-                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
-                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+                models().singleTexture(
+                                BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(),
+                                ResourceLocation.parse("minecraft:block/leaves"),
+                                "all",
+                                blockTexture(blockRegistryObject.get()))
+                        .renderType("cutout"));
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
-
         getVariantBuilder(block).forAllStates(function);
     }
 
     private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(CrimsonBlueBerryBushBlock.AGE),
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + textureName + state.getValue(CrimsonBlueBerryBushBlock.AGE))).renderType("cutout"));
-
+        models[0] = new ConfiguredModel(
+                models().cross(
+                        modelName + state.getValue(CrimsonBlueBerryBushBlock.AGE),
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + textureName + state.getValue(CrimsonBlueBerryBushBlock.AGE))
+                ).renderType("cutout")
+        );
         return models;
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
-
         getVariantBuilder(block).forAllStates(function);
     }
 
     private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((WhiteCarrotCropBlock) block).getAgeProperty()),
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + textureName + state.getValue(((WhiteCarrotCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
+        models[0] = new ConfiguredModel(
+                models().crop(
+                        modelName + state.getValue(((WhiteCarrotCropBlock) block).getAgeProperty()),
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + textureName + state.getValue(((WhiteCarrotCropBlock) block).getAgeProperty()))
+                ).renderType("cutout")
+        );
         return models;
     }
 
     private void customNightmareLamp() {
         getVariantBuilder(ModBlocks.NIGHTMARE_LAMP.get()).forAllStates(state -> {
-            if(state.getValue(NightmareLampBlock.CLICKED)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("nightmare_lamp_on",
-                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_on")))};
+            if (state.getValue(NightmareLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{
+                        new ConfiguredModel(
+                                models().cubeAll(
+                                        "nightmare_lamp_on",
+                                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/nightmare_lamp_on")
+                                )
+                        )
+                };
             } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("nightmare_lamp_off",
-                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_off")))};
+                return new ConfiguredModel[]{
+                        new ConfiguredModel(
+                                models().cubeAll(
+                                        "nightmare_lamp_off",
+                                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/nightmare_lamp_off")
+                                )
+                        )
+                };
             }
         });
-        simpleBlockItem(ModBlocks.NIGHTMARE_LAMP.get(), models().cubeAll("nightmare_lamp_on",
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "nightmare_lamp_on")));
+        simpleBlockItem(ModBlocks.NIGHTMARE_LAMP.get(),
+                models().cubeAll("nightmare_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/nightmare_lamp_on")));
     }
+
     private void customStormLamp() {
         getVariantBuilder(ModBlocks.STORM_LAMP.get()).forAllStates(state -> {
-            if(state.getValue(NightmareLampBlock.CLICKED)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("storm_lamp_on",
-                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "storm_lamp_on")))};
+            if (state.getValue(NightmareLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{
+                        new ConfiguredModel(
+                                models().cubeAll(
+                                        "storm_lamp_on",
+                                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/storm_lamp_on")
+                                )
+                        )
+                };
             } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("storm_lamp_off",
-                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "storm_lamp_off")))};
+                return new ConfiguredModel[]{
+                        new ConfiguredModel(
+                                models().cubeAll(
+                                        "storm_lamp_off",
+                                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/storm_lamp_off")
+                                )
+                        )
+                };
             }
         });
-        simpleBlockItem(ModBlocks.STORM_LAMP.get(), models().cubeAll("storm_lamp_on",
-                ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/" + "storm_lamp_on")));
+        simpleBlockItem(ModBlocks.STORM_LAMP.get(),
+                models().cubeAll("storm_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "block/storm_lamp_on")));
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    private void blockWithItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
-    private void blockItem(RegistryObject<? extends Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("testermod:block/" +
-                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    private void blockItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("testermod:block/" + deferredBlock.getId().getPath()));
     }
 
-    private void blockItem(RegistryObject<? extends Block> blockRegistryObject, String appendix) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("testermod:block/" +
-                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("testermod:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }
