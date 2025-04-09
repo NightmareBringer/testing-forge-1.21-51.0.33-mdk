@@ -1,13 +1,18 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.ReloadableServerRegistries;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
@@ -20,6 +25,7 @@ import net.nbc.thetestermod.enchantment.ModEnchantments;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.loot.AddItemModifier;
 import net.nbc.thetestermod.potion.ModPotions;
+import net.minecraft.core.Holder;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -48,9 +54,24 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                         .and(LootItemRandomChanceCondition.randomChance(0.05f)).build() }, // modified by the creeper's own loot table
                 ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get()));
 
-        add("lightning_shot_from_skeleton", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/skeleton"))
-                        .and(LootItemRandomChanceCondition.randomChance(0.05f)).build() }, // modified by the skeleton's own loot table
+        add("nightmare_trim_from_spider", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/spider"))
+                        .and(LootItemRandomChanceCondition.randomChance(0.02f)).build() },
+                ModItems.NIGHTEN_SMITHING_TEMPLATE.get()));
+
+        add("storm_trim_from_stray", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/stray"))
+                        .and(LootItemRandomChanceCondition.randomChance(0.02f)).build() },
+                ModItems.STORMEN_SMITHING_TEMPLATE.get()));
+
+        add("throwing_knife_from_zombie", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/zombie"))
+                        .and(LootItemRandomChanceCondition.randomChance(0.08f)).build() },
+                ModItems.THROWING_KNIFE.get()));
+
+        add("energy_orb_from_drowned", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/drowned"))
+                        .and(LootItemRandomChanceCondition.randomChance(0.08f)).build() },
                 ModItems.ENERGY_ORB.get()));
     }
 }

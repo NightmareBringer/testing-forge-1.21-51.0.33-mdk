@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.enchantment;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -12,6 +13,8 @@ import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.EnchantmentTarget;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.enchantment.custom.LightningStrikerEnchantmentEffect;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModEnchantments
 {

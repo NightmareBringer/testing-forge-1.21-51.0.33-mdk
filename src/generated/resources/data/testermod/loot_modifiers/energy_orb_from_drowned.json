@@ -1,0 +1,19 @@
+{
+  "type": "testermod:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:entities/drowned"
+        },
+        {
+          "chance": 0.08,
+          "condition": "minecraft:random_chance"
+        }
+      ]
+    }
+  ],
+  "item": "testermod:orb_of_energy"
+}

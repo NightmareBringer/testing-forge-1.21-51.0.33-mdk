@@ -1,9 +1,12 @@
 {
   "entries": [
-    "testermod:lightning_shot_from_skeleton",
     "testermod:squidward_music_disk_from_creeper",
+    "testermod:nightmare_trim_from_spider",
+    "testermod:energy_orb_from_drowned",
     "testermod:chisel_from_jungle_temple",
-    "testermod:crimson_blue_berries_from_crimson_roots"
+    "testermod:throwing_knife_from_zombie",
+    "testermod:crimson_blue_berries_from_crimson_roots",
+    "testermod:storm_trim_from_stray"
   ],
   "replace": false
 }

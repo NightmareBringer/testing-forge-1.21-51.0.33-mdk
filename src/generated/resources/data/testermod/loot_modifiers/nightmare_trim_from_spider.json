@@ -6,14 +6,14 @@
       "terms": [
         {
           "condition": "neoforge:loot_table_id",
-          "loot_table_id": "minecraft:entities/skeleton"
+          "loot_table_id": "minecraft:entities/spider"
         },
         {
-          "chance": 0.05,
+          "chance": 0.02,
           "condition": "minecraft:random_chance"
         }
       ]
     }
   ],
-  "item": "testermod:orb_of_energy"
+  "item": "testermod:nighten_armor_trim_smithing_template"
 }

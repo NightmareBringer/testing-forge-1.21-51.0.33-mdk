@@ -4,7 +4,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.nbc.thetestermod.TesterMod;
@@ -201,7 +200,7 @@ public class ModItems
 
     public static final DeferredItem<Item> THROWING_KNIFE = ITEMS.register("throwing_knife",
             () -> new ThrowingKnifeItem(new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.KNIFE, 1, -2.2f))
+                    .attributes(SwordItem.createAttributes(ModToolTiers.KNIFE, 1, -1.0f))
                     .stacksTo(4)));
 
     public static final DeferredItem<Item> ENERGY_ORB = ITEMS.register("orb_of_energy",
