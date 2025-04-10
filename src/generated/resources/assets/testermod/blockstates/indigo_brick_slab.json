@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/indigo_brick_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/indigo_bricks"
+    },
+    "type=top": {
+      "model": "testermod:block/indigo_brick_slab_top"
+    }
+  }
+}

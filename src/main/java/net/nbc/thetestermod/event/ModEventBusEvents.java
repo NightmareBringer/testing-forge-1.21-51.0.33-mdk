@@ -1,6 +1,8 @@
 package net.nbc.thetestermod.event;
 
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.nbc.thetestermod.TesterMod;
@@ -31,6 +33,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
         event.register(ModEntities.TESTER_MOB.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                Monster::checkMonsterSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 }

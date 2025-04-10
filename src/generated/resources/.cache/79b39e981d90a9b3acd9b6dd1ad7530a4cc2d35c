@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-24T17:31:22.5461225	Item Models: testermod
+// 1.21.1	2025-04-09T20:33:06.6114924	Item Models: testermod
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
 39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
 e8bf8fd1e98d6d9e85a968f3e69cf04abb106bfd assets/testermod/models/item/corrupted_oak_door.json
@@ -12,6 +12,9 @@ b6e5a22d9900a24a01968f59b7e92885f4dbb03c assets/testermod/models/item/devils_bla
 89d2eeef9ea1e974e33a880dad94cc209ff8c4d7 assets/testermod/models/item/impure_eye.json
 50a574476cf06804eff80724efe7f0e0d1a3a154 assets/testermod/models/item/impure_stick.json
 cf7da4a3b1acb2b07a0e82b2059ae129e8df97a3 assets/testermod/models/item/impure_stormite.json
+131df4b7749b18ed139eda678624337bd9568f3c assets/testermod/models/item/indigo_brick.json
+2f9503510c79fb4ce57ca5c2be4d5bc0f46b024b assets/testermod/models/item/indigo_brick_wall.json
+fd6f2bfaa90ede29174f9bd0d1d997d7f4dfb9e0 assets/testermod/models/item/indigo_dust.json
 0b84c82b685f3557a12c76dd9c2c385d9071aef7 assets/testermod/models/item/krabs.json
 fc9d1758f200a445ad7ddfd775e884ab7ff77444 assets/testermod/models/item/mysterious_dust.json
 87c0d3d8910970f0bd4327d428e1b62cb04bdc2b assets/testermod/models/item/mysterious_string.json

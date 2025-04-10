@@ -40,7 +40,7 @@ import java.util.Objects;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class TesterEntity extends Monster {
+public class TesterEntity extends Animal {
 
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(TesterEntity.class, EntityDataSerializers.INT);
@@ -53,7 +53,7 @@ public class TesterEntity extends Monster {
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
-    public TesterEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
+    public TesterEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.setPersistenceRequired();
     }
@@ -281,6 +281,11 @@ public class TesterEntity extends Monster {
     }
 
     @Override
+    public boolean isFood(ItemStack itemStack) {
+        return false;
+    }
+
+    @Override
     public void checkDespawn() {
         if (!this.level().isClientSide && this.level() instanceof ServerLevel serverLevel) {
             List<TesterEntity> mobs = serverLevel.getEntities(ModEntities.TESTER_MOB.get(), e -> !e.isReinforcement())
@@ -297,18 +302,18 @@ public class TesterEntity extends Monster {
             }
         }
     }
+
     /*
     @Override
     public boolean removeWhenFarAway(double pDistanceToClosestPlayer) {
         return false;
     }
 
+    */
     @Override
     public boolean isPersistenceRequired() {
         return true;
     }
-     */
-
 
     @Override
     protected boolean shouldDespawnInPeaceful() {
@@ -331,8 +336,6 @@ public class TesterEntity extends Monster {
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
 
-
-
         // If the mob hasn't spawned yet, proceed with the spawn logic
         TesterVariant variant = TesterVariant.WHITE; // Default variant
 
@@ -346,12 +349,12 @@ public class TesterEntity extends Monster {
         MobManager.setTesterMobSpawned(true);
         System.out.println("Spawned TesterEntity with variant: " + variant);
 
-        // Example: 50% chance to cancel the spawn
-        if (random.nextBoolean()) {
-            return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, null);
-        } else {
-            return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
-        }
+        return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
+    }
+
+    @Override
+    public @Nullable AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
+        return null;
     }
 
     @Override

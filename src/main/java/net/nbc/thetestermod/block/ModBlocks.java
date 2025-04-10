@@ -293,6 +293,19 @@ public class ModBlocks
                     .strength(5f).explosionResistance(5f)
                     .requiresCorrectToolForDrops().sound(ModSounds.ANTI_MAGIC_BLOCK_SOUNDS)));
 
+    public static final DeferredBlock<Block> INDIGO_BRICKS = registerBlock("indigo_bricks",
+            () -> new Block(BlockBehaviour.Properties.of().strength(3f).explosionResistance(10f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<StairBlock> INDIGO_BRICK_STAIRS = registerBlock("indigo_bricks_stairs",
+            () -> new StairBlock(ModBlocks.INDIGO_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(2.25f).explosionResistance(4f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<SlabBlock> INDIGO_BRICK_SlAB = registerBlock("indigo_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(1.5f).explosionResistance(4f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<WallBlock> INDIGO_BRICK_WALL = registerBlock("indigo_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(6f).explosionResistance(8f).requiresCorrectToolForDrops()));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {

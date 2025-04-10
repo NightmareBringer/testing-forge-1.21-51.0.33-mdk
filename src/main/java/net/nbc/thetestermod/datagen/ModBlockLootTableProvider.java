@@ -153,6 +153,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.CORRUPTED_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.MYSTERIOUS_DUST_SLAB.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        dropSelf(ModBlocks.INDIGO_BRICKS.get());
+
+        dropSelf(ModBlocks.INDIGO_BRICK_STAIRS.get());
+        dropSelf(ModBlocks.INDIGO_BRICK_WALL.get());
+        this.add(ModBlocks.INDIGO_BRICK_SlAB.get(),
+                block -> createSlabItemTable(ModBlocks.INDIGO_BRICK_SlAB.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

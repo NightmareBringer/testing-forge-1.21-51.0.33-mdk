@@ -2,8 +2,8 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 250,
-  "experience": 0.2,
-  "group": "stormite",
+  "experience": 0.4,
+  "group": "stormite_smelt",
   "ingredient": {
     "item": "testermod:stormite"
   },

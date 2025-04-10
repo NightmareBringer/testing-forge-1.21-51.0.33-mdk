@@ -9,13 +9,13 @@
       "item": "minecraft:crying_obsidian"
     },
     "E": {
-      "item": "minecraft:echo_shard"
+      "item": "testermod:indigo_brick"
     },
     "L": {
       "item": "minecraft:lapis_block"
     },
     "S": {
-      "item": "minecraft:sculk"
+      "item": "testermod:indigo_bricks"
     },
     "U": {
       "item": "testermod:impure_eye"

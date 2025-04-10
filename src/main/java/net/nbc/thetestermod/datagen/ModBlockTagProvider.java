@@ -83,8 +83,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_PRESSURE_PLATE.get())
                 .add(ModBlocks.STORM_LAMP.get())
 
-                .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
+                .add(ModBlocks.INDIGO_BRICKS.get())
+                .add(ModBlocks.INDIGO_BRICK_WALL.get())
+                .add(ModBlocks.INDIGO_BRICK_SlAB.get())
+                .add(ModBlocks.INDIGO_BRICK_STAIRS.get())
 
+
+                .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
                 .add(ModBlocks.NIGHTMARITE_ORE.get())

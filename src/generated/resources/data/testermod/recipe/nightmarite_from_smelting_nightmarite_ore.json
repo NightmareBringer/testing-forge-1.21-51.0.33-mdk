@@ -2,8 +2,8 @@
   "type": "minecraft:smelting",
   "category": "misc",
   "cookingtime": 200,
-  "experience": 0.25,
-  "group": "nightmarite",
+  "experience": 0.35,
+  "group": "nightmarite_smelt",
   "ingredient": {
     "item": "testermod:nightmarite_ore"
   },

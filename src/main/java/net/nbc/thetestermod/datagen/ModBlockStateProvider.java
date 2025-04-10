@@ -145,8 +145,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.CORRUPTED_OAK_FENCE_GATE);
         blockItem(ModBlocks.CORRUPTED_OAK_TRAPDOOR, "_bottom");
 
+        blockWithItem(ModBlocks.INDIGO_BRICKS);
+
         slabBlock(ModBlocks.MYSTERIOUS_DUST_SLAB.get(), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()));
         blockItem(ModBlocks.MYSTERIOUS_DUST_SLAB);
+
+
+        stairsBlock(ModBlocks.INDIGO_BRICK_STAIRS.get(), blockTexture(ModBlocks.INDIGO_BRICKS.get()));
+        slabBlock(ModBlocks.INDIGO_BRICK_SlAB.get(), blockTexture(ModBlocks.INDIGO_BRICKS.get()), blockTexture(ModBlocks.INDIGO_BRICKS.get()));
+
+        wallBlock(ModBlocks.INDIGO_BRICK_WALL.get(), blockTexture(ModBlocks.INDIGO_BRICKS.get()));
+
+        blockItem(ModBlocks.INDIGO_BRICK_STAIRS);
+        blockItem(ModBlocks.INDIGO_BRICK_SlAB);
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {

@@ -2,14 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:diamond_block"
-    },
     "A": {
       "item": "minecraft:amethyst_shard"
     },
     "D": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:diamond"
     },
     "G": {
       "item": "minecraft:amethyst_block"
@@ -22,7 +19,7 @@
     }
   },
   "pattern": [
-    "#A#",
+    "GAG",
     "DUD",
     "GLG"
   ],

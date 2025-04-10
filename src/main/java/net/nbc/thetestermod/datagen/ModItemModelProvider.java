@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
+import net.nbc.thetestermod.item.custom.EnchantableArmorItem;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -71,6 +72,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MYSTERIOUS_STRING.get());
         handheldItem(ModItems.STRANGE_STICK.get());
 
+        handheldItem(ModItems.INDIGO_DUST.get());
+        handheldItem(ModItems.INDIGO_BRICK.get());
+
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
@@ -126,6 +130,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.CORRUPTED_OAK_SAPLING);
 
+        wallItem(ModBlocks.INDIGO_BRICK_WALL, ModBlocks.INDIGO_BRICKS);
+
         withExistingParent(ModItems.TESTER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
@@ -135,10 +141,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     // Shoutout to El_Redstoniano for making this trimmed armor support
-    private void trimmedArmorItem(DeferredItem<ArmorItem> itemDeferred) {
+    private void trimmedArmorItem(DeferredItem<EnchantableArmorItem> itemDeferred) {
         final String MOD_ID = TesterMod.MOD_ID; // Change this to your mod id if needed
 
-        if (itemDeferred.get() instanceof ArmorItem armorItem) {
+        if (itemDeferred.get() instanceof EnchantableArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
                 float trimValue = value;
 

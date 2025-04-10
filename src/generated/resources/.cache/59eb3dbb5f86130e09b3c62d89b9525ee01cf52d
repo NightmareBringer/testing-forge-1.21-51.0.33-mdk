@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-06T23:03:26.2619094	Loot Tables
+// 1.21.1	2025-04-09T20:33:06.6044927	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -17,6 +17,10 @@ a488a27acbadf12ac217acead46614ca49c37221 data/testermod/loot_table/blocks/corrup
 3ca7982f909351669aaf7df6ef3c49dd17fcfc4b data/testermod/loot_table/blocks/gaming_chair_blue.json
 cf0e1dc76faa2b6a6e33ca52ab8072a2315a25f9 data/testermod/loot_table/blocks/gaming_chair_red.json
 35d98b03fdea972317adca223238f1800975eb1b data/testermod/loot_table/blocks/impurifier_block.json
+1930fb07bb0b30a9d6c51219cfb7c2d801af04d9 data/testermod/loot_table/blocks/indigo_bricks.json
+faf03cf71f9b35d5036353b058a0a6daf7f38890 data/testermod/loot_table/blocks/indigo_bricks_stairs.json
+a96b23dc3476b32328d3046f088fc4c2196c7126 data/testermod/loot_table/blocks/indigo_brick_slab.json
+a64e57ba635d15fec31aa29b93b6fa75490cc60c data/testermod/loot_table/blocks/indigo_brick_wall.json
 d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_block.json
 01c1817cf96ae43fed9b468e6ec51c4723bc214f data/testermod/loot_table/blocks/mysterious_dust_block.json
 288ca1c5eee99f978363ee46c1c5a343a3750c77 data/testermod/loot_table/blocks/mysterious_dust_slab.json

@@ -28,12 +28,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> STORMITE_SMELTABLES = List.of(ModItems.STORMITE.get(),
                 ModBlocks.STORMITE_ORE.get(), ModBlocks.STORMITE_DEEPSLATE_ORE.get());
 
+        List<ItemLike> INDIGO_SMELTABLES = List.of(ModItems.INDIGO_BRICK.get(),
+                ModItems.INDIGO_DUST.get());
+
         SmithingTransformRecipeBuilder.smithing(
-                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  //Template (first slot)
-                Ingredient.of(Items.FIRE_CHARGE), //Addition (second slot)
-                Ingredient.of(Items.GOLD_INGOT),  //Ingot (third slot)
-                RecipeCategory.MISC,
-                ModItems.NIGHTMARE_INGOT.get()) //Result
+                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  // Template (first slot)
+                Ingredient.of(Items.FIRE_CHARGE),                // Addition (second slot)
+                Ingredient.of(Items.GOLD_INGOT),                 // Ingot (third slot)
+                RecipeCategory.MISC,                             // Recipe Class
+                ModItems.NIGHTMARE_INGOT.get())                  // Result
                 .unlocks("has_pure_nightmarite", has(ModItems.PURE_NIGHTMARITE.get())) // Unlock condition
                 .save(pRecipeOutput, "nightmare_ingot_from_smithing");
 
@@ -101,7 +104,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#F#")
                 .pattern("BEB")
                 .pattern("FBF")
-                .define('#', Items.WITHER_SKELETON_SKULL)
+                .define('#', Items.MAGMA_CREAM)
                 .define('F', Items.FERMENTED_SPIDER_EYE)
                 .define('B', Items.BLAZE_POWDER)
                 .define('E', Items.ENDER_PEARL)
@@ -122,19 +125,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SUS")
                 .pattern("CLC")
                 .define('#', Items.WARPED_WART_BLOCK)
-                .define('E', Items.ECHO_SHARD)
-                .define('S', Items.SCULK)
+                .define('E', ModItems.INDIGO_BRICK)
+                .define('S', ModBlocks.INDIGO_BRICKS)
                 .define('U', ModItems.IMPURE_EYE.get())
                 .define('C', Items.CRYING_OBSIDIAN)
                 .define('L', Items.LAPIS_BLOCK)
                 .unlockedBy(getHasName(ModItems.IMPURE_EYE.get()), has(ModItems.IMPURE_EYE.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURIFIER_BLOCK.get())
-                .pattern("#A#")
+                .pattern("GAG")
                 .pattern("DUD")
                 .pattern("GLG")
-                .define('D', Items.GOLD_BLOCK)
                 .define('A', Items.AMETHYST_SHARD)
-                .define('#', Items.DIAMOND_BLOCK)
+                .define('D', Items.DIAMOND)
                 .define('U', ModItems.PURE_EYE.get())
                 .define('G', Items.AMETHYST_BLOCK)
                 .define('L', Items.LAPIS_BLOCK)
@@ -152,8 +154,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#t#")
                 .pattern("tRt")
                 .pattern("#t#")
-                .define('t', Items.GLASS)
-                .define('#', ModItems.STORM_INGOT.get())
+                .define('#', Items.GLASS)
+                .define('t', ModItems.STORM_INGOT.get())
                 .define('R', ModItems.IMPURE_STORMITE.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
 
@@ -426,6 +428,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModItems.MYSTERIOUS_DUST.get())
                 .define('M', Items.STICK)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.INDIGO_DUST.get())
+                .pattern("DD ")
+                .pattern("DD ")
+                .pattern("   ")
+                .define('D', ModItems.MYSTERIOUS_DUST.get())
+                .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTERIOUS_STRING.get())
                 .pattern(" / ")
                 .pattern("/M/")
@@ -433,6 +441,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModItems.MYSTERIOUS_DUST.get())
                 .define('M', Items.STRING)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INDIGO_BRICKS.get())
+                .pattern("DD ")
+                .pattern("DD ")
+                .pattern("   ")
+                .define('D', ModItems.INDIGO_BRICK.get())
+                .unlockedBy(getHasName(ModItems.INDIGO_BRICK.get()), has(ModItems.INDIGO_BRICK.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_GAMING_CHAIR.get())
                 .pattern("#L#")
@@ -621,11 +636,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         trapdoorBuilder(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get(), Ingredient.of(ModBlocks.CORRUPTED_OAK_PLANKS.get())).group("corrupted_oak_planks")
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
 
-        oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.25f, 200, "nightmarite");
-        oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.50f, 100, "nightmarite");
+        stairBuilder(ModBlocks.INDIGO_BRICK_STAIRS.get(), Ingredient.of(ModItems.INDIGO_BRICK.get())).group("indigo_brick")
+                .unlockedBy(getHasName(ModItems.INDIGO_BRICK.get()), has(ModItems.INDIGO_BRICK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDIGO_BRICK_SlAB.get(), ModItems.INDIGO_BRICK.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDIGO_BRICK_WALL.get(), ModItems.INDIGO_BRICK.get());
 
-        oreSmelting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.20f, 250, "stormite");
-        oreBlasting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.40f, 150, "stormite");
+
+        oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.35f, 200, "nightmarite_smelt");
+        oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.70f, 100, "nightmarite_blast");
+
+        oreSmelting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.40f, 250, "stormite_smelt");
+        oreBlasting(pRecipeOutput, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.STORMITE.get(), 0.80f, 150, "stormite_blast");
+
+        oreSmelting(pRecipeOutput, INDIGO_SMELTABLES, RecipeCategory.MISC, ModItems.INDIGO_BRICK.get(), 0.25f, 200, "indigo_brick_smelt");
+        oreBlasting(pRecipeOutput, INDIGO_SMELTABLES, RecipeCategory.MISC, ModItems.INDIGO_BRICK.get(), 0.25f, 100, "indigo_brick_blast");
 
         trimSmithing(pRecipeOutput, ModItems.NIGHTEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "nighten"));
         trimSmithing(pRecipeOutput, ModItems.STORMEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen"));

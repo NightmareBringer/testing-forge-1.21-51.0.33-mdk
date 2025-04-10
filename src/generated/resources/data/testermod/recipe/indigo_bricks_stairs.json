@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "indigo_brick",
+  "key": {
+    "#": {
+      "item": "testermod:indigo_brick"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:indigo_bricks_stairs"
+  }
+}

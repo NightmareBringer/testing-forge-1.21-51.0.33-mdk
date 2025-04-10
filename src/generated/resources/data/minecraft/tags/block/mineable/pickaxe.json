@@ -45,6 +45,10 @@
     "testermod:storm_button",
     "testermod:storm_pressure_plate",
     "testermod:storm_lamp",
+    "testermod:indigo_bricks",
+    "testermod:indigo_brick_wall",
+    "testermod:indigo_brick_slab",
+    "testermod:indigo_bricks_stairs",
     "testermod:refined_nightmare_block"
   ]
 }

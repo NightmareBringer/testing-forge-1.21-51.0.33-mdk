@@ -2,8 +2,8 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "cookingtime": 150,
-  "experience": 0.4,
-  "group": "stormite",
+  "experience": 0.8,
+  "group": "stormite_blast",
   "ingredient": {
     "item": "testermod:stormite_deepslate_ore"
   },

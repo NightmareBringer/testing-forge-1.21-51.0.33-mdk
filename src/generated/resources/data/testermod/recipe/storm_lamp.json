@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "testermod:storm_ingot"
+      "item": "minecraft:glass"
     },
     "R": {
       "item": "testermod:impure_stormite"
     },
     "t": {
-      "item": "minecraft:glass"
+      "item": "testermod:storm_ingot"
     }
   },
   "pattern": [

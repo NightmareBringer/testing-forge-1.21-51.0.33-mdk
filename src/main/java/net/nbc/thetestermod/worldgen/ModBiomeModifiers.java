@@ -93,13 +93,8 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SPAWN_TESTER, new BiomeModifiers.AddSpawnsBiomeModifier(
-                HolderSet.direct(
-                        biomes.getOrThrow(Biomes.TAIGA),
-                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
-                        biomes.getOrThrow(Biomes.CRIMSON_FOREST),
-                        biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)
-                ),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 15, 1, 1)))); // Keep spawn weights reasonable!
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 10, 1, 1)))); // Keep spawn weights reasonable!
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

@@ -59,6 +59,9 @@
   "item.testermod.throwing_knife": "Throwing Knife",
   "item.testermod.orb_of_energy": "Orb of Energy",
 
+  "item.testermod.indigo_dust": "Indigo Dust",
+  "item.testermod.indigo_brick": "Indigo Brick",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmare Essence",
   "block.testermod.nightmarite_block": "Block of Nightmare Essence",
   "block.testermod.nightmare_block": "Block of Nightmare",
@@ -135,6 +138,11 @@
   "block.testermod.gaming_chair_blue": "Blue Gaming Chair",
 
   "block.testermod.pedestal": "Item Displayer",
+
+  "block.testermod.indigo_bricks": "Indigo Bricks",
+  "block.testermod.indigo_brick_stairs": "Indigo Brick Stairs",
+  "block.testermod.indigo_brick_slab": "Indigo Brick Slab",
+  "block.testermod.indigo_brick_wall": "Indigo Brick Wall",
 
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmare Ingot Material",

@@ -18,4 +18,5 @@ public class ModToolTiers {
 
     public static final Tier KNIFE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL,
             200, 15f, 3f, 22, () -> Ingredient.of(Items.STICK));
+
 }
