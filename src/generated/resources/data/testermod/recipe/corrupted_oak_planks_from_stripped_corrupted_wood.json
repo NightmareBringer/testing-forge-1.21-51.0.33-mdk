@@ -3,16 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "testermod:corrupted_oak_wood"
-    },
-    {
-      "item": "testermod:corrupted_oak_log"
-    },
-    {
       "item": "testermod:stripped_corrupted_oak_wood"
-    },
-    {
-      "item": "testermod:stripped_corrupted_oak_log"
     }
   ],
   "result": {

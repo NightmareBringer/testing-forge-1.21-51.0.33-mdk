@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_corrupted_oak_leaves": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:corrupted_oak_leaves"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:mysterious_dust_block_from_corrupted_leaves"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_corrupted_oak_leaves"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:mysterious_dust_block_from_corrupted_leaves"
+    ]
+  }
+}

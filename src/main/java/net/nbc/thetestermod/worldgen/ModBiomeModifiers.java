@@ -82,7 +82,10 @@ public class ModBiomeModifiers {
                         biomes.getOrThrow(Biomes.FOREST),
                         biomes.getOrThrow(Biomes.DARK_FOREST),
                         biomes.getOrThrow(Biomes.TAIGA),
-                        biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)
+                        biomes.getOrThrow(Biomes.WINDSWEPT_FOREST),
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_PINE_TAIGA),
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_SPRUCE_TAIGA),
+                        biomes.getOrThrow(Biomes.FLOWER_FOREST)
                 ),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
@@ -93,8 +96,22 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SPAWN_TESTER, new BiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 10, 1, 1)))); // Keep spawn weights reasonable!
+                HolderSet.direct(
+                        biomes.getOrThrow(Biomes.FOREST),
+                        biomes.getOrThrow(Biomes.DARK_FOREST),
+                        biomes.getOrThrow(Biomes.TAIGA),
+                        biomes.getOrThrow(Biomes.WINDSWEPT_FOREST),
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_PINE_TAIGA),
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_SPRUCE_TAIGA),
+                        biomes.getOrThrow(Biomes.BIRCH_FOREST),
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_BIRCH_FOREST),
+                        biomes.getOrThrow(Biomes.SPARSE_JUNGLE),
+                        biomes.getOrThrow(Biomes.SNOWY_TAIGA),
+                        biomes.getOrThrow(Biomes.CRIMSON_FOREST),
+                        biomes.getOrThrow(Biomes.WARPED_FOREST),
+                        biomes.getOrThrow(Biomes.FLOWER_FOREST)
+                ),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 1, 1, 1)))); // Keep spawn weights reasonable!
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

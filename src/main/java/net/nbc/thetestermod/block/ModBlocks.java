@@ -296,7 +296,7 @@ public class ModBlocks
     public static final DeferredBlock<Block> INDIGO_BRICKS = registerBlock("indigo_bricks",
             () -> new Block(BlockBehaviour.Properties.of().strength(3f).explosionResistance(10f).requiresCorrectToolForDrops()));
 
-    public static final DeferredBlock<StairBlock> INDIGO_BRICK_STAIRS = registerBlock("indigo_bricks_stairs",
+    public static final DeferredBlock<StairBlock> INDIGO_BRICK_STAIRS = registerBlock("indigo_brick_stairs",
             () -> new StairBlock(ModBlocks.INDIGO_BRICKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of().strength(2.25f).explosionResistance(4f).requiresCorrectToolForDrops()));
 

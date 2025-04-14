@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "testermod:corrupted_oak_leaves"
+    }
+  },
+  "pattern": [
+    "DD ",
+    "DD ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:mysterious_dust_block"
+  }
+}

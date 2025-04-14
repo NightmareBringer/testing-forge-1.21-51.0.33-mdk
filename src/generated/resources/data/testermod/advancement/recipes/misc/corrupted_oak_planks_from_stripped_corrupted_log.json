@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_indigo_brick": {
+    "has_corrupted_oak_log": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:indigo_brick"
+            "items": "testermod:corrupted_oak_log"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "testermod:indigo_bricks_stairs"
+        "recipe": "testermod:corrupted_oak_planks_from_stripped_corrupted_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_indigo_brick"
+      "has_corrupted_oak_log"
     ]
   ],
   "rewards": {
     "recipes": [
-      "testermod:indigo_bricks_stairs"
+      "testermod:corrupted_oak_planks_from_stripped_corrupted_log"
     ]
   }
 }

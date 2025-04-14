@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_corrupted_oak_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:corrupted_oak_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:corrupted_oak_planks_from_corrupted_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_corrupted_oak_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:corrupted_oak_planks_from_corrupted_wood"
+    ]
+  }
+}

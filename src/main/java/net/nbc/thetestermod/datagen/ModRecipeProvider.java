@@ -516,6 +516,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('M', ModBlocks.REFINED_NIGHTMARE_BLOCK.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MYSTERIOUS_DUST_BLOCK.get())
+                .pattern("DD ")
+                .pattern("DD ")
+                .pattern("   ")
+                .define('D', ModBlocks.CORRUPTED_OAK_LEAVES.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LEAVES.get()), has(ModBlocks.CORRUPTED_OAK_LEAVES.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_block_from_corrupted_leaves");
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
@@ -554,10 +562,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CORRUPTED_OAK_PLANKS.get(), 4)
                 .requires(ModBlocks.CORRUPTED_OAK_WOOD.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_planks_from_corrupted_wood");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CORRUPTED_OAK_PLANKS.get(), 4)
                 .requires(ModBlocks.CORRUPTED_OAK_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_planks_from_corrupted_log");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CORRUPTED_OAK_PLANKS.get(), 4)
                 .requires(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_planks_from_stripped_corrupted_wood");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CORRUPTED_OAK_PLANKS.get(), 4)
                 .requires(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get())
-                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_planks_from_stripped_corrupted_log");
 
 
 

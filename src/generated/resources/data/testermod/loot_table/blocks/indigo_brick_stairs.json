@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "testermod:indigo_bricks_stairs"
+          "name": "testermod:indigo_brick_stairs"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "testermod:blocks/indigo_bricks_stairs"
+  "random_sequence": "testermod:blocks/indigo_brick_stairs"
 }
