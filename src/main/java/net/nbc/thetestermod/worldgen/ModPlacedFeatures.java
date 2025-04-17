@@ -54,7 +54,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
         register(context, CORRUPTED_OAK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CORRUPTED_OAK_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.1f, 1),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.05f, 1),
                         ModBlocks.CORRUPTED_OAK_SAPLING.get()));
 
         register(context, CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_CRIMSON_BLUE_BERRY_BUSH_KEY),

@@ -4,7 +4,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 
-public class EnchantableArmorItem extends ArmorItem {
+public class EnchantableArmorItem extends ModArmorItem {
 
     public EnchantableArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {
         super(material, type, properties);

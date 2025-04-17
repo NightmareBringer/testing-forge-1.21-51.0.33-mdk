@@ -216,6 +216,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
 
+        tag(BlockTags.LEAVES)
+                .add(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+
         tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCES).add(ModBlocks.REFINED_NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCES).add(ModBlocks.STORM_FENCE.get());
@@ -227,6 +230,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.REFINED_NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.INDIGO_BRICK_WALL.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CORRUPTED_OAK_LOG.get())

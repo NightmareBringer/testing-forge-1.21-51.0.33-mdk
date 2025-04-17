@@ -10,12 +10,12 @@ public class ModFoodProperties
     public static final FoodProperties KRABS = new FoodProperties.Builder().nutrition(2).saturationModifier(0.05f)
             .effect(new MobEffectInstance(MobEffects.HARM, 1, 1), 1.0f).alwaysEdible().build();
 
-    public static final FoodProperties CRIMSON_BLUE_BERRIES = new FoodProperties.Builder().nutrition(3).saturationModifier(0.7f).fast().build();
+    public static final FoodProperties CRIMSON_BLUE_BERRIES = new FoodProperties.Builder().nutrition(3).saturationModifier(0.8f).fast().build();
 
-    public static final FoodProperties WHITE_CARROT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.85f).build();
+    public static final FoodProperties WHITE_CARROT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.9f).build();
 
-    public static final FoodProperties GLISTERING_CARROT = new FoodProperties.Builder().nutrition(7).saturationModifier(1.2f)
-            .effect(new MobEffectInstance(MobEffects.REGENERATION, 1800, 2), 1.0f)
-            .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 800, 1), 0.75f)
-            .effect(new MobEffectInstance(ModEffects.PURIFICATION_EFFECT, 800, 0), 0.50f).build();
+    public static final FoodProperties GLISTERING_CARROT = new FoodProperties.Builder().nutrition(7).saturationModifier(1.4f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 1800, 2), 1.0f)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 800, 1), 0.75f)
+            .effect(() -> new MobEffectInstance(ModEffects.PURIFICATION_EFFECT, 800, 0), 0.50f).build();
 }
