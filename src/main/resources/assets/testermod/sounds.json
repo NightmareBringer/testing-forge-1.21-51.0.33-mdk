@@ -1,66 +1,61 @@
 {
   "chisel_use": {
-    "subtitle": "sounds.testermod.chisel_use",
+    "subtitle": "Block transforms",
     "sounds": [
       "testermod:chisel_use"
     ]
   },
   "magic_block_break": {
-    "subtitle": "sounds.testermod.magic_block_break",
     "sounds": [
       "testermod:magic_block_break"
     ]
   },
   "magic_block_step": {
-    "subtitle": "sounds.testermod.magic_block_step",
     "sounds": [
       "testermod:magic_block_step"
     ]
   },
   "magic_block_place": {
-    "subtitle": "sounds.testermod.magic_block_place",
     "sounds": [
       "testermod:magic_block_place"
     ]
   },
   "magic_block_hit": {
-    "subtitle": "sounds.testermod.magic_block_hit",
     "sounds": [
       "testermod:magic_block_hit"
     ]
   },
   "magic_block_fall": {
-    "subtitle": "sounds.testermod.magic_block_fall",
     "sounds": [
       "testermod:magic_block_fall"
     ]
   },
   "tester_death_1": {
-    "subtitle": " dies",
+    "subtitle": "An end",
     "sounds": [
       "testermod:tester_death_1"
     ]
   },
   "tester_hurt_1": {
-    "subtitle": " hurts",
+    "subtitle": "Hurt",
     "sounds": [
       "testermod:tester_hurt_1"
     ]
   },
   "tester_hurt_2": {
-    "subtitle": " hurts more",
+    "subtitle": "Pain",
     "sounds": [
       "testermod:tester_hurt_2"
     ]
   },
   "tester_idle_1": {
-    "subtitle": " drones",
+    "subtitle": "Droning",
     "sounds": [
       "testermod:tester_idle_1"
     ]
   },
   "tester_idle_2": {
-    "subtitle": "  ",
+    "subtitle": " ... ",
     "sounds": [
       "testermod:tester_idle_2"
     ]

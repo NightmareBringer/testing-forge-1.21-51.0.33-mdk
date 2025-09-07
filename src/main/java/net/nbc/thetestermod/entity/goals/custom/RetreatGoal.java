@@ -20,7 +20,7 @@ public class RetreatGoal extends Goal {
 
     @Override
     public boolean canUse() {
-        this.target = this.mob.level().getNearestPlayer(this.mob, 128.0D);
+        this.target = this.mob.level().getNearestPlayer(this.mob, 120.0D);
         return shouldRetreat || (target != null && this.mob.getLastHurtByMob() instanceof Player);
     }
 

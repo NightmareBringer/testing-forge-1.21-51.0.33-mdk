@@ -1,6 +1,7 @@
 package net.nbc.thetestermod.entity.custom;
 
 import net.minecraft.Util;
+import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -8,10 +9,14 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,10 +26,13 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.nbc.thetestermod.entity.MobManager;
 import net.nbc.thetestermod.entity.ModEntities;
@@ -47,6 +55,12 @@ public class TesterEntity extends Animal {
 
     private boolean isReinforcement = false;
 
+    private int lookTimer = 0; // Tracks continuous player gaze
+    private boolean hasAttacked = false; // Ensures rush attack happens only once
+
+    private int retreatTicks = 0;
+    private Vec3 retreatTarget = null;
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -60,43 +74,15 @@ public class TesterEntity extends Animal {
 
     @Override
     protected void registerGoals() {
-
         this.goalSelector.addGoal(0, new FloatGoal(this));
-
-        // Panic when attacked
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.5));
-
-        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 128.0F));
-
-        // Create RetreatGoal first so we can pass it to ChaseAndPauseGoal
-        RetreatGoal retreatGoal = new RetreatGoal(this, 48.0, 2.5);
-        ChaseAndPauseGoal chaseGoal = new ChaseAndPauseGoal(this, 1.0, retreatGoal);
-
-        // Add goals
-        this.goalSelector.addGoal(3, chaseGoal);
-        this.goalSelector.addGoal(4, retreatGoal);
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 120.0F));
 
         // Attack when close
-        this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2D, true) {
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false) {
             @Override
             public boolean canUse() {
-                // Only allow the melee attack goal if the mob is not in pause state (moveTicks > 0)
-                return chaseGoal.getMoveTicks() <= 0 && super.canUse();  // Only use if moveTicks is 0
-            }
-
-            @Override
-            public boolean canContinueToUse() {
-                // Similar logic, only continue melee attack if the mob is actively moving
-                return chaseGoal.getMoveTicks() > 0 && super.canContinueToUse();  // Only continue when moveTicks > 0
-            }
-
-            @Override
-            public void tick() {
-                super.tick();
-
-                if (this.mob.swinging) {
-                    retreatGoal.forceRetreat();
-                }
+                return TesterEntity.this.getTarget() != null && !hasAttacked &&
+                        TesterEntity.this.distanceTo(TesterEntity.this.getTarget()) < 4.0F;
             }
         });
 
@@ -107,48 +93,215 @@ public class TesterEntity extends Animal {
         return PathfinderMob.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 20D)
                 .add(Attributes.MOVEMENT_SPEED, 0.5D)
-                .add(Attributes.FOLLOW_RANGE, 96D)
-                .add(Attributes.ARMOR, 20D)
-                .add(Attributes.ARMOR_TOUGHNESS, 20D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
-                .add(Attributes.BURNING_TIME, 0.0D)
-                .add(Attributes.FALL_DAMAGE_MULTIPLIER, 0.01D)
-                .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, 20D)
-                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE, 0.01D)
-                .add(Attributes.ATTACK_DAMAGE, 7.5D)
+                .add(Attributes.FOLLOW_RANGE, 128D)
+                .add(Attributes.ATTACK_DAMAGE, 8.0D)
                 .add(Attributes.ATTACK_KNOCKBACK, 2.5D)
-                .add(Attributes.ATTACK_SPEED, 4D);
+                //.add(Attributes.BURNING_TIME, 0.0D)
+                //.add(Attributes.ATTACK_SPEED, 4D)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D);
     }
 
+    private void setupAnimationStates() {
+        if(this.idleAnimationTimeout <= 0) {
+            this.idleAnimationTimeout = 160;
+            this.idleAnimationState.start(this.tickCount);
+        } else {
+            --this.idleAnimationTimeout;
+        }
+
+        if(this.swinging && attackAnimationTimeout <= 0) {
+            attackAnimationTimeout = 7;
+            this.attackAnimationState.start(this.tickCount);
+        } else {
+            --this.attackAnimationTimeout;
+        }
+
+        if(attackAnimationTimeout == 0) {
+            this.swinging = false;
+            attackAnimationState.stop();
+        }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        setupAnimationStates();
+
+        if(this.level().isClientSide()) {
+            this.setupAnimationStates();
+        }
+
+        if (this.level().isClientSide()) return; // Server-only logic
+
+        if (!this.level().isClientSide) {
+            Player nearest = this.level().getNearestPlayer(this, 128.0D);
+            if (nearest != null) {
+                this.getLookControl().setLookAt(nearest, 30.0F, 30.0F);
+            }
+        }
+
+        Player nearest = this.level().getNearestPlayer(this, 128.0D);
+        if (nearest == null) return;
+
+        // Check if player is staring
+        if (playerIsLooking(nearest)) {
+            lookTimer++;
+            if (lookTimer >= 100) { // ~5 seconds
+                applyBlindness(nearest);
+                runAwayAndVanish();
+            }
+        } else {
+            lookTimer = 0;
+        }
+
+        // Rush attack if close and hasn't attacked yet
+        if (!hasAttacked && this.swinging) {
+            rushAttack(nearest);
+        }
+
+        // Handle retreat movement
+        if (retreatTicks > 0 && retreatTarget != null) {
+            retreatTicks--;
+            this.getNavigation().moveTo(retreatTarget.x, retreatTarget.y, retreatTarget.z, 1.5D);
+
+            // When retreat finished
+            if (retreatTicks == 0) {
+                this.level().playSound(
+                        null,
+                        this.getX(), this.getY(), this.getZ(),
+                        SoundEvents.FIRE_EXTINGUISH,
+                        SoundSource.HOSTILE,
+                        1.0F,
+                        0.9F
+                );
+                spawnVanishParticles();
+                this.discard();
+            }
+        }
+    }
+
+    @Override
+    public boolean isInvulnerableTo(DamageSource source) {
+        // Be immune to everything
+        //return source.isProjectile(); // only immune to projectiles
+        return true;
+    }
+
+    private void startRetreat(Player player) {
+        // Vector pointing away from player
+        Vec3 away = this.position().subtract(player.position()).normalize();
+
+        // Scale it so mob runs 15–20 blocks away
+        double distance = 15 + this.getRandom().nextInt(6); // 15–20 blocks
+        retreatTarget = this.position().add(away.scale(distance));
+
+        retreatTicks = 20;
+    }
+
+    private Vec3 getRetreatDestination(Player player) {
+        // Vector from player to mob
+        Vec3 away = this.position().subtract(player.position()).normalize();
+
+        // Scale it so the mob runs 16 blocks away
+        Vec3 retreatPos = this.position().add(away.scale(16.0));
+
+        return retreatPos;
+    }
+
+    private void spawnVanishParticles() {
+        // Placeholder for particles
+        this.level().broadcastEntityEvent(this, (byte) 60);
+    }
+
+    private boolean playerHasLineOfSight(Player player) {
+        Vec3 eyePos = player.getEyePosition(1.0F);
+        Vec3 mobPos = this.position().add(0, this.getBbHeight() * 0.5, 0); // center of mob
+
+        ClipContext context = new ClipContext(
+                eyePos,
+                mobPos,
+                ClipContext.Block.COLLIDER, // consider solid blocks
+                ClipContext.Fluid.NONE,
+                player
+        );
+
+        BlockHitResult result = this.level().clip(context);
+        return result.getType() == HitResult.Type.MISS; // no block in between
+    }
+
+    private boolean playerIsLooking(Player player) {
+        // Simplified: checks if player head rotation points roughly at mob
+        Vec3 direction = player.getViewVector(1.0F).normalize();
+        Vec3 toMob = this.position().subtract(player.position()).normalize();
+        double dot = direction.dot(toMob);
+        return dot > 0.95 && player.distanceTo(this) > 10 && playerHasLineOfSight(player); // 10+ blocks for look-triggered vanish
+    }
+
+    private void rushAttack(Player player) {
+        hasAttacked = true;
+
+        // Pathfind toward the player briefly
+        this.getNavigation().moveTo(player, 1.5D); // sprint speed
+        this.swinging = true;
+
+        // Apply effects on attack
+        applyBlindness(player);
+
+        // Trigger retreat/vanish
+        startRetreat(player);
+    }
+
+    private void applyBlindness(Player player) {
+        this.level().playSound(
+                null,
+                player.getX(), player.getY(), player.getZ(),
+                SoundEvents.ZOMBIE_VILLAGER_CURE,
+                SoundSource.HOSTILE,
+                0.5F,
+                0.5F
+        );
+
+        player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, false, false));
+    }
+
+    private void runAwayAndVanish() {
+        // Optional: play particle effect here
+        this.level().broadcastEntityEvent(this, (byte) 60); // custom vanish particle packet
+
+        // Move a few blocks away for visual effect
+        Vec3 retreatVec = this.position().add(0, 0, -5); // simple backward motion
+        this.getNavigation().moveTo(retreatVec.x, retreatVec.y, retreatVec.z, 1.5D);
+
+        this.level().playSound(
+                null,
+                this.getX(), this.getY(), this.getZ(),
+                SoundEvents.FIRE_EXTINGUISH,
+                SoundSource.HOSTILE,
+                1.0F,
+                0.9F
+        );
+
+        // Despawn
+        this.discard();
+    }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        boolean hurt = super.hurt(source, amount);
+        if (hurt && source.getEntity() instanceof Player player) {
+            applyBlindness(player);
+            runAwayAndVanish();
+        }
+        return hurt;
+    }
+
+    /*
     public void setAsReinforcement(boolean bool) {
         this.isReinforcement = bool;
     }
 
     public boolean isReinforcement() {
         return isReinforcement;
-    }
-
-    @Override
-    public boolean hurt(DamageSource source, float amount) {
-        // Call the super method to ensure the entity takes damage as usual
-        boolean hurt = super.hurt(source, amount);
-
-        // Check if the mob is hurt and if the spawn reinforcement chance is triggered
-        if (hurt && source.getEntity() instanceof Player) {
-            double baseSpawnChance = this.getAttributeValue(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
-            double adjustedSpawnChance = Math.min(1.0, baseSpawnChance + (amount * 0.01255075)); // Increase chance based on damage taken
-
-            System.out.println("Base spawn chance: " + baseSpawnChance + ", Adjusted spawn chance: " + adjustedSpawnChance);
-
-            if (this.getRandom().nextDouble() < adjustedSpawnChance) {
-                // Schedule reinforcement spawning with a delay
-                System.out.println("Reinforcement spawn chance triggered! Attempting to spawn...");
-                spawnReinforcements();
-            } else {
-                System.out.println("Reinforcement spawn chance failed.");
-            }
-        }
-        return hurt;
     }
 
     // Method to spawn reinforcements
@@ -207,48 +360,7 @@ public class TesterEntity extends Animal {
         }
 
         return null; // If no valid position is found after maxAttempts
-    }
-
-    private void setupAnimationStates() {
-        if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 160;
-            this.idleAnimationState.start(this.tickCount);
-        } else {
-            --this.idleAnimationTimeout;
-        }
-
-        if(this.swinging && attackAnimationTimeout <= 0) {
-            attackAnimationTimeout = 7;
-            this.attackAnimationState.start(this.tickCount);
-        } else {
-            --this.attackAnimationTimeout;
-        }
-
-        if(attackAnimationTimeout == 0) {
-            this.swinging = false;
-            attackAnimationState.stop();
-        }
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-/*
-        if (!this.level().isClientSide) {
-            Player nearestPlayer = this.level().getNearestPlayer(this, 256);
-            if (nearestPlayer == null || this.distanceTo(nearestPlayer) > 192) {
-                this.getNavigation().stop(); // Stop active pathfinding, but don't freeze AI
-                this.setNoAi(false);  // Keep AI on so it doesn't fully freeze
-            } else {
-                this.setNoAi(false); // Ensure AI is on when the player is nearby
-            }
-        }
- */
-
-        if(this.level().isClientSide()) {
-            this.setupAnimationStates();
-        }
-    }
+    } */
 
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
@@ -288,7 +400,7 @@ public class TesterEntity extends Animal {
     @Override
     public void checkDespawn() {
         if (!this.level().isClientSide && this.level() instanceof ServerLevel serverLevel) {
-            List<TesterEntity> mobs = serverLevel.getEntities(ModEntities.TESTER_MOB.get(), e -> !e.isReinforcement())
+            List<TesterEntity> mobs = serverLevel.getEntities(ModEntities.TESTER_MOB.get(), e -> true)
                     .stream()
                     .filter(Objects::nonNull)
                     .map(TesterEntity.class::cast)
@@ -296,23 +408,11 @@ public class TesterEntity extends Animal {
 
             if (!mobs.isEmpty()) {
                 TesterEntity firstSpawned = mobs.get(0); // Get the first mob that spawned
-                if (this != firstSpawned && !isReinforcement()) {
+                if (this != firstSpawned) {
                     this.discard(); // Despawn this mob if it's not the first one spawned
                 }
             }
         }
-    }
-
-    /*
-    @Override
-    public boolean removeWhenFarAway(double pDistanceToClosestPlayer) {
-        return false;
-    }
-
-    */
-    @Override
-    public boolean isPersistenceRequired() {
-        return true;
     }
 
     @Override
