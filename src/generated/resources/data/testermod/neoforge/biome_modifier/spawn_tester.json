@@ -19,6 +19,6 @@
     "type": "testermod:tester_mob",
     "maxCount": 1,
     "minCount": 1,
-    "weight": 1
+    "weight": 2
   }
 }

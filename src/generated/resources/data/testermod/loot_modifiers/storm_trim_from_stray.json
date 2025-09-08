@@ -9,7 +9,7 @@
           "loot_table_id": "minecraft:entities/stray"
         },
         {
-          "chance": 0.02,
+          "chance": 0.03,
           "condition": "minecraft:random_chance"
         }
       ]

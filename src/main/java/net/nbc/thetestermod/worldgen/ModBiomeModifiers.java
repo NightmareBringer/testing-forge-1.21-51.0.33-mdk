@@ -111,7 +111,7 @@ public class ModBiomeModifiers {
                         biomes.getOrThrow(Biomes.WARPED_FOREST),
                         biomes.getOrThrow(Biomes.FLOWER_FOREST)
                 ),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 1, 1, 1)))); // Keep spawn weights reasonable!
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.TESTER_MOB.get(), 2, 1, 1)))); // Keep spawn weights reasonable!
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

@@ -1,12 +1,25 @@
 {
   "entries": [
-    "testermod:squidward_music_disk_from_creeper",
+    "testermod:crimson_berries_from_nether_bridge",
+    "testermod:squidward_music_from_mineshaft",
     "testermod:nightmare_trim_from_spider",
-    "testermod:energy_orb_from_drowned",
+    "testermod:mystery_dust_from_igloo_chest",
+    "testermod:devils_blade_from_stronghold_crossing",
+    "testermod:chisel_from_pyramid",
     "testermod:chisel_from_jungle_temple",
+    "testermod:squidward_music_from_simple_dungeon",
+    "testermod:throwing_knife_from_ruined_portal",
+    "testermod:storm_trim_from_stray",
+    "testermod:white_carrot_from_village_plains_house",
+    "testermod:crimson_berries_from_bastion_treasure",
+    "testermod:strange_stick_from_bastion_bridge",
+    "testermod:devils_snath_from_stronghold_corridor",
+    "testermod:energy_orb_from_from_charged_creeper",
+    "testermod:strange_stick_from_bastion_other",
+    "testermod:mystery_dust_from_pillager_outpost",
+    "testermod:white_carrot_from_igloo_chest",
     "testermod:throwing_knife_from_zombie",
-    "testermod:crimson_blue_berries_from_crimson_roots",
-    "testermod:storm_trim_from_stray"
+    "testermod:crimson_blue_berries_from_crimson_roots"
   ],
   "replace": false
 }

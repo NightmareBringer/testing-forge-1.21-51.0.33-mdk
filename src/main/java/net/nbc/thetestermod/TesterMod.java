@@ -14,6 +14,7 @@ import net.nbc.thetestermod.entity.client.TesterRenderer;
 import net.nbc.thetestermod.entity.client.ThrowingKnifeProjectileRenderer;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import net.nbc.thetestermod.item.ModItems;
+import net.nbc.thetestermod.loot.ModLootConditions;
 import net.nbc.thetestermod.loot.ModLootModifiers;
 import net.nbc.thetestermod.particle.ShineParticles;
 import net.nbc.thetestermod.particle.ModParticles;
@@ -82,6 +83,7 @@ public class TesterMod
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModLootConditions.register(modEventBus);
         ModBlockEntities.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);

@@ -22,14 +22,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
-        List<ItemLike> NIGHTMARITE_SMELTABLES = List.of(ModItems.NIGHTMARITE.get(),
-                ModBlocks.NIGHTMARITE_ORE.get(), ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
+        List<ItemLike> NIGHTMARITE_SMELTABLES = List.of(ModBlocks.NIGHTMARITE_ORE.get(), ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
 
-        List<ItemLike> STORMITE_SMELTABLES = List.of(ModItems.STORMITE.get(),
-                ModBlocks.STORMITE_ORE.get(), ModBlocks.STORMITE_DEEPSLATE_ORE.get());
+        List<ItemLike> STORMITE_SMELTABLES = List.of(ModBlocks.STORMITE_ORE.get(), ModBlocks.STORMITE_DEEPSLATE_ORE.get());
 
-        List<ItemLike> INDIGO_SMELTABLES = List.of(ModItems.INDIGO_BRICK.get(),
-                ModItems.INDIGO_DUST.get());
+        List<ItemLike> INDIGO_SMELTABLES = List.of(ModItems.INDIGO_DUST.get());
 
         SmithingTransformRecipeBuilder.smithing(
                 Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  // Template (first slot)
@@ -41,7 +38,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput, "nightmare_ingot_from_smithing");
 
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ModItems.IMPURE_STORMITE.get()),  // Placeholder, try using Items.AIR instead of Ingredient.EMPTY <- for empty slots I think
+                        Ingredient.of(ModItems.IMPURE_STORMITE.get()),  // Try using Items.AIR instead of Ingredient.EMPTY <- for empty slots I think
                         Ingredient.of(Items.BLAZE_POWDER),
                         Ingredient.of(Items.COPPER_INGOT),
                         RecipeCategory.MISC,
@@ -59,7 +56,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.STORM_NUGGET.get())
                 .define('I', ModItems.IMPURE_STICK.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
-
+        /*
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -72,7 +69,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
-                .unlockedBy(getHasName(ModItems.PURE_NIGHTMARITE.get()), has(ModItems.PURE_NIGHTMARITE.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.PURE_NIGHTMARITE.get()), has(ModItems.PURE_NIGHTMARITE.get())).save(pRecipeOutput); */
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARE_BLOCK.get())
                 .pattern("AAA")
