@@ -1,0 +1,19 @@
+{
+  "type": "testermod:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/desert_pyramid"
+        },
+        {
+          "chance": 0.09,
+          "condition": "minecraft:random_chance"
+        }
+      ]
+    }
+  ],
+  "item": "testermod:chisel"
+}

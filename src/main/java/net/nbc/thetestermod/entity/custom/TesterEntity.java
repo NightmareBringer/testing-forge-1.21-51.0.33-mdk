@@ -7,6 +7,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -15,6 +16,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
@@ -45,6 +48,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -182,9 +186,14 @@ public class TesterEntity extends Animal {
 
     @Override
     public boolean isInvulnerableTo(DamageSource source) {
-        // Be immune to everything
-        //return source.isProjectile(); // only immune to projectiles
-        return true;
+        // The mob is only vulnerable to specific damage types
+        return !source.is(DamageTypes.GENERIC_KILL)
+                && !source.is(DamageTypes.IN_WALL)
+                && !source.is(DamageTypes.OUTSIDE_BORDER)
+                && !source.is(DamageTypes.WITHER_SKULL)
+                && !source.is(DamageTypes.WITHER)
+                && !source.is(DamageTypes.SONIC_BOOM)
+                && !source.is(DamageTypes.FELL_OUT_OF_WORLD);
     }
 
     private void startRetreat(Player player) {
@@ -436,11 +445,10 @@ public class TesterEntity extends Animal {
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
 
-        // If the mob hasn't spawned yet, proceed with the spawn logic
         TesterVariant variant = TesterVariant.WHITE; // Default variant
 
-        if (this.random.nextInt(2048) == 1) {
-            variant = TesterVariant.RARE; // Rare chance
+        if (this.random.nextInt(50) == 1) {
+            variant = TesterVariant.RARE; // Rare variant
         }
 
         this.setVariant(variant);

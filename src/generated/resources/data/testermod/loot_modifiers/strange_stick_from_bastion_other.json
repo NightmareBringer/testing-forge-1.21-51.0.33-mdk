@@ -1,0 +1,19 @@
+{
+  "type": "testermod:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/bastion_other"
+        },
+        {
+          "chance": 0.12,
+          "condition": "minecraft:random_chance"
+        }
+      ]
+    }
+  ],
+  "item": "testermod:strange_stick"
+}
