@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "all": "testermod:block/purifier_block"
+    "bottom": "testermod:block/magic_block_bottom",
+    "side": "testermod:block/magic_block_side",
+    "top": "testermod:block/magic_block_top"
   }
 }

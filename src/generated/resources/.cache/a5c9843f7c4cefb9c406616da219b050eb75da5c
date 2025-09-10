@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-13T21:36:10.8958955	Block States: testermod
+// 1.21.1	2025-09-09T16:11:51.9853495	Block States: testermod
 215997a7997109d775aab79b09a30b6c1c544667 assets/testermod/blockstates/anti_magic_block.json
 6191d0174d29e0c93073a493d0ce9bd81447a387 assets/testermod/blockstates/corrupted_oak_button.json
 fecc9e252b1d6075120b95a2b4bf2083cfa708c2 assets/testermod/blockstates/corrupted_oak_door.json
@@ -104,7 +104,7 @@ d34ed575b66052f5e00b0d8e1686fb1ddb72b89a assets/testermod/models/block/corrupted
 bee170e33c192b697bd52486b363e74657fb0365 assets/testermod/models/block/crimson_blue_berry_bush_stage1.json
 239d19d4f9b8e41355829c84ecab9e5c7f9b9470 assets/testermod/models/block/crimson_blue_berry_bush_stage2.json
 01dbebacf5270103f33f6ff993b9c73d08a4d7f4 assets/testermod/models/block/crimson_blue_berry_bush_stage3.json
-489736efbd91c859e16ab52f2699ba8c7164985d assets/testermod/models/block/impurifier_block.json
+60df6b0c6749d3236903b58a65f71a98c99d88a0 assets/testermod/models/block/impurifier_block.json
 9a7f7991d9cc9d6c30cf8404f79e3a86ad9f923d assets/testermod/models/block/indigo_bricks.json
 fcadf916069c0ad39bf64e2a1137a329e2b5524c assets/testermod/models/block/indigo_brick_slab.json
 b6a7610044e27b836f0fd4bc25cb1ef5f1ddc504 assets/testermod/models/block/indigo_brick_slab_top.json
@@ -156,7 +156,7 @@ f1a68cc9cc5c69da53ca6f190a0dc59341610dfe assets/testermod/models/block/nightmari
 b8979e9487b9c38356713e7c9c42aa9549ff0295 assets/testermod/models/block/nightmarite_nether_ore.json
 17751ea933cbebb15ab4da52da3181d9817b0376 assets/testermod/models/block/nightmarite_ore.json
 c308c6e68ecef4f02a170296caa2242cd31b7a2f assets/testermod/models/block/pure_nightmarite_block.json
-342967b22f6cef740da6d034b2b298396c23dd2c assets/testermod/models/block/purifier_block.json
+98846bd697e09e9b447abbe1507923d6f4e41edd assets/testermod/models/block/purifier_block.json
 37999af9184905941646fa619edbb32717604ee4 assets/testermod/models/block/refined_nightmare_block.json
 540e4e4c1d9f22ce0bf565b92c830a57b6d9138d assets/testermod/models/block/refined_nightmare_button.json
 fe970ef4c11657a84c888c8322785211cb9dcd34 assets/testermod/models/block/refined_nightmare_button_pressed.json

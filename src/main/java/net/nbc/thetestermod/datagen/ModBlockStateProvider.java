@@ -48,8 +48,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.MYSTERIOUS_DUST_BLOCK);
 
-        blockWithItem(ModBlocks.PURIFIER_BLOCK);
-        blockWithItem(ModBlocks.IMPURIFIER_BLOCK);
+        blockWithTopBottom(ModBlocks.PURIFIER_BLOCK,
+                modLoc("block/magic_block_side"),
+                modLoc("block/magic_block_top"),
+                modLoc("block/magic_block_bottom"));
+
+        blockWithTopBottom(ModBlocks.IMPURIFIER_BLOCK,
+                modLoc("block/anti_magic_block_side"),
+                modLoc("block/anti_magic_block_top"),
+                modLoc("block/anti_magic_block_bottom"));
 
         stairsBlock(ModBlocks.NIGHTMARE_STAIRS.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
         slabBlock(ModBlocks.NIGHTMARE_SlAB.get(), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()), blockTexture(ModBlocks.NIGHTMARE_BLOCK.get()));
@@ -158,6 +165,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.INDIGO_BRICK_STAIRS);
         blockItem(ModBlocks.INDIGO_BRICK_SlAB);
+    }
+
+    private void blockWithTopBottom(DeferredBlock<?> deferredBlock, ResourceLocation side, ResourceLocation top, ResourceLocation bottom) {
+        simpleBlockWithItem(deferredBlock.get(),
+                models().cubeBottomTop(
+                        deferredBlock.getId().getPath(),
+                        side,
+                        bottom,
+                        top
+                )
+        );
+    }
+
+    private void blockWithAllSides(DeferredBlock<?> deferredBlock,
+                                   ResourceLocation north, ResourceLocation south,
+                                   ResourceLocation east, ResourceLocation west,
+                                   ResourceLocation up, ResourceLocation down) {
+        simpleBlockWithItem(deferredBlock.get(),
+                models().cube(
+                        deferredBlock.getId().getPath(),
+                        down, up, north, south, east, west
+                )
+        );
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
