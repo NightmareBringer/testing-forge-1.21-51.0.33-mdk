@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/steelium_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/steelium_block"
+    },
+    "type=top": {
+      "model": "testermod:block/steelium_slab_top"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-13T21:36:10.8889055	Loot Tables
+// 1.21.1	2025-09-10T05:51:53.4537579	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -51,6 +51,15 @@ edb8e91665fe4a87165de6d6b3def866ce988205 data/testermod/loot_table/blocks/refine
 39979350f6a50f2df4df492212a0281e519957c9 data/testermod/loot_table/blocks/refined_nightmare_slab.json
 e68d591af7275f57c6f21ddad207764ba140332d data/testermod/loot_table/blocks/refined_nightmare_stairs.json
 b146d72767ed682965996ecd5d647c40fc19dfdf data/testermod/loot_table/blocks/refined_nightmare_wall.json
+0f86b3faeda7c48a72f6ff84fdc5eb1f98612bf1 data/testermod/loot_table/blocks/steelium_bars.json
+7f2bd83d371e69d4123019035676a37b1b9e8701 data/testermod/loot_table/blocks/steelium_block.json
+21e861a1ffd2c30c8732b99d6d54f10f70faf898 data/testermod/loot_table/blocks/steelium_button.json
+e81ff29d42eb1637bf06ec7078050ff3f1c47adb data/testermod/loot_table/blocks/steelium_door.json
+a89e8aded40b2185b0d2149535c4272d67da860a data/testermod/loot_table/blocks/steelium_pressure_plate.json
+32a21712a29d638871c55b8d9ebc52a85d32ddc6 data/testermod/loot_table/blocks/steelium_slab.json
+0f0e2416888e7f5c3e4469b91a3a54dfc9226db6 data/testermod/loot_table/blocks/steelium_stairs.json
+ac948095e47e33466655d0f6b06fa42ea57db897 data/testermod/loot_table/blocks/steelium_trapdoor.json
+fe3ad8c18dd6b7a24c881e05ceb3ffca9cd4fc38 data/testermod/loot_table/blocks/steelium_wall.json
 518013a34a3aa900309bdf1ab450b00422683a9c data/testermod/loot_table/blocks/stormite_deepslate_ore.json
 53fe30eaec53dca2fda20c3b6dcc4b7fa99ddaf3 data/testermod/loot_table/blocks/stormite_end_ore.json
 31601e670437dea1c19c3135b596d301a52e9085 data/testermod/loot_table/blocks/stormite_nether_ore.json

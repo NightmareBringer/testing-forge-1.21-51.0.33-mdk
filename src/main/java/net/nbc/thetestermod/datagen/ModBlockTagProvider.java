@@ -88,6 +88,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.INDIGO_BRICK_SlAB.get())
                 .add(ModBlocks.INDIGO_BRICK_STAIRS.get())
 
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
 
                 .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
@@ -231,6 +240,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS).add(ModBlocks.REFINED_NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.INDIGO_BRICK_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.STEELIUM_WALL.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CORRUPTED_OAK_LOG.get())

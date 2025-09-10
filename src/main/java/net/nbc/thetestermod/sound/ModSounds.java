@@ -31,11 +31,20 @@ public class ModSounds {
     public static final Supplier<SoundEvent> TESTER_HURT_2 = registerSoundEvent("tester_hurt_2");
     public static final Supplier<SoundEvent> TESTER_DEATH_1 = registerSoundEvent("tester_death_1");
 
+    public static final Supplier<SoundEvent> STEEL_BREAK = registerSoundEvent("steel_break");
+    public static final Supplier<SoundEvent> STEEL_PLACE = registerSoundEvent("steel_place");
+    public static final Supplier<SoundEvent> STEEL_STEP = registerSoundEvent("steel_step");
+    public static final Supplier<SoundEvent> STEEL_HIT = registerSoundEvent("steel_hit");
+    public static final Supplier<SoundEvent> STEEL_FALL = registerSoundEvent("steel_fall");
+
     public static final DeferredSoundType MAGIC_BLOCK_SOUNDS = new DeferredSoundType(1f, 1f,
             MAGIC_BLOCK_BREAK, MAGIC_BLOCK_STEP, MAGIC_BLOCK_PLACE, MAGIC_BLOCK_HIT, MAGIC_BLOCK_FALL);
 
     public static final DeferredSoundType ANTI_MAGIC_BLOCK_SOUNDS = new DeferredSoundType(1f, 0.75f,
             MAGIC_BLOCK_BREAK, MAGIC_BLOCK_STEP, MAGIC_BLOCK_PLACE, MAGIC_BLOCK_HIT, MAGIC_BLOCK_FALL);
+
+    public static final DeferredSoundType STEELIUM_BLOCK_SOUNDS = new DeferredSoundType(1f, 1f,
+            STEEL_BREAK, STEEL_STEP, STEEL_PLACE, STEEL_HIT, STEEL_FALL);
 
     // Optional: Combine ambient sounds into a custom type later if needed
 

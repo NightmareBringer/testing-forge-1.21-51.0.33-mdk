@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "steelium_block",
+  "ingredients": [
+    {
+      "item": "testermod:steelium_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:steelium_button"
+  }
+}

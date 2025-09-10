@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-09T20:33:06.6114924	Item Models: testermod
+// 1.21.1	2025-09-10T07:14:56.4735855	Item Models: testermod
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
 39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
 e8bf8fd1e98d6d9e85a968f3e69cf04abb106bfd assets/testermod/models/item/corrupted_oak_door.json
@@ -82,6 +82,10 @@ d0193c666eb94f75192817dbb8f67389fa0b9faa assets/testermod/models/item/pure_night
 68ca2f98dcb6e64ff26c422a070bbc5df369c025 assets/testermod/models/item/refined_nightmare_button.json
 fb7323a46eb2fc55ba332e81d93259941038f98a assets/testermod/models/item/refined_nightmare_fence.json
 424fa7d4ae7cb05be5d34bb5f2137744b2665b48 assets/testermod/models/item/refined_nightmare_wall.json
+150dc62789f9f7d96c94f90ed08c5416692ac68a assets/testermod/models/item/steelium_bars.json
+39aaf96177a90d62fea98bb942a68f7364ee1f71 assets/testermod/models/item/steelium_button.json
+b6eaa04700027baccf3828fccf8a0f4af08f7311 assets/testermod/models/item/steelium_door.json
+e7ddbaa04ddb8b4fdfe26529d1179b935c7cc94f assets/testermod/models/item/steelium_wall.json
 1ee3efe32b51fef4b766195addc6482c602c119d assets/testermod/models/item/stormen_armor_trim_smithing_template.json
 365fe2ae2ce63446e83cecd7b225d54bf0a84dfb assets/testermod/models/item/stormite.json
 e47d7a369022c6ca05fd84d5a4f3bff619cfd6a0 assets/testermod/models/item/storm_axe.json

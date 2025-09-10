@@ -521,6 +521,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LEAVES.get()), has(ModBlocks.CORRUPTED_OAK_LEAVES.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_block_from_corrupted_leaves");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_BARS.get())
+                .pattern(" / ")
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.STEELIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
@@ -658,6 +665,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.INDIGO_BRICK.get()), has(ModItems.INDIGO_BRICK.get())).save(pRecipeOutput);
         slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDIGO_BRICK_SlAB.get(), ModItems.INDIGO_BRICK.get());
         wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.INDIGO_BRICK_WALL.get(), ModItems.INDIGO_BRICK.get());
+
+        stairBuilder(ModBlocks.STEELIUM_STAIRS.get(), Ingredient.of(ModBlocks.STEELIUM_BLOCK.get())).group("steelium_block")
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEELIUM_SlAB.get(), ModBlocks.STEELIUM_BLOCK.get());
+
+        buttonBuilder(ModBlocks.STEELIUM_BUTTON.get(), Ingredient.of(ModBlocks.STEELIUM_BLOCK.get())).group("steelium_block")
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.STEELIUM_PRESSURE_PLATE.get(), ModBlocks.STEELIUM_BLOCK.get());
+
+        doorBuilder(ModBlocks.STEELIUM_DOOR.get(), Ingredient.of(ModBlocks.STEELIUM_BLOCK.get())).group("steelium_block")
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.STEELIUM_TRAPDOOR.get(), Ingredient.of(ModBlocks.STEELIUM_BLOCK.get())).group("steelium_block")
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEELIUM_WALL.get(), ModBlocks.STEELIUM_BLOCK.get());
 
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.35f, 200, "nightmarite_smelt");

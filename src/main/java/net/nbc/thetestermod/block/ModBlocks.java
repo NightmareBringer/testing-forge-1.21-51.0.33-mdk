@@ -307,6 +307,43 @@ public class ModBlocks
             () -> new WallBlock(BlockBehaviour.Properties.of().strength(6f).explosionResistance(8f).requiresCorrectToolForDrops()));
 
 
+    public static final DeferredBlock<Block> STEELIUM_BLOCK = registerBlock("steelium_block",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(250f).explosionResistance(100f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<StairBlock> STEELIUM_STAIRS = registerBlock("steelium_stairs",
+            () -> new StairBlock(ModBlocks.STEELIUM_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                            .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<SlabBlock> STEELIUM_SlAB = registerBlock("steelium_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(125f).explosionResistance(100f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<WallBlock> STEELIUM_WALL = registerBlock("steelium_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(255f).explosionResistance(100f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<DoorBlock> STEELIUM_DOOR = registerBlock("steelium_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(100f)
+                    .explosionResistance(250f).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .requiresCorrectToolForDrops().noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> STEELIUM_TRAPDOOR = registerBlock("steelium_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(100f)
+                    .explosionResistance(250f).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final DeferredBlock<PressurePlateBlock> STEELIUM_PRESSURE_PLATE = registerBlock("steelium_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
+    public static final DeferredBlock<ButtonBlock> STEELIUM_BUTTON = registerBlock("steelium_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 40, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
+
+    public static final DeferredBlock<IronBarsBlock> STEELIUM_BARS = registerBlock("steelium_bars",
+            () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(255f).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
+
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
         DeferredBlock<T> toReturn = (DeferredBlock<T>) BLOCKS.register(name, block);

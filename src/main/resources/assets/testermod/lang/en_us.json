@@ -144,6 +144,16 @@
   "block.testermod.indigo_brick_slab": "Indigo Brick Slab",
   "block.testermod.indigo_brick_wall": "Indigo Brick Wall",
 
+  "block.testermod.steelium_block": "Block of Steelium",
+  "block.testermod.steelium_stairs": "Steelium Stairs",
+  "block.testermod.steelium_slab": "Steelium Slab",
+  "block.testermod.steelium_wall": "Steelium Wall",
+  "block.testermod.steelium_door": "Steelium Door",
+  "block.testermod.steelium_trapdoor": "Steelium Trapdoor",
+  "block.testermod.steelium_bars": "Steelium Bars",
+  "block.testermod.steelium_button": "Steelium Button",
+  "block.testermod.steelium_pressure_plate": "Steelium Pressure Plate",
+
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmare Ingot Material",
   "trim_pattern.testermod.stormen": "Stormen Armor Trim",

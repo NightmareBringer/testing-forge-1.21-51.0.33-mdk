@@ -160,6 +160,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.INDIGO_BRICK_WALL.get());
         this.add(ModBlocks.INDIGO_BRICK_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.INDIGO_BRICK_SlAB.get()));
+
+        dropSelf(ModBlocks.STEELIUM_STAIRS.get());
+        dropSelf(ModBlocks.STEELIUM_BARS.get());
+        dropSelf(ModBlocks.STEELIUM_WALL.get());
+        dropSelf(ModBlocks.STEELIUM_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.STEELIUM_BUTTON.get());
+        dropSelf(ModBlocks.STEELIUM_TRAPDOOR.get());
+        dropSelf(ModBlocks.STEELIUM_BLOCK.get());
+
+        this.add(ModBlocks.STEELIUM_SlAB.get(),
+                block -> createSlabItemTable(ModBlocks.STEELIUM_SlAB.get()));
+        this.add(ModBlocks.STEELIUM_DOOR.get(),
+                block -> createDoorTable(ModBlocks.STEELIUM_DOOR.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

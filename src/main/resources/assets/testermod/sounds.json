@@ -30,6 +30,46 @@
       "testermod:magic_block_fall"
     ]
   },
+  "steel_break": {
+    "sounds": [
+      "testermod:steel_break2",
+      "testermod:steel_break3",
+      "testermod:steel_break5",
+      "testermod:steel_break8"
+    ]
+  },
+  "steel_step": {
+    "sounds": [
+      "testermod:steel_step1",
+      "testermod:steel_step2",
+      "testermod:steel_step3",
+      "testermod:steel_step4"
+    ]
+  },
+  "steel_place": {
+    "sounds": [
+      "testermod:steel_break2",
+      "testermod:steel_break3",
+      "testermod:steel_break5",
+      "testermod:steel_break8"
+    ]
+  },
+  "steel_hit": {
+    "sounds": [
+      "testermod:steel_step1",
+      "testermod:steel_step2",
+      "testermod:steel_step3",
+      "testermod:steel_step4"
+    ]
+  },
+  "steel_fall": {
+    "sounds": [
+      "testermod:steel_step1",
+      "testermod:steel_step2",
+      "testermod:steel_step3",
+      "testermod:steel_step4"
+    ]
+  },
   "tester_death_1": {
     "subtitle": "An end",
     "sounds": [

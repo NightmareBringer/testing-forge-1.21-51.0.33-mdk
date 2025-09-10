@@ -1,5 +1,7 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.block.custom.CrimsonBlueBerryBushBlock;
@@ -165,6 +167,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.INDIGO_BRICK_STAIRS);
         blockItem(ModBlocks.INDIGO_BRICK_SlAB);
+
+        blockWithItem(ModBlocks.STEELIUM_BLOCK);
+
+        paneBlockWithRenderType(
+                ModBlocks.STEELIUM_BARS.get(),
+                modLoc("block/steelium_bars"),
+                modLoc("block/steelium_bars"),
+                "cutout"
+        );
+
+        stairsBlock(ModBlocks.STEELIUM_STAIRS.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
+        slabBlock(ModBlocks.STEELIUM_SlAB.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
+
+        buttonBlock(ModBlocks.STEELIUM_BUTTON.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.STEELIUM_PRESSURE_PLATE.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
+
+        wallBlock(ModBlocks.STEELIUM_WALL.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
+
+        doorBlockWithRenderType(ModBlocks.STEELIUM_DOOR.get(), modLoc("block/steelium_door_bottom"), modLoc("block/steelium_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.STEELIUM_TRAPDOOR.get(), modLoc("block/steelium_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.STEELIUM_STAIRS);
+        blockItem(ModBlocks.STEELIUM_SlAB);
+        blockItem(ModBlocks.STEELIUM_PRESSURE_PLATE);
+        blockItem(ModBlocks.STEELIUM_TRAPDOOR, "_bottom");
+
     }
 
     private void blockWithTopBottom(DeferredBlock<?> deferredBlock, ResourceLocation side, ResourceLocation top, ResourceLocation bottom) {
