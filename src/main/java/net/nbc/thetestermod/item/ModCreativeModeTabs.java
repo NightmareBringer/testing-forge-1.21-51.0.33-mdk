@@ -134,6 +134,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.STEELIUM_BUTTON.get());
                         output.accept(ModBlocks.STEELIUM_BARS.get());
+                        output.accept(ModBlocks.STEELIUM_CONSOLE.get());
 
 
                         output.accept(ModItems.TESTER_SPAWN_EGG.get());

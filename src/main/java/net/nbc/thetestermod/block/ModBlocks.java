@@ -343,6 +343,10 @@ public class ModBlocks
             () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(255f).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final DeferredBlock<Block> STEELIUM_CONSOLE = registerBlock("steelium_console",
+            () -> new ConsoleBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(50f).requiresCorrectToolForDrops().noOcclusion()));
+
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)

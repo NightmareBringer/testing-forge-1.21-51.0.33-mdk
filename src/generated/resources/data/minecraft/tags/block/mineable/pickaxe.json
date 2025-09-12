@@ -58,6 +58,7 @@
     "testermod:steelium_trapdoor",
     "testermod:steelium_button",
     "testermod:steelium_pressure_plate",
+    "testermod:steelium_console",
     "testermod:refined_nightmare_block"
   ]
 }

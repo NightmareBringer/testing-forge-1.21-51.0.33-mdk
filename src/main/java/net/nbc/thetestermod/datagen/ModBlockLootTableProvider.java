@@ -168,6 +168,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STEELIUM_BUTTON.get());
         dropSelf(ModBlocks.STEELIUM_TRAPDOOR.get());
         dropSelf(ModBlocks.STEELIUM_BLOCK.get());
+        dropSelf(ModBlocks.STEELIUM_CONSOLE.get());
 
         this.add(ModBlocks.STEELIUM_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.STEELIUM_SlAB.get()));

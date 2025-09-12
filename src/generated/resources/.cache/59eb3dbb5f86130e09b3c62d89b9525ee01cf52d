@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-10T05:51:53.4537579	Loot Tables
+// 1.21.1	2025-09-12T07:54:35.8741409	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -54,6 +54,7 @@ b146d72767ed682965996ecd5d647c40fc19dfdf data/testermod/loot_table/blocks/refine
 0f86b3faeda7c48a72f6ff84fdc5eb1f98612bf1 data/testermod/loot_table/blocks/steelium_bars.json
 7f2bd83d371e69d4123019035676a37b1b9e8701 data/testermod/loot_table/blocks/steelium_block.json
 21e861a1ffd2c30c8732b99d6d54f10f70faf898 data/testermod/loot_table/blocks/steelium_button.json
+0fabc8d84c5adb084549784677477579c514a071 data/testermod/loot_table/blocks/steelium_console.json
 e81ff29d42eb1637bf06ec7078050ff3f1c47adb data/testermod/loot_table/blocks/steelium_door.json
 a89e8aded40b2185b0d2149535c4272d67da860a data/testermod/loot_table/blocks/steelium_pressure_plate.json
 32a21712a29d638871c55b8d9ebc52a85d32ddc6 data/testermod/loot_table/blocks/steelium_slab.json
