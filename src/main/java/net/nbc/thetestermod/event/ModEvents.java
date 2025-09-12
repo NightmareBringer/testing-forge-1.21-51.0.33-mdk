@@ -106,12 +106,12 @@ public class ModEvents {
                     new ItemStack(ModItems.MYSTERIOUS_DUST.get(), 3), 3, 3, 0.25f));
 
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.LAPIS_BLOCK, 5),
-                    new ItemStack(ModBlocks.CORRUPTED_OAK_SAPLING.get(), 1), 2, 10, 0.15f));
+                    new ItemCost(Items.LAPIS_BLOCK, 4),
+                    new ItemStack(ModBlocks.CORRUPTED_OAK_SAPLING.get(), 2), 6, 10, 0.25f));
 
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 18),
-                    new ItemStack(ModItems.ENERGY_ORB.get(), 1), 6, 15, 0.05f));
+                    new ItemCost(ModItems.INDIGO_DUST, 32),
+                    new ItemStack(ModItems.ENERGY_ORB.get(), 1), 2, 15, 0.5f));
         }
         if(event.getType() == ModVillagers.GAMING_VILLAGER_N.value()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();

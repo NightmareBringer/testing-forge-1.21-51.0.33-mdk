@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-10T07:14:56.4735855	Item Models: testermod
+// 1.21.1	2025-09-11T12:06:54.417739	Item Models: testermod
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
 39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
 e8bf8fd1e98d6d9e85a968f3e69cf04abb106bfd assets/testermod/models/item/corrupted_oak_door.json
@@ -78,7 +78,6 @@ b04bb7060aab6a6bba318b68c42c98b0e3016257 assets/testermod/models/item/nightmare_
 715325412f312ab1e8c6da804e56bb77776bbd08 assets/testermod/models/item/nightmare_wall.json
 1a57fca234efb293139e7a88a9ffcc4df060f0ba assets/testermod/models/item/nightmarite.json
 956212e94f0ff9f62e198309e9f2b2dc13429f76 assets/testermod/models/item/pure_eye.json
-d0193c666eb94f75192817dbb8f67389fa0b9faa assets/testermod/models/item/pure_nightmarite.json
 68ca2f98dcb6e64ff26c422a070bbc5df369c025 assets/testermod/models/item/refined_nightmare_button.json
 fb7323a46eb2fc55ba332e81d93259941038f98a assets/testermod/models/item/refined_nightmare_fence.json
 424fa7d4ae7cb05be5d34bb5f2137744b2665b48 assets/testermod/models/item/refined_nightmare_wall.json

@@ -178,6 +178,10 @@ public class ModItems
     public static final DeferredItem<Item> STORMEN_SMITHING_TEMPLATE = ITEMS.register("stormen_armor_trim_smithing_template",
             () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen")));
 
+    // Both nightmare and storm bows are unused in-game as of the 1.2.5 update
+    // due to them using stolen art, of which I am also too lazy to redo, (all of those textures should be removed now)
+    // and for the fact that they are just regular bows with no difference
+    // from vanilla ones, might come back to these at a later update (with updated textures of course)
     public static final DeferredItem<Item> NIGHTMARE_BOW = ITEMS.register("nightmare_bow",
             () -> new BowItem(new Item.Properties().durability(500)));
     public static final DeferredItem<Item> STORM_BOW = ITEMS.register("storm_bow",

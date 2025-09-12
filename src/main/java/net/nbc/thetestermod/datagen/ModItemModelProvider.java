@@ -45,7 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         // Basic items
         basicItem(ModItems.NIGHTMARITE.get());
-        basicItem(ModItems.PURE_NIGHTMARITE.get());
+        //basicItem(ModItems.PURE_NIGHTMARITE.get());
         basicItem(ModItems.NIGHTMARE_INGOT.get());
         basicItem(ModItems.NIGHTMARE_NUGGET.get());
         basicItem(ModItems.STORMITE.get());

@@ -31,7 +31,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SmithingTransformRecipeBuilder.smithing(
                 Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  // Template (first slot)
                 Ingredient.of(Items.FIRE_CHARGE),                // Addition (second slot)
-                Ingredient.of(Items.GOLD_INGOT),                 // Ingot (third slot)
+                Ingredient.of(Items.IRON_INGOT),                 // Ingot (third slot)
                 RecipeCategory.MISC,                             // Recipe Class
                 ModItems.NIGHTMARE_INGOT.get())                  // Result
                 .unlocks("has_pure_nightmarite", has(ModItems.PURE_NIGHTMARITE.get())) // Unlock condition
@@ -56,20 +56,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.STORM_NUGGET.get())
                 .define('I', ModItems.IMPURE_STICK.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
-        /*
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARITE_BLOCK.get())
-                .pattern("AAA")
-                .pattern("AAA")
-                .pattern("AAA")
-                .define('A', ModBlocks.NIGHTMARITE_ORE.get())
-                .unlockedBy(getHasName(ModItems.NIGHTMARITE.get()), has(ModItems.NIGHTMARITE.get())).save(pRecipeOutput);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURE_NIGHTMARITE_BLOCK.get())
-                .pattern("AAA")
-                .pattern("AAA")
-                .pattern("AAA")
-                .define('A', ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
-                .unlockedBy(getHasName(ModItems.PURE_NIGHTMARITE.get()), has(ModItems.PURE_NIGHTMARITE.get())).save(pRecipeOutput); */
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NIGHTMARE_BLOCK.get())
                 .pattern("AAA")
@@ -368,6 +354,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModBlocks.NIGHTMARE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NIGHTMARE_BLOCK.get()), has(ModBlocks.NIGHTMARE_BLOCK.get())).save(pRecipeOutput);
 
+        /*
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NIGHTMARE_BOW.get())
                 .pattern(" TS")
                 .pattern("# S")
@@ -383,7 +370,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', ModItems.IMPURE_STICK.get())
                 .define('#', ModItems.STORM_INGOT.get())
                 .define('S', ModItems.MYSTERIOUS_STRING.get())
-                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput); */
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLISTERING_CARROT.get())
                 .pattern("D#D")
@@ -528,16 +515,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModBlocks.STEELIUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
 
-
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURE_NIGHTMARITE.get(), 9)
-                .requires(ModBlocks.PURE_NIGHTMARITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.PURE_NIGHTMARITE_BLOCK.get()), has(ModBlocks.PURE_NIGHTMARITE_BLOCK.get())).save(pRecipeOutput);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 9)
-                .requires(ModBlocks.NIGHTMARITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.NIGHTMARITE_BLOCK.get()), has(ModBlocks.NIGHTMARITE_BLOCK.get())).save(pRecipeOutput);
-                //.save(pRecipeOutput, TesterMod.MOD_ID + ":nightmarite_from_nightmarite_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get(), 9)
                 .requires(ModBlocks.NIGHTMARE_BLOCK.get())

@@ -48,17 +48,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PURIFIER_BLOCK.get());
                         output.accept(ModItems.IMPURE_EYE.get());
                         output.accept(ModBlocks.IMPURIFIER_BLOCK.get());
-                        output.accept(ModItems.NIGHTMARITE.get());
-                        output.accept(ModItems.PURE_NIGHTMARITE.get());
-                        output.accept(ModBlocks.NIGHTMARITE_BLOCK.get());
-                        output.accept(ModBlocks.PURE_NIGHTMARITE_BLOCK.get());
+                        output.accept(ModItems.MYSTERIOUS_STRING.get());
+                        output.accept(ModItems.STRANGE_STICK.get());
+                        output.accept(ModItems.IMPURE_STICK.get());
                         output.accept(ModBlocks.NIGHTMARITE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_END_ORE.get());
-                        output.accept(ModItems.MYSTERIOUS_STRING.get());
-                        output.accept(ModItems.STRANGE_STICK.get());
-                        output.accept(ModItems.IMPURE_STICK.get());
+                        output.accept(ModItems.NIGHTMARITE.get());
+                        output.accept(ModItems.PURE_NIGHTMARITE.get());
                         output.accept(ModItems.NIGHTMARE_INGOT.get());
                         output.accept(ModItems.NIGHTMARE_NUGGET.get());
                         output.accept(ModBlocks.NIGHTMARE_BLOCK.get());
@@ -80,7 +78,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get());
                         output.accept(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.REFINED_NIGHTMARE_BUTTON.get());
-                        output.accept(ModItems.NIGHTMARE_BOW.get());
                         output.accept(ModItems.NIGHTMARE_SWORD.get());
                         output.accept(ModItems.NIGHTMARE_PICKAXE.get());
                         output.accept(ModItems.NIGHTMARE_AXE.get());
@@ -93,12 +90,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NIGHTMARE_BOOTS.get());
                         output.accept(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
                         output.accept(ModItems.NIGHTMARE_HORSE_ARMOR.get());
-                        output.accept(ModItems.STORMITE.get());
-                        output.accept(ModItems.IMPURE_STORMITE.get());
+
                         output.accept(ModBlocks.STORMITE_ORE.get());
                         output.accept(ModBlocks.STORMITE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.STORM_NETHER_ORE.get());
                         output.accept(ModBlocks.STORM_END_ORE.get());
+                        output.accept(ModItems.STORMITE.get());
+                        output.accept(ModItems.IMPURE_STORMITE.get());
                         output.accept(ModItems.STORM_INGOT.get());
                         output.accept(ModItems.STORM_NUGGET.get());
                         output.accept(ModBlocks.STORM_BLOCK.get());
@@ -112,7 +110,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STORM_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.STORM_BUTTON.get());
                         output.accept(ModBlocks.STORM_LAMP.get());
-                        output.accept(ModItems.STORM_BOW.get());
                         output.accept(ModItems.STORM_SWORD.get());
                         output.accept(ModItems.STORM_PICKAXE.get());
                         output.accept(ModItems.STORM_AXE.get());

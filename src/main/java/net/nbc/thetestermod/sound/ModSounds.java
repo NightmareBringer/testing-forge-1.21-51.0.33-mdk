@@ -43,7 +43,7 @@ public class ModSounds {
     public static final DeferredSoundType ANTI_MAGIC_BLOCK_SOUNDS = new DeferredSoundType(1f, 0.75f,
             MAGIC_BLOCK_BREAK, MAGIC_BLOCK_STEP, MAGIC_BLOCK_PLACE, MAGIC_BLOCK_HIT, MAGIC_BLOCK_FALL);
 
-    public static final DeferredSoundType STEELIUM_BLOCK_SOUNDS = new DeferredSoundType(1f, 1f,
+    public static final DeferredSoundType STEELIUM_BLOCK_SOUNDS = new DeferredSoundType(2f, 1f,
             STEEL_BREAK, STEEL_STEP, STEEL_PLACE, STEEL_HIT, STEEL_FALL);
 
     // Optional: Combine ambient sounds into a custom type later if needed
