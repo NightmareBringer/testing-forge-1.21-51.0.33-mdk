@@ -2,6 +2,7 @@ package net.nbc.thetestermod.datagen;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.server.ReloadableServerRegistries;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
@@ -169,6 +170,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STEELIUM_TRAPDOOR.get());
         dropSelf(ModBlocks.STEELIUM_BLOCK.get());
         dropSelf(ModBlocks.STEELIUM_CONSOLE.get());
+        dropSelf(ModBlocks.STEELIUM_CORE.get());
+
+        dropSelf(ModBlocks.FALSE_STORMITE_BLOCK.get());
+        dropSelf(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());
 
         this.add(ModBlocks.STEELIUM_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.STEELIUM_SlAB.get()));

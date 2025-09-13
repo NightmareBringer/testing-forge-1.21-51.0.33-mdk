@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-12T07:54:35.8741409	Loot Tables
+// 1.21.1	2025-09-13T13:40:28.5983944	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -14,6 +14,8 @@ f1d69c75e57d561b0ada97a5c0817b6ff77ff920 data/testermod/loot_table/blocks/corrup
 a488a27acbadf12ac217acead46614ca49c37221 data/testermod/loot_table/blocks/corrupted_oak_trapdoor.json
 25c2896cd50a75b16b49f63194d2960be4c2bb44 data/testermod/loot_table/blocks/corrupted_oak_wood.json
 58a5305d71914ec94856fd849971f02273fd21b9 data/testermod/loot_table/blocks/crimson_blue_berry_bush.json
+d4330086563e3af813f6cbabe7cb7dcbd4f64271 data/testermod/loot_table/blocks/false_nightmarite_block.json
+34ed184607a17a8bc7dc7a376cb6230ab787fa88 data/testermod/loot_table/blocks/false_stormite_block.json
 3ca7982f909351669aaf7df6ef3c49dd17fcfc4b data/testermod/loot_table/blocks/gaming_chair_blue.json
 cf0e1dc76faa2b6a6e33ca52ab8072a2315a25f9 data/testermod/loot_table/blocks/gaming_chair_red.json
 35d98b03fdea972317adca223238f1800975eb1b data/testermod/loot_table/blocks/impurifier_block.json
@@ -55,6 +57,7 @@ b146d72767ed682965996ecd5d647c40fc19dfdf data/testermod/loot_table/blocks/refine
 7f2bd83d371e69d4123019035676a37b1b9e8701 data/testermod/loot_table/blocks/steelium_block.json
 21e861a1ffd2c30c8732b99d6d54f10f70faf898 data/testermod/loot_table/blocks/steelium_button.json
 0fabc8d84c5adb084549784677477579c514a071 data/testermod/loot_table/blocks/steelium_console.json
+de615518c033a461de5dc706de5e30c224d6bc3e data/testermod/loot_table/blocks/steelium_core.json
 e81ff29d42eb1637bf06ec7078050ff3f1c47adb data/testermod/loot_table/blocks/steelium_door.json
 a89e8aded40b2185b0d2149535c4272d67da860a data/testermod/loot_table/blocks/steelium_pressure_plate.json
 32a21712a29d638871c55b8d9ebc52a85d32ddc6 data/testermod/loot_table/blocks/steelium_slab.json

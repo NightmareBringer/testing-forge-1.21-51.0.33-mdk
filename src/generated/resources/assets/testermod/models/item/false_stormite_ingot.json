@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "testermod:item/indigo_brick"
+    "layer0": "testermod:item/false_stormite_ingot"
   }
 }

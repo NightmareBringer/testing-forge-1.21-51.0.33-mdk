@@ -71,9 +71,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MYSTERIOUS_DUST.get());
         basicItem(ModItems.MYSTERIOUS_STRING.get());
         handheldItem(ModItems.STRANGE_STICK.get());
+        handheldItem(ModItems.PURE_STICK.get());
 
-        handheldItem(ModItems.INDIGO_DUST.get());
-        handheldItem(ModItems.INDIGO_BRICK.get());
+        basicItem(ModItems.INDIGO_DUST.get());
+        basicItem(ModItems.INDIGO_BRICK.get());
+
+        basicItem(ModItems.PURE_STORMITE.get());
+        basicItem(ModItems.IMPURE_NIGHTMARITE.get());
+        basicItem(ModItems.FALSE_STORMITE_INGOT.get());
+        basicItem(ModItems.FALSE_NIGHTMARITE_INGOT.get());
 
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());

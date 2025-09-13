@@ -98,6 +98,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELIUM_BUTTON.get())
                 .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
                 .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
+
+                .add(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get())
+                .add(ModBlocks.FALSE_STORMITE_BLOCK.get())
 
                 .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 

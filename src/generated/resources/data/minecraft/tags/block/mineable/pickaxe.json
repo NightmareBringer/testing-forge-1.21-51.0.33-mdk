@@ -59,6 +59,9 @@
     "testermod:steelium_button",
     "testermod:steelium_pressure_plate",
     "testermod:steelium_console",
+    "testermod:steelium_core",
+    "testermod:false_nightmarite_block",
+    "testermod:false_stormite_block",
     "testermod:refined_nightmare_block"
   ]
 }

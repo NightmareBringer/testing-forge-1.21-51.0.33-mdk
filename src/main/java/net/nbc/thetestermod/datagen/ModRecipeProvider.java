@@ -29,22 +29,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> INDIGO_SMELTABLES = List.of(ModItems.INDIGO_DUST.get());
 
         SmithingTransformRecipeBuilder.smithing(
-                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  // Template (first slot)
+                Ingredient.of(ModItems.PURE_NIGHTMARITE.get()),  // Template (first slot) - Try using Items.AIR instead of Ingredient.EMPTY for empty slots
                 Ingredient.of(Items.FIRE_CHARGE),                // Addition (second slot)
                 Ingredient.of(Items.IRON_INGOT),                 // Ingot (third slot)
                 RecipeCategory.MISC,                             // Recipe Class
                 ModItems.NIGHTMARE_INGOT.get())                  // Result
                 .unlocks("has_pure_nightmarite", has(ModItems.PURE_NIGHTMARITE.get())) // Unlock condition
                 .save(pRecipeOutput, "nightmare_ingot_from_smithing");
-
         SmithingTransformRecipeBuilder.smithing(
-                        Ingredient.of(ModItems.IMPURE_STORMITE.get()),  // Try using Items.AIR instead of Ingredient.EMPTY <- for empty slots I think
+                        Ingredient.of(ModItems.IMPURE_STORMITE.get()),
                         Ingredient.of(Items.BLAZE_POWDER),
                         Ingredient.of(Items.COPPER_INGOT),
                         RecipeCategory.MISC,
                         ModItems.STORM_INGOT.get())
                 .unlocks("has_impure_stormite", has(ModItems.IMPURE_STORMITE.get())) // Unlock condition
                 .save(pRecipeOutput, "storm_ingot_from_smithing");
+
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(ModItems.IMPURE_NIGHTMARITE.get()),  // Template (first slot) - Try using Items.AIR instead of Ingredient.EMPTY for empty slots
+                        Ingredient.of(Items.FIRE_CHARGE),                // Addition (second slot)
+                        Ingredient.of(Items.IRON_INGOT),                 // Ingot (third slot)
+                        RecipeCategory.MISC,                             // Recipe Class
+                        ModItems.FALSE_NIGHTMARITE_INGOT.get())                  // Result
+                .unlocks("has_impure_nightmarite", has(ModItems.IMPURE_NIGHTMARITE.get())) // Unlock condition
+                .save(pRecipeOutput, "false_nightmare_ingot_from_smithing");
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(ModItems.PURE_STORMITE.get()),
+                        Ingredient.of(Items.BLAZE_POWDER),
+                        Ingredient.of(Items.COPPER_INGOT),
+                        RecipeCategory.MISC,
+                        ModItems.FALSE_STORMITE_INGOT.get())
+                .unlocks("has_pure_stormite", has(ModItems.PURE_STORMITE.get())) // Unlock condition
+                .save(pRecipeOutput, "false_storm_ingot_from_smithing");
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHISEL.get())
@@ -515,6 +531,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModBlocks.STEELIUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FALSE_STORMITE_BLOCK.get())
+                .pattern("///")
+                .pattern("///")
+                .pattern("///")
+                .define('/', ModItems.FALSE_STORMITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FALSE_NIGHTMARITE_BLOCK.get())
+                .pattern("///")
+                .pattern("///")
+                .pattern("///")
+                .define('/', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get(), 9)
                 .requires(ModBlocks.NIGHTMARE_BLOCK.get())
@@ -523,6 +553,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_NUGGET.get(), 9)
                 .requires(ModItems.NIGHTMARE_INGOT.get())
                 .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARITE_INGOT.get(), 9)
+                .requires(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get()), has(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":false_nightmare_ingot_from_false_nightmare_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STORM_INGOT.get(), 9)
                 .requires(ModBlocks.STORM_BLOCK.get())
@@ -531,6 +565,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STORM_NUGGET.get(), 9)
                 .requires(ModItems.STORM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.FALSE_STORMITE_INGOT.get(), 9)
+                .requires(ModBlocks.FALSE_STORMITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.FALSE_STORMITE_BLOCK.get()), has(ModBlocks.FALSE_STORMITE_BLOCK.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":false_storm_ingot_from_false_storm_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MYSTERIOUS_DUST.get(), 1)
                 .requires(ModBlocks.MYSTERIOUS_DUST_SLAB.get())

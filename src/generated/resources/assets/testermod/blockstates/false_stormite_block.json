@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "testermod:block/false_stormite_block"
+    }
+  }
+}

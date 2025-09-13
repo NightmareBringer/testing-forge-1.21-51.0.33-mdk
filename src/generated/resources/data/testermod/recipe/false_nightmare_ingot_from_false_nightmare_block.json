@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testermod:false_nightmarite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "testermod:false_nightmarite_ingot"
+  }
+}

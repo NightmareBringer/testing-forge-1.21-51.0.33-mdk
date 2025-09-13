@@ -216,6 +216,19 @@ public class ModItems
     public static final DeferredItem<Item> INDIGO_BRICK = ITEMS.register("indigo_brick",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> PURE_STICK = ITEMS.register("pure_stick",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> PURE_STORMITE = ITEMS.register("pure_stormite",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> IMPURE_NIGHTMARITE = ITEMS.register("impure_nightmarite",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> FALSE_STORMITE_INGOT = ITEMS.register("false_stormite_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> FALSE_NIGHTMARITE_INGOT = ITEMS.register("false_nightmarite_ingot",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);

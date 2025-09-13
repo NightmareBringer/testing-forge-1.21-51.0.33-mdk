@@ -346,7 +346,16 @@ public class ModBlocks
     public static final DeferredBlock<Block> STEELIUM_CONSOLE = registerBlock("steelium_console",
             () -> new ConsoleBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(50f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final DeferredBlock<Block> STEELIUM_CORE = registerBlock("steelium_core",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(250f).explosionResistance(100f).requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<Block> FALSE_STORMITE_BLOCK = registerBlock("false_stormite_block",
+            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(5f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> FALSE_NIGHTMARITE_BLOCK = registerBlock("false_nightmarite_block",
+            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(5f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)

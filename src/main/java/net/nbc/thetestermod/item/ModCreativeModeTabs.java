@@ -50,13 +50,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IMPURIFIER_BLOCK.get());
                         output.accept(ModItems.MYSTERIOUS_STRING.get());
                         output.accept(ModItems.STRANGE_STICK.get());
+                        output.accept(ModItems.PURE_STICK.get());
                         output.accept(ModItems.IMPURE_STICK.get());
+
                         output.accept(ModBlocks.NIGHTMARITE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_END_ORE.get());
                         output.accept(ModItems.NIGHTMARITE.get());
+                        output.accept(ModItems.IMPURE_NIGHTMARITE.get());
                         output.accept(ModItems.PURE_NIGHTMARITE.get());
+                        output.accept(ModItems.FALSE_NIGHTMARITE_INGOT.get());
+                        output.accept(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());
+
                         output.accept(ModItems.NIGHTMARE_INGOT.get());
                         output.accept(ModItems.NIGHTMARE_NUGGET.get());
                         output.accept(ModBlocks.NIGHTMARE_BLOCK.get());
@@ -96,7 +102,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STORM_NETHER_ORE.get());
                         output.accept(ModBlocks.STORM_END_ORE.get());
                         output.accept(ModItems.STORMITE.get());
+                        output.accept(ModItems.PURE_STORMITE.get());
                         output.accept(ModItems.IMPURE_STORMITE.get());
+                        output.accept(ModItems.FALSE_STORMITE_INGOT.get());
+                        output.accept(ModBlocks.FALSE_STORMITE_BLOCK.get());
+
                         output.accept(ModItems.STORM_INGOT.get());
                         output.accept(ModItems.STORM_NUGGET.get());
                         output.accept(ModBlocks.STORM_BLOCK.get());
@@ -134,6 +144,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.STEELIUM_BUTTON.get());
                         output.accept(ModBlocks.STEELIUM_BARS.get());
+                        output.accept(ModBlocks.STEELIUM_CORE.get());
                         output.accept(ModBlocks.STEELIUM_CONSOLE.get());
 
 

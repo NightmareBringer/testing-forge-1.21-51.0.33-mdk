@@ -169,6 +169,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.INDIGO_BRICK_SlAB);
 
         blockWithItem(ModBlocks.STEELIUM_BLOCK);
+        blockWithItem(ModBlocks.STEELIUM_CORE);
+
+        blockWithItem(ModBlocks.FALSE_STORMITE_BLOCK);
+        blockWithItem(ModBlocks.FALSE_NIGHTMARITE_BLOCK);
 
         paneBlockWithRenderType(
                 ModBlocks.STEELIUM_BARS.get(),
