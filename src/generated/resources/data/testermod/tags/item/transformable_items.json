@@ -1,15 +1,6 @@
 {
   "values": [
-    "testermod:nightmare_ingot",
-    "testermod:nightmare_nugget",
-    "testermod:stormite",
-    "testermod:impure_stormite",
-    "testermod:mysterious_dust",
-    "minecraft:dirt",
-    "minecraft:ender_eye",
-    "minecraft:ender_pearl",
-    "minecraft:nether_star",
-    "minecraft:blaze_powder",
-    "minecraft:blaze_rod"
+    "testermod:nightmarite",
+    "testermod:stormite"
   ]
 }

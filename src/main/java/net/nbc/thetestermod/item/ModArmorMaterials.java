@@ -25,18 +25,36 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 10);
                 attribute.put(ArmorItem.Type.HELMET, 5);
                 attribute.put(ArmorItem.Type.BODY, 15);
-            }), 15, 5f, 0.0375f, ModItems.NIGHTMARE_INGOT);
+            }), 15, 5f, 0.03f, ModItems.NIGHTMARE_INGOT);
 
     public static final Holder<ArmorMaterial> STORM_ARMOR_MATERIAL = register("storm", Util.make(new EnumMap<>(ArmorItem.Type.class),
             attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 2);
-                attribute.put(ArmorItem.Type.LEGGINGS, 4);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 6);
-                attribute.put(ArmorItem.Type.HELMET, 3);
+                attribute.put(ArmorItem.Type.BOOTS, 3);
+                attribute.put(ArmorItem.Type.LEGGINGS, 5);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
+                attribute.put(ArmorItem.Type.HELMET, 4);
                 attribute.put(ArmorItem.Type.BODY, 10);
-            }), 15, 10f, 0f, ModItems.STORM_INGOT);
+            }), 15, 10f, 0.05f, ModItems.STORM_INGOT);
 
+    // ===== FALSE NIGHTMARE ARMOR =====
+    public static final Holder<ArmorMaterial> FALSE_NIGHTMARE_ARMOR_MATERIAL = register("false_nightmarite", Util.make(new EnumMap<>(ArmorItem.Type.class),
+            attr -> {
+                attr.put(ArmorItem.Type.BOOTS, 3);
+                attr.put(ArmorItem.Type.LEGGINGS, 5);
+                attr.put(ArmorItem.Type.CHESTPLATE, 6);
+                attr.put(ArmorItem.Type.HELMET, 3);
+                attr.put(ArmorItem.Type.BODY, 7);
+            }), 10, 2f, 0f, ModItems.FALSE_NIGHTMARITE_INGOT);
 
+    // ===== FALSE STORM ARMOR =====
+    public static final Holder<ArmorMaterial> FALSE_STORM_ARMOR_MATERIAL = register("false_stormite", Util.make(new EnumMap<>(ArmorItem.Type.class),
+            attr -> {
+                attr.put(ArmorItem.Type.BOOTS, 3);
+                attr.put(ArmorItem.Type.LEGGINGS, 4);
+                attr.put(ArmorItem.Type.CHESTPLATE, 5);
+                attr.put(ArmorItem.Type.HELMET, 2);
+                attr.put(ArmorItem.Type.BODY, 6);
+            }), 10, 3f, 0f, ModItems.FALSE_STORMITE_INGOT);
 
 
 

@@ -64,20 +64,20 @@ public class ModItems
     public static final DeferredItem<Item> IMPURE_EYE= ITEMS.register("impure_eye",
             () -> new FuelItem(new Item.Properties(), 7600));
 
-    public static final DeferredItem<EnchantableSwordItem> NIGHTMARE_SWORD = ITEMS.register("nightmare_sword",
-            () -> new EnchantableSwordItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.NIGHTMARE, 1, -1.65f))));
-    public static final DeferredItem<EnchantablePickaxeItem> NIGHTMARE_PICKAXE = ITEMS.register("nightmare_pickaxe",
-            () -> new EnchantablePickaxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, -1, -2.5f))));
-    public static final DeferredItem<EnchantableShovelItem> NIGHTMARE_SHOVEL = ITEMS.register("nightmare_shovel",
-            () -> new EnchantableShovelItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(ModToolTiers.NIGHTMARE, -2, -3.0f))));
-    public static final DeferredItem<EnchantableAxeItem> NIGHTMARE_AXE = ITEMS.register("nightmare_axe",
-            () -> new EnchantableAxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.NIGHTMARE, 3.25f, -2.3f))));
-    public static final DeferredItem<EnchantableHoeItem> NIGHTMARE_HOE = ITEMS.register("nightmare_hoe",
-            () -> new EnchantableHoeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+    public static final DeferredItem<SwordItem> NIGHTMARE_SWORD = ITEMS.register("nightmare_sword",
+            () -> new SwordItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.NIGHTMARE, 1, -2.5f))));
+    public static final DeferredItem<PickaxeItem> NIGHTMARE_PICKAXE = ITEMS.register("nightmare_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, -1, -2.6f))));
+    public static final DeferredItem<ShovelItem> NIGHTMARE_SHOVEL = ITEMS.register("nightmare_shovel",
+            () -> new ShovelItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.NIGHTMARE, -2, -3f))));
+    public static final DeferredItem<AxeItem> NIGHTMARE_AXE = ITEMS.register("nightmare_axe",
+            () -> new AxeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.NIGHTMARE, 4f, -2.6f))));
+    public static final DeferredItem<HoeItem> NIGHTMARE_HOE = ITEMS.register("nightmare_hoe",
+            () -> new HoeItem(ModToolTiers.NIGHTMARE, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.NIGHTMARE, -7, 0f))));
 
     public static final DeferredItem<Item> NIGHTMARE_HAMMER = ITEMS.register("nightmare_hammer",
@@ -91,18 +91,44 @@ public class ModItems
                 }
             });
 
-    public static final DeferredItem<EnchantableArmorItem> NIGHTMARE_HELMET = ITEMS.register("nightmare_helmet",
-            () -> new EnchantableArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(50))));
-    public static final DeferredItem<EnchantableArmorItem> NIGHTMARE_CHESTPLATE = ITEMS.register("nightmare_chestplate",
-            () -> new EnchantableArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(50))));
-    public static final DeferredItem<EnchantableArmorItem> NIGHTMARE_LEGGINGS = ITEMS.register("nightmare_leggings",
-            () -> new EnchantableArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(50))));
-    public static final DeferredItem<EnchantableArmorItem> NIGHTMARE_BOOTS = ITEMS.register("nightmare_boots",
-            () -> new EnchantableArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(50))));
+    public static final DeferredItem<SwordItem> PURE_NIGHTMARE_SWORD = ITEMS.register("pure_nightmare_sword",
+            () -> new SwordItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 2, -2.6f))));
+    public static final DeferredItem<PickaxeItem> PURE_NIGHTMARE_PICKAXE = ITEMS.register("pure_nightmare_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 1, -2.5f))));
+    public static final DeferredItem<ShovelItem> PURE_NIGHTMARE_SHOVEL = ITEMS.register("pure_nightmare_shovel",
+            () -> new ShovelItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 2, -2.8f))));
+    public static final DeferredItem<AxeItem> PURE_NIGHTMARE_AXE = ITEMS.register("pure_nightmare_axe",
+            () -> new AxeItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 4f, -2.4f))));
+    public static final DeferredItem<HoeItem> PURE_NIGHTMARE_HOE = ITEMS.register("pure_nightmare_hoe",
+            () -> new HoeItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, -7, 0f))));
+    public static final DeferredItem<Item> PURE_NIGHTMARE_HAMMER = ITEMS.register("pure_nightmare_hammer",
+            () -> new HammerItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 10f, -3.4f))) {
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer2"));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
+
+    public static final DeferredItem<ModArmorItem> NIGHTMARE_HELMET = ITEMS.register("nightmare_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(38))));
+    public static final DeferredItem<ModArmorItem> NIGHTMARE_CHESTPLATE = ITEMS.register("nightmare_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(38))));
+    public static final DeferredItem<ModArmorItem> NIGHTMARE_LEGGINGS = ITEMS.register("nightmare_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(38))));
+    public static final DeferredItem<ModArmorItem> NIGHTMARE_BOOTS = ITEMS.register("nightmare_boots",
+            () -> new ModArmorItem(ModArmorMaterials.NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(38))));
 
     public static final DeferredItem<Item> STORMITE = ITEMS.register("stormite",
             () -> new Item(new Item.Properties()));
@@ -116,25 +142,24 @@ public class ModItems
     public static final DeferredItem<Item> STORM_NUGGET = ITEMS.register("storm_nugget",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<EnchantableSwordItem> STORM_SWORD = ITEMS.register("storm_sword",
-            () -> new EnchantableSwordItem(ModToolTiers.STORM, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.STORM, 2, -1.85f))));
-    public static final DeferredItem<EnchantablePickaxeItem> STORM_PICKAXE = ITEMS.register("storm_pickaxe",
-            () -> new EnchantablePickaxeItem(ModToolTiers.STORM, new Item.Properties()
+    public static final DeferredItem<SwordItem> STORM_SWORD = ITEMS.register("storm_sword",
+            () -> new SwordItem(ModToolTiers.STORM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.STORM, 2, -2.4f))));
+    public static final DeferredItem<PickaxeItem> STORM_PICKAXE = ITEMS.register("storm_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.STORM, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.STORM, 1, -2.7f))));
-    public static final DeferredItem<EnchantableShovelItem> STORM_SHOVEL = ITEMS.register("storm_shovel",
-            () -> new EnchantableShovelItem(ModToolTiers.STORM, new Item.Properties()
-                    .attributes(ShovelItem.createAttributes(ModToolTiers.STORM, 2, -3.2f))));
-    public static final DeferredItem<EnchantableAxeItem> STORM_AXE = ITEMS.register("storm_axe",
-            () -> new EnchantableAxeItem(ModToolTiers.STORM, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.STORM, 4f, -2.5f))));
-    public static final DeferredItem<EnchantableHoeItem> STORM_HOE = ITEMS.register("storm_hoe",
-            () -> new EnchantableHoeItem(ModToolTiers.STORM, new Item.Properties()
+    public static final DeferredItem<ShovelItem> STORM_SHOVEL = ITEMS.register("storm_shovel",
+            () -> new ShovelItem(ModToolTiers.STORM, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.STORM, 2, -2.9f))));
+    public static final DeferredItem<AxeItem> STORM_AXE = ITEMS.register("storm_axe",
+            () -> new AxeItem(ModToolTiers.STORM, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.STORM, 4f, -2.7f))));
+    public static final DeferredItem<HoeItem> STORM_HOE = ITEMS.register("storm_hoe",
+            () -> new HoeItem(ModToolTiers.STORM, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.STORM, -7, 0f))));
-
     public static final DeferredItem<Item> STORM_HAMMER = ITEMS.register("storm_hammer",
             () -> new HammerItem(ModToolTiers.STORM, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STORM, 10f, -3.5f))) {
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STORM, 10f, -3.4f))) {
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
                     pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer1"));
@@ -143,26 +168,51 @@ public class ModItems
                 }
             });
 
-    public static final DeferredItem<EnchantableArmorItem> STORM_HELMET = ITEMS.register("storm_helmet",
-            () -> new EnchantableArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(30))));
-    public static final DeferredItem<EnchantableArmorItem> STORM_CHESTPLATE = ITEMS.register("storm_chestplate",
-            () -> new EnchantableArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(30))));
-    public static final DeferredItem<EnchantableArmorItem> STORM_LEGGINGS = ITEMS.register("storm_leggings",
-            () -> new EnchantableArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(30))));
-    public static final DeferredItem<EnchantableArmorItem> STORM_BOOTS = ITEMS.register("storm_boots",
-            () -> new EnchantableArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(30))));
+    public static final DeferredItem<SwordItem> PURE_STORM_SWORD = ITEMS.register("pure_storm_sword",
+            () -> new SwordItem(ModToolTiers.PURE_STORM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.PURE_STORM, 2, -2.3f))));
+    public static final DeferredItem<PickaxeItem> PURE_STORM_PICKAXE = ITEMS.register("pure_storm_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.PURE_STORM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_STORM, 1, -2.8f))));
+    public static final DeferredItem<ShovelItem> PURE_STORM_SHOVEL = ITEMS.register("pure_storm_shovel",
+            () -> new ShovelItem(ModToolTiers.PURE_STORM, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.PURE_STORM, 2, -3f))));
+    public static final DeferredItem<AxeItem> PURE_STORM_AXE = ITEMS.register("pure_storm_axe",
+            () -> new AxeItem(ModToolTiers.PURE_STORM, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.PURE_STORM, 4f, -2.8f))));
+    public static final DeferredItem<HoeItem> PURE_STORM_HOE = ITEMS.register("pure_storm_hoe",
+            () -> new HoeItem(ModToolTiers.PURE_STORM, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.PURE_STORM, -7, 0f))));
+    public static final DeferredItem<Item> PURE_STORM_HAMMER = ITEMS.register("pure_storm_hammer",
+            () -> new HammerItem(ModToolTiers.PURE_STORM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_STORM, 10f, -3.5f))) {
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer1"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer2"));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
+    public static final DeferredItem<ModArmorItem> STORM_HELMET = ITEMS.register("storm_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(34))));
+    public static final DeferredItem<ModArmorItem> STORM_CHESTPLATE = ITEMS.register("storm_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(34))));
+    public static final DeferredItem<ModArmorItem> STORM_LEGGINGS = ITEMS.register("storm_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(34))));
+    public static final DeferredItem<ModArmorItem> STORM_BOOTS = ITEMS.register("storm_boots",
+            () -> new ModArmorItem(ModArmorMaterials.STORM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(34))));
 
     public static final DeferredItem<Item> DEVILS_BLADE = ITEMS.register("devils_blade",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DEVILS_SNATH = ITEMS.register("devils_snath",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<EnchantableAxeItem> DEVILSKNIFE = ITEMS.register("devilsknife",
-            () -> new EnchantableAxeItem(ModToolTiers.DEVILSKNIFE, new Item.Properties()
+    public static final DeferredItem<AxeItem> DEVILSKNIFE = ITEMS.register("devilsknife",
+            () -> new AxeItem(ModToolTiers.DEVILSKNIFE, new Item.Properties()
                     .attributes(AxeItem.createAttributes(ModToolTiers.DEVILSKNIFE, 7.66f, -2.9f))));
 
     public  static final DeferredItem<Item> NIGHTMARE_HORSE_ARMOR = ITEMS.register("nightmare_horse_armor",
@@ -204,7 +254,7 @@ public class ModItems
 
     public static final DeferredItem<Item> THROWING_KNIFE = ITEMS.register("throwing_knife",
             () -> new ThrowingKnifeItem(new Item.Properties()
-                    .attributes(EnchantableSwordItem.createAttributes(ModToolTiers.KNIFE, 1, -1.0f))
+                    .attributes(SwordItem.createAttributes(ModToolTiers.KNIFE, 1, -1.0f))
                     .stacksTo(4)));
 
     public static final DeferredItem<Item> ENERGY_ORB = ITEMS.register("orb_of_energy",
@@ -228,6 +278,64 @@ public class ModItems
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FALSE_NIGHTMARITE_INGOT = ITEMS.register("false_nightmarite_ingot",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<SwordItem> FALSE_NIGHTMARE_SWORD = ITEMS.register("false_nightmarite_sword",
+            () -> new SwordItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 2, -2.2f))));
+    public static final DeferredItem<PickaxeItem> FALSE_NIGHTMARE_PICKAXE = ITEMS.register("false_nightmarite_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 1, -2.9f))));
+    public static final DeferredItem<ShovelItem> FALSE_NIGHTMARE_SHOVEL = ITEMS.register("false_nightmarite_shovel",
+            () -> new ShovelItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 2, -3f))));
+    public static final DeferredItem<AxeItem> FALSE_NIGHTMARE_AXE = ITEMS.register("false_nightmarite_axe",
+            () -> new AxeItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 4f, -3f))));
+    public static final DeferredItem<HoeItem> FALSE_NIGHTMARE_HOE = ITEMS.register("false_nightmarite_hoe",
+            () -> new HoeItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, -4, 0f))));
+
+    public static final DeferredItem<SwordItem> FALSE_STORM_SWORD = ITEMS.register("false_stormite_sword",
+            () -> new SwordItem(ModToolTiers.FALSE_STORM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.FALSE_STORM, 2, -2.3f))));
+    public static final DeferredItem<PickaxeItem> FALSE_STORM_PICKAXE = ITEMS.register("false_stormite_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.FALSE_STORM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.FALSE_STORM, 1, -2.8f))));
+    public static final DeferredItem<ShovelItem> FALSE_STORM_SHOVEL = ITEMS.register("false_stormite_shovel",
+            () -> new ShovelItem(ModToolTiers.FALSE_STORM, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.FALSE_STORM, 2, -3f))));
+    public static final DeferredItem<AxeItem> FALSE_STORM_AXE = ITEMS.register("false_stormite_axe",
+            () -> new AxeItem(ModToolTiers.FALSE_STORM, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.FALSE_STORM, 4f, -3f))));
+    public static final DeferredItem<HoeItem> FALSE_STORM_HOE = ITEMS.register("false_stormite_hoe",
+            () -> new HoeItem(ModToolTiers.FALSE_STORM, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.FALSE_STORM, -5, 0f))));
+
+    public static final DeferredItem<ModArmorItem> FALSE_STORM_HELMET = ITEMS.register("false_stormite_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_STORM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(24))));
+    public static final DeferredItem<ModArmorItem> FALSE_STORM_CHESTPLATE = ITEMS.register("false_stormite_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_STORM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(24))));
+    public static final DeferredItem<ModArmorItem> FALSE_STORM_LEGGINGS = ITEMS.register("false_stormite_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_STORM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(24))));
+    public static final DeferredItem<ModArmorItem> FALSE_STORM_BOOTS = ITEMS.register("false_stormite_boots",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_STORM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(24))));
+
+    public static final DeferredItem<ModArmorItem> FALSE_NIGHTMARE_HELMET = ITEMS.register("false_nightmarite_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(22))));
+    public static final DeferredItem<ModArmorItem> FALSE_NIGHTMARE_CHESTPLATE = ITEMS.register("false_nightmarite_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(22))));
+    public static final DeferredItem<ModArmorItem> FALSE_NIGHTMARE_LEGGINGS = ITEMS.register("false_nightmarite_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
+    public static final DeferredItem<ModArmorItem> FALSE_NIGHTMARE_BOOTS = ITEMS.register("false_nightmarite_boots",
+            () -> new ModArmorItem(ModArmorMaterials.FALSE_NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
 
     public static void register(IEventBus eventBus)
     {

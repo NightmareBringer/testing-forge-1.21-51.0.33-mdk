@@ -7,6 +7,14 @@
     "testermod:storm_helmet",
     "testermod:storm_chestplate",
     "testermod:storm_leggings",
-    "testermod:storm_boots"
+    "testermod:storm_boots",
+    "testermod:false_nightmarite_helmet",
+    "testermod:false_nightmarite_chestplate",
+    "testermod:false_nightmarite_leggings",
+    "testermod:false_nightmarite_boots",
+    "testermod:false_stormite_helmet",
+    "testermod:false_stormite_chestplate",
+    "testermod:false_stormite_leggings",
+    "testermod:false_stormite_boots"
   ]
 }

@@ -13,6 +13,7 @@ import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
 import net.nbc.thetestermod.item.custom.EnchantableArmorItem;
+import net.nbc.thetestermod.item.custom.ModArmorItem;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -109,12 +110,38 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.NIGHTMARE_HOE);
         handheldItem(ModItems.NIGHTMARE_HAMMER);
 
+        handheldItem(ModItems.PURE_NIGHTMARE_SWORD);
+        handheldItem(ModItems.PURE_NIGHTMARE_PICKAXE);
+        handheldItem(ModItems.PURE_NIGHTMARE_SHOVEL);
+        handheldItem(ModItems.PURE_NIGHTMARE_AXE);
+        handheldItem(ModItems.PURE_NIGHTMARE_HOE);
+        handheldItem(ModItems.PURE_NIGHTMARE_HAMMER);
+
+        handheldItem(ModItems.FALSE_NIGHTMARE_SWORD);
+        handheldItem(ModItems.FALSE_NIGHTMARE_PICKAXE);
+        handheldItem(ModItems.FALSE_NIGHTMARE_SHOVEL);
+        handheldItem(ModItems.FALSE_NIGHTMARE_AXE);
+        handheldItem(ModItems.FALSE_NIGHTMARE_HOE);
+
         handheldItem(ModItems.STORM_SWORD);
         handheldItem(ModItems.STORM_PICKAXE);
         handheldItem(ModItems.STORM_SHOVEL);
         handheldItem(ModItems.STORM_AXE);
         handheldItem(ModItems.STORM_HOE);
         handheldItem(ModItems.STORM_HAMMER);
+
+        handheldItem(ModItems.PURE_STORM_SWORD);
+        handheldItem(ModItems.PURE_STORM_PICKAXE);
+        handheldItem(ModItems.PURE_STORM_SHOVEL);
+        handheldItem(ModItems.PURE_STORM_AXE);
+        handheldItem(ModItems.PURE_STORM_HOE);
+        handheldItem(ModItems.PURE_STORM_HAMMER);
+
+        handheldItem(ModItems.FALSE_STORM_SWORD);
+        handheldItem(ModItems.FALSE_STORM_PICKAXE);
+        handheldItem(ModItems.FALSE_STORM_SHOVEL);
+        handheldItem(ModItems.FALSE_STORM_AXE);
+        handheldItem(ModItems.FALSE_STORM_HOE);
 
         handheldItem(ModItems.DEVILSKNIFE);
 
@@ -124,10 +151,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.NIGHTMARE_LEGGINGS);
         trimmedArmorItem(ModItems.NIGHTMARE_BOOTS);
 
+        trimmedArmorItem(ModItems.FALSE_NIGHTMARE_HELMET);
+        trimmedArmorItem(ModItems.FALSE_NIGHTMARE_CHESTPLATE);
+        trimmedArmorItem(ModItems.FALSE_NIGHTMARE_LEGGINGS);
+        trimmedArmorItem(ModItems.FALSE_NIGHTMARE_BOOTS);
+
         trimmedArmorItem(ModItems.STORM_HELMET);
         trimmedArmorItem(ModItems.STORM_CHESTPLATE);
         trimmedArmorItem(ModItems.STORM_LEGGINGS);
         trimmedArmorItem(ModItems.STORM_BOOTS);
+
+        trimmedArmorItem(ModItems.FALSE_STORM_HELMET);
+        trimmedArmorItem(ModItems.FALSE_STORM_CHESTPLATE);
+        trimmedArmorItem(ModItems.FALSE_STORM_LEGGINGS);
+        trimmedArmorItem(ModItems.FALSE_STORM_BOOTS);
 
         // Other block-based item models
         buttonItem(ModBlocks.CORRUPTED_OAK_BUTTON, ModBlocks.CORRUPTED_OAK_PLANKS);
@@ -154,10 +191,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     // Shoutout to El_Redstoniano for making this trimmed armor support
-    private void trimmedArmorItem(DeferredItem<EnchantableArmorItem> itemDeferred) {
+    private void trimmedArmorItem(DeferredItem<ModArmorItem> itemDeferred) {
         final String MOD_ID = TesterMod.MOD_ID; // Change this to your mod id if needed
 
-        if (itemDeferred.get() instanceof EnchantableArmorItem armorItem) {
+        if (itemDeferred.get() instanceof ModArmorItem armorItem) {
             trimMaterials.forEach((trimMaterial, value) -> {
                 float trimValue = value;
 

@@ -1,7 +1,7 @@
 {
   "asset_name": "storm_ingot",
   "description": {
-    "color": "#031CFC",
+    "color": "#34808E",
     "translate": "trim_material.testermod.storm_ingot"
   },
   "ingredient": "testermod:storm_ingot",

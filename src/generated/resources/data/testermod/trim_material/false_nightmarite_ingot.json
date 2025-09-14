@@ -1,0 +1,9 @@
+{
+  "asset_name": "false_nightmarite_ingot",
+  "description": {
+    "color": "#30E077",
+    "translate": "trim_material.testermod.false_nightmarite_ingot"
+  },
+  "ingredient": "testermod:false_nightmarite_ingot",
+  "item_model_index": 0.7
+}

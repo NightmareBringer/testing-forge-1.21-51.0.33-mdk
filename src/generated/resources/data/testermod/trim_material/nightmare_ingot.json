@@ -1,7 +1,7 @@
 {
   "asset_name": "nightmare_ingot",
   "description": {
-    "color": "#031CFC",
+    "color": "#DB133F",
     "translate": "trim_material.testermod.nightmare_ingot"
   },
   "ingredient": "testermod:nightmare_ingot",

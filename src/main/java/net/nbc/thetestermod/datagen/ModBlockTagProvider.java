@@ -106,6 +106,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_END_ORE.get())
@@ -117,6 +128,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_NETHER_ORE.get());
 
         tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_END_ORE.get())
@@ -128,6 +150,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_NETHER_ORE.get());
 
         tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_END_ORE.get())
@@ -139,6 +172,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_NETHER_ORE.get());
 
         tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
                 .add(ModBlocks.NIGHTMARITE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_END_ORE.get())
@@ -150,6 +194,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_NETHER_ORE.get());
 
         tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
                 .add(ModBlocks.STORM_END_ORE.get())
@@ -159,7 +214,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
                 .add(ModBlocks.STORM_END_ORE.get())
-                .add(ModBlocks.STORM_NETHER_ORE.get());
+                .add(ModBlocks.STORM_NETHER_ORE.get())
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get());
@@ -205,6 +271,20 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NIGHTMARITE_END_ORE.get())
                 .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
 
+        // FALSE NIGHTMARE behaves like iron
+        tag(ModTags.Blocks.NEEDS_FALSE_NIGHTMARE_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_FALSE_NIGHTMARE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
+
+        // Same for FALSE STORM
+        tag(ModTags.Blocks.NEEDS_FALSE_STORM_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_FALSE_STORM_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
+
         // NIGHTMARE tool can only break stormite ores
         tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)
                 .add(ModBlocks.STORMITE_ORE.get())
@@ -218,11 +298,35 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(ModTags.Blocks.NEEDS_STORM_TOOL)
                 .add(ModBlocks.STORM_WALL.get())
-                .add(Blocks.REINFORCED_DEEPSLATE);
+                .add(Blocks.REINFORCED_DEEPSLATE)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get());
 
         tag(ModTags.Blocks.INCORRECT_FOR_STORM_TOOL)
                 //.addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
                 .add(Blocks.BEDROCK);
+
+        tag(ModTags.Blocks.NEEDS_PURE_NIGHTMARE_TOOL)
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get());
 
         tag(ModTags.Blocks.NEEDS_DEVILSKNIFE_TOOL)
                 .addTag(BlockTags.NEEDS_STONE_TOOL);

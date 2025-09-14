@@ -1,7 +1,25 @@
-// 1.21.1	2025-03-01T14:06:20.0301658	Tags for minecraft:item mod id testermod
+// 1.21.1	2025-09-14T12:11:40.3081115	Tags for minecraft:item mod id testermod
+7b67bdc1e1b5d88f0f324e2b5944809083d05fc5 data/minecraft/tags/item/axes.json
+a09287d70abc53cb69f5ccaf96465da6fc2c0320 data/minecraft/tags/item/beacon_payment_items.json
+af59ed5cedff87e2532c8b23fb92de028ec93c15 data/minecraft/tags/item/enchantable/chest_armor.json
+971b3464c7fa76662299d5dd910ac7616862d5d5 data/minecraft/tags/item/enchantable/durability.json
+7f6c2199d742159bd90fb74c9009af6c5b592afa data/minecraft/tags/item/enchantable/equippable.json
+d9417f147e937abd511eec72b1cf7f747048fb7e data/minecraft/tags/item/enchantable/fire_aspect.json
+e8020d93b30449eef3055ed880377e639c03e881 data/minecraft/tags/item/enchantable/foot_armor.json
+f50e323376d4d996c5047668ed41d85a702c6293 data/minecraft/tags/item/enchantable/head_armor.json
+7131b42793405798121f987f8a41fa412ab32c44 data/minecraft/tags/item/enchantable/leg_armor.json
+8a0feaf44238f3d76533c476b0064a66685d2771 data/minecraft/tags/item/enchantable/mining.json
+dc92875c8ce5a94d3a0c47b2c3005e4c71646ee3 data/minecraft/tags/item/enchantable/mining_loot.json
+01af6a323470e90b27dedf1354a0bea95462844c data/minecraft/tags/item/enchantable/sharp_weapon.json
+d9417f147e937abd511eec72b1cf7f747048fb7e data/minecraft/tags/item/enchantable/sword.json
+01af6a323470e90b27dedf1354a0bea95462844c data/minecraft/tags/item/enchantable/weapon.json
+f73a24d5eb34c04d026011ebb5bb3929a5c364d1 data/minecraft/tags/item/hoes.json
 b452c1747036e07f62ef5411f54d35d21b415b69 data/minecraft/tags/item/logs_that_burn.json
+aa627f4ced7534dac57f39e9b430723a106a76a4 data/minecraft/tags/item/pickaxes.json
 5614dd4d1e6870abeed60a55694ccb3da04eb07a data/minecraft/tags/item/planks.json
-7f6c2199d742159bd90fb74c9009af6c5b592afa data/minecraft/tags/item/trimmable_armor.json
-a09287d70abc53cb69f5ccaf96465da6fc2c0320 data/minecraft/tags/item/trim_materials.json
+3c53900617e1c6ada6dc49329e6c83c2e9af0d9b data/minecraft/tags/item/shovels.json
+a57df072291f5e1607d9061269443f5ca5cbd92f data/minecraft/tags/item/swords.json
+ccb3ad8b0b7e5b5ea1060965137a5d9f733e5ed8 data/minecraft/tags/item/trimmable_armor.json
+5cbd3479f1e6c37dcbdf58f51b7121c1b4ec7a01 data/minecraft/tags/item/trim_materials.json
 a332e1f5ef1d67c744936d2bf102cadd12d09b0f data/minecraft/tags/item/trim_templates.json
-555757405fc0738aa4b736c0f3be86deded2bc61 data/testermod/tags/item/transformable_items.json
+a3893cba92f599307562062eaf906ada38f35499 data/testermod/tags/item/transformable_items.json

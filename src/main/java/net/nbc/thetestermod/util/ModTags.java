@@ -12,14 +12,35 @@ public class ModTags
 {
     public static class Blocks
     {
+        // ===== REG NIGHTMARE =====
         public static final TagKey<Block> NEEDS_NIGHTMARE_TOOL = createTag("needs_nightmare_tool");
         public static final TagKey<Block> INCORRECT_FOR_NIGHTMARE_TOOL = createTag("incorrect_for_nightmare_tool");
 
+        // ===== FALSE NIGHTMARE =====
+        public static final TagKey<Block> NEEDS_FALSE_NIGHTMARE_TOOL = createTag("needs_false_nightmare_tool");
+        public static final TagKey<Block> INCORRECT_FOR_FALSE_NIGHTMARE_TOOL = createTag("incorrect_for_false_nightmare_tool");
+
+        // ===== PURE NIGHTMARE =====
+        public static final TagKey<Block> NEEDS_PURE_NIGHTMARE_TOOL = createTag("needs_pure_nightmare_tool");
+        public static final TagKey<Block> INCORRECT_FOR_PURE_NIGHTMARE_TOOL = createTag("incorrect_for_pure_nightmare_tool");
+
+        // ===== IMPURE STORM =====
         public static final TagKey<Block> NEEDS_STORM_TOOL = createTag("needs_storm_tool");
         public static final TagKey<Block> INCORRECT_FOR_STORM_TOOL = createTag("incorrect_for_storm_tool");
 
+        // ===== FALSE STORM =====
+        public static final TagKey<Block> NEEDS_FALSE_STORM_TOOL = createTag("needs_false_storm_tool");
+        public static final TagKey<Block> INCORRECT_FOR_FALSE_STORM_TOOL = createTag("incorrect_for_false_storm_tool");
+
+        // ===== PURE STORM =====
+        public static final TagKey<Block> NEEDS_PURE_STORM_TOOL = createTag("needs_pure_storm_tool");
+        public static final TagKey<Block> INCORRECT_FOR_PURE_STORM_TOOL = createTag("incorrect_for_pure_storm_tool");
+
         public static final TagKey<Block> NEEDS_DEVILSKNIFE_TOOL = createTag("needs_devilsknife_tool");
         public static final TagKey<Block> INCORRECT_FOR_DEVILSKNIFE_TOOL = createTag("incorrect_for_devilsknife_tool");
+
+        public static final TagKey<Block> NEEDS_STEELIUM_TOOL = createTag("needs_steelium_tool");
+        public static final TagKey<Block> INCORRECT_FOR_STEELIUM_TOOL = createTag("incorrect_for_steelium_tool");
 
 
         private static TagKey<Block> createTag(String name)

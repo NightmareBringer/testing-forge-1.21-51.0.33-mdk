@@ -1,5 +1,16 @@
 {
   "values": [
+    "testermod:steelium_block",
+    "testermod:steelium_bars",
+    "testermod:steelium_stairs",
+    "testermod:steelium_slab",
+    "testermod:steelium_wall",
+    "testermod:steelium_door",
+    "testermod:steelium_trapdoor",
+    "testermod:steelium_button",
+    "testermod:steelium_pressure_plate",
+    "testermod:steelium_console",
+    "testermod:steelium_core",
     "testermod:stormite_deepslate_ore",
     "testermod:stormite_ore",
     "testermod:stormite_end_ore",

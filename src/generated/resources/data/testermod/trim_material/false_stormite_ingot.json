@@ -1,0 +1,9 @@
+{
+  "asset_name": "false_stormite_ingot",
+  "description": {
+    "color": "#7328B0",
+    "translate": "trim_material.testermod.false_stormite_ingot"
+  },
+  "ingredient": "testermod:false_stormite_ingot",
+  "item_model_index": 1.0
+}

@@ -544,6 +544,243 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModItems.FALSE_NIGHTMARITE_INGOT.get())
                 .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
 
+        // PURE NIGHTMARE TOOLS (same ingot, pure stick)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_NIGHTMARE_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_NIGHTMARE_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_NIGHTMARE_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_NIGHTMARE_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_NIGHTMARE_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_NIGHTMARE_HAMMER.get())
+                .pattern("###")
+                .pattern("#S#")
+                .pattern(" S ")
+                .define('#', ModItems.NIGHTMARE_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.NIGHTMARE_INGOT.get()), has(ModItems.NIGHTMARE_INGOT.get())).save(pRecipeOutput);
+
+        // FALSE NIGHTMARE TOOLS (vanilla stick + FALSE_NIGHTMARE_INGOT)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_NIGHTMARE_BOOTS.get())
+                .pattern("   ")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.FALSE_NIGHTMARITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_NIGHTMARITE_INGOT.get()), has(ModItems.FALSE_NIGHTMARITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_STORM_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_STORM_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_STORM_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_STORM_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_STORM_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURE_STORM_HAMMER.get())
+                .pattern("###")
+                .pattern("#S#")
+                .pattern(" S ")
+                .define('#', ModItems.STORM_INGOT.get())
+                .define('S', ModItems.PURE_STICK.get())
+                .unlockedBy(getHasName(ModItems.STORM_INGOT.get()), has(ModItems.STORM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FALSE_STORM_BOOTS.get())
+                .pattern("# #")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.FALSE_STORMITE_INGOT.get())
+                .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get()))
+                .save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get(), 9)

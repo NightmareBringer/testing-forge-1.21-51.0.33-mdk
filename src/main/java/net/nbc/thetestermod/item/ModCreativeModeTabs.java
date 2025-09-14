@@ -58,10 +58,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
                         output.accept(ModBlocks.NIGHTMARITE_END_ORE.get());
                         output.accept(ModItems.NIGHTMARITE.get());
-                        output.accept(ModItems.IMPURE_NIGHTMARITE.get());
                         output.accept(ModItems.PURE_NIGHTMARITE.get());
+                        output.accept(ModItems.IMPURE_NIGHTMARITE.get());
                         output.accept(ModItems.FALSE_NIGHTMARITE_INGOT.get());
                         output.accept(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_SWORD.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_PICKAXE.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_AXE.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_SHOVEL.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_HOE.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_HELMET.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_CHESTPLATE.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_LEGGINGS.get());
+                        output.accept(ModItems.FALSE_NIGHTMARE_BOOTS.get());
 
                         output.accept(ModItems.NIGHTMARE_INGOT.get());
                         output.accept(ModItems.NIGHTMARE_NUGGET.get());
@@ -84,6 +93,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.REFINED_NIGHTMARE_FENCE_GATE.get());
                         output.accept(ModBlocks.REFINED_NIGHTMARE_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.REFINED_NIGHTMARE_BUTTON.get());
+
+                        output.accept(ModItems.PURE_NIGHTMARE_SWORD.get());
+                        output.accept(ModItems.PURE_NIGHTMARE_PICKAXE.get());
+                        output.accept(ModItems.PURE_NIGHTMARE_AXE.get());
+                        output.accept(ModItems.PURE_NIGHTMARE_SHOVEL.get());
+                        output.accept(ModItems.PURE_NIGHTMARE_HOE.get());
+                        output.accept(ModItems.PURE_NIGHTMARE_HAMMER.get());
                         output.accept(ModItems.NIGHTMARE_SWORD.get());
                         output.accept(ModItems.NIGHTMARE_PICKAXE.get());
                         output.accept(ModItems.NIGHTMARE_AXE.get());
@@ -106,6 +122,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.IMPURE_STORMITE.get());
                         output.accept(ModItems.FALSE_STORMITE_INGOT.get());
                         output.accept(ModBlocks.FALSE_STORMITE_BLOCK.get());
+                        output.accept(ModItems.FALSE_STORM_SWORD.get());
+                        output.accept(ModItems.FALSE_STORM_PICKAXE.get());
+                        output.accept(ModItems.FALSE_STORM_AXE.get());
+                        output.accept(ModItems.FALSE_STORM_SHOVEL.get());
+                        output.accept(ModItems.FALSE_STORM_HOE.get());
+                        output.accept(ModItems.FALSE_STORM_HELMET.get());
+                        output.accept(ModItems.FALSE_STORM_CHESTPLATE.get());
+                        output.accept(ModItems.FALSE_STORM_LEGGINGS.get());
+                        output.accept(ModItems.FALSE_STORM_BOOTS.get());
 
                         output.accept(ModItems.STORM_INGOT.get());
                         output.accept(ModItems.STORM_NUGGET.get());
@@ -120,6 +145,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STORM_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.STORM_BUTTON.get());
                         output.accept(ModBlocks.STORM_LAMP.get());
+                        output.accept(ModItems.PURE_STORM_SWORD.get());
+                        output.accept(ModItems.PURE_STORM_PICKAXE.get());
+                        output.accept(ModItems.PURE_STORM_AXE.get());
+                        output.accept(ModItems.PURE_STORM_SHOVEL.get());
+                        output.accept(ModItems.PURE_STORM_HOE.get());
+                        output.accept(ModItems.PURE_STORM_HAMMER.get());
                         output.accept(ModItems.STORM_SWORD.get());
                         output.accept(ModItems.STORM_PICKAXE.get());
                         output.accept(ModItems.STORM_AXE.get());
