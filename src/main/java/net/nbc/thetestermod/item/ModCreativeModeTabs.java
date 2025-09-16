@@ -176,6 +176,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_BUTTON.get());
                         output.accept(ModBlocks.STEELIUM_BARS.get());
                         output.accept(ModBlocks.STEELIUM_CORE.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_VERT.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_HORI.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get());
+                        output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
                         output.accept(ModBlocks.STEELIUM_CONSOLE.get());
 
 

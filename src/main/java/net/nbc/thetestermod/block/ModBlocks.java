@@ -349,6 +349,38 @@ public class ModBlocks
     public static final DeferredBlock<Block> STEELIUM_CORE = registerBlock("steelium_core",
             () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(250f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_VERT = registerBlock("steelium_energy_tube_vertical",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_HORI = registerBlock("steelium_energy_tube_horizontal",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_BR = registerBlock("steelium_energy_tube_corner_br",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_BL = registerBlock("steelium_energy_tube_corner_bl",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_TR = registerBlock("steelium_energy_tube_corner_tr",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_TL = registerBlock("steelium_energy_tube_corner_tl",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_B = registerBlock("steelium_energy_tube_threeway_b",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_T = registerBlock("steelium_energy_tube_threeway_t",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_L = registerBlock("steelium_energy_tube_threeway_l",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_R = registerBlock("steelium_energy_tube_threeway_r",
+            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(200f).explosionResistance(100f).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> FALSE_STORMITE_BLOCK = registerBlock("false_stormite_block",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)

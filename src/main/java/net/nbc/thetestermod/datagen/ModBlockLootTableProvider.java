@@ -171,6 +171,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STEELIUM_BLOCK.get());
         dropSelf(ModBlocks.STEELIUM_CONSOLE.get());
         dropSelf(ModBlocks.STEELIUM_CORE.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_VERT.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_HORI.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get());
+        dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
 
         dropSelf(ModBlocks.FALSE_STORMITE_BLOCK.get());
         dropSelf(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());

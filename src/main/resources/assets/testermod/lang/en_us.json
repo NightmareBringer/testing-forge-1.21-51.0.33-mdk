@@ -199,7 +199,19 @@
   "block.testermod.steelium_button": "Steelium Button",
   "block.testermod.steelium_pressure_plate": "Steelium Pressure Plate",
   "block.testermod.steelium_console": "Steelium Console",
-  "block.testermod.steelium_core": "Steelium Core",
+  "block.testermod.steelium_core": "Steelium Energy Core",
+  "block.testermod.steelium_energy_tube_vertical": "Steelium Energy Tube (Vertical)",
+  "block.testermod.steelium_energy_tube_horizontal": "Steelium Energy Tube (Horizontal)",
+
+  "block.testermod.steelium_energy_tube_corner_br": "Steelium Energy Tube Corner (B/R)",
+  "block.testermod.steelium_energy_tube_corner_bl": "Steelium Energy Tube Corner (B/L)",
+  "block.testermod.steelium_energy_tube_corner_tr": "Steelium Energy Tube Corner (T/R)",
+  "block.testermod.steelium_energy_tube_corner_tl": "Steelium Energy Tube Corner (T/L)",
+
+  "block.testermod.steelium_energy_tube_threeway_b": "Steelium Energy Tube Three-Way (Bottom)",
+  "block.testermod.steelium_energy_tube_threeway_t": "Steelium Energy Tube Three-Way (Top)",
+  "block.testermod.steelium_energy_tube_threeway_l": "Steelium Energy Tube Three-Way (Left)",
+  "block.testermod.steelium_energy_tube_threeway_r": "Steelium Energy Tube Three-Way (Right)",
 
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmarite Ingot Material",

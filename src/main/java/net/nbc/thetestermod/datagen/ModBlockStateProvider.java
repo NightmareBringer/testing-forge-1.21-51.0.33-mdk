@@ -170,6 +170,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.STEELIUM_BLOCK);
         blockWithItem(ModBlocks.STEELIUM_CORE);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_VERT);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_HORI);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R);
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T);
 
         blockWithItem(ModBlocks.FALSE_STORMITE_BLOCK);
         blockWithItem(ModBlocks.FALSE_NIGHTMARITE_BLOCK);
