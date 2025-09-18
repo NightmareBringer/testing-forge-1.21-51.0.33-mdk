@@ -183,6 +183,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.INDIGO_BRICK_WALL, ModBlocks.INDIGO_BRICKS);
 
         withExistingParent(ModItems.TESTER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.ALIEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> block) {

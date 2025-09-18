@@ -20,6 +20,10 @@ public class ModEntities {
             ENTITY_TYPES.register("tester_mob", () -> EntityType.Builder.of(TesterEntity::new, MobCategory.MONSTER)
                     .sized(0.25f, 1.9f).build("tester_mob"));
 
+    public static final Supplier<EntityType<TesterEntity>> ALIEN_MOB =
+            ENTITY_TYPES.register("alien_mob", () -> EntityType.Builder.of(TesterEntity::new, MobCategory.MONSTER)
+                    .sized(1.5f, 4.0f).build("alien_mob"));
+
     public static final Supplier<EntityType<ThrowingKnifeProjectileEntity>> THROWING_KNIFE =
             ENTITY_TYPES.register("throwing_knife", () -> EntityType.Builder.<ThrowingKnifeProjectileEntity>of(ThrowingKnifeProjectileEntity::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).build("throwing_knife"));

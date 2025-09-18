@@ -7,8 +7,10 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.entity.ModEntities;
+import net.nbc.thetestermod.entity.client.AlienModel;
 import net.nbc.thetestermod.entity.client.TesterModel;
 import net.nbc.thetestermod.entity.client.ThrowingKnifeProjectileModel;
+import net.nbc.thetestermod.entity.custom.AlienEntity;
 import net.nbc.thetestermod.entity.custom.TesterEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -22,17 +24,22 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(TesterModel.LAYER_LOCATION, TesterModel::createBodyLayer);
+        event.registerLayerDefinition(AlienModel.LAYER_LOCATION, AlienModel::createBodyLayer);
         event.registerLayerDefinition(ThrowingKnifeProjectileModel.LAYER_LOCATION, ThrowingKnifeProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.TESTER_MOB.get(), TesterEntity.createAttributes().build());
+        event.put(ModEntities.ALIEN_MOB.get(), AlienEntity.createAttributes().build());
     }
 
     @SubscribeEvent
     public static void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
         event.register(ModEntities.TESTER_MOB.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+
+        event.register(ModEntities.ALIEN_MOB.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 }

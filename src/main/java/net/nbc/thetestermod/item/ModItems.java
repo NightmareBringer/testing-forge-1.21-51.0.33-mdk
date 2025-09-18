@@ -337,6 +337,9 @@ public class ModItems
             () -> new ModArmorItem(ModArmorMaterials.FALSE_NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
 
+    public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
+            () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0xfafafa, 0x000000 , new Item.Properties()));
+
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);

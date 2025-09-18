@@ -73,7 +73,7 @@ public class TesterEntity extends Animal {
 
     public TesterEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.setPersistenceRequired();
+        //this.setPersistenceRequired();
     }
 
     @Override
