@@ -29,7 +29,7 @@ public class ModBlocks
             DeferredRegister.createBlocks(TesterMod.MOD_ID);
 
     // Both pure and normal nightmarite blocks are unused in-game as of the 1.2.5 update
-    // due to them being pointless from now on and I don't want to update their textures
+    // due to them being pointless from now on and I don't want to update their textures (will not come back to these)
     public static final DeferredBlock<Block> PURE_NIGHTMARITE_BLOCK = registerBlock("pure_nightmarite_block",
         () -> new Block(BlockBehaviour.Properties.of()
                 .strength(10f).explosionResistance(15f)
