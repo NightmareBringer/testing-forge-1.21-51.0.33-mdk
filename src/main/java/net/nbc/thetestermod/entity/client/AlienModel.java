@@ -9,30 +9,23 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.Entity;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.entity.custom.AlienEntity;
 
 public class AlienModel<T extends AlienEntity> extends HierarchicalModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "alien"), "main");
-    private final ModelPart head;
     private final ModelPart body;
+    private final ModelPart head;
 
     public AlienModel(ModelPart root) {
-        this.head = root.getChild("head");
         this.body = root.getChild("body");
+        this.head = this.body.getChild("head");
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
-
-        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-6.0F, -6.0F, -6.0F, 12.0F, 12.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -30.0F, -0.5F));
-
-        PartDefinition eyeL = head.addOrReplaceChild("eyeL", CubeListBuilder.create().texOffs(70, 43).addBox(-1.5F, -2.5F, -0.5F, 3.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(2.5F, -1.5F, -6.5F));
-
-        PartDefinition eyeR = head.addOrReplaceChild("eyeR", CubeListBuilder.create().texOffs(70, 57).addBox(-1.5F, -2.5F, -0.5F, 3.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.5F, -1.5F, -6.5F));
 
         PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(52, 65).addBox(-2.0F, -13.625F, -1.5F, 4.0F, 5.0F, 3.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 24).addBox(-10.0F, -8.625F, -1.5F, 20.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -13.375F, -0.5F));
@@ -40,6 +33,12 @@ public class AlienModel<T extends AlienEntity> extends HierarchicalModel<T> {
         PartDefinition cube_r1 = body.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(60, 16).addBox(6.0F, -4.0F, -3.0F, 2.0F, 6.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 7.375F, 0.5F, 0.0F, 0.0F, 1.5708F));
 
         PartDefinition cube_r2 = body.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, 30).addBox(-9.0F, -3.0F, -2.0F, 19.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 3.375F, 0.5F, 0.0F, 0.0F, 1.5708F));
+
+        PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-6.0F, -6.0F, -6.0F, 12.0F, 12.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -16.625F, 0.0F));
+
+        PartDefinition eyeL = head.addOrReplaceChild("eyeL", CubeListBuilder.create().texOffs(70, 43).addBox(-1.5F, -2.5F, -0.5F, 3.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(2.5F, -1.5F, -6.5F));
+
+        PartDefinition eyeR = head.addOrReplaceChild("eyeR", CubeListBuilder.create().texOffs(70, 57).addBox(-1.5F, -2.5F, -0.5F, 3.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.5F, -1.5F, -6.5F));
 
         PartDefinition upper = body.addOrReplaceChild("upper", CubeListBuilder.create().texOffs(16, 78).addBox(1.75F, -4.5F, -0.5F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(10, 75).addBox(-4.75F, 1.5F, -0.5F, 3.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
@@ -180,6 +179,7 @@ public class AlienModel<T extends AlienEntity> extends HierarchicalModel<T> {
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {
         body.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+        //head.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
     }
 
     @Override

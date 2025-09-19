@@ -90,12 +90,13 @@ public class TesterEntity extends Animal {
             }
         });
 
+        this.targetSelector.addGoal(0, new NearestAttackableTargetGoal<>(this, AlienEntity.class, true, true));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, false, true));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return PathfinderMob.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 20D)
+                .add(Attributes.MAX_HEALTH, 10D)
                 .add(Attributes.MOVEMENT_SPEED, 0.5D)
                 .add(Attributes.FOLLOW_RANGE, 128D)
                 .add(Attributes.ATTACK_DAMAGE, 8.0D)
@@ -186,14 +187,20 @@ public class TesterEntity extends Animal {
 
     @Override
     public boolean isInvulnerableTo(DamageSource source) {
-        // The mob is only vulnerable to specific damage types
-        return !source.is(DamageTypes.GENERIC_KILL)
+        // Always allow environmental or special damage types
+        if (!source.is(DamageTypes.GENERIC_KILL)
                 && !source.is(DamageTypes.IN_WALL)
                 && !source.is(DamageTypes.OUTSIDE_BORDER)
                 && !source.is(DamageTypes.WITHER_SKULL)
                 && !source.is(DamageTypes.WITHER)
                 && !source.is(DamageTypes.SONIC_BOOM)
-                && !source.is(DamageTypes.FELL_OUT_OF_WORLD);
+                && !(source.getEntity() instanceof AlienEntity)
+                && !source.is(DamageTypes.FELL_OUT_OF_WORLD)) {
+            return true;
+        }
+
+        // If a player is the attacker, make it invulnerable
+        return source.getEntity() instanceof Player;
     }
 
     private void startRetreat(Player player) {
@@ -261,16 +268,18 @@ public class TesterEntity extends Animal {
     }
 
     private void applyBlindness(Player player) {
-        this.level().playSound(
-                null,
-                player.getX(), player.getY(), player.getZ(),
-                SoundEvents.ZOMBIE_VILLAGER_CURE,
-                SoundSource.HOSTILE,
-                0.5F,
-                0.5F
-        );
+        if (!(getTarget() instanceof AlienEntity)) {
+            this.level().playSound(
+                    null,
+                    player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.ZOMBIE_VILLAGER_CURE,
+                    SoundSource.HOSTILE,
+                    0.5F,
+                    0.5F
+            );
 
-        player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, false, false));
+            player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, false, false));
+        }
     }
 
     private void runAwayAndVanish() {

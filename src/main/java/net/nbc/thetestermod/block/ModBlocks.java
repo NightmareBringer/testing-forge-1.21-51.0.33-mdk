@@ -347,7 +347,7 @@ public class ModBlocks
             () -> new ConsoleBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(50f).requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<Block> STEELIUM_CORE = registerBlock("steelium_core",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+            () -> new CoreBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(250f).explosionResistance(100f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_VERT = registerBlock("steelium_energy_tube_vertical",
             () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)

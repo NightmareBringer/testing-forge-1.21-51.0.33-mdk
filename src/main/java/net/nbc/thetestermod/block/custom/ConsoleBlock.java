@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobSpawnType;
@@ -24,6 +25,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.nbc.thetestermod.entity.ModEntities;
 import net.nbc.thetestermod.entity.custom.ChairEntity;
+import net.nbc.thetestermod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -39,22 +41,17 @@ public class ConsoleBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        /*
-        if(!level.isClientSide()) {
-            Entity entity = null;
-            List<ChairEntity> entities = level.getEntities(ModEntities.CHAIR_ENT.get(), new AABB(pos), chair -> true);
-            if(entities.isEmpty()) {
-                entity = ModEntities.CHAIR_ENT.get().spawn((ServerLevel) level, pos, MobSpawnType.TRIGGERED);
-            } else {
-                entity = entities.get(0);
-            }
-
-            player.startRiding(entity);
-        }
-         */
         if (!level.isClientSide) {
             player.displayClientMessage(Component.literal("The console seems to be frozen..."), true);
         }
+        level.playSound(
+                null,
+                pos,
+                ModSounds.CONSOLE_CLICK.get(),
+                SoundSource.BLOCKS,
+                1.0f,
+                1.0f
+        );
 
         return InteractionResult.SUCCESS;
     }

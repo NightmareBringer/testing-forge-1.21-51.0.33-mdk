@@ -11,7 +11,7 @@ import net.nbc.thetestermod.entity.custom.AlienEntity;
 public class AlienRenderer extends MobRenderer<AlienEntity, AlienModel<AlienEntity>> {
 
     public AlienRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new AlienModel<>(pContext.bakeLayer(AlienModel.LAYER_LOCATION)), 1.0f);
+        super(pContext, new AlienModel<>(pContext.bakeLayer(AlienModel.LAYER_LOCATION)), 0.5f);
     }
 
     @Override

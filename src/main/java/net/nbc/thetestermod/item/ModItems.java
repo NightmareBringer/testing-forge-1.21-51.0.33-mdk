@@ -93,7 +93,7 @@ public class ModItems
 
     public static final DeferredItem<SwordItem> PURE_NIGHTMARE_SWORD = ITEMS.register("pure_nightmare_sword",
             () -> new SwordItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 2, -2.6f))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 2, -2.2f))));
     public static final DeferredItem<PickaxeItem> PURE_NIGHTMARE_PICKAXE = ITEMS.register("pure_nightmare_pickaxe",
             () -> new PickaxeItem(ModToolTiers.PURE_NIGHTMARE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 1, -2.5f))));
@@ -281,7 +281,7 @@ public class ModItems
 
     public static final DeferredItem<SwordItem> FALSE_NIGHTMARE_SWORD = ITEMS.register("false_nightmarite_sword",
             () -> new SwordItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 2, -2.2f))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 2, -2.8f))));
     public static final DeferredItem<PickaxeItem> FALSE_NIGHTMARE_PICKAXE = ITEMS.register("false_nightmarite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.FALSE_NIGHTMARE, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.FALSE_NIGHTMARE, 1, -2.9f))));
@@ -297,7 +297,7 @@ public class ModItems
 
     public static final DeferredItem<SwordItem> FALSE_STORM_SWORD = ITEMS.register("false_stormite_sword",
             () -> new SwordItem(ModToolTiers.FALSE_STORM, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.FALSE_STORM, 2, -2.3f))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.FALSE_STORM, 2, -2.6f))));
     public static final DeferredItem<PickaxeItem> FALSE_STORM_PICKAXE = ITEMS.register("false_stormite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.FALSE_STORM, new Item.Properties()
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.FALSE_STORM, 1, -2.8f))));

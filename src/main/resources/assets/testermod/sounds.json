@@ -70,6 +70,20 @@
       "testermod:steel_step4"
     ]
   },
+  "console_click": {
+    "subtitle": "Clicking",
+    "sounds": [
+      "testermod:click1",
+      "testermod:click2",
+      "testermod:click3"
+    ]
+  },
+  "core_hum": {
+    "subtitle": "Energy Core hums",
+    "sounds": [
+      "testermod:core_humming"
+    ]
+  },
   "tester_death_1": {
     "subtitle": "An end",
     "sounds": [
@@ -98,6 +112,30 @@
     "subtitle": " ... ",
     "sounds": [
       "testermod:tester_idle_2"
+    ]
+  },
+  "alien_ambient": {
+    "subtitle": "Alien growls",
+    "sounds": [
+      "testermod:alien_ambient1",
+      "testermod:alien_ambient2"
+
+    ]
+  },
+  "alien_hurt": {
+    "subtitle": "Alien hurts",
+    "sounds": [
+      "testermod:alien_hurt1",
+      "testermod:alien_hurt2",
+      "testermod:alien_hurt3",
+      "testermod:alien_hurt4"
+    ]
+  },
+  "alien_death": {
+    "subtitle": "Alien dies",
+    "sounds": [
+      "testermod:alien_death1",
+      "testermod:alien_death2"
     ]
   },
   "all_hail_squidward": {
