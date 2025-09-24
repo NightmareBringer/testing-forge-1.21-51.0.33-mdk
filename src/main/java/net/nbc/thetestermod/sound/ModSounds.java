@@ -31,10 +31,12 @@ public class ModSounds {
     public static final Supplier<SoundEvent> TESTER_HURT_2 = registerSoundEvent("tester_hurt_2");
     public static final Supplier<SoundEvent> TESTER_DEATH_1 = registerSoundEvent("tester_death_1");
 
-
     public static final Supplier<SoundEvent> ALIEN_AMBIENT = registerSoundEvent("alien_ambient");
     public static final Supplier<SoundEvent> ALIEN_HURT = registerSoundEvent("alien_hurt");
     public static final Supplier<SoundEvent> ALIEN_DEATH = registerSoundEvent("alien_death");
+
+    public static final Supplier<SoundEvent> ARMOR_ALIEN_HURT = registerSoundEvent("armor_alien_hurt");
+    public static final Supplier<SoundEvent> ARMOR_ALIEN_DEATH = registerSoundEvent("armor_alien_death");
 
     public static final Supplier<SoundEvent> STEEL_BREAK = registerSoundEvent("steel_break");
     public static final Supplier<SoundEvent> STEEL_PLACE = registerSoundEvent("steel_place");

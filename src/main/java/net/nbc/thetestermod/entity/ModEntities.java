@@ -4,10 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.nbc.thetestermod.TesterMod;
-import net.nbc.thetestermod.entity.custom.AlienEntity;
-import net.nbc.thetestermod.entity.custom.ChairEntity;
-import net.nbc.thetestermod.entity.custom.TesterEntity;
-import net.nbc.thetestermod.entity.custom.ThrowingKnifeProjectileEntity;
+import net.nbc.thetestermod.entity.custom.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -24,6 +21,10 @@ public class ModEntities {
     public static final Supplier<EntityType<AlienEntity>> ALIEN_MOB =
             ENTITY_TYPES.register("alien_mob", () -> EntityType.Builder.of(AlienEntity::new, MobCategory.MONSTER)
                     .sized(1.0f, 3.6f).build("alien_mob"));
+
+    public static final Supplier<EntityType<ArmoredAlienEntity>> ARMORED_ALIEN_MOB =
+            ENTITY_TYPES.register("armored_alien_mob", () -> EntityType.Builder.of(ArmoredAlienEntity::new, MobCategory.MONSTER)
+                    .sized(1.0f, 3.6f).build("armored_alien_mob"));
 
     public static final Supplier<EntityType<ThrowingKnifeProjectileEntity>> THROWING_KNIFE =
             ENTITY_TYPES.register("throwing_knife", () -> EntityType.Builder.<ThrowingKnifeProjectileEntity>of(ThrowingKnifeProjectileEntity::new, MobCategory.MISC)

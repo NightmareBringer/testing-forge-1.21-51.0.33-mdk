@@ -100,6 +100,7 @@
 
   "item.testermod.tester_spawn_egg": "Spawn Tester",
   "item.testermod.alien_spawn_egg": "Spawn Alien",
+  "item.testermod.armored_alien_spawn_egg": "Spawn Armored Alien",
   "item.testermod.throwing_knife": "Throwing Knife",
   "item.testermod.orb_of_energy": "Orb of Energy",
 
@@ -252,6 +253,7 @@
 
   "entity.testermod.tester_mob": "Tester",
   "entity.testermod.alien_mob": "Alien",
+  "entity.testermod.armored_alien_mob": "Alien",
   "entity.testermod.throwing_knife": "Thrown Knife",
   "entity.testermod.chair_entity": "Gaming Chair",
 

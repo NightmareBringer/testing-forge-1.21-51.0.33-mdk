@@ -138,6 +138,24 @@
       "testermod:alien_death2"
     ]
   },
+  "armor_alien_hurt": {
+    "subtitle": "Alien hurts",
+    "sounds": [
+      "testermod:armor_alien_hurt1",
+      "testermod:armor_alien_hurt2",
+      "testermod:armor_alien_hurt3",
+      "testermod:armor_alien_hurt4"
+    ]
+  },
+  "armor_alien_death": {
+    "subtitle": "Alien dies",
+    "sounds": [
+      "testermod:armor_alien_death1",
+      "testermod:armor_alien_death2",
+      "testermod:armor_alien_death3",
+      "testermod:armor_alien_death4"
+    ]
+  },
   "all_hail_squidward": {
     "sounds": [
       {

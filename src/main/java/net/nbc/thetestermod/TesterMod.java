@@ -9,10 +9,7 @@ import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.enchantment.ModEnchantmentEffects;
 import net.nbc.thetestermod.entity.ModEntities;
-import net.nbc.thetestermod.entity.client.AlienRenderer;
-import net.nbc.thetestermod.entity.client.ChairEntRenderer;
-import net.nbc.thetestermod.entity.client.TesterRenderer;
-import net.nbc.thetestermod.entity.client.ThrowingKnifeProjectileRenderer;
+import net.nbc.thetestermod.entity.client.*;
 import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.loot.ModLootConditions;
@@ -121,6 +118,7 @@ public class TesterMod
 
             EntityRenderers.register(ModEntities.TESTER_MOB.get(), TesterRenderer::new);
             EntityRenderers.register(ModEntities.ALIEN_MOB.get(), AlienRenderer::new);
+            EntityRenderers.register(ModEntities.ARMORED_ALIEN_MOB.get(), ArmoredAlienRenderer::new);
             EntityRenderers.register(ModEntities.THROWING_KNIFE.get(), ThrowingKnifeProjectileRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR_ENT.get(), ChairEntRenderer::new);
         }

@@ -184,6 +184,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent(ModItems.TESTER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.ALIEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.ARMORED_ALIEN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> block) {

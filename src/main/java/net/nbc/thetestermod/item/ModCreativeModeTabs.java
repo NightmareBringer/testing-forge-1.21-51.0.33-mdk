@@ -190,6 +190,7 @@ public class ModCreativeModeTabs {
 
 
                         output.accept(ModItems.ALIEN_SPAWN_EGG.get());
+                        output.accept(ModItems.ARMORED_ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.TESTER_SPAWN_EGG.get());
                         output.accept(ModItems.CRIMSON_BLUE_BERRIES.get());
                         output.accept(ModItems.WHITE_CARROT.get());
