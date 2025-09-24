@@ -38,9 +38,9 @@ public class ArmoredAlienRenderer extends MobRenderer<ArmoredAlienEntity, Armore
         
         String path = switch (level) {
             case NONE   -> variant.getPath() + ".png";
-            case LOW    -> variant.getPath() + ".png";
-            case MEDIUM -> variant.getPath() + "_withered_1.png";
-            case HIGH   -> variant.getPath() + "_withered_1.png";
+            case LOW    -> variant.getPath() + "_withered_1.png";
+            case MEDIUM -> variant.getPath() + "_withered_2.png";
+            case HIGH   -> variant.getPath() + "_withered_3.png";
         };
 
         return ResourceLocation.fromNamespaceAndPath(variant.getNamespace(), path);

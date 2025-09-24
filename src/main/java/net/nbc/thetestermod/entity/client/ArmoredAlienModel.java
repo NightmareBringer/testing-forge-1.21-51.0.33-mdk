@@ -36,7 +36,7 @@ public class ArmoredAlienModel<T extends ArmoredAlienEntity> extends Hierarchica
 
         PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-6.0F, -6.0F, -6.0F, 12.0F, 12.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -16.625F, 0.0F));
 
-        PartDefinition headArmor = head.addOrReplaceChild("headArmor", CubeListBuilder.create().texOffs(52, 103).addBox(-6.0F, -7.0F, -9.0F, 12.0F, 13.0F, 1.0F, new CubeDeformation(0.0F))
+        PartDefinition headArmor = head.addOrReplaceChild("headArmor", CubeListBuilder.create().texOffs(52, 103).addBox(-6.0F, -7.0F, -9.5F, 12.0F, 13.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(104, 100).addBox(-6.0F, -7.0F, 7.0F, 12.0F, 13.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
         PartDefinition cube_r3 = headArmor.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(0, 76).addBox(-6.0F, -8.0F, 0.0F, 12.0F, 16.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 6.0F, -1.0F, -1.5708F, 0.0F, 0.0F));
@@ -139,7 +139,7 @@ public class ArmoredAlienModel<T extends ArmoredAlienEntity> extends Hierarchica
 
         PartDefinition lower = body.addOrReplaceChild("lower", CubeListBuilder.create(), PartPose.offset(0.0F, 5.375F, 0.5F));
 
-        PartDefinition armR = body.addOrReplaceChild("armR", CubeListBuilder.create().texOffs(44, 117).addBox(-2.0F, -0.75F, -2.5F, 4.0F, 13.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-10.75F, -8.625F, 0.0F));
+        PartDefinition armR = body.addOrReplaceChild("armR", CubeListBuilder.create().texOffs(46, 119).addBox(-2.0F, -0.75F, -1.5F, 4.0F, 13.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(-10.75F, -8.625F, 0.0F));
 
         PartDefinition armRarmor = armR.addOrReplaceChild("armRarmor", CubeListBuilder.create().texOffs(142, 97).addBox(-2.75F, 8.375F, -2.5F, 5.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
                 .texOffs(86, 34).addBox(-1.75F, -6.625F, -2.5F, 5.0F, 2.0F, 5.0F, new CubeDeformation(0.0F))
@@ -191,11 +191,11 @@ public class ArmoredAlienModel<T extends ArmoredAlienEntity> extends Hierarchica
 
         PartDefinition legR = body.addOrReplaceChild("legR", CubeListBuilder.create().texOffs(158, 53).addBox(-0.9286F, 19.2143F, -1.4286F, 2.0F, 1.0F, 3.0F, new CubeDeformation(0.0F))
                 .texOffs(84, 158).addBox(-0.9286F, 18.2143F, -1.4286F, 2.0F, 1.0F, 3.0F, new CubeDeformation(0.0F))
-                .texOffs(44, 135).addBox(1.0714F, -1.5357F, -2.9286F, 1.0F, 12.0F, 5.0F, new CubeDeformation(0.0F))
+                .texOffs(44, 135).addBox(0.5714F, -1.5357F, -2.9286F, 1.0F, 12.0F, 5.0F, new CubeDeformation(0.0F))
                 .texOffs(20, 117).addBox(-0.9286F, -2.5357F, -1.9286F, 2.0F, 21.0F, 4.0F, new CubeDeformation(0.0F))
-                .texOffs(86, 136).addBox(-1.9286F, -1.5357F, -1.9286F, 1.0F, 12.0F, 4.0F, new CubeDeformation(0.0F))
+                .texOffs(86, 136).addBox(-1.6786F, -1.5357F, -1.9286F, 1.0F, 12.0F, 4.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 146).addBox(-1.9286F, -1.5357F, 2.0714F, 4.0F, 12.0F, 1.0F, new CubeDeformation(0.0F))
-                .texOffs(144, 148).addBox(-1.9286F, -1.5357F, -2.9286F, 3.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-4.0714F, 14.1607F, -0.0714F));
+                .texOffs(145, 148).addBox(-1.4286F, -1.5357F, -2.9286F, 2.0F, 12.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-4.0714F, 14.1607F, -0.0714F));
 
         PartDefinition legRarmor = legR.addOrReplaceChild("legRarmor", CubeListBuilder.create().texOffs(12, 142).addBox(-1.9917F, -7.625F, 3.1248F, 4.0F, 13.0F, 2.0F, new CubeDeformation(0.0F))
                 .texOffs(112, 70).addBox(-1.9917F, -7.625F, -5.1252F, 4.0F, 13.0F, 6.0F, new CubeDeformation(0.0F))
