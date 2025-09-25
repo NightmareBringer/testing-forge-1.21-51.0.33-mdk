@@ -2,6 +2,7 @@ package net.nbc.thetestermod.enchantment;
 
 import com.mojang.serialization.MapCodec;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.enchantment.custom.FortificationEnchantmentEffect;
 import net.nbc.thetestermod.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -16,6 +17,10 @@ public class ModEnchantmentEffects {
 
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantmentEffect.CODEC);
+
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> FORTIFICATION =
+            ENTITY_ENCHANTMENT_EFFECTS.register("fortification", () -> FortificationEnchantmentEffect.CODEC);
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_ENCHANTMENT_EFFECTS.register(eventBus);

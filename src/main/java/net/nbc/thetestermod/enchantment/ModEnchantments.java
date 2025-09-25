@@ -1,6 +1,5 @@
 package net.nbc.thetestermod.enchantment;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -8,21 +7,24 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
-import net.minecraft.world.item.enchantment.EnchantmentTarget;
-import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 import net.nbc.thetestermod.TesterMod;
+import net.nbc.thetestermod.enchantment.custom.FortificationEnchantmentEffect;
 import net.nbc.thetestermod.enchantment.custom.LightningStrikerEnchantmentEffect;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+
+import java.util.Collections;
 
 public class ModEnchantments
 {
     public static final ResourceKey<Enchantment> LIGHTNING_STRIKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "lightning_striker"));
+
+    public static final ResourceKey<Enchantment> FORTIFICATION = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "fortification"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantments = context.lookup(Registries.ENCHANTMENT);
@@ -40,6 +42,20 @@ public class ModEnchantments
                 .exclusiveWith(HolderSet.direct(enchantments.getOrThrow(Enchantments.FLAME)))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                         EnchantmentTarget.VICTIM, new LightningStrikerEnchantmentEffect()));
+
+        register(context, FORTIFICATION, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(ItemTags.ARMOR_ENCHANTABLE),
+                        5,
+                        3,
+                        Enchantment.dynamicCost(5, 8),
+                        Enchantment.dynamicCost(25, 8),
+                        2,
+                        EquipmentSlotGroup.ARMOR))
+                .exclusiveWith(HolderSet.direct(enchantments.getOrThrow(Enchantments.UNBREAKING)))
+                .exclusiveWith(HolderSet.direct(enchantments.getOrThrow(Enchantments.BINDING_CURSE)))
+                .withEffect(EnchantmentEffectComponents.PREVENT_ARMOR_CHANGE)
+                .withEffect(EnchantmentEffectComponents.TICK, new FortificationEnchantmentEffect())
+                );
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "testermod:lightning_striker"
+    "testermod:lightning_striker",
+    "testermod:fortification"
   ]
 }

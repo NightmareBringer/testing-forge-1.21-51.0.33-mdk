@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.event;
 
+import com.mojang.blaze3d.shaders.Effect;
 import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -95,13 +96,14 @@ public class ModClientEvents {
             boolean hasImpurification = player.getActiveEffects().stream()
                     .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == ModEffects.IMPURIFICATION_EFFECT);
 
-            if (hasPurification) {
+            if ((hasPurification) && (player.getActiveEffects().stream()
+                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == MobEffectCategory.BENEFICIAL))) {
                 player.removeEffect(event.getEffectInstance().getEffect());
-            } else if (hasImpurification) {
-                player.removeEffect(event.getEffectInstance().is(MobEffectCategory.BENEFICIAL));
+            } else if ((hasImpurification) && (player.getActiveEffects().stream()
+                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == MobEffectCategory.BENEFICIAL))) {
+                player.removeEffect(event.getEffectInstance().getEffect());
             }
         }
-    }
-    */
+    } */
 
 }

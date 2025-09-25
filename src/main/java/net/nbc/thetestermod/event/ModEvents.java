@@ -1,8 +1,18 @@
 package net.nbc.thetestermod.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
+import net.nbc.thetestermod.enchantment.ModEnchantments;
+import net.nbc.thetestermod.enchantment.custom.FortificationEnchantmentEffect;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.item.custom.HammerItem;
 import net.nbc.thetestermod.potion.ModPotions;
@@ -28,12 +38,14 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
 
 @EventBusSubscriber(modid = TesterMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEvents {
@@ -61,7 +73,7 @@ public class ModEvents {
             }
         }
     }
-
+    /*
     @SubscribeEvent
     public static void livingDamage(LivingDamageEvent.Pre event) {
         if(event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
@@ -71,7 +83,7 @@ public class ModEvents {
                 player.getMainHandItem().shrink(1);
             }
         }
-    }
+    } */
 
     @SubscribeEvent
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
