@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/neptochrome_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/neptochrome_block"
+    },
+    "type=top": {
+      "model": "testermod:block/neptochrome_slab_top"
+    }
+  }
+}

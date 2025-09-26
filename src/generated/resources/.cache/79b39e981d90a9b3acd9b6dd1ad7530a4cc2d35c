@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-23T17:39:42.1034022	Item Models: testermod
+// 1.21.1	2025-09-25T20:23:44.6275775	Item Models: testermod
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/alien_spawn_egg.json
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/armored_alien_spawn_egg.json
@@ -121,6 +121,10 @@ e0992668768817c350d626e186d7c822fe8820a2 assets/testermod/models/item/indigo_bri
 0b84c82b685f3557a12c76dd9c2c385d9071aef7 assets/testermod/models/item/krabs.json
 fc9d1758f200a445ad7ddfd775e884ab7ff77444 assets/testermod/models/item/mysterious_dust.json
 87c0d3d8910970f0bd4327d428e1b62cb04bdc2b assets/testermod/models/item/mysterious_string.json
+f57ca8dece6516938991d505abf24e79ea7cc8ba assets/testermod/models/item/neptochrome_bars.json
+18f6fb6d6f9ff823065078e36792e3fa7b62926e assets/testermod/models/item/neptochrome_button.json
+9a1ecfb64425cc773e1b027748691a2b1a4d57f9 assets/testermod/models/item/neptochrome_door.json
+a0ce432dcd3f774b2701aa1d8a9edb787af65523 assets/testermod/models/item/neptochrome_wall.json
 1c1e127e8338bde2aef49df8d66d5a804108bd2c assets/testermod/models/item/nighten_armor_trim_smithing_template.json
 0adaff6afb0189ff5570ae8c26055c601440a695 assets/testermod/models/item/nightmare_axe.json
 fb71e9be16f2d76b7f65353dbbe769ba150375d4 assets/testermod/models/item/nightmare_boots.json

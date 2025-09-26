@@ -531,6 +531,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModBlocks.STEELIUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_BARS.get())
+                .pattern(" / ")
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FALSE_STORMITE_BLOCK.get())
                 .pattern("///")
                 .pattern("///")
@@ -932,6 +939,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
         wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEELIUM_WALL.get(), ModBlocks.STEELIUM_BLOCK.get());
 
+        stairBuilder(ModBlocks.NEPTOCHROME_STAIRS.get(), Ingredient.of(ModBlocks.NEPTOCHROME_BLOCK.get())).group("neptochrome_block")
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NEPTOCHROME_SLAB.get(), ModBlocks.NEPTOCHROME_BLOCK.get());
+
+        buttonBuilder(ModBlocks.NEPTOCHROME_BUTTON.get(), Ingredient.of(ModBlocks.NEPTOCHROME_BLOCK.get())).group("neptochrome_block")
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get(), ModBlocks.NEPTOCHROME_BLOCK.get());
+
+        doorBuilder(ModBlocks.NEPTOCHROME_DOOR.get(), Ingredient.of(ModBlocks.NEPTOCHROME_BLOCK.get())).group("neptochrome_block")
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.NEPTOCHROME_TRAPDOOR.get(), Ingredient.of(ModBlocks.NEPTOCHROME_BLOCK.get())).group("neptochrome_block")
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NEPTOCHROME_WALL.get(), ModBlocks.NEPTOCHROME_BLOCK.get());
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.35f, 200, "nightmarite_smelt");
         oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.70f, 100, "nightmarite_blast");

@@ -188,6 +188,28 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
                         output.accept(ModBlocks.STEELIUM_CONSOLE.get());
 
+                        output.accept(ModBlocks.NEPTOCHROME_BLOCK.get());
+                        output.accept(ModBlocks.NEPTOCHROME_STAIRS.get());
+                        output.accept(ModBlocks.NEPTOCHROME_SLAB.get());
+                        output.accept(ModBlocks.NEPTOCHROME_WALL.get());
+                        output.accept(ModBlocks.NEPTOCHROME_DOOR.get());
+                        output.accept(ModBlocks.NEPTOCHROME_TRAPDOOR.get());
+                        output.accept(ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.NEPTOCHROME_BUTTON.get());
+                        output.accept(ModBlocks.NEPTOCHROME_BARS.get());
+                        output.accept(ModBlocks.NEPTOCHROME_CORE.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BR.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TR.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TL.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
+                        output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
+                        output.accept(ModBlocks.NEPTOCHROME_CONSOLE.get());
+
 
                         output.accept(ModItems.ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.ARMORED_ALIEN_SPAWN_EGG.get());

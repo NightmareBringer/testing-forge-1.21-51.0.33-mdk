@@ -168,6 +168,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.INDIGO_BRICK_STAIRS);
         blockItem(ModBlocks.INDIGO_BRICK_SlAB);
 
+        blockWithItem(ModBlocks.FALSE_STORMITE_BLOCK);
+        blockWithItem(ModBlocks.FALSE_NIGHTMARITE_BLOCK);
+
         blockWithItem(ModBlocks.STEELIUM_BLOCK);
         blockWithItem(ModBlocks.STEELIUM_CORE);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_VERT);
@@ -180,9 +183,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T);
-
-        blockWithItem(ModBlocks.FALSE_STORMITE_BLOCK);
-        blockWithItem(ModBlocks.FALSE_NIGHTMARITE_BLOCK);
 
         paneBlockWithRenderType(
                 ModBlocks.STEELIUM_BARS.get(),
@@ -206,6 +206,43 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STEELIUM_SlAB);
         blockItem(ModBlocks.STEELIUM_PRESSURE_PLATE);
         blockItem(ModBlocks.STEELIUM_TRAPDOOR, "_bottom");
+
+        blockWithItem(ModBlocks.NEPTOCHROME_BLOCK);
+        blockWithItem(ModBlocks.NEPTOCHROME_CORE);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BR);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TR);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TL);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R);
+        blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T);
+
+        paneBlockWithRenderType(
+                ModBlocks.NEPTOCHROME_BARS.get(),
+                modLoc("block/neptochrome_bars"),
+                modLoc("block/neptochrome_bars"),
+                "cutout"
+        );
+
+        stairsBlock(ModBlocks.NEPTOCHROME_STAIRS.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
+        slabBlock(ModBlocks.NEPTOCHROME_SLAB.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
+
+        buttonBlock(ModBlocks.NEPTOCHROME_BUTTON.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
+
+        wallBlock(ModBlocks.NEPTOCHROME_WALL.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
+
+        doorBlockWithRenderType(ModBlocks.NEPTOCHROME_DOOR.get(), modLoc("block/neptochrome_door_bottom"), modLoc("block/neptochrome_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.NEPTOCHROME_TRAPDOOR.get(), modLoc("block/neptochrome_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.NEPTOCHROME_STAIRS);
+        blockItem(ModBlocks.NEPTOCHROME_SLAB);
+        blockItem(ModBlocks.NEPTOCHROME_PRESSURE_PLATE);
+        blockItem(ModBlocks.NEPTOCHROME_TRAPDOOR, "_bottom");
+
 
     }
 

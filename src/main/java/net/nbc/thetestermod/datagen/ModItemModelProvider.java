@@ -178,6 +178,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         //withExistingParent(ModBlocks.STEELIUM_BARS.getId().getPath(), mcLoc("item/steelium_bars"));
         basicItem(Item.byBlock(ModBlocks.STEELIUM_BARS.get()));
 
+        buttonItem(ModBlocks.NEPTOCHROME_BUTTON, ModBlocks.NEPTOCHROME_BLOCK);
+        wallItem(ModBlocks.NEPTOCHROME_WALL, ModBlocks.NEPTOCHROME_BLOCK);
+        simpleBlockItem(ModBlocks.NEPTOCHROME_DOOR);
+
+        basicItem(Item.byBlock(ModBlocks.NEPTOCHROME_BARS.get()));
+
         saplingItem(ModBlocks.CORRUPTED_OAK_SAPLING);
 
         wallItem(ModBlocks.INDIGO_BRICK_WALL, ModBlocks.INDIGO_BRICKS);

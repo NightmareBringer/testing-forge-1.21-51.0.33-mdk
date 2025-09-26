@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "testermod:block/neptochrome_block",
+    "side": "testermod:block/neptochrome_block",
+    "top": "testermod:block/neptochrome_block"
+  }
+}

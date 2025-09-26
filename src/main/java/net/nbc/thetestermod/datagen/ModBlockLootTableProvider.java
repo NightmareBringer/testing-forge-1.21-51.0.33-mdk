@@ -182,6 +182,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get());
         dropSelf(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
 
+        dropSelf(ModBlocks.NEPTOCHROME_STAIRS.get());
+        dropSelf(ModBlocks.NEPTOCHROME_BARS.get());
+        dropSelf(ModBlocks.NEPTOCHROME_WALL.get());
+        dropSelf(ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.NEPTOCHROME_BUTTON.get());
+        dropSelf(ModBlocks.NEPTOCHROME_TRAPDOOR.get());
+        dropSelf(ModBlocks.NEPTOCHROME_BLOCK.get());
+        dropSelf(ModBlocks.NEPTOCHROME_CONSOLE.get());
+        dropSelf(ModBlocks.NEPTOCHROME_CORE.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BR.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TR.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TL.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
+        dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
+
         dropSelf(ModBlocks.FALSE_STORMITE_BLOCK.get());
         dropSelf(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());
 
@@ -189,6 +209,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.STEELIUM_SlAB.get()));
         this.add(ModBlocks.STEELIUM_DOOR.get(),
                 block -> createDoorTable(ModBlocks.STEELIUM_DOOR.get()));
+
+        this.add(ModBlocks.NEPTOCHROME_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.NEPTOCHROME_SLAB.get()));
+        this.add(ModBlocks.NEPTOCHROME_DOOR.get(),
+                block -> createDoorTable(ModBlocks.NEPTOCHROME_DOOR.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

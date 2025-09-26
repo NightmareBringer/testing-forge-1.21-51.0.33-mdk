@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "neptochrome_block",
+  "key": {
+    "#": {
+      "item": "testermod:neptochrome_block"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "testermod:neptochrome_trapdoor"
+  }
+}
