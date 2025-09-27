@@ -68,9 +68,9 @@ public record FortificationEnchantmentEffect() implements EnchantmentEntityEffec
         float durabilityPercent = (float) (maxDurability - currentDamage) / maxDurability;
 
         boolean boost = switch (i) {
-            case 1 -> durabilityPercent >= 0.85f;
-            case 2 -> durabilityPercent >= 0.75f;
-            case 3 -> durabilityPercent >= 0.50f;
+            case 1 -> durabilityPercent >= 0.90f;
+            case 2 -> durabilityPercent >= 0.80f;
+            case 3 -> durabilityPercent >= 0.70f;
             default -> false;
         };
 

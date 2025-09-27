@@ -278,7 +278,7 @@
 
   "entity.testermod.tester_mob": "Tester",
   "entity.testermod.alien_mob": "Alien",
-  "entity.testermod.armored_alien_mob": "Alien",
+  "entity.testermod.armored_alien_mob": "Armored Alien",
   "entity.testermod.throwing_knife": "Thrown Knife",
   "entity.testermod.chair_entity": "Gaming Chair",
 
@@ -286,9 +286,9 @@
   "entity.minecraft.villager.testermod.gaming_villager_s": "Gaming Villager",
 
 
-  "tooltip.testermod.purifier_block.tooltip": "Enhances items/blocks to their §9purest§r form.",
-  "tooltip.testermod.impurifier_block.tooltip": "Degrades items/blocks to their §4impurest§r form.",
-  "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks.",
+  "tooltip.testermod.purifier_block.tooltip": "§9Purifies§r items",
+  "tooltip.testermod.impurifier_block.tooltip": "§4Impurifies§r items",
+  "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks",
   "tooltip.testermod.chisel.shift_down2": "Only has two uses however",
   "tooltip.testermod.chisel": "Press SHIFT for more info",
   "tooltip.testermod.krabs1": "A particular§c crustacean§r from under the sea...",

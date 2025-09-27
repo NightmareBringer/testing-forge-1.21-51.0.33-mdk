@@ -1,0 +1,9 @@
+{
+  "type": "testermod:purifier_block",
+  "ingredient": {
+    "item": "testermod:stormite"
+  },
+  "result": {
+    "id": "testermod:pure_stormite"
+  }
+}

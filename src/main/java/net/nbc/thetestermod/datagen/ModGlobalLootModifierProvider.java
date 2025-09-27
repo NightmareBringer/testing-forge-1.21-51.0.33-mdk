@@ -136,7 +136,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
         add("energy_orb_from_from_charged_creeper", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/creeper"))
-                        .and(LootItemRandomChanceCondition.randomChance(0.6f)).build(), new ChargedCreeperCondition() },
+                        .and(LootItemRandomChanceCondition.randomChance(0.8f)).build(), new ChargedCreeperCondition() },
                 ModItems.ENERGY_ORB.get()));
 
         add("nightmare_trim_from_spider", new AddItemModifier(new LootItemCondition[] {

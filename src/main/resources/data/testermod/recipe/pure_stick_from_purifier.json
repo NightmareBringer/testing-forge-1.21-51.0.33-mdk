@@ -1,0 +1,9 @@
+{
+  "type": "testermod:purifier_block",
+  "ingredient": {
+    "item": "testermod:strange_stick"
+  },
+  "result": {
+    "id": "testermod:pure_stick"
+  }
+}
