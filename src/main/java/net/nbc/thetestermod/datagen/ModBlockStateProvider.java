@@ -243,6 +243,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.NEPTOCHROME_PRESSURE_PLATE);
         blockItem(ModBlocks.NEPTOCHROME_TRAPDOOR, "_bottom");
 
+        blockWithItem(ModBlocks.STEELIUM_VAULT);
+        blockWithItem(ModBlocks.NEPTOCHROME_VAULT);
+        wallBlock(ModBlocks.STEELIUM_VAULT_WALL.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
+        wallBlock(ModBlocks.NEPTOCHROME_VAULT_WALL.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
+
 
     }
 

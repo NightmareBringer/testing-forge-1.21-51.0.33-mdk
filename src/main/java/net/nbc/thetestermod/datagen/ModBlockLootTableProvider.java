@@ -202,6 +202,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
         dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
 
+        dropSelf(ModBlocks.STEELIUM_VAULT.get());
+        dropSelf(ModBlocks.STEELIUM_VAULT_WALL.get());
+        dropSelf(ModBlocks.NEPTOCHROME_VAULT.get());
+        dropSelf(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
+
         dropSelf(ModBlocks.FALSE_STORMITE_BLOCK.get());
         dropSelf(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());
 

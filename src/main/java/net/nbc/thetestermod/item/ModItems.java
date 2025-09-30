@@ -337,6 +337,13 @@ public class ModItems
             () -> new ModArmorItem(ModArmorMaterials.FALSE_NIGHTMARE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
 
+    public static final DeferredItem<PickaxeItem> STEELICHROME_PICKAXE = ITEMS.register("steelichrome_pickaxe",
+            () -> new SpecialPickaxeItem(ModToolTiers.STEELIUM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STEELIUM, 1, -2.9f))));
+
+    public static final DeferredItem<Item> STEELICHROME_KEYS = ITEMS.register("steelichrome_keys",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
     public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
             () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0x000000, 0xfafafa, new Item.Properties()));
 

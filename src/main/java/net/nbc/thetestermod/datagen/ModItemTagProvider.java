@@ -26,8 +26,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.IMPURE_NIGHTMARITE.get())
                 .add(ModItems.NIGHTMARITE.get())
-                .add(ModItems.STORMITE.get());
+                .add(ModItems.STORMITE.get())
+                .add(ModItems.PURE_STORMITE.get())
+                .add(ModItems.STRANGE_STICK.get())
+                .add(Items.LEATHER)
+                .add(Items.ROTTEN_FLESH)
+                .add(Items.ENDER_PEARL);
 
         tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.NIGHTMARE_HELMET.get())

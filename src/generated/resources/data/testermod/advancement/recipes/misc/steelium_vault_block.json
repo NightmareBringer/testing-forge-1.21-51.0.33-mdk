@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steelichrome_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:steelichrome_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:steelium_vault_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steelichrome_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:steelium_vault_block"
+    ]
+  }
+}

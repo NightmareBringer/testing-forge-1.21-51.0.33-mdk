@@ -8,7 +8,7 @@ import net.neoforged.neoforge.common.SimpleTier;
 import net.nbc.thetestermod.util.ModTags;
 
 public class ModToolTiers {
-    // ===== REG NIGHTMARE =====
+    // ===== IMPURE NIGHTMARE =====
     public static final Tier NIGHTMARE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_NIGHTMARE_TOOL,
             2150, 30f, 7f, 10, () -> Ingredient.of(ModItems.NIGHTMARE_INGOT));
 
@@ -39,6 +39,5 @@ public class ModToolTiers {
             200, 15f, 3f, 22, () -> Ingredient.of(Items.STICK));
 
     public static final Tier STEELIUM = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_STEELIUM_TOOL,
-            123, 50f, 5f, 1, () -> Ingredient.of(ModBlocks.STEELIUM_BLOCK));
-
+            64, 50f, 5f, 0, () -> Ingredient.of(ModBlocks.STEELIUM_BLOCK));
 }

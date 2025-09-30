@@ -107,6 +107,9 @@
   "item.testermod.indigo_dust": "Indigo Dust",
   "item.testermod.indigo_brick": "Indigo Brick",
 
+  "item.testermod.steelichrome_pickaxe": "Steelichrome Pickaxe",
+  "item.testermod.steelichrome_keys": "Steelichrome Keys",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite Essence",
   "block.testermod.nightmarite_block": "Block of Nightmarite Essence",
   "block.testermod.nightmare_block": "Block of Nightmarite",
@@ -238,6 +241,12 @@
   "block.testermod.neptochrome_energy_tube_threeway_t": "Neptochrome Energy Tube Three-Way (Top)",
   "block.testermod.neptochrome_energy_tube_threeway_l": "Neptochrome Energy Tube Three-Way (Left)",
   "block.testermod.neptochrome_energy_tube_threeway_r": "Neptochrome Energy Tube Three-Way (Right)",
+
+  "block.testermod.steelium_vault_block": "Steelium Vault",
+  "block.testermod.steelium_vault_wall": "Steelium Vault Wall",
+
+  "block.testermod.neptochrome_vault_block": "Neptochrome Vault",
+  "block.testermod.neptochrome_vault_wall": "Neptochrome Vault Wall",
 
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmarite Ingot Material",

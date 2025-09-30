@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-25T20:23:44.6275775	Item Models: testermod
+// 1.21.1	2025-09-30T06:36:53.989708	Item Models: testermod
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/alien_spawn_egg.json
 88151b9e296cece819c45656a09058d05781fb08 assets/testermod/models/item/all_hail_squidward_music_disc.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/armored_alien_spawn_egg.json
@@ -124,6 +124,7 @@ fc9d1758f200a445ad7ddfd775e884ab7ff77444 assets/testermod/models/item/mysterious
 f57ca8dece6516938991d505abf24e79ea7cc8ba assets/testermod/models/item/neptochrome_bars.json
 18f6fb6d6f9ff823065078e36792e3fa7b62926e assets/testermod/models/item/neptochrome_button.json
 9a1ecfb64425cc773e1b027748691a2b1a4d57f9 assets/testermod/models/item/neptochrome_door.json
+a0ce432dcd3f774b2701aa1d8a9edb787af65523 assets/testermod/models/item/neptochrome_vault_wall.json
 a0ce432dcd3f774b2701aa1d8a9edb787af65523 assets/testermod/models/item/neptochrome_wall.json
 1c1e127e8338bde2aef49df8d66d5a804108bd2c assets/testermod/models/item/nighten_armor_trim_smithing_template.json
 0adaff6afb0189ff5570ae8c26055c601440a695 assets/testermod/models/item/nightmare_axe.json
@@ -202,9 +203,12 @@ cca747f54b17a3f17d766a278e1b642cb3f5722a assets/testermod/models/item/pure_storm
 68ca2f98dcb6e64ff26c422a070bbc5df369c025 assets/testermod/models/item/refined_nightmare_button.json
 fb7323a46eb2fc55ba332e81d93259941038f98a assets/testermod/models/item/refined_nightmare_fence.json
 424fa7d4ae7cb05be5d34bb5f2137744b2665b48 assets/testermod/models/item/refined_nightmare_wall.json
+4fe8566b3f30ab8c2867acdaad57668a0c9c8c63 assets/testermod/models/item/steelichrome_keys.json
+b1f754cb859863f5290a102c85cc61cf91598703 assets/testermod/models/item/steelichrome_pickaxe.json
 150dc62789f9f7d96c94f90ed08c5416692ac68a assets/testermod/models/item/steelium_bars.json
 39aaf96177a90d62fea98bb942a68f7364ee1f71 assets/testermod/models/item/steelium_button.json
 b6eaa04700027baccf3828fccf8a0f4af08f7311 assets/testermod/models/item/steelium_door.json
+e7ddbaa04ddb8b4fdfe26529d1179b935c7cc94f assets/testermod/models/item/steelium_vault_wall.json
 e7ddbaa04ddb8b4fdfe26529d1179b935c7cc94f assets/testermod/models/item/steelium_wall.json
 1ee3efe32b51fef4b766195addc6482c602c119d assets/testermod/models/item/stormen_armor_trim_smithing_template.json
 365fe2ae2ce63446e83cecd7b225d54bf0a84dfb assets/testermod/models/item/stormite.json

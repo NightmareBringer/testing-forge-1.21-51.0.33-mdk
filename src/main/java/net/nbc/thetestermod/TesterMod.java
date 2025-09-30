@@ -21,6 +21,8 @@ import net.nbc.thetestermod.recipe.ModRecipes;
 import net.nbc.thetestermod.screen.ModMenuTypes;
 import net.nbc.thetestermod.screen.custom.ImpurifierBlockScreen;
 import net.nbc.thetestermod.screen.custom.PurifierBlockScreen;
+import net.nbc.thetestermod.screen.custom.VaultMenu;
+import net.nbc.thetestermod.screen.custom.VaultScreen;
 import net.nbc.thetestermod.sound.ModSounds;
 import net.nbc.thetestermod.util.ModItemProperties;
 import net.nbc.thetestermod.villager.ModVillagers;
@@ -137,6 +139,7 @@ public class TesterMod
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.PURIFIER_BLOCK_MENU.get(), PurifierBlockScreen::new);
             event.register(ModMenuTypes.IMPURIFIER_BLOCK_MENU.get(), ImpurifierBlockScreen::new);
+            event.register(ModMenuTypes.VAULT_BLOCK_MENU.get(), VaultScreen::new);
         }
     }
 }

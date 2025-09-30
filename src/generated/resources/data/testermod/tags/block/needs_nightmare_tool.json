@@ -1,8 +1,6 @@
 {
   "values": [
-    "testermod:stormite_ore",
-    "testermod:stormite_deepslate_ore",
-    "testermod:stormite_end_ore",
-    "testermod:stormite_nether_ore"
+    "minecraft:crying_obsidian",
+    "minecraft:ender_chest"
   ]
 }

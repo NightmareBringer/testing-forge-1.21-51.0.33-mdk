@@ -6,6 +6,7 @@ import net.nbc.thetestermod.screen.custom.PurifierBlockMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
+import net.nbc.thetestermod.screen.custom.VaultMenu;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import net.neoforged.neoforge.network.IContainerFactory;
@@ -22,6 +23,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<ImpurifierBlockMenu>> IMPURIFIER_BLOCK_MENU =
             registerMenuType("impurifier_block_menu", ImpurifierBlockMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<VaultMenu>> VAULT_BLOCK_MENU =
+            registerMenuType("vault_block_menu", VaultMenu::new);
 
     // Helper method to register MenuTypes using NF's DeferredHolder and IMenuTypeExtension
     private static <T extends AbstractContainerMenu> DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(

@@ -166,6 +166,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PEDESTAL_BLOCK.get());
                         output.accept(ModItems.ENERGY_ORB.get());
 
+                        output.accept(ModItems.STEELICHROME_PICKAXE.get());
                         output.accept(ModBlocks.STEELIUM_BLOCK.get());
                         output.accept(ModBlocks.STEELIUM_STAIRS.get());
                         output.accept(ModBlocks.STEELIUM_SlAB.get());
@@ -187,6 +188,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
                         output.accept(ModBlocks.STEELIUM_CONSOLE.get());
+                        output.accept(ModBlocks.STEELIUM_VAULT.get());
+                        output.accept(ModBlocks.STEELIUM_VAULT_WALL.get());
 
                         output.accept(ModBlocks.NEPTOCHROME_BLOCK.get());
                         output.accept(ModBlocks.NEPTOCHROME_STAIRS.get());
@@ -209,7 +212,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
                         output.accept(ModBlocks.NEPTOCHROME_CONSOLE.get());
-
+                        output.accept(ModBlocks.NEPTOCHROME_VAULT.get());
+                        output.accept(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
+                        output.accept(ModItems.STEELICHROME_KEYS.get());
 
                         output.accept(ModItems.ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.ARMORED_ALIEN_SPAWN_EGG.get());

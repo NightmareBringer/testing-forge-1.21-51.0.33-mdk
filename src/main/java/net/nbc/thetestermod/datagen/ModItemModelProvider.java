@@ -82,6 +82,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FALSE_STORMITE_INGOT.get());
         basicItem(ModItems.FALSE_NIGHTMARITE_INGOT.get());
 
+        basicItem(ModItems.STEELICHROME_KEYS.get());
+
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
@@ -144,6 +146,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.FALSE_STORM_HOE);
 
         handheldItem(ModItems.DEVILSKNIFE);
+        handheldItem(ModItems.STEELICHROME_PICKAXE);
 
         // Armor with trimming support
         trimmedArmorItem(ModItems.NIGHTMARE_HELMET);
@@ -183,6 +186,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.NEPTOCHROME_DOOR);
 
         basicItem(Item.byBlock(ModBlocks.NEPTOCHROME_BARS.get()));
+
+        wallItem(ModBlocks.STEELIUM_VAULT_WALL, ModBlocks.STEELIUM_BLOCK);
+        wallItem(ModBlocks.NEPTOCHROME_VAULT_WALL, ModBlocks.NEPTOCHROME_BLOCK);
 
         saplingItem(ModBlocks.CORRUPTED_OAK_SAPLING);
 

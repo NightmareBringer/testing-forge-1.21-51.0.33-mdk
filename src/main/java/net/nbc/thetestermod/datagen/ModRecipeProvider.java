@@ -2,6 +2,7 @@ package net.nbc.thetestermod.datagen;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.item.ModItems;
@@ -10,6 +11,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.nbc.thetestermod.util.ModTags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -537,6 +539,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" / ")
                 .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STEELICHROME_PICKAXE.get())
+                .pattern("SSS")
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .define('S', ModBlocks.STEELIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STEELICHROME_KEYS.get())
+                .pattern("S/ ")
+                .pattern(" N ")
+                .pattern("   ")
+                .define('/', Blocks.CHAIN)
+                .define('S', ModBlocks.STEELIUM_BLOCK.get())
+                .define('N', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_VAULT_WALL.get())
+                .pattern("///")
+                .pattern("///")
+                .pattern("///")
+                .define('/', ModBlocks.STEELIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_VAULT_WALL.get())
+                .pattern("///")
+                .pattern("///")
+                .pattern("///")
+                .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_VAULT.get())
+                .pattern("rSr")
+                .pattern("S/S")
+                .pattern("rSr")
+                .define('/', Items.GLOW_ITEM_FRAME)
+                .define('r', ModBlocks.STEELIUM_VAULT_WALL.get())
+                .define('S', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_VAULT.get())
+                .pattern("rSr")
+                .pattern("S/S")
+                .pattern("rSr")
+                .define('/', Items.GLOW_ITEM_FRAME)
+                .define('r', ModBlocks.NEPTOCHROME_VAULT_WALL.get())
+                .define('S', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FALSE_STORMITE_BLOCK.get())
                 .pattern("///")

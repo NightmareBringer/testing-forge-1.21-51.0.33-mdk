@@ -472,6 +472,20 @@ public class ModBlocks
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
                     .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<Block> STEELIUM_VAULT = registerBlock("steelium_vault_block",
+            () -> new CodeVaultBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<WallBlock> STEELIUM_VAULT_WALL = registerBlock("steelium_vault_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> NEPTOCHROME_VAULT = registerBlock("neptochrome_vault_block",
+            () -> new CodeVaultBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
+                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<WallBlock> NEPTOCHROME_VAULT_WALL = registerBlock("neptochrome_vault_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
+                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+
 
     public static final DeferredBlock<Block> FALSE_STORMITE_BLOCK = registerBlock("false_stormite_block",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)

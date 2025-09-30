@@ -392,12 +392,20 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get())
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
                 .add(ModBlocks.STORM_END_ORE.get())
                 .add(ModBlocks.STORM_NETHER_ORE.get());
 
         tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
                 .add(ModBlocks.STORM_END_ORE.get())
@@ -483,12 +491,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_LAMP.get())
                 .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
-        tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.NIGHTMARITE_ORE.get())
-                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
-                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
-                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get());
-
         // FALSE NIGHTMARE behaves like iron
         tag(ModTags.Blocks.NEEDS_FALSE_NIGHTMARE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
@@ -503,19 +505,69 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_FALSE_STORM_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
 
-        // NIGHTMARE tool can only break stormite ores
-        tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)
+        tag(ModTags.Blocks.NEEDS_STEELIUM_TOOL)
+                .add(ModBlocks.NIGHTMARITE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_END_ORE.get())
+                .add(ModBlocks.NIGHTMARITE_NETHER_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORM_END_ORE.get())
-                .add(ModBlocks.STORM_NETHER_ORE.get());
+                .add(ModBlocks.STORM_NETHER_ORE.get())
+                .add(ModBlocks.STEELIUM_BLOCK.get())
+                .add(ModBlocks.STEELIUM_BARS.get())
+                .add(ModBlocks.STEELIUM_STAIRS.get())
+                .add(ModBlocks.STEELIUM_SlAB.get())
+                .add(ModBlocks.STEELIUM_WALL.get())
+                .add(ModBlocks.STEELIUM_DOOR.get())
+                .add(ModBlocks.STEELIUM_TRAPDOOR.get())
+                .add(ModBlocks.STEELIUM_BUTTON.get())
+                .add(ModBlocks.STEELIUM_PRESSURE_PLATE.get())
+                .add(ModBlocks.STEELIUM_CONSOLE.get())
+                .add(ModBlocks.STEELIUM_CORE.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_VERT.get())
+                .add(ModBlocks.STEELIUM_ENERGY_TUBE_HORI.get())
+                .add(ModBlocks.NEPTOCHROME_BLOCK.get())
+                .add(ModBlocks.NEPTOCHROME_BARS.get())
+                .add(ModBlocks.NEPTOCHROME_STAIRS.get())
+                .add(ModBlocks.NEPTOCHROME_SLAB.get())
+                .add(ModBlocks.NEPTOCHROME_WALL.get())
+                .add(ModBlocks.NEPTOCHROME_DOOR.get())
+                .add(ModBlocks.NEPTOCHROME_TRAPDOOR.get())
+                .add(ModBlocks.NEPTOCHROME_BUTTON.get())
+                .add(ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get())
+                .add(ModBlocks.NEPTOCHROME_CONSOLE.get())
+                .add(ModBlocks.NEPTOCHROME_CORE.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BR.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TR.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TL.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
+
+        // NIGHTMARE tool can only break stormite ores
+        tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)
+                .add(Blocks.CRYING_OBSIDIAN)
+                .add(Blocks.ENDER_CHEST);
+
 
 // Everything else should be incorrect for NIGHTMARE_TOOL
         tag(ModTags.Blocks.INCORRECT_FOR_NIGHTMARE_TOOL)
-                .add(ModBlocks.STORM_WALL.get());
+                .add(Blocks.END_PORTAL_FRAME);
 
         tag(ModTags.Blocks.NEEDS_STORM_TOOL)
-                .add(ModBlocks.STORM_WALL.get())
                 .add(Blocks.REINFORCED_DEEPSLATE)
                 .add(ModBlocks.STEELIUM_BLOCK.get())
                 .add(ModBlocks.STEELIUM_BARS.get())
@@ -628,9 +680,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS).add(ModBlocks.NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.REFINED_NIGHTMARE_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STORM_WALL.get());
-        tag(BlockTags.WALLS).add(ModBlocks.INDIGO_BRICK_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STEELIUM_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.NEPTOCHROME_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.INDIGO_BRICK_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.STEELIUM_VAULT_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CORRUPTED_OAK_LOG.get())

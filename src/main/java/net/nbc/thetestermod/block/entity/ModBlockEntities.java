@@ -4,6 +4,7 @@ import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.nbc.thetestermod.block.entity.custom.CodeVaultBlockEntity;
 import net.nbc.thetestermod.block.entity.custom.ImpurifierBlockEntity;
 import net.nbc.thetestermod.block.entity.custom.PedestalBlockEntity;
 import net.nbc.thetestermod.block.entity.custom.PurifierBlockEntity;
@@ -27,6 +28,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<ImpurifierBlockEntity>> IMPURIFIER_BLOCK_BE =
             BLOCK_ENTITIES.register("impurifier_block_be", () -> BlockEntityType.Builder.of(
                     ImpurifierBlockEntity::new, ModBlocks.IMPURIFIER_BLOCK.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CodeVaultBlockEntity>> VAULT_BLOCK_BE =
+            BLOCK_ENTITIES.register("vault_block_be", () -> BlockEntityType.Builder.of(
+                    CodeVaultBlockEntity::new, ModBlocks.STEELIUM_VAULT.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

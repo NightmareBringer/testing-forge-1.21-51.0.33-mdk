@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:glow_item_frame"
+    },
+    "S": {
+      "item": "minecraft:redstone"
+    },
+    "r": {
+      "item": "testermod:steelium_vault_wall"
+    }
+  },
+  "pattern": [
+    "rSr",
+    "S/S",
+    "rSr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:steelium_vault_block"
+  }
+}

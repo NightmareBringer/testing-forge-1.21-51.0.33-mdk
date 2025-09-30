@@ -1,6 +1,12 @@
 {
   "values": [
+    "testermod:impure_nightmarite",
     "testermod:nightmarite",
-    "testermod:stormite"
+    "testermod:stormite",
+    "testermod:pure_stormite",
+    "testermod:strange_stick",
+    "minecraft:leather",
+    "minecraft:rotten_flesh",
+    "minecraft:ender_pearl"
   ]
 }

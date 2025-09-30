@@ -279,6 +279,7 @@ public class TesterEntity extends Animal {
             );
 
             player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, false, false));
+            player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4, false, false));
         }
     }
 
