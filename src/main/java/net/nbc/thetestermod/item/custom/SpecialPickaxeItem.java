@@ -16,6 +16,9 @@ public class SpecialPickaxeItem extends PickaxeItem {
 
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
+        if (state.is(ModBlocks.STEELIUM_VAULT.get())) {
+            return 1000.0F;
+        }
         if (state.is(ModTags.Blocks.NEEDS_STEELIUM_TOOL)) {
             return 256.0F;
         }

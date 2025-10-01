@@ -1,5 +1,9 @@
 {
   "values": [
+    "testermod:steelium_vault_block",
+    "testermod:steelium_vault_wall",
+    "testermod:neptochrome_vault_block",
+    "testermod:neptochrome_vault_wall",
     "minecraft:bedrock"
   ]
 }

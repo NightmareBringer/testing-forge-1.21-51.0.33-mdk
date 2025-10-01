@@ -1,14 +1,20 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.ReloadableServerRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
+import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.block.custom.WhiteCarrotCropBlock;
+import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -24,6 +30,7 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraft.core.Holder;
+import net.minecraft.world.level.storage.loot.LootContext;
 
 import java.util.Set;
 
@@ -202,7 +209,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
         dropSelf(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
 
-        dropSelf(ModBlocks.STEELIUM_VAULT.get());
+        //  NOT THE CORRECT WAY OF DOING THIS!!! NEED TO ADD testermod:vault_code INTO DATAGEN
+        // INTENDED ERROR IN CASE i RUN DATAGEN BY MISTAKE
+
+        this.add(ModBlocks.STEELIUM_VAULT.get(),
+                block -> createVaultLoot(block)
+        );
+
         dropSelf(ModBlocks.STEELIUM_VAULT_WALL.get());
         dropSelf(ModBlocks.NEPTOCHROME_VAULT.get());
         dropSelf(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
@@ -230,6 +243,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )
         );
+    }
+
+    private LootTable.Builder createVaultLoot(Block block) {
+        return LootTable.lootTable()
+                .withPool(
+                        LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .add(LootItem.lootTableItem(block)
+                                        .apply(CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                                                .include(DataComponents.BLOCK_ENTITY_DATA)) // << copies your NBT
+                                )
+                                .when(ExplosionCondition.survivesExplosion())
+                );
     }
 
     @Override

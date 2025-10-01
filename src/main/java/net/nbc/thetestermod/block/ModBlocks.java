@@ -474,7 +474,7 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> STEELIUM_VAULT = registerBlock("steelium_vault_block",
             () -> new CodeVaultBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(500f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<WallBlock> STEELIUM_VAULT_WALL = registerBlock("steelium_vault_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
