@@ -14,6 +14,7 @@ import net.nbc.thetestermod.item.ModCreativeModeTabs;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.loot.ModLootConditions;
 import net.nbc.thetestermod.loot.ModLootModifiers;
+import net.nbc.thetestermod.packets.ModMessages;
 import net.nbc.thetestermod.particle.ShineParticles;
 import net.nbc.thetestermod.particle.ModParticles;
 import net.nbc.thetestermod.potion.ModPotions;
@@ -88,6 +89,8 @@ public class TesterMod
 
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
+
+        //ModMessages.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

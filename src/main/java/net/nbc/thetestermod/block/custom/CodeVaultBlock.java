@@ -1,29 +1,19 @@
 package net.nbc.thetestermod.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.block.entity.custom.CodeVaultBlockEntity;
-import net.nbc.thetestermod.block.entity.custom.ImpurifierBlockEntity;
-import net.nbc.thetestermod.block.entity.custom.PurifierBlockEntity;
-import net.nbc.thetestermod.screen.custom.VaultScreen;
+import net.nbc.thetestermod.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 public class CodeVaultBlock extends BaseEntityBlock {
@@ -39,42 +29,30 @@ public class CodeVaultBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected RenderShape getRenderShape(BlockState pState) {
+    protected RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos,
-                                              Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
-        if (!pLevel.isClientSide()) {
-            BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof CodeVaultBlockEntity growthChamberBlockEntity) {
-                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(growthChamberBlockEntity, Component.literal("Code Vault")), pPos);
-            } else {
-                throw new IllegalStateException("Our Container provider is missing!");
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos,
+                                              Player player, InteractionHand hand, BlockHitResult hit) {
+        boolean hasKey = player.getMainHandItem().is(ModItems.STEELICHROME_KEYS.get())
+                || player.getOffhandItem().is(ModItems.STEELICHROME_KEYS.get());
+
+        if (!level.isClientSide()) {
+            BlockEntity be = level.getBlockEntity(pos);
+            if (be instanceof CodeVaultBlockEntity vaultBE && player instanceof ServerPlayer serverPlayer) {
+                // record intent for the menu about set-mode
+                vaultBE.setPendingSetMode(hasKey);
+                serverPlayer.openMenu(vaultBE, pos);
             }
         }
 
-        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
-    }
-
-    CodeVaultBlockEntity blockEntity;
-
-    public void removeConnectedWalls(ServerLevel level, int radius) {
-
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Override
-    protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (blockEntity.isUnlocked()) {
-            removeConnectedWalls(level, 10);
-        }
-
-        super.tick(state, level, pos, random);
-    }
-
-    @Override
-    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new CodeVaultBlockEntity(blockPos, blockState);
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new CodeVaultBlockEntity(pos, state);
     }
 }

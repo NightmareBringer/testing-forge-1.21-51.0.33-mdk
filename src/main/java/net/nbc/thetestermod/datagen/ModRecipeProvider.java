@@ -549,9 +549,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STEELICHROME_KEYS.get())
-                .pattern("S/ ")
-                .pattern(" N ")
-                .pattern("   ")
+                .pattern("N/")
+                .pattern(" S")
                 .define('/', Blocks.CHAIN)
                 .define('S', ModBlocks.STEELIUM_BLOCK.get())
                 .define('N', ModBlocks.NEPTOCHROME_BLOCK.get())

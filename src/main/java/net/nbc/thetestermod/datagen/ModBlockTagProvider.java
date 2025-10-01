@@ -132,6 +132,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get())
 
+                .add(ModBlocks.STEELIUM_VAULT.get())
+                .add(ModBlocks.STEELIUM_VAULT_WALL.get())
+                .add(ModBlocks.NEPTOCHROME_VAULT.get())
+                .add(ModBlocks.NEPTOCHROME_VAULT_WALL.get())
+
                 .add(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get())
                 .add(ModBlocks.FALSE_STORMITE_BLOCK.get())
 
@@ -555,7 +560,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
-                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
+                .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get())
+                .add(ModBlocks.STEELIUM_VAULT.get())
+                .add(ModBlocks.STEELIUM_VAULT_WALL.get())
+                .add(ModBlocks.NEPTOCHROME_VAULT.get())
+                .add(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
 
         // NIGHTMARE tool can only break stormite ores
         tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)

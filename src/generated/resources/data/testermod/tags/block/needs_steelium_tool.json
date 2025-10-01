@@ -49,6 +49,10 @@
     "testermod:neptochrome_energy_tube_threeway_l",
     "testermod:neptochrome_energy_tube_threeway_b",
     "testermod:neptochrome_energy_tube_threeway_r",
-    "testermod:neptochrome_energy_tube_threeway_t"
+    "testermod:neptochrome_energy_tube_threeway_t",
+    "testermod:steelium_vault_block",
+    "testermod:steelium_vault_wall",
+    "testermod:neptochrome_vault_block",
+    "testermod:neptochrome_vault_wall"
   ]
 }

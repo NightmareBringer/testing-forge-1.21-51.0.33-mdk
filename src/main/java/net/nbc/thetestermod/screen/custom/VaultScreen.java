@@ -1,38 +1,29 @@
 package net.nbc.thetestermod.screen.custom;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.nbc.thetestermod.TesterMod;
-import net.nbc.thetestermod.block.entity.custom.CodeVaultBlockEntity;
-import org.jetbrains.annotations.Nullable;
+import net.nbc.thetestermod.item.ModItems;
+import net.nbc.thetestermod.packets.custom.CodeEnteredPayload;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 
 public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
     // Store the entered numbers
     private String enteredCode = "";
     private boolean codeCorrect = true;
-    public boolean editMode = false;
+    private String feedbackMessage = "";
 
     private static final ResourceLocation GUI_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,"textures/gui/vault/vault_gui.png");
 
     public VaultScreen(VaultMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
-    }
-
-    private void onNumberPressed(int number) {
-        VaultMenu menu = this.menu;
-        enteredCode += number;
-        menu.broadcastChanges();
-        menu.clickMenuButton(getMinecraft().player, number);
     }
 
     @Override
@@ -52,7 +43,7 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
                 int number = y * 3 + x + 1;
                 this.addRenderableWidget(Button.builder(
                                 Component.literal(String.valueOf(number)),
-                                (button) -> onNumberPressed(number))
+                                (button) -> { feedbackMessage = ""; enteredCode += number; })
                         .pos(startX + x * (buttonWidth + padding), startY + y * (buttonHeight + padding))
                         .size(buttonWidth, buttonHeight)
                         .build());
@@ -62,7 +53,7 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
         // 0 button (centered in bottom row of numbers)
         this.addRenderableWidget(Button.builder(
                         Component.literal("0"),
-                        (button) -> onNumberPressed(0))
+                        (button) -> { feedbackMessage = ""; enteredCode += "0"; })
                 .pos(startX + buttonWidth + padding, startY + 3 * (buttonHeight + padding))
                 .size(buttonWidth, buttonHeight)
                 .build());
@@ -70,23 +61,7 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
         // Enter button
         this.addRenderableWidget(Button.builder(
                         Component.literal("Enter"),
-                        (button) -> {
-                            VaultMenu menu = (VaultMenu) this.menu;
-                            CodeVaultBlockEntity be = menu.getBlockEntity();
-
-                            if (enteredCode.equals(be.getCode())) {
-                                be.unlock();
-                                System.out.println("Correct!");
-                                //removeConnectedWalls(be.getBlockPos(), level);
-                                codeCorrect = true;
-
-                                this.onClose();
-                            } else {
-                                System.out.println("Incorrect!");
-                                codeCorrect = false;
-                            }
-                            enteredCode = "";
-                        })
+                        (button) -> handleEnterPressed())
                 .pos(this.width / 2 - 50, startY + gridHeight + 10)
                 .size(100, buttonHeight)
                 .build());
@@ -100,6 +75,38 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
                 .build());
     }
 
+    private void handleEnterPressed() {
+        feedbackMessage = ""; // reset
+
+        if (enteredCode.isEmpty()) {
+            feedbackMessage = "Code must be at least 1 number!";
+            codeCorrect = false;
+        } else if (enteredCode.length() > 10) {
+            feedbackMessage = "Code mustn't be over 10 numbers!";
+            codeCorrect = false;
+        } else {
+            boolean hasKey = Minecraft.getInstance().player.getMainHandItem().is(ModItems.STEELICHROME_KEYS.get())
+                    || Minecraft.getInstance().player.getOffhandItem().is(ModItems.STEELICHROME_KEYS.get());
+
+            // Send intent to server
+            PacketDistributor.sendToServer(
+                    new CodeEnteredPayload(menu.getBlockEntity().getBlockPos(), enteredCode, hasKey)
+            );
+
+            // Guess result locally
+            codeCorrect = hasKey ||
+                    enteredCode.equals(menu.getBlockEntity().getCurrentCode());
+
+            if (codeCorrect) {
+                this.onClose();
+            } else {
+                feedbackMessage = "Incorrect code!";
+            }
+        }
+
+        enteredCode = "";
+    }
+
     @Override
     public void render(GuiGraphics guiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
         this.renderBackground(guiGraphics, pMouseX, pMouseY, pPartialTick);
@@ -111,8 +118,9 @@ public class VaultScreen extends AbstractContainerScreen<VaultMenu> {
         // Show entered code
         guiGraphics.drawCenteredString(this.font, "Code: " + enteredCode, this.width / 2, 35, 0xFFFFFF00);
 
-        if (!codeCorrect && enteredCode == "") {
-            guiGraphics.drawCenteredString(this.font, "Incorrect code!", this.width / 2, 50, 0xFF0000);
+        if (!feedbackMessage.isEmpty()) {
+            int color = 0xFF0000; // red
+            guiGraphics.drawCenteredString(this.font, feedbackMessage, this.width / 2, 50, color);
         }
     }
 

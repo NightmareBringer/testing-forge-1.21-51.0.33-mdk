@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-30T06:28:38.847016	Recipes
+// 1.21.1	2025-09-30T22:43:55.156194	Recipes
 f842d727088d442ee18daaf52ca2e50d1ef5672e data/minecraft/advancement/recipes/misc/false_nightmare_ingot_from_smithing.json
 cc2e94fc19a00851f49513e6ad7cfb76b45e42de data/minecraft/advancement/recipes/misc/false_storm_ingot_from_smithing.json
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
@@ -295,7 +295,7 @@ dc1e3ae4638c47992e6ca6409d85faaf9d8b5ba1 data/testermod/recipe/refined_nightmare
 c36fb8857e808aad02dc47f13af9a1f188900516 data/testermod/recipe/refined_nightmare_wall.json
 12db84ca129f5b2435138a8c84d6b5c3a8b67e7c data/testermod/recipe/rgc_from_bgc.json
 406b0087ab5645d0a9daacc8708173ec0bf55032 data/testermod/recipe/rgc_from_full_craft.json
-04b1d012943cac27103c3b6b6b811e99aeddfdbb data/testermod/recipe/steelichrome_keys.json
+2372bd33e61e99876c4f6059a93a122b62e5e081 data/testermod/recipe/steelichrome_keys.json
 49fee88479b7e25d1366f7f35fd676c7ebd4eaa1 data/testermod/recipe/steelichrome_pickaxe.json
 d1c05601fb0d1aa0f21edec6289e1de8d5e41048 data/testermod/recipe/steelium_bars.json
 9508bb97e3be4d452c3ab02d57ec0f3f778aa363 data/testermod/recipe/steelium_button.json
