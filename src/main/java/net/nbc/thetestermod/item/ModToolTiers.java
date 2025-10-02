@@ -36,8 +36,8 @@ public class ModToolTiers {
             1366, 25f, 5f, 22, () -> Ingredient.of(ModItems.IMPURE_STICK));
 
     public static final Tier KNIFE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_DEVILSKNIFE_TOOL,
-            200, 15f, 3f, 22, () -> Ingredient.of(Items.STICK));
+            200, 15f, 3f, 22, () -> Ingredient.of(Items.IRON_INGOT));
 
     public static final Tier STEELIUM = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_STEELIUM_TOOL,
-            64, 50f, 5f, 0, () -> Ingredient.of(ModBlocks.STEELIUM_BLOCK));
+            72, 50f, 6f, 0, () -> Ingredient.of(ModItems.STEELICHROME_PICKAXE));
 }

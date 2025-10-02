@@ -3,19 +3,16 @@
   "category": "misc",
   "key": {
     "/": {
-      "item": "minecraft:glow_item_frame"
-    },
-    "S": {
-      "item": "minecraft:redstone"
+      "item": "minecraft:iron_block"
     },
     "r": {
       "item": "testermod:neptochrome_vault_wall"
     }
   },
   "pattern": [
-    "rSr",
-    "S/S",
-    "rSr"
+    "rrr",
+    "r/r",
+    "rrr"
   ],
   "result": {
     "count": 1,

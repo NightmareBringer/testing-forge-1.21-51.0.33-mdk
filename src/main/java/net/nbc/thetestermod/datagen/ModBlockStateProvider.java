@@ -1,7 +1,5 @@
 package net.nbc.thetestermod.datagen;
 
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.block.custom.CrimsonBlueBerryBushBlock;
@@ -243,8 +241,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.NEPTOCHROME_PRESSURE_PLATE);
         blockItem(ModBlocks.NEPTOCHROME_TRAPDOOR, "_bottom");
 
-        blockWithItem(ModBlocks.STEELIUM_VAULT);
-        blockWithItem(ModBlocks.NEPTOCHROME_VAULT);
+        blockWithItem(ModBlocks.STEELIUM_VAULT_BLOCK);
+        blockWithItem(ModBlocks.NEPTOCHROME_VAULT_BLOCK);
         wallBlock(ModBlocks.STEELIUM_VAULT_WALL.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
         wallBlock(ModBlocks.NEPTOCHROME_VAULT_WALL.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
 

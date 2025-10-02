@@ -1,12 +1,17 @@
 package net.nbc.thetestermod.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;
@@ -17,6 +22,8 @@ import net.nbc.thetestermod.block.entity.custom.CodeVaultBlockEntity;
 import net.nbc.thetestermod.component.ModDataComponentTypes;
 import net.nbc.thetestermod.item.ModItems;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class CodeVaultBlock extends BaseEntityBlock {
     public static final MapCodec<CodeVaultBlock> CODEC = simpleCodec(CodeVaultBlock::new);
@@ -63,6 +70,34 @@ public class CodeVaultBlock extends BaseEntityBlock {
                 codeVaultBlockEntity.setCurrentCode(savedCode);
             }
         }
+    }
+
+    @Override
+    public boolean canHarvestBlock(BlockState state, BlockGetter level, BlockPos pos, Player player) {
+        ItemStack held = player.getMainHandItem();
+        return held.is(ModItems.STEELICHROME_PICKAXE.get());
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.testermod.vault_block1").withStyle(ChatFormatting.GRAY));
+        tooltipComponents.add(Component.translatable("tooltip.testermod.vault_block2").withStyle(ChatFormatting.GRAY));
+
+        // Check if VaultCode exists in the item’s components
+        if (stack.has(net.nbc.thetestermod.component.ModDataComponentTypes.VAULT_CODE.get())) {
+            String code = stack.get(net.nbc.thetestermod.component.ModDataComponentTypes.VAULT_CODE.get());
+
+            // Only show if Shift is held
+            if (net.minecraft.client.gui.screens.Screen.hasShiftDown()) {
+                tooltipComponents.add(Component.literal("Hold SHIFT for code: " + code).withStyle(ChatFormatting.GREEN));
+            } else {
+                tooltipComponents.add(Component.literal("Hold SHIFT for code: ").withStyle(ChatFormatting.GRAY));
+            }
+        }
+
+        //tooltipComponents.add(Component.translatable("tooltip.testermod.vault_block_code"));
+
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 
     @Override

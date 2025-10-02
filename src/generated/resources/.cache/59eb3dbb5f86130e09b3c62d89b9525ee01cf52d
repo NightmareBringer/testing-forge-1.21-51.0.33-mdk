@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-01T10:18:12.4339309	Loot Tables
+// 1.21.1	2025-10-02T06:43:22.0502669	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -46,7 +46,7 @@ a110f7bbb739eda735f576e783e4023c632bcbe6 data/testermod/loot_table/blocks/neptoc
 ec1ad29c4cf85ab8fde4b0b84d5fdb9bd6e60a8c data/testermod/loot_table/blocks/neptochrome_slab.json
 dce63d4b2e0ff2126d0e9b7802855999cee63b78 data/testermod/loot_table/blocks/neptochrome_stairs.json
 6736f79e1df51142393ed97fabe13e80f5038eb2 data/testermod/loot_table/blocks/neptochrome_trapdoor.json
-0092dbb0e53bb7659e1e61f02030b4c8dd8714cf data/testermod/loot_table/blocks/neptochrome_vault_block.json
+8ae5956b54b0b4ce516cd18b85f6b15b7618855b data/testermod/loot_table/blocks/neptochrome_vault_block.json
 29f271f07261d7ccd3b611fffd6ee423affaa1be data/testermod/loot_table/blocks/neptochrome_vault_wall.json
 845f3dfde984f8707b050cf0b97dac3bc98e94a3 data/testermod/loot_table/blocks/neptochrome_wall.json
 6f0eb3c79ef8d792f4248ea9e28c4f5a6f45b461 data/testermod/loot_table/blocks/nightmare_block.json
@@ -96,7 +96,7 @@ a89e8aded40b2185b0d2149535c4272d67da860a data/testermod/loot_table/blocks/steeli
 32a21712a29d638871c55b8d9ebc52a85d32ddc6 data/testermod/loot_table/blocks/steelium_slab.json
 0f0e2416888e7f5c3e4469b91a3a54dfc9226db6 data/testermod/loot_table/blocks/steelium_stairs.json
 ac948095e47e33466655d0f6b06fa42ea57db897 data/testermod/loot_table/blocks/steelium_trapdoor.json
-cadb08b9d5165605208fe5459c1a1459bebf82d1 data/testermod/loot_table/blocks/steelium_vault_block.json
+f39d95980d9d344a18c0c2072f3abfbb1c089215 data/testermod/loot_table/blocks/steelium_vault_block.json
 a51e9b3316503236ea83946008de12635a26aace data/testermod/loot_table/blocks/steelium_vault_wall.json
 fe3ad8c18dd6b7a24c881e05ceb3ffca9cd4fc38 data/testermod/loot_table/blocks/steelium_wall.json
 518013a34a3aa900309bdf1ab450b00422683a9c data/testermod/loot_table/blocks/stormite_deepslate_ore.json

@@ -11,6 +11,16 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "minecraft:custom_name",
+                "testermod:vault_code"
+              ],
+              "source": "block_entity"
+            }
+          ],
           "name": "testermod:neptochrome_vault_block"
         }
       ],

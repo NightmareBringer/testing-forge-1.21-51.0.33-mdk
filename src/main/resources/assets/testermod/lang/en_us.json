@@ -295,23 +295,32 @@
   "entity.minecraft.villager.testermod.gaming_villager_s": "Gaming Villager",
 
 
-  "tooltip.testermod.purifier_block.tooltip": "§9Purifies§r items",
-  "tooltip.testermod.impurifier_block.tooltip": "§4Impurifies§r items",
+  "tooltip.testermod.purifier_block.tooltip": "§9Purifies certain items",
+  "tooltip.testermod.impurifier_block.tooltip": "§4Impurifies certain items",
   "tooltip.testermod.chisel.shift_down1": "Has a §2unique§r effect on some blocks",
   "tooltip.testermod.chisel.shift_down2": "Only has two uses however",
   "tooltip.testermod.chisel": "Press SHIFT for more info",
-  "tooltip.testermod.krabs1": "A particular§c crustacean§r from under the sea...",
+  "tooltip.testermod.krabs1": "A shockingly cheap§c crustacean§r...",
   "tooltip.testermod.krabs2": "Probably shouldn't eat it...",
   "tooltip.testermod.nightmare_hammer1": "Breaks blocks in a 3x3 area",
-  "tooltip.testermod.nightmare_hammer2": "Also has a high damage output",
+  "tooltip.testermod.nightmare_hammer2": "Also deals very high damage",
   "tooltip.testermod.storm_hammer1": "Breaks blocks in a 3x3 area",
-  "tooltip.testermod.storm_hammer2": "Also has a very high damage output",
+  "tooltip.testermod.storm_hammer2": "Also deals very high damage",
+
+  "tooltip.testermod.keys1": "Right click any Vault block",
+  "tooltip.testermod.keys2": "with this to change its code",
+
+  "tooltip.testermod.vault_block1": "Stores a changeable code that will",
+  "tooltip.testermod.vault_block2": "break its corresponding Vault Wall",
+
+  "tooltip.testermod.vault_wall_warm1": "Used for Steelium Vault only",
+  "tooltip.testermod.vault_wall_warm2": "Used for Neptochrome Vault only",
 
   "tooltip.testermod.red_gc1.tooltip": "An ordinary §cred§r gaming chair.",
-  "tooltip.testermod.red_gc2.tooltip": "Apparently, a certain doctor §lcan§r fix",
-  "tooltip.testermod.red_gc3.tooltip": "the chair if it starts to squeak...",
+  "tooltip.testermod.red_gc2.tooltip": "Apparently, a certain doctor §lcan§r",
+  "tooltip.testermod.red_gc3.tooltip": "fix the chair if it starts to squeak...",
 
   "tooltip.testermod.blue_gc1.tooltip": "An ordinary §9blue§r gaming chair.",
-  "tooltip.testermod.blue_gc2.tooltip": "Apparently, a certain doctor §ncan't§r fix",
-  "tooltip.testermod.blue_gc3.tooltip": "the chair if it starts to squeak..."
+  "tooltip.testermod.blue_gc2.tooltip": "Apparently, a certain doctor §ncan't§r",
+  "tooltip.testermod.blue_gc3.tooltip": "fix the chair if it starts to squeak..."
 }

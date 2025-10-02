@@ -11,7 +11,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.nbc.thetestermod.util.ModTags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -569,21 +568,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
                 .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_VAULT.get())
-                .pattern("rSr")
-                .pattern("S/S")
-                .pattern("rSr")
-                .define('/', Items.GLOW_ITEM_FRAME)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_VAULT_BLOCK.get())
+                .pattern("rrr")
+                .pattern("r/r")
+                .pattern("rrr")
+                .define('/', Blocks.IRON_BLOCK)
                 .define('r', ModBlocks.STEELIUM_VAULT_WALL.get())
-                .define('S', Items.REDSTONE)
                 .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_VAULT.get())
-                .pattern("rSr")
-                .pattern("S/S")
-                .pattern("rSr")
-                .define('/', Items.GLOW_ITEM_FRAME)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())
+                .pattern("rrr")
+                .pattern("r/r")
+                .pattern("rrr")
+                .define('/', Blocks.IRON_BLOCK)
                 .define('r', ModBlocks.NEPTOCHROME_VAULT_WALL.get())
-                .define('S', Items.REDSTONE)
                 .unlockedBy(getHasName(ModItems.STEELICHROME_PICKAXE.get()), has(ModItems.STEELICHROME_PICKAXE.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FALSE_STORMITE_BLOCK.get())

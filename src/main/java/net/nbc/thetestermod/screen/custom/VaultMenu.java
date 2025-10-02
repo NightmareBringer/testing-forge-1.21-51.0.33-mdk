@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.block.entity.custom.CodeVaultBlockEntity;
@@ -71,6 +72,6 @@ public class VaultMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player player) {
         return stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()),
-                player, ModBlocks.STEELIUM_VAULT.get());
+                player, this.blockEntity.getBlockState().getBlock());
     }
 }

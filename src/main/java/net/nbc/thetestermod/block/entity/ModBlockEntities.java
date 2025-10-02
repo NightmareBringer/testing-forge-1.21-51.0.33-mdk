@@ -31,7 +31,7 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<CodeVaultBlockEntity>> VAULT_BLOCK_BE =
             BLOCK_ENTITIES.register("vault_block_be", () -> BlockEntityType.Builder.of(
-                    CodeVaultBlockEntity::new, ModBlocks.STEELIUM_VAULT.get()).build(null));
+                    CodeVaultBlockEntity::new, ModBlocks.STEELIUM_VAULT_BLOCK.get(), ModBlocks.NEPTOCHROME_VAULT_BLOCK.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

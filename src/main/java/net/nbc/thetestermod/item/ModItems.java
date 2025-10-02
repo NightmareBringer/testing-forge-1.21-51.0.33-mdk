@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.item;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -85,8 +86,8 @@ public class ModItems
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.NIGHTMARE, 8f, -3.5f))) {
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1"));
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer2"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer2").withStyle(ChatFormatting.GRAY));
                     super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
                 }
             });
@@ -111,8 +112,8 @@ public class ModItems
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_NIGHTMARE, 10f, -3.4f))) {
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1"));
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer2"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer1").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.nightmare_hammer2").withStyle(ChatFormatting.GRAY));
                     super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
                 }
             });
@@ -162,8 +163,8 @@ public class ModItems
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.STORM, 10f, -3.4f))) {
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer1"));
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer2"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer1").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer2").withStyle(ChatFormatting.GRAY));
                     super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
                 }
             });
@@ -188,8 +189,8 @@ public class ModItems
                     .attributes(PickaxeItem.createAttributes(ModToolTiers.PURE_STORM, 10f, -3.5f))) {
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer1"));
-                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer2"));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer1").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.storm_hammer2").withStyle(ChatFormatting.GRAY));
                     super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
                 }
             });
@@ -339,10 +340,17 @@ public class ModItems
 
     public static final DeferredItem<PickaxeItem> STEELICHROME_PICKAXE = ITEMS.register("steelichrome_pickaxe",
             () -> new SpecialPickaxeItem(ModToolTiers.STEELIUM, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STEELIUM, 1, -2.9f))));
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.STEELIUM, 1, -3.0f))));
 
     public static final DeferredItem<Item> STEELICHROME_KEYS = ITEMS.register("steelichrome_keys",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new Item(new Item.Properties().stacksTo(1)){
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.keys1").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.keys2").withStyle(ChatFormatting.GRAY));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
             () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0x000000, 0xfafafa, new Item.Properties()));

@@ -1,5 +1,10 @@
 package net.nbc.thetestermod.block;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.material.PushReaction;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.custom.*;
 import net.nbc.thetestermod.item.ModItems;
@@ -21,6 +26,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks
@@ -326,18 +332,18 @@ public class ModBlocks
                     .strength(255f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<DoorBlock> STEELIUM_DOOR = registerBlock("steelium_door",
-            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(-1f)
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<TrapDoorBlock> STEELIUM_TRAPDOOR = registerBlock("steelium_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(-1f)
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<PressurePlateBlock> STEELIUM_PRESSURE_PLATE = registerBlock("steelium_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE).strength(50f).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
     public static final DeferredBlock<ButtonBlock> STEELIUM_BUTTON = registerBlock("steelium_button",
-            () -> new ButtonBlock(BlockSetType.IRON, 40, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
+            () -> new ButtonBlock(BlockSetType.IRON, 40, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON).strength(50f).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
 
     public static final DeferredBlock<IronBarsBlock> STEELIUM_BARS = registerBlock("steelium_bars",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
@@ -400,24 +406,24 @@ public class ModBlocks
                     .strength(255f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<DoorBlock> NEPTOCHROME_DOOR = registerBlock("neptochrome_door",
-            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(-1f)
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(SoundType.COPPER)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<TrapDoorBlock> NEPTOCHROME_TRAPDOOR = registerBlock("neptochrome_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(-1f)
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(SoundType.COPPER)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<PressurePlateBlock> NEPTOCHROME_PRESSURE_PLATE = registerBlock("neptochrome_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE)
-                            .sound(SoundType.COPPER)));
+                            .strength(50f).sound(SoundType.COPPER)));
 
     public static final DeferredBlock<ButtonBlock> NEPTOCHROME_BUTTON = registerBlock("neptochrome_button",
             () -> new ButtonBlock(BlockSetType.IRON, 40,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)
-                            .sound(SoundType.COPPER)));
+                            .strength(50f).sound(SoundType.COPPER)));
 
     public static final DeferredBlock<IronBarsBlock> NEPTOCHROME_BARS = registerBlock("neptochrome_bars",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER_GRATE)
@@ -472,19 +478,31 @@ public class ModBlocks
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
                     .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
-    public static final DeferredBlock<Block> STEELIUM_VAULT = registerBlock("steelium_vault_block",
+    public static final DeferredBlock<Block> STEELIUM_VAULT_BLOCK = registerBlock("steelium_vault_block",
             () -> new CodeVaultBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(500f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).explosionResistance(3600000.0F).pushReaction(PushReaction.IGNORE).requiresCorrectToolForDrops()));
     public static final DeferredBlock<WallBlock> STEELIUM_VAULT_WALL = registerBlock("steelium_vault_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).explosionResistance(3600000.0F).pushReaction(PushReaction.IGNORE).requiresCorrectToolForDrops()){
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.vault_wall_warm1").withStyle(ChatFormatting.RED));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
-    public static final DeferredBlock<Block> NEPTOCHROME_VAULT = registerBlock("neptochrome_vault_block",
+    public static final DeferredBlock<Block> NEPTOCHROME_VAULT_BLOCK = registerBlock("neptochrome_vault_block",
             () -> new CodeVaultBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
-                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).explosionResistance(3600000.0F).pushReaction(PushReaction.IGNORE).requiresCorrectToolForDrops()));
     public static final DeferredBlock<WallBlock> NEPTOCHROME_VAULT_WALL = registerBlock("neptochrome_vault_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
-                    .strength(-1.0f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).explosionResistance(3600000.0F).pushReaction(PushReaction.IGNORE).requiresCorrectToolForDrops()){
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.vault_wall_warm2").withStyle(ChatFormatting.RED));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
 
     public static final DeferredBlock<Block> FALSE_STORMITE_BLOCK = registerBlock("false_stormite_block",

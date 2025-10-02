@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-30T22:43:55.156194	Recipes
+// 1.21.1	2025-10-02T06:43:22.0552627	Recipes
 f842d727088d442ee18daaf52ca2e50d1ef5672e data/minecraft/advancement/recipes/misc/false_nightmare_ingot_from_smithing.json
 cc2e94fc19a00851f49513e6ad7cfb76b45e42de data/minecraft/advancement/recipes/misc/false_storm_ingot_from_smithing.json
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
@@ -239,7 +239,7 @@ a1c00d32fd03642a79e1580fb0ed979cd4ca220b data/testermod/recipe/mysterious_dust_f
 01a4e5c266217bab1533872f86583e4295fc92b0 data/testermod/recipe/neptochrome_slab.json
 ba3a1a0c4f931578772c2b2d26ee68dce9889400 data/testermod/recipe/neptochrome_stairs.json
 1b8f58afbb0bde9b310eecc86e56478c915f15f5 data/testermod/recipe/neptochrome_trapdoor.json
-bffb9f99df0b108f493618135729483fff05bc04 data/testermod/recipe/neptochrome_vault_block.json
+014fbb8683c89ce30838ab4607d63ebabceba304 data/testermod/recipe/neptochrome_vault_block.json
 4b08c7445a0d066fc2406fb7a175889dd4f50c99 data/testermod/recipe/neptochrome_vault_wall.json
 65e129cd57fded8240d8ee9d32167aa7250a0238 data/testermod/recipe/neptochrome_wall.json
 d0c85cfb5d0476b3a9e7ddc9da9fb6a7117d4833 data/testermod/recipe/nighten.json
@@ -304,7 +304,7 @@ b612fe7072101e7d261d52fc20f1bcc12ffcddd3 data/testermod/recipe/steelium_door.jso
 a0008e674046d1a65ff0dc010d8acf2c98116ec9 data/testermod/recipe/steelium_slab.json
 6884066c9e6ab0336b9d366ef2a3e5fff58c254f data/testermod/recipe/steelium_stairs.json
 2b63499eee5de224e6437afd6a545daa14b5467b data/testermod/recipe/steelium_trapdoor.json
-711de68548f2de3e5ffeda7b69f47824463303f9 data/testermod/recipe/steelium_vault_block.json
+2d87dc6db7446d42dad2ba96f6987d30859b1b9a data/testermod/recipe/steelium_vault_block.json
 2ae32c936be419ce67688616a51abff0f2809ea4 data/testermod/recipe/steelium_vault_wall.json
 ac0deb076bb18bd28cb9905eac4b7a1190306291 data/testermod/recipe/steelium_wall.json
 3647d81fa6ebee2c2137eeb72b80d83daddbb540 data/testermod/recipe/sticks_from_corrupted_oak_planks.json

@@ -43,6 +43,11 @@ public class CodeVaultBlockEntity extends BlockEntity implements MenuProvider {
     public void setCurrentCode(String newCode) {
         this.currentCode = newCode;
         setChanged();
+
+        if (this.level != null && !this.level.isClientSide) {
+            BlockState state = this.getBlockState();
+            this.level.sendBlockUpdated(this.worldPosition, state, state, Block.UPDATE_ALL);
+        }
     }
 
     public void setPendingSetMode(boolean value) {
@@ -60,25 +65,22 @@ public class CodeVaultBlockEntity extends BlockEntity implements MenuProvider {
     public void removeConnectedWalls(int radius) {
         if (level == null) return;
 
-        BlockPos center = getBlockPos();
-        BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
-
-        for (int dx = -radius; dx <= radius; dx++) {
-            for (int dy = -radius; dy <= radius; dy++) {
-                for (int dz = -radius; dz <= radius; dz++) {
-                    m.set(center.getX() + dx, center.getY() + dy, center.getZ() + dz);
-                    BlockState state = level.getBlockState(m);
-                    if (state.is(ModBlocks.STEELIUM_VAULT_WALL.get())) {
-                        Block.dropResources(state, level, m, level.getBlockEntity(m));
-
-                        level.playSound(null, m, ModSounds.STEEL_BREAK.get(),
-                                SoundSource.BLOCKS, 0.5f, 1.0f);
-
-                        level.setBlock(m, Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL);
-                    }
-                }
-            }
+        Block wallBlock;
+        if (getBlockState().is(ModBlocks.STEELIUM_VAULT_BLOCK.get())) {
+            wallBlock = ModBlocks.STEELIUM_VAULT_WALL.get();
+        } else if (getBlockState().is(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())) {
+            wallBlock = ModBlocks.NEPTOCHROME_VAULT_WALL.get();
+        } else {
+            return; // Unknown vault type
         }
+
+        BlockPos.betweenClosedStream(worldPosition.offset(-radius, -radius, -radius),
+                        worldPosition.offset(radius, radius, radius))
+                .forEach(pos -> {
+                    if (level.getBlockState(pos).is(wallBlock)) {
+                        level.destroyBlock(pos, true);
+                    }
+                });
         setChanged();
     }
 
@@ -127,7 +129,7 @@ public class CodeVaultBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.testermod.steelium_vault_block");
+        return this.getBlockState().getBlock().getName();
     }
 
     @Override

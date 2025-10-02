@@ -8,7 +8,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
-import net.nbc.thetestermod.item.ModItems;
 
 import java.util.function.Supplier;
 
@@ -188,7 +187,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
                         output.accept(ModBlocks.STEELIUM_CONSOLE.get());
-                        output.accept(ModBlocks.STEELIUM_VAULT.get());
+                        output.accept(ModBlocks.STEELIUM_VAULT_BLOCK.get());
                         output.accept(ModBlocks.STEELIUM_VAULT_WALL.get());
 
                         output.accept(ModBlocks.NEPTOCHROME_BLOCK.get());
@@ -212,7 +211,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
                         output.accept(ModBlocks.NEPTOCHROME_CONSOLE.get());
-                        output.accept(ModBlocks.NEPTOCHROME_VAULT.get());
+                        output.accept(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get());
                         output.accept(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
                         output.accept(ModItems.STEELICHROME_KEYS.get());
 
