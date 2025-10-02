@@ -332,11 +332,11 @@ public class ModBlocks
                     .strength(255f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<DoorBlock> STEELIUM_DOOR = registerBlock("steelium_door",
-            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
+            () -> new SpecialDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<TrapDoorBlock> STEELIUM_TRAPDOOR = registerBlock("steelium_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
+            () -> new SpecialTrapdoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
@@ -406,12 +406,12 @@ public class ModBlocks
                     .strength(255f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<DoorBlock> NEPTOCHROME_DOOR = registerBlock("neptochrome_door",
-            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
+            () -> new SpecialDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(SoundType.COPPER)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<TrapDoorBlock> NEPTOCHROME_TRAPDOOR = registerBlock("neptochrome_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
+            () -> new SpecialTrapdoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(SoundType.COPPER)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
