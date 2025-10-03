@@ -1,21 +1,13 @@
 package net.nbc.thetestermod.item.custom;
 
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.component.DataComponentType;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.enchantment.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.util.ModTags;
-import net.neoforged.neoforge.common.Tags;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public class SpecialPickaxeItem extends PickaxeItem {
