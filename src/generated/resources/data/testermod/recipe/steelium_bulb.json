@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "testermod:steelium_core"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "M": {
+      "item": "testermod:steelium_block"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "MGM",
+    "GCG",
+    "MRM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:steelium_bulb"
+  }
+}

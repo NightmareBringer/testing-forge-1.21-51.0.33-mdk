@@ -139,6 +139,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get())
                 .add(ModBlocks.FALSE_STORMITE_BLOCK.get())
 
+                .add(ModBlocks.STEELIUM_LAMP.get())
+                .add(ModBlocks.NEPTOCHROME_LAMP.get())
+
                 .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
 
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
@@ -192,6 +195,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get())
+                .add(ModBlocks.STEELIUM_LAMP.get())
+                .add(ModBlocks.NEPTOCHROME_LAMP.get())
 
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
@@ -249,6 +254,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get())
+                .add(ModBlocks.STEELIUM_LAMP.get())
+                .add(ModBlocks.NEPTOCHROME_LAMP.get())
 
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
@@ -306,6 +313,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get())
                 .add(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get())
+                .add(ModBlocks.STEELIUM_LAMP.get())
+                .add(ModBlocks.NEPTOCHROME_LAMP.get())
 
                 .add(ModBlocks.STORMITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.STORMITE_ORE.get())
@@ -517,7 +526,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STORM_BUTTON.get())
                 .add(ModBlocks.STORM_PRESSURE_PLATE.get())
                 .add(ModBlocks.STORM_LAMP.get())
-                .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get());
+                .add(ModBlocks.REFINED_NIGHTMARE_BLOCK.get())
+                .add(ModBlocks.STEELIUM_LAMP.get())
+                .add(ModBlocks.NEPTOCHROME_LAMP.get());
 
         // FALSE NIGHTMARE behaves like iron
         tag(ModTags.Blocks.NEEDS_FALSE_NIGHTMARE_TOOL)

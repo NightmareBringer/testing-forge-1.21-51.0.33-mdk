@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steelium_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:steelium_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:steelium_bulb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steelium_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:steelium_bulb"
+    ]
+  }
+}

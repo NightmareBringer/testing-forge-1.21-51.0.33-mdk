@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,powered=false": {
+      "model": "testermod:block/steelium_bulb"
+    },
+    "lit=false,powered=true": {
+      "model": "testermod:block/steelium_bulb_powered"
+    },
+    "lit=true,powered=false": {
+      "model": "testermod:block/steelium_bulb_lit"
+    },
+    "lit=true,powered=true": {
+      "model": "testermod:block/steelium_bulb_lit_powered"
+    }
+  }
+}

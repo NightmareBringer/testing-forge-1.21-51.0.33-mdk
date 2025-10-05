@@ -248,6 +248,9 @@
   "block.testermod.neptochrome_vault_block": "Neptochrome Vault",
   "block.testermod.neptochrome_vault_wall": "Neptochrome Vault Wall",
 
+  "block.testermod.steelium_bulb": "Steelium Energy Bulb",
+  "block.testermod.neptochrome_bulb": "Neptochrome Energy Bulb",
+
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmarite Ingot Material",
   "trim_pattern.testermod.stormen": "Stormen Armor Trim",

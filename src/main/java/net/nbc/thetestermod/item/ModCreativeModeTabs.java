@@ -175,6 +175,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.STEELIUM_BUTTON.get());
                         output.accept(ModBlocks.STEELIUM_BARS.get());
+                        output.accept(ModBlocks.STEELIUM_CONSOLE.get());
                         output.accept(ModBlocks.STEELIUM_CORE.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_VERT.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_HORI.get());
@@ -186,7 +187,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get());
-                        output.accept(ModBlocks.STEELIUM_CONSOLE.get());
+                        output.accept(ModBlocks.STEELIUM_LAMP.get());
                         output.accept(ModBlocks.STEELIUM_VAULT_BLOCK.get());
                         output.accept(ModBlocks.STEELIUM_VAULT_WALL.get());
 
@@ -199,6 +200,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.NEPTOCHROME_BUTTON.get());
                         output.accept(ModBlocks.NEPTOCHROME_BARS.get());
+                        output.accept(ModBlocks.NEPTOCHROME_CONSOLE.get());
                         output.accept(ModBlocks.NEPTOCHROME_CORE.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI.get());
@@ -210,7 +212,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get());
-                        output.accept(ModBlocks.NEPTOCHROME_CONSOLE.get());
+                        output.accept(ModBlocks.NEPTOCHROME_LAMP.get());
                         output.accept(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get());
                         output.accept(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
                         output.accept(ModItems.STEELICHROME_KEYS.get());

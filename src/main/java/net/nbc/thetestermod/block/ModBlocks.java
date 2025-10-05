@@ -512,6 +512,11 @@ public class ModBlocks
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
                     .strength(5f).requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<CopperBulbBlock> STEELIUM_LAMP = registerBlock("steelium_bulb",
+            () -> new CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).sound(ModSounds.STEELIUM_BLOCK_SOUNDS).strength(255.5f)));
+
+    public static final DeferredBlock<CopperBulbBlock> NEPTOCHROME_LAMP = registerBlock("neptochrome_bulb",
+            () -> new CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).sound(SoundType.COPPER_BULB).strength(255.5f)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {

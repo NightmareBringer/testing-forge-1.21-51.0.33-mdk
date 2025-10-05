@@ -834,6 +834,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get()))
                 .save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_LAMP.get())
+                .pattern("MGM")
+                .pattern("GCG")
+                .pattern("MRM")
+                .define('C', ModBlocks.STEELIUM_CORE.get())
+                .define('G', Blocks.GLASS)
+                .define('M', ModBlocks.STEELIUM_BLOCK.get())
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_CORE.get()), has(ModBlocks.STEELIUM_CORE.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_LAMP.get())
+                .pattern("MGM")
+                .pattern("GCG")
+                .pattern("MRM")
+                .define('C', ModBlocks.NEPTOCHROME_CORE.get())
+                .define('G', Blocks.GLASS)
+                .define('M', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_CORE.get()), has(ModBlocks.NEPTOCHROME_CORE.get())).save(pRecipeOutput);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get(), 9)
                 .requires(ModBlocks.NIGHTMARE_BLOCK.get())

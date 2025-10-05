@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-02T06:43:22.0502669	Loot Tables
+// 1.21.1	2025-10-05T09:53:10.1424298	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -28,6 +28,7 @@ d66d2243e9dfc10b76f47db0c55bd250459d55ef data/testermod/loot_table/blocks/magic_
 288ca1c5eee99f978363ee46c1c5a343a3750c77 data/testermod/loot_table/blocks/mysterious_dust_slab.json
 a4dbfa4d90bb0796d445789dac2d90f5d890447f data/testermod/loot_table/blocks/neptochrome_bars.json
 db8fc6fde7b5a759726af169a4de7086ad5fa8cb data/testermod/loot_table/blocks/neptochrome_block.json
+39b551630c16290e92f48cf5171f7649174ae687 data/testermod/loot_table/blocks/neptochrome_bulb.json
 14c003fec093b9965420920f50f1954ce81cbaa5 data/testermod/loot_table/blocks/neptochrome_button.json
 8860726bb02380c7c1205390c43ab183aed7a5d4 data/testermod/loot_table/blocks/neptochrome_console.json
 6c8ef4c2b27a68d8c7cfc173d9cfc3c2b928ed85 data/testermod/loot_table/blocks/neptochrome_core.json
@@ -78,6 +79,7 @@ e68d591af7275f57c6f21ddad207764ba140332d data/testermod/loot_table/blocks/refine
 b146d72767ed682965996ecd5d647c40fc19dfdf data/testermod/loot_table/blocks/refined_nightmare_wall.json
 0f86b3faeda7c48a72f6ff84fdc5eb1f98612bf1 data/testermod/loot_table/blocks/steelium_bars.json
 7f2bd83d371e69d4123019035676a37b1b9e8701 data/testermod/loot_table/blocks/steelium_block.json
+288caa119832723c88d74bed4e7d523b55b3a757 data/testermod/loot_table/blocks/steelium_bulb.json
 21e861a1ffd2c30c8732b99d6d54f10f70faf898 data/testermod/loot_table/blocks/steelium_button.json
 0fabc8d84c5adb084549784677477579c514a071 data/testermod/loot_table/blocks/steelium_console.json
 de615518c033a461de5dc706de5e30c224d6bc3e data/testermod/loot_table/blocks/steelium_core.json

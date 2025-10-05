@@ -32,6 +32,8 @@
     "testermod:storm_button",
     "testermod:storm_pressure_plate",
     "testermod:storm_lamp",
-    "testermod:refined_nightmare_block"
+    "testermod:refined_nightmare_block",
+    "testermod:steelium_bulb",
+    "testermod:neptochrome_bulb"
   ]
 }

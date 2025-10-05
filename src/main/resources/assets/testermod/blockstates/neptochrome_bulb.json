@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,powered=false": {
+      "model": "testermod:block/neptochrome_bulb"
+    },
+    "lit=false,powered=true": {
+      "model": "testermod:block/neptochrome_bulb_powered"
+    },
+    "lit=true,powered=false": {
+      "model": "testermod:block/neptochrome_bulb_lit"
+    },
+    "lit=true,powered=true": {
+      "model": "testermod:block/neptochrome_bulb_lit_powered"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-02T06:43:22.0552627	Recipes
+// 1.21.1	2025-10-05T09:53:10.1484301	Recipes
 f842d727088d442ee18daaf52ca2e50d1ef5672e data/minecraft/advancement/recipes/misc/false_nightmare_ingot_from_smithing.json
 cc2e94fc19a00851f49513e6ad7cfb76b45e42de data/minecraft/advancement/recipes/misc/false_storm_ingot_from_smithing.json
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
@@ -80,6 +80,7 @@ ca24cd3c9fc38c88e389c3b4450c4f8ab1ea410d data/testermod/advancement/recipes/misc
 72508c4cc18bb8b93452e73ae642345915e6912e data/testermod/advancement/recipes/misc/mysterious_dust_from_dust_slab.json
 db932f67d64e376a6fed626945e78d72dcb6470d data/testermod/advancement/recipes/misc/mysterious_string.json
 970d65269973300bb1f9d00d6f58552d6f375be1 data/testermod/advancement/recipes/misc/neptochrome_bars.json
+464124a6b5c0150aa312103c938dfac389c342df data/testermod/advancement/recipes/misc/neptochrome_bulb.json
 2d1179ea39b9ece8959affbceea252f2e2c24bae data/testermod/advancement/recipes/misc/neptochrome_vault_block.json
 9bfd49d25f18f53a332a43a702d1becb845fce9b data/testermod/advancement/recipes/misc/neptochrome_vault_wall.json
 2f635b082d50a9681fc589a8023a47fd30a418b2 data/testermod/advancement/recipes/misc/nighten.json
@@ -122,6 +123,7 @@ be55bb7342cad257c5097bec9b36203723bf5947 data/testermod/advancement/recipes/misc
 971d39891509a900da4b0c1c388378dd2f589139 data/testermod/advancement/recipes/misc/steelichrome_keys.json
 104e5d144ae3be3aba8ab0a39952450c1bb467a8 data/testermod/advancement/recipes/misc/steelichrome_pickaxe.json
 519880cec8b498582987bdb73e619f6706b3a6df data/testermod/advancement/recipes/misc/steelium_bars.json
+1fb33c52d9193c8a1c8ae3dead1d136e8891548b data/testermod/advancement/recipes/misc/steelium_bulb.json
 83025c099ae00aa222ea2ca5aa7d554f4843188f data/testermod/advancement/recipes/misc/steelium_vault_block.json
 a427cdb06286db8171c2a0c67dfa45dffda781a0 data/testermod/advancement/recipes/misc/steelium_vault_wall.json
 fb6d752a64c1306a998916d812f90beac8254a77 data/testermod/advancement/recipes/misc/sticks_from_corrupted_oak_planks.json
@@ -233,6 +235,7 @@ cc2dd1821518bb88a9a79169ad497416d79ade9e data/testermod/recipe/mysterious_dust_b
 a1c00d32fd03642a79e1580fb0ed979cd4ca220b data/testermod/recipe/mysterious_dust_from_dust_slab.json
 173d0cdd6e6d8e596e864118fe97ec60958a2a3c data/testermod/recipe/mysterious_string.json
 8422a7b5862ae2aa23ab1a7975b862c03d02b718 data/testermod/recipe/neptochrome_bars.json
+dd600c138e296b1cb61e0575d940e8ba9a56516a data/testermod/recipe/neptochrome_bulb.json
 7ddc276f891ab32f13c906488715720a860659a5 data/testermod/recipe/neptochrome_button.json
 741afdd7dfe41c4e69fa80bcfa0f18a1e673f550 data/testermod/recipe/neptochrome_door.json
 2d0db92c5b95a280fa33cec4299e3cd4235777fd data/testermod/recipe/neptochrome_pressure_plate.json
@@ -298,6 +301,7 @@ c36fb8857e808aad02dc47f13af9a1f188900516 data/testermod/recipe/refined_nightmare
 2372bd33e61e99876c4f6059a93a122b62e5e081 data/testermod/recipe/steelichrome_keys.json
 49fee88479b7e25d1366f7f35fd676c7ebd4eaa1 data/testermod/recipe/steelichrome_pickaxe.json
 d1c05601fb0d1aa0f21edec6289e1de8d5e41048 data/testermod/recipe/steelium_bars.json
+f85abb163ddaf3f70cfeaae7f2ee18315760d168 data/testermod/recipe/steelium_bulb.json
 9508bb97e3be4d452c3ab02d57ec0f3f778aa363 data/testermod/recipe/steelium_button.json
 b612fe7072101e7d261d52fc20f1bcc12ffcddd3 data/testermod/recipe/steelium_door.json
 789c9a56cb32aa61b93027c853e1217fb91327c3 data/testermod/recipe/steelium_pressure_plate.json

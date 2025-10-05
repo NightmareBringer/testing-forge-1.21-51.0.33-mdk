@@ -218,6 +218,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.FALSE_STORMITE_BLOCK.get());
         dropSelf(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get());
 
+        dropSelf(ModBlocks.STEELIUM_LAMP.get());
+        dropSelf(ModBlocks.NEPTOCHROME_LAMP.get());
+
         this.add(ModBlocks.STEELIUM_SlAB.get(),
                 block -> createSlabItemTable(ModBlocks.STEELIUM_SlAB.get()));
         this.add(ModBlocks.STEELIUM_DOOR.get(),
