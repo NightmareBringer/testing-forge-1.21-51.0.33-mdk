@@ -15,17 +15,44 @@ public class SpecialPickaxeItem extends PickaxeItem {
         super(tier, properties);
     }
 
-    // Create set for vault related blocks
-    private static final Set<Block> VAULT_BLOCKS = Set.of(
+    // Create set for misc related blocks
+    private static final Set<Block> OTHER_BLOCKS = Set.of(
             ModBlocks.STEELIUM_VAULT_BLOCK.get(),
             ModBlocks.NEPTOCHROME_VAULT_BLOCK.get(),
             ModBlocks.STEELIUM_VAULT_WALL.get(),
             ModBlocks.NEPTOCHROME_VAULT_WALL.get(),
-            // I know not vault blocks but whatever
             ModBlocks.STEELIUM_DOOR.get(),
             ModBlocks.STEELIUM_TRAPDOOR.get(),
+            ModBlocks.STEELIUM_BLOCK.get(),
+            ModBlocks.STEELIUM_STAIRS.get(),
+            ModBlocks.STEELIUM_CORE.get(),
+            ModBlocks.STEELIUM_BARS.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_HORI.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_VERT.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L.get(),
+            ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get(),
+            ModBlocks.NEPTOCHROME_BLOCK.get(),
+            ModBlocks.NEPTOCHROME_STAIRS.get(),
+            ModBlocks.NEPTOCHROME_CORE.get(),
+            ModBlocks.NEPTOCHROME_BARS.get(),
             ModBlocks.NEPTOCHROME_DOOR.get(),
-            ModBlocks.NEPTOCHROME_TRAPDOOR.get()
+            ModBlocks.NEPTOCHROME_TRAPDOOR.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BR.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TR.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TL.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get(),
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get()
     );
 
     // Create set for Nightmarite and Stormite ores
@@ -42,8 +69,8 @@ public class SpecialPickaxeItem extends PickaxeItem {
 
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
-        if (VAULT_BLOCKS.contains(state.getBlock())) {
-            return 3600000.0F;
+        if (OTHER_BLOCKS.contains(state.getBlock())) {
+            return 3600000.0F*2;
         }
         if (ORES.contains(state.getBlock())) {
             return 64.0F;

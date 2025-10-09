@@ -171,7 +171,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.STEELIUM_BLOCK);
         blockWithItem(ModBlocks.STEELIUM_CORE);
-        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_VERT);
+        /*blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_VERT);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_HORI);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR);
@@ -181,6 +181,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T);
+         */
+
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_VERT, "steelium_energy_tube_vertical");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_HORI, "steelium_energy_tube_horizontal");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR, "steelium_energy_tube_corner_br");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL, "steelium_energy_tube_corner_bl");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR, "steelium_energy_tube_corner_tr");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL, "steelium_energy_tube_corner_tl");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B, "steelium_energy_tube_threeway_b");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T, "steelium_energy_tube_threeway_t");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L, "steelium_energy_tube_threeway_l");
+        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R, "steelium_energy_tube_threeway_r");
 
         paneBlockWithRenderType(
                 ModBlocks.STEELIUM_BARS.get(),
@@ -247,6 +259,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.NEPTOCHROME_VAULT_WALL.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
 
 
+    }
+
+    private void horizontalBlockOnly(DeferredBlock<? extends Block> block, String name) {
+        horizontalBlock(
+                block.get(),
+                modLoc("block/" + name),
+                modLoc("block/" + name),
+                modLoc("block/" + name)
+        );
     }
 
     private void blockWithTopBottom(DeferredBlock<?> deferredBlock, ResourceLocation side, ResourceLocation top, ResourceLocation bottom) {

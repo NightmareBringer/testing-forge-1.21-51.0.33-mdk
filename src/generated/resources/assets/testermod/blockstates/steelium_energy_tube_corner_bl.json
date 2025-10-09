@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "testermod:block/steelium_energy_tube_corner_bl",
+      "y": 90
+    },
+    "facing=north": {
       "model": "testermod:block/steelium_energy_tube_corner_bl"
+    },
+    "facing=south": {
+      "model": "testermod:block/steelium_energy_tube_corner_bl",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "testermod:block/steelium_energy_tube_corner_bl",
+      "y": 270
     }
   }
 }

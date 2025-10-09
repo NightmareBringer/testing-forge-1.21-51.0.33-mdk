@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "testermod:block/steelium_energy_tube_corner_bl"
+    "front": "testermod:block/steelium_energy_tube_corner_bl",
+    "side": "testermod:block/steelium_energy_tube_corner_bl",
+    "top": "testermod:block/steelium_energy_tube_corner_bl"
   }
 }

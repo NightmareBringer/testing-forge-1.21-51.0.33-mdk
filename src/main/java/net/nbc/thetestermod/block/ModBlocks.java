@@ -316,12 +316,12 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> STEELIUM_BLOCK = registerBlock("steelium_block",
             () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(250f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<StairBlock> STEELIUM_STAIRS = registerBlock("steelium_stairs",
             () -> new StairBlock(ModBlocks.STEELIUM_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                            .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                            .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<SlabBlock> STEELIUM_SlAB = registerBlock("steelium_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
@@ -347,55 +347,55 @@ public class ModBlocks
 
     public static final DeferredBlock<IronBarsBlock> STEELIUM_BARS = registerBlock("steelium_bars",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(255f).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3600000.0F).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<Block> STEELIUM_CONSOLE = registerBlock("steelium_console",
             () -> new ConsoleBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
                     .strength(50f).requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<Block> STEELIUM_CORE = registerBlock("steelium_core",
             () -> new CoreBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(255f).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_VERT = registerBlock("steelium_energy_tube_vertical",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(36000000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_HORI = registerBlock("steelium_energy_tube_horizontal",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(36000000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_BR = registerBlock("steelium_energy_tube_corner_br",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(36000000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_BL = registerBlock("steelium_energy_tube_corner_bl",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(36000000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_TR = registerBlock("steelium_energy_tube_corner_tr",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(36000000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_CORNER_TL = registerBlock("steelium_energy_tube_corner_tl",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(36000000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_B = registerBlock("steelium_energy_tube_threeway_b",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_T = registerBlock("steelium_energy_tube_threeway_t",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_L = registerBlock("steelium_energy_tube_threeway_l",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> STEELIUM_ENERGY_TUBE_THREEWAY_R = registerBlock("steelium_energy_tube_threeway_r",
-            () -> new Block(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+            () -> new RotatableBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_BLOCK = registerBlock("neptochrome_block",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
-                    .strength(250f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<StairBlock> NEPTOCHROME_STAIRS = registerBlock("neptochrome_stairs",
             () -> new StairBlock(ModBlocks.NEPTOCHROME_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.of().sound(SoundType.COPPER)
-                            .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                            .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<SlabBlock> NEPTOCHROME_SLAB = registerBlock("neptochrome_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
@@ -427,7 +427,7 @@ public class ModBlocks
 
     public static final DeferredBlock<IronBarsBlock> NEPTOCHROME_BARS = registerBlock("neptochrome_bars",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER_GRATE)
-                    .strength(255f).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
+                    .strength(3600000.0F).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_CONSOLE = registerBlock("neptochrome_console",
             () -> new ConsoleBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER)
@@ -435,48 +435,48 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> NEPTOCHROME_CORE = registerBlock("neptochrome_core",
             () -> new CoreBlock(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(255f).requiresCorrectToolForDrops()));
+                    .strength(3600000.0F).requiresCorrectToolForDrops()));
 
     // Energy tubes use COPPER_BULB sounds
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_VERT = registerBlock("neptochrome_energy_tube_vertical",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_HORI = registerBlock("neptochrome_energy_tube_horizontal",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_CORNER_BR = registerBlock("neptochrome_energy_tube_corner_br",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_CORNER_BL = registerBlock("neptochrome_energy_tube_corner_bl",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_CORNER_TR = registerBlock("neptochrome_energy_tube_corner_tr",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_CORNER_TL = registerBlock("neptochrome_energy_tube_corner_tl",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_THREEWAY_B = registerBlock("neptochrome_energy_tube_threeway_b",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_THREEWAY_T = registerBlock("neptochrome_energy_tube_threeway_t",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_THREEWAY_L = registerBlock("neptochrome_energy_tube_threeway_l",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> NEPTOCHROME_ENERGY_TUBE_THREEWAY_R = registerBlock("neptochrome_energy_tube_threeway_r",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.COPPER_BULB)
-                    .strength(200f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
+                    .strength(3600000f).explosionResistance(3600000.0F).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> STEELIUM_VAULT_BLOCK = registerBlock("steelium_vault_block",
             () -> new CodeVaultBlock(BlockBehaviour.Properties.of().sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
