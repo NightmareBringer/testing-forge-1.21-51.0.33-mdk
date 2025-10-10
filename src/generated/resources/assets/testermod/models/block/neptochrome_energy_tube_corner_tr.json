@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "testermod:block/neptochrome_energy_tube_corner_tr"
+    "front": "testermod:block/neptochrome_energy_tube_corner_tr",
+    "side": "testermod:block/neptochrome_energy_tube_corner_tr",
+    "top": "testermod:block/neptochrome_energy_tube_corner_tr"
   }
 }

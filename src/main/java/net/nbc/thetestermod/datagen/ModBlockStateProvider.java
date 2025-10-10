@@ -171,7 +171,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.STEELIUM_BLOCK);
         blockWithItem(ModBlocks.STEELIUM_CORE);
-        /*blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_VERT);
+        /*
+        blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_VERT);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_HORI);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR);
@@ -181,18 +182,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R);
         blockWithItem(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T);
-         */
+        */
 
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_VERT, "steelium_energy_tube_vertical");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_HORI, "steelium_energy_tube_horizontal");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR, "steelium_energy_tube_corner_br");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL, "steelium_energy_tube_corner_bl");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR, "steelium_energy_tube_corner_tr");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL, "steelium_energy_tube_corner_tl");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B, "steelium_energy_tube_threeway_b");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T, "steelium_energy_tube_threeway_t");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L, "steelium_energy_tube_threeway_l");
-        horizontalBlockOnly(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R, "steelium_energy_tube_threeway_r");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_VERT, "steelium_energy_tube_vertical");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_HORI, "steelium_energy_tube_horizontal");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BR, "steelium_energy_tube_corner_br");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_BL, "steelium_energy_tube_corner_bl");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TR, "steelium_energy_tube_corner_tr");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_CORNER_TL, "steelium_energy_tube_corner_tl");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_B, "steelium_energy_tube_threeway_b");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T, "steelium_energy_tube_threeway_t");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L, "steelium_energy_tube_threeway_l");
+        normalRotatableBlock(ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R, "steelium_energy_tube_threeway_r");
 
         paneBlockWithRenderType(
                 ModBlocks.STEELIUM_BARS.get(),
@@ -219,6 +220,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.NEPTOCHROME_BLOCK);
         blockWithItem(ModBlocks.NEPTOCHROME_CORE);
+        /*
         blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT);
         blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI);
         blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL);
@@ -229,6 +231,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B);
         blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R);
         blockWithItem(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T);
+        */
+
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT, "neptochrome_energy_tube_vertical");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_HORI, "neptochrome_energy_tube_horizontal");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BR, "neptochrome_energy_tube_corner_br");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_BL, "neptochrome_energy_tube_corner_bl");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TR, "neptochrome_energy_tube_corner_tr");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_CORNER_TL, "neptochrome_energy_tube_corner_tl");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B, "neptochrome_energy_tube_threeway_b");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T, "neptochrome_energy_tube_threeway_t");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L, "neptochrome_energy_tube_threeway_l");
+        normalRotatableBlock(ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R, "neptochrome_energy_tube_threeway_r");
 
         paneBlockWithRenderType(
                 ModBlocks.NEPTOCHROME_BARS.get(),
@@ -261,13 +275,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     }
 
-    private void horizontalBlockOnly(DeferredBlock<? extends Block> block, String name) {
+    private void normalRotatableBlock(DeferredBlock<? extends Block> block, String name) {
         horizontalBlock(
                 block.get(),
                 modLoc("block/" + name),
                 modLoc("block/" + name),
                 modLoc("block/" + name)
         );
+        blockItem(block);
     }
 
     private void blockWithTopBottom(DeferredBlock<?> deferredBlock, ResourceLocation side, ResourceLocation top, ResourceLocation bottom) {

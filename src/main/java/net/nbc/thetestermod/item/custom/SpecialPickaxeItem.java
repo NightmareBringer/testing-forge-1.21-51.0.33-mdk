@@ -37,6 +37,7 @@ public class SpecialPickaxeItem extends PickaxeItem {
             ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get(),
             ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L.get(),
             ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get(),
+            ModBlocks.STEELIUM_LAMP.get(),
             ModBlocks.NEPTOCHROME_BLOCK.get(),
             ModBlocks.NEPTOCHROME_STAIRS.get(),
             ModBlocks.NEPTOCHROME_CORE.get(),
@@ -52,7 +53,8 @@ public class SpecialPickaxeItem extends PickaxeItem {
             ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_B.get(),
             ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get(),
             ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get(),
-            ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get()
+            ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get(),
+            ModBlocks.NEPTOCHROME_LAMP.get()
     );
 
     // Create set for Nightmarite and Stormite ores
@@ -70,7 +72,7 @@ public class SpecialPickaxeItem extends PickaxeItem {
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         if (OTHER_BLOCKS.contains(state.getBlock())) {
-            return 3600000.0F*2;
+            return 3600000.0F*2.5F;
         }
         if (ORES.contains(state.getBlock())) {
             return 64.0F;
