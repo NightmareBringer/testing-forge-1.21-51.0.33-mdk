@@ -4,22 +4,17 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.behavior.warden.SonicBoom;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.IronGolem;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.nbc.thetestermod.effect.ModEffects;
 import net.nbc.thetestermod.entity.ModEntities;
 import net.nbc.thetestermod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
@@ -31,6 +26,12 @@ public class AlienEntity extends Animal {
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
+    private boolean hasSpawnedBaby = false;
+    private boolean isCooldownPaused = false;
+    private int babiesSpawned = 0;
+    private int maxBabiesToSpawn = this.getRandom().nextInt(2, 4);
+    private int maxBirthCooldown = 720;
+    private int birthCooldown = maxBirthCooldown;
 
     @Override
     protected void registerGoals() {
@@ -66,7 +67,7 @@ public class AlienEntity extends Animal {
                 .add(Attributes.ARMOR, 5.0D)
                 //.add(Attributes.BURNING_TIME, 0.0D)
                 //.add(Attributes.ATTACK_SPEED, 4D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D);
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0.35D);
     }
 
     private void setupAnimationStates() {
@@ -93,30 +94,105 @@ public class AlienEntity extends Animal {
     @Override
     public void tick() {
         super.tick();
-        //setupAnimationStates();
+
+        if (this.level().isClientSide) return;
+
+        LivingEntity target = this.getTarget();
+
+        // --- Handle cooldown tick ---
+        if (birthCooldown > 0) {
+            if (target instanceof Player player && this.hasLineOfSight(player)) {
+                if (isCooldownPaused) {
+                    //System.out.println("[AlienDebug] Player visible again — resuming cooldown.");
+                    isCooldownPaused = false;
+                }
+
+                birthCooldown--;
+                if (birthCooldown % 200 == 0) {
+                    //System.out.println("[AlienDebug] Cooldown ticking down: " + birthCooldown);
+                }
+
+            } else {
+                if (!isCooldownPaused) {
+                    //System.out.println("[AlienDebug] Lost sight of player. Cooldown paused at: " + birthCooldown);
+                    isCooldownPaused = true;
+                }
+            }
+        }
+
+        // --- Handle baby spawning ---
+        if (birthCooldown == 0 && !this.isBaby() && babiesSpawned < maxBabiesToSpawn) {
+            //System.out.println("[AlienDebug] Cooldown reached zero. Spawning baby...");
+            spawnBabyAlien();
+            babiesSpawned++;
+           //System.out.println("[AlienDebug] Baby spawned! Total: " + babiesSpawned + "/" + maxBabiesToSpawn);
+
+            birthCooldown = maxBirthCooldown; // Reset after spawn
+            hasSpawnedBaby = true;
+        }
 
         if (this.level().isClientSide()) {
             this.setupAnimationStates();
         }
     }
 
-    /*
-    @Override
-    public boolean isInvulnerableTo(DamageSource source) {
-        // The mob is only vulnerable to specific damage types
-        return !source.is(DamageTypes.GENERIC_KILL)
-                && !source.is(DamageTypes.IN_WALL)
-                && !source.is(DamageTypes.OUTSIDE_BORDER)
-                && !source.is(DamageTypes.WITHER_SKULL)
-                && !source.is(DamageTypes.WITHER)
-                && !source.is(DamageTypes.SONIC_BOOM)
-                && !source.is(DamageTypes.FELL_OUT_OF_WORLD);
-    } */
-
     public boolean doHurtTarget(Entity entity) {
-        //this.level().broadcastEntityEvent(this, (byte)4);
         this.playSound(SoundEvents.WARDEN_ATTACK_IMPACT, 10.0F, this.getVoicePitch());
         return super.doHurtTarget(entity);
+    }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        boolean flag = super.hurt(source, amount);
+
+        if (flag && source.getEntity() instanceof Player player) {
+
+            if (!hasSpawnedBaby && birthCooldown == 0) {
+                hasSpawnedBaby = true;
+                birthCooldown = maxBirthCooldown / 2;
+                //System.out.println("[AlienDebug] First player hit detected. Starting cooldown at half: " + birthCooldown);
+            }
+
+            // --- Reduce cooldown based on damage ---
+            if (birthCooldown > 0) {
+                int reduction = (int) (amount * 10);
+                int prevCooldown = birthCooldown;
+                birthCooldown = Math.max(0, birthCooldown - reduction);
+
+                //System.out.println("[AlienDebug] Alien hit by player. Cooldown reduced from "
+                //        + prevCooldown + " to " + birthCooldown + " (" + reduction + " ticks removed)");
+            }
+        }
+
+        return flag;
+    }
+
+    //Spawns a baby alien near this alien.
+    private void spawnBabyAlien() {
+        AlienEntity babyAlien = ModEntities.ALIEN_MOB.get().create(this.level());
+        if (babyAlien != null) {
+            double spawnX = this.getX() + (this.getRandom().nextDouble() - 0.5D) * 2.0D;
+            double spawnY = this.getY();
+            double spawnZ = this.getZ() + (this.getRandom().nextDouble() - 0.5D) * 2.0D;
+
+            babyAlien.setBaby(true);
+            babyAlien.moveTo(spawnX, spawnY, spawnZ, this.getYRot(), this.getXRot());
+
+            this.level().addFreshEntity(babyAlien);
+
+            this.level().levelEvent(2001, babyAlien.blockPosition(), 0); // small particle effect
+            this.playSound(SoundEvents.TURTLE_EGG_HATCH, 1.0F, 1.2F);
+
+            System.out.println("[AlienDebug] Baby alien successfully spawned at: " +
+                    String.format("(%.2f, %.2f, %.2f)", spawnX, spawnY, spawnZ));
+        } else {
+            System.out.println("[AlienDebug] ERROR: Failed to create baby alien entity!");
+        }
+    }
+
+    @Override
+    public boolean isBaby() {
+        return super.isBaby();
     }
 
     @Override

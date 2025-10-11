@@ -598,7 +598,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELIUM_VAULT_BLOCK.get())
                 .add(ModBlocks.STEELIUM_VAULT_WALL.get())
                 .add(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())
-                .add(ModBlocks.NEPTOCHROME_VAULT_WALL.get());
+                .add(ModBlocks.NEPTOCHROME_VAULT_WALL.get())
+                .add(ModBlocks.STEELIUM_LAMP.get())
+                .add(ModBlocks.NEPTOCHROME_LAMP.get());
 
         // NIGHTMARE tool can only break stormite ores
         tag(ModTags.Blocks.NEEDS_NIGHTMARE_TOOL)

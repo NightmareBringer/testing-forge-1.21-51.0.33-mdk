@@ -17,19 +17,16 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.IronGolem;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.nbc.thetestermod.entity.ArmoredAlienVariant;
-import net.nbc.thetestermod.entity.MobManager;
-import net.nbc.thetestermod.entity.TesterVariant;
-import net.nbc.thetestermod.particle.ModParticles;
 import net.nbc.thetestermod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
-public class ArmoredAlienEntity extends AlienEntity {
+public class ArmoredAlienEntity extends Animal {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -38,6 +35,26 @@ public class ArmoredAlienEntity extends AlienEntity {
 
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(ArmoredAlienEntity.class, EntityDataSerializers.INT);
+
+    @Override
+    protected void registerGoals() {
+        this.goalSelector.addGoal(0, new FloatGoal(this));
+
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.55D, false));
+
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0F));
+
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 32.0F));
+
+        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+
+        this.targetSelector.addGoal(0, new NearestAttackableTargetGoal<>(this, TesterEntity.class, true));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Mob.class, 5, false, false, (p_28879_) -> {
+            return p_28879_ instanceof Enemy;
+        }));
+    }
 
     public ArmoredAlienEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -49,7 +66,7 @@ public class ArmoredAlienEntity extends AlienEntity {
                 .add(Attributes.MOVEMENT_SPEED, 0.25D)
                 .add(Attributes.FOLLOW_RANGE, 64D)
                 .add(Attributes.ATTACK_DAMAGE, 18.0D)
-                .add(Attributes.ATTACK_KNOCKBACK, 1.2D)
+                .add(Attributes.ATTACK_KNOCKBACK, 1.3D)
                 .add(Attributes.ARMOR, 10.0D)
                 .add(Attributes.BURNING_TIME, 0.0D)
                 //.add(Attributes.ATTACK_SPEED, 4D)
@@ -115,6 +132,16 @@ public class ArmoredAlienEntity extends AlienEntity {
         return flag;
     }
 
+    public boolean doHurtTarget(Entity entity) {
+        this.playSound(SoundEvents.WARDEN_ATTACK_IMPACT, 10.0F, this.getVoicePitch());
+        return super.doHurtTarget(entity);
+    }
+
+    @Override
+    public boolean isAffectedByPotions() {
+        return false;
+    }
+
     public Crackiness.Level getCrackiness() {
         return Crackiness.GOLEM.byFraction(this.getHealth() / this.getMaxHealth());
     }
@@ -150,6 +177,11 @@ public class ArmoredAlienEntity extends AlienEntity {
     }
 
     @Override
+    public boolean isFood(ItemStack itemStack) {
+        return false;
+    }
+
+    @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
 
         ArmoredAlienVariant variant = ArmoredAlienVariant.BLUE; // Default variant
@@ -163,18 +195,15 @@ public class ArmoredAlienEntity extends AlienEntity {
         return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
     }
 
-    /*
     @Override
-    public boolean isInvulnerableTo(DamageSource source) {
-        // The mob is only vulnerable to specific damage types
-        return !source.is(DamageTypes.GENERIC_KILL)
-                && !source.is(DamageTypes.IN_WALL)
-                && !source.is(DamageTypes.OUTSIDE_BORDER)
-                && !source.is(DamageTypes.WITHER_SKULL)
-                && !source.is(DamageTypes.WITHER)
-                && !source.is(DamageTypes.SONIC_BOOM)
-                && !source.is(DamageTypes.FELL_OUT_OF_WORLD);
-    } */
+    public @Nullable AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
+        return null;
+    }
+
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return false;
+    }
 
     @Override
     protected @Nullable SoundEvent getAmbientSound() {

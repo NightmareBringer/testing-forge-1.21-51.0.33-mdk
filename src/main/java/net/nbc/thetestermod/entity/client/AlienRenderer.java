@@ -22,7 +22,7 @@ public class AlienRenderer extends MobRenderer<AlienEntity, AlienModel<AlienEnti
     @Override
     public void render(AlienEntity entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
         if(entity.isBaby()) {
-            poseStack.scale(0.5f, 0.5f, 0.5f);
+            poseStack.scale(0.4f, 0.4f, 0.4f);
         } else {
             poseStack.scale(1.0f, 1.0f, 1.0f);
         }
