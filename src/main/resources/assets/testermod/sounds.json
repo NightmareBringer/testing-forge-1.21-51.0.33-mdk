@@ -156,10 +156,10 @@
       "testermod:armor_alien_death4"
     ]
   },
-  "all_hail_squidward": {
+  "void_music_disc": {
     "sounds": [
       {
-        "name": "testermod:all_hail_squidward",
+        "name": "testermod:void_music_disc",
         "stream": true
       }
     ]

@@ -232,7 +232,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.KRABS.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_SAPLING.get());
-                        output.accept(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
+                        output.accept(ModItems.VOID_MUSIC_DISK.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

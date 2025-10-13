@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-05T09:53:10.1374539	Tags for minecraft:block mod id testermod
+// 1.21.1	2025-10-12T16:52:10.1646722	Tags for minecraft:block mod id testermod
 d5bac7e436aa9d566ba2d615a38f1f6947079302 data/minecraft/tags/block/fences.json
 0524ca1661a3a6cd4226023964c682555b590785 data/minecraft/tags/block/fence_gates.json
 378fbe4b38c6b88aeb04df46205b33025118c8bf data/minecraft/tags/block/incorrect_for_diamond_tool.json
@@ -27,5 +27,5 @@ a1b2025abb32b030db067c77f24fe7657326df63 data/testermod/tags/block/incorrect_for
 0555a97684905d00b21a1865713b616f555ee1c6 data/testermod/tags/block/needs_nightmare_tool.json
 1f2be005d6f0bdd3fe39a078b98be63c74633ee9 data/testermod/tags/block/needs_pure_nightmare_tool.json
 0555a97684905d00b21a1865713b616f555ee1c6 data/testermod/tags/block/needs_pure_storm_tool.json
-cc13fcb01b8f98cfad735d455032151d470554ee data/testermod/tags/block/needs_steelium_tool.json
+4a444cdc4861de801cfc40be940a7f7efa0c7e3e data/testermod/tags/block/needs_steelium_tool.json
 4d2c1891d791880a3c16d3572d8d76c13f389d34 data/testermod/tags/block/needs_storm_tool.json

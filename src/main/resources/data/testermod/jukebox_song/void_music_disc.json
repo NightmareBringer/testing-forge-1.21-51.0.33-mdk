@@ -1,0 +1,8 @@
+{
+  "comparator_output": 6,
+  "description": {
+    "translate": "item.testermod.void_music_disc.desc"
+  },
+  "length_in_seconds": 107.0,
+  "sound_event": "testermod:void_music_disc"
+}

@@ -1,19 +1,8 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.ReloadableServerRegistries;
-import net.minecraft.world.item.EnchantedBookItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -22,11 +11,8 @@ import net.nbc.thetestermod.loot.custom.ChargedCreeperCondition;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 import net.nbc.thetestermod.TesterMod;
-import net.nbc.thetestermod.enchantment.ModEnchantments;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.loot.AddItemModifier;
-import net.nbc.thetestermod.potion.ModPotions;
-import net.minecraft.core.Holder;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -126,13 +112,13 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/abandoned_mineshaft"))
                                 .and(LootItemRandomChanceCondition.randomChance(0.12f)).build()
-                }, ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get()));
+                }, ModItems.VOID_MUSIC_DISK.get()));
 
         this.add("squidward_music_from_simple_dungeon",
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/simple_dungeon"))
                                 .and(LootItemRandomChanceCondition.randomChance(0.10f)).build()
-                }, ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get()));
+                }, ModItems.VOID_MUSIC_DISK.get()));
 
         add("energy_orb_from_from_charged_creeper", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("entities/creeper"))

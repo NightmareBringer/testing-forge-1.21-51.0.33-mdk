@@ -7,12 +7,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.nbc.thetestermod.item.custom.EnchantableArmorItem;
 import net.nbc.thetestermod.item.custom.ModArmorItem;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -87,7 +85,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
-        basicItem(ModItems.HAIL_SQUIDWARD_MUSIC_DISC.get());
+        basicItem(ModItems.VOID_MUSIC_DISK.get());
 
         // Block-derived items
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);

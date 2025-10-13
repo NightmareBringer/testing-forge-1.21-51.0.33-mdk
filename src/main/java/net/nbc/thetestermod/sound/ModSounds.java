@@ -58,10 +58,10 @@ public class ModSounds {
 
     // Optional: Combine ambient sounds into a custom type later if needed
 
-    public static final Supplier<SoundEvent> HAIL_SQUIDWARD = registerSoundEvent("all_hail_squidward");
-    public static final ResourceKey<JukeboxSong> HAIL_SQUIDWARD_KEY = ResourceKey.create(
+    public static final Supplier<SoundEvent> VOID_DISK = registerSoundEvent("void_music_disc");
+    public static final ResourceKey<JukeboxSong> VOID_DISK_KEY = ResourceKey.create(
             Registries.JUKEBOX_SONG,
-            ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "all_hail_squidward")
+            ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "void_music_disc")
     );
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {

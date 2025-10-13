@@ -238,8 +238,8 @@ public class ModItems
     public static final DeferredItem<Item> STORM_BOW = ITEMS.register("storm_bow",
             () -> new BowItem(new Item.Properties().durability(250)));
 
-    public static final DeferredItem<Item> HAIL_SQUIDWARD_MUSIC_DISC = ITEMS.register("all_hail_squidward_music_disc",
-            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.HAIL_SQUIDWARD_KEY).stacksTo(1)));
+    public static final DeferredItem<Item> VOID_MUSIC_DISK = ITEMS.register("void_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.VOID_DISK_KEY).stacksTo(1)));
 
     public static final DeferredItem<Item> MYSTERIOUS_DUST = ITEMS.register("mysterious_dust",
             () -> new Item(new Item.Properties()));

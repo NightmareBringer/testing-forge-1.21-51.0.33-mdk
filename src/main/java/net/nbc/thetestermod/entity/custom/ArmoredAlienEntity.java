@@ -133,7 +133,7 @@ public class ArmoredAlienEntity extends Animal {
     }
 
     public boolean doHurtTarget(Entity entity) {
-        this.playSound(SoundEvents.WARDEN_ATTACK_IMPACT, 10.0F, this.getVoicePitch());
+        this.playSound(SoundEvents.WARDEN_ATTACK_IMPACT, 2.0F, this.getVoicePitch());
         return super.doHurtTarget(entity);
     }
 

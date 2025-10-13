@@ -259,8 +259,8 @@
   "trim_material.testermod.false_nightmarite_ingot": "False Nightmarite Ingot Material",
   "trim_material.testermod.false_stormite_ingot": "False Stormite Ingot Material",
 
-  "item.testermod.all_hail_squidward_music_disc": "All Hail Shadow Music Disc",
-  "item.testermod.all_hail_squidward_music_disc.desc": "All Hail Shadow (Shadow Generations) Squidward AI Cover",
+  "item.testermod.void_music_disc": "§bMusic Disc",
+  "item.testermod.void_music_disc.desc": "NightmareBringa - Impending Void",
 
   "enchantment.testermod.lightning_striker": "Lightning Shot",
   "enchantment.testermod.fortification": "Fortification",
