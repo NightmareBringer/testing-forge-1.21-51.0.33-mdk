@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mysterious_string": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:mysterious_string"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:woven_indigo_brick_from_indigo_brick_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mysterious_string"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:woven_indigo_brick_from_indigo_brick_item"
+    ]
+  }
+}

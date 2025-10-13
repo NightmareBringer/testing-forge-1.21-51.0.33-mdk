@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-05T09:53:10.1484301	Recipes
+// 1.21.1	2025-10-12T20:30:26.4222173	Recipes
 f842d727088d442ee18daaf52ca2e50d1ef5672e data/minecraft/advancement/recipes/misc/false_nightmare_ingot_from_smithing.json
 cc2e94fc19a00851f49513e6ad7cfb76b45e42de data/minecraft/advancement/recipes/misc/false_storm_ingot_from_smithing.json
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
@@ -149,6 +149,8 @@ d055d1a01bdad6d8769673324adeeaa6948cf8ff data/testermod/advancement/recipes/misc
 e3a2466e0fa9ed6071e3acc3d153497daaaa3f90 data/testermod/advancement/recipes/misc/strange_stick.json
 859b95de1aa4f74a9a380391de2fb45f4e5bea04 data/testermod/advancement/recipes/misc/throwing_knife_from_iron_ingot_and_stick.json
 315830b99273e3f1fc35eaa17ede5a6a60b53dc1 data/testermod/advancement/recipes/misc/white_carrot.json
+aa9b8b09d748b9db63df338f6f13ebf19881e402 data/testermod/advancement/recipes/misc/woven_indigo_bricks_from_indigo_brick_block.json
+2ba0450434956493d131f6b6c61473e2b1ae2f07 data/testermod/advancement/recipes/misc/woven_indigo_brick_from_indigo_brick_item.json
 24fa00e6822b116dda40b40b8cad6890b6317378 data/testermod/advancement/recipes/redstone/corrupted_oak_button.json
 36c735a5a1a843c5b0ec8803ef7cba32b4879f5a data/testermod/advancement/recipes/redstone/corrupted_oak_door.json
 d61610264a08370b03e908007961dbcb11a7b346 data/testermod/advancement/recipes/redstone/corrupted_oak_fence_gate.json
@@ -343,3 +345,5 @@ b4a36f4185f34410db7bb2ca004323a579be8018 data/testermod/recipe/storm_wall.json
 8631aeb4a24d35c8d9aa227d401b9ac32761a5e1 data/testermod/recipe/strange_stick.json
 2f692a4a3873c11089cbd49201a32f9d5074a4e0 data/testermod/recipe/throwing_knife_from_iron_ingot_and_stick.json
 d5116b93eec63f2092a142d7d013ad5d3ceb57e1 data/testermod/recipe/white_carrot.json
+d9bfd51128b51bfd7bf84ad9a854f43f8aa3f830 data/testermod/recipe/woven_indigo_bricks_from_indigo_brick_block.json
+06b8cd449dfe828fa7e8b5f1db33346823b18c5e data/testermod/recipe/woven_indigo_brick_from_indigo_brick_item.json

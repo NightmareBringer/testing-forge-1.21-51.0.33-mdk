@@ -18,7 +18,7 @@ public class ImpurifierBlockMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public ImpurifierBlockMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(4));
     }
 
     public ImpurifierBlockMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -30,8 +30,9 @@ public class ImpurifierBlockMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 54, 34));  // NeoForge version of SlotItemHandler
-        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 104, 34));  // NeoForge version of SlotItemHandler
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 0, 54, 20));  // INPUT
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 1, 54, 50));  // FUEL
+        this.addSlot(new SlotItemHandler(blockEntity.itemHandler, 2, 104, 34)); // OUTPUT
 
         addDataSlots(data);
     }
@@ -46,6 +47,18 @@ public class ImpurifierBlockMenu extends AbstractContainerMenu {
         int arrowPixelSize = 24;
 
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
+    }
+
+    public boolean isBurning() {
+        return data.get(2) > 0;
+    }
+
+    public int getBurnProgress() {
+        int burnTime = this.data.get(2);
+        int maxBurnTime = this.data.get(3);
+        int burnPixels = 44;
+        if (maxBurnTime == 0) maxBurnTime = 200;
+        return burnTime * burnPixels / maxBurnTime;
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -64,7 +77,7 @@ public class ImpurifierBlockMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // Define the TileEntity (TE) inventory slots
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // Adjust this to the number of slots in the TE
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // Adjust this to the number of slots in the TE
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

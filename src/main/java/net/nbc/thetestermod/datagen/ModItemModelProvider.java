@@ -81,6 +81,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FALSE_NIGHTMARITE_INGOT.get());
 
         basicItem(ModItems.STEELICHROME_KEYS.get());
+        basicItem(ModItems.WOVEN_INDIGO_BRICK.get());
 
         basicItem(ModItems.NIGHTEN_SMITHING_TEMPLATE.get());
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());

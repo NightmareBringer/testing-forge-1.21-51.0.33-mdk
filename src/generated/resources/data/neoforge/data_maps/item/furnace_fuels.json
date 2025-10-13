@@ -5,6 +5,9 @@
     },
     "testermod:pure_eye": {
       "burn_time": 1200
+    },
+    "testermod:woven_indigo_brick": {
+      "burn_time": 300
     }
   }
 }

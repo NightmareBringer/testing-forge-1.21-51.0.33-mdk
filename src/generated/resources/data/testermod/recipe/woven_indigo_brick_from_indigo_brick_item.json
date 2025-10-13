@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "testermod:mysterious_string"
+    },
+    "M": {
+      "item": "testermod:indigo_brick"
+    }
+  },
+  "pattern": [
+    " / ",
+    "/M/",
+    " / "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:woven_indigo_brick"
+  }
+}

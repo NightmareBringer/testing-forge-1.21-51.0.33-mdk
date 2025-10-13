@@ -352,6 +352,9 @@ public class ModItems
                 }
             });
 
+    public static final DeferredItem<Item> WOVEN_INDIGO_BRICK = ITEMS.register("woven_indigo_brick",
+            () -> new FuelItem(new Item.Properties(), 47));
+
     public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
             () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0x000000, 0xfafafa, new Item.Properties()));
 

@@ -19,6 +19,7 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.nbc.thetestermod.item.ModItems;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.nbc.thetestermod.block.entity.ModBlockEntities;
 import net.nbc.thetestermod.recipe.ImpurifierBlockRecipe;
@@ -31,7 +32,7 @@ import java.util.Optional;
 
 public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
 
-    public final ItemStackHandler itemHandler = new ItemStackHandler(2) {
+    public final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -41,12 +42,15 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
         }
     };
 
-    private static final int INPUT_SLOT = 0;
-    private static final int OUTPUT_SLOT = 1;
+    private static final int INPUT_SLOT  = 0;
+    private static final int FUEL_SLOT   = 1;
+    private static final int OUTPUT_SLOT = 2;
 
     protected final ContainerData data;
-    private int progress = 0;
-    private int maxProgress = 350;
+    private int progress     = 0;
+    private int maxProgress  = 225;
+    private int burnTime     = 0;
+    private int maxBurnTime  = 225;
 
     public ImpurifierBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.IMPURIFIER_BLOCK_BE.get(), pos, blockState);
@@ -56,6 +60,8 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
                 return switch (i) {
                     case 0 -> ImpurifierBlockEntity.this.progress;
                     case 1 -> ImpurifierBlockEntity.this.maxProgress;
+                    case 2 -> ImpurifierBlockEntity.this.burnTime;
+                    case 3 -> ImpurifierBlockEntity.this.maxBurnTime;
                     default -> 0;
                 };
             }
@@ -65,12 +71,14 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
                 switch (i) {
                     case 0 -> ImpurifierBlockEntity.this.progress = value;
                     case 1 -> ImpurifierBlockEntity.this.maxProgress = value;
+                    case 2 -> ImpurifierBlockEntity.this.burnTime = value;
+                    case 3 -> ImpurifierBlockEntity.this.maxBurnTime = value;
                 }
             }
 
             @Override
             public int getCount() {
-                return 2;
+                return 4;
             }
         };
     }
@@ -100,7 +108,8 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
         pTag.put("inventory", itemHandler.serializeNBT(pRegistries));
         pTag.putInt("impurifier_block.progress", progress);
         pTag.putInt("impurifier_block.max_progress", maxProgress);
-
+        pTag.putInt("impurifier_block.burn_time", burnTime);
+        pTag.putInt("impurifier_block.man_burn_time", maxBurnTime);
         super.saveAdditional(pTag, pRegistries);
     }
 
@@ -111,13 +120,33 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
         itemHandler.deserializeNBT(pRegistries, pTag.getCompound("inventory"));
         progress = pTag.getInt("impurifier_block.progress");
         maxProgress = pTag.getInt("impurifier_block.max_progress");
+        burnTime = pTag.getInt("impurifier_block.burn_time");
+        maxBurnTime = pTag.getInt("impurifier_block.man_burn_time");
     }
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
-        if (hasRecipe()) {
-            increaseCraftingProgress();
-            setChanged(level, blockPos, blockState);
+        boolean isBurning = burnTime > 0;
+        boolean stateChanged = false;
 
+        if (burnTime > 0) {
+            burnTime--;
+        }
+
+        ItemStack fuelStack = itemHandler.getStackInSlot(FUEL_SLOT);
+
+        // Start burning if needed
+        if (burnTime == 0 && hasRecipe() && !fuelStack.isEmpty()) {
+            int fuelBurn = getFuelTime(fuelStack);
+            if (fuelBurn > 0) {
+                burnTime = fuelBurn;
+                maxBurnTime = fuelBurn;
+                fuelStack.shrink(1);
+                stateChanged = true;
+            }
+        }
+
+        if (isBurning && hasRecipe()) {
+            increaseCraftingProgress();
             if (hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
@@ -125,6 +154,17 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
         } else {
             resetProgress();
         }
+
+        if (stateChanged) {
+            setChanged(level, blockPos, blockState);
+        }
+    }
+
+    private int getFuelTime(ItemStack stack) {
+        if (stack.is(ModItems.WOVEN_INDIGO_BRICK.get())) {
+            return 33; // (coal = 1600)
+        }
+        return 0;
     }
 
     private void craftItem() {

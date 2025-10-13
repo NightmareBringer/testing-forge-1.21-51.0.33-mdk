@@ -43,11 +43,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.INDIGO_BRICK_STAIRS.get());
                         output.accept(ModBlocks.INDIGO_BRICK_SlAB.get());
                         output.accept(ModBlocks.INDIGO_BRICK_WALL.get());
+                        output.accept(ModItems.MYSTERIOUS_STRING.get());
+                        output.accept(ModItems.WOVEN_INDIGO_BRICK.get());
                         output.accept(ModItems.PURE_EYE.get());
                         output.accept(ModBlocks.PURIFIER_BLOCK.get());
                         output.accept(ModItems.IMPURE_EYE.get());
                         output.accept(ModBlocks.IMPURIFIER_BLOCK.get());
-                        output.accept(ModItems.MYSTERIOUS_STRING.get());
                         output.accept(ModItems.STRANGE_STICK.get());
                         output.accept(ModItems.PURE_STICK.get());
                         output.accept(ModItems.IMPURE_STICK.get());

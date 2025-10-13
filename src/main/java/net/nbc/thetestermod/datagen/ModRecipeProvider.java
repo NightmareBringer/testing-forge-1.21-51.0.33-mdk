@@ -442,6 +442,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModItems.MYSTERIOUS_DUST.get())
                 .define('M', Items.STRING)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOVEN_INDIGO_BRICK.get())
+                .pattern(" / ")
+                .pattern("/M/")
+                .pattern(" / ")
+                .define('/', ModItems.MYSTERIOUS_STRING.get())
+                .define('M', ModItems.INDIGO_BRICK.get())
+                .unlockedBy(getHasName(ModItems.MYSTERIOUS_STRING.get()), has(ModItems.MYSTERIOUS_STRING.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":woven_indigo_brick_from_indigo_brick_item");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOVEN_INDIGO_BRICK.get(), 4)
+                .pattern("///")
+                .pattern("/M/")
+                .pattern("///")
+                .define('/', ModItems.MYSTERIOUS_STRING.get())
+                .define('M', ModBlocks.INDIGO_BRICKS.get())
+                .unlockedBy(getHasName(ModBlocks.INDIGO_BRICKS.get()), has(ModBlocks.INDIGO_BRICKS.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":woven_indigo_bricks_from_indigo_brick_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.INDIGO_BRICKS.get())
                 .pattern("DD ")

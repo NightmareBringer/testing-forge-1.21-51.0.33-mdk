@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-12T16:52:10.1686815	Item Models: testermod
+// 1.21.1	2025-10-12T20:30:26.4372156	Item Models: testermod
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/alien_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/armored_alien_spawn_egg.json
 39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
@@ -272,3 +272,4 @@ c80799f51d89f67ba87bf7634c7043daa96961cc assets/testermod/models/item/strange_st
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/tester_spawn_egg.json
 a87e6bd2b25bbf5a514390ff77a04c4febdc9176 assets/testermod/models/item/void_music_disc.json
 8360149cc327223b7839a95c05dfc4942184fa6f assets/testermod/models/item/white_carrot.json
+7c2a4acc1b57d28da782bddc10c701cbfc6fba69 assets/testermod/models/item/woven_indigo_brick.json

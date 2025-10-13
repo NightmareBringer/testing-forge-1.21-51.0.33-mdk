@@ -311,6 +311,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.STORM_INGOT.get()
                 );
 
+        tag(ItemTags.PIGLIN_REPELLENTS)
+                .add(ModItems.WOVEN_INDIGO_BRICK.get()
+                );
+
         tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.NIGHTMARE_INGOT.get())
                 .add(ModItems.STORM_INGOT.get())
