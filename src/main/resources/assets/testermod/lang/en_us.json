@@ -319,6 +319,8 @@
 
   "tooltip.testermod.vault_wall_warm1": "Used for Steelium Vault only",
   "tooltip.testermod.vault_wall_warm2": "Used for Neptochrome Vault only",
+  "tooltip.testermod.transform_block_warn1": "Requires a certain fuel",
+  "tooltip.testermod.transform_block_warn2": "Use with extreme cation",
 
   "tooltip.testermod.red_gc1.tooltip": "An ordinary §cred§r gaming chair.",
   "tooltip.testermod.red_gc2.tooltip": "Apparently, a certain doctor §lcan§r",

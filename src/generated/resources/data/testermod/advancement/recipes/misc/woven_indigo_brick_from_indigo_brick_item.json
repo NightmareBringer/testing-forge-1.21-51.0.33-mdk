@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mysterious_string": {
+    "has_indigo_brick": {
       "conditions": {
         "items": [
           {
-            "items": "testermod:mysterious_string"
+            "items": "testermod:indigo_brick"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mysterious_string"
+      "has_indigo_brick"
     ]
   ],
   "rewards": {

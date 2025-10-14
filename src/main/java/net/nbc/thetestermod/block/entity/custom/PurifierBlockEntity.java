@@ -1,5 +1,10 @@
 package net.nbc.thetestermod.block.entity.custom;
 
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.nbc.thetestermod.block.custom.PurifierBlock;
 import net.nbc.thetestermod.block.entity.ModBlockEntities;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.recipe.ModRecipes;
@@ -51,6 +56,9 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
     private int maxProgress  = 225;
     private int burnTime     = 0;
     private int maxBurnTime  = 225;
+    private boolean lastHadProgress = false;
+    private boolean hasStartedCrafting = false;
+    private boolean lastHadInput = false;
 
     public PurifierBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.PURIFIER_BLOCK_BE.get(), pos, blockState);
@@ -110,6 +118,9 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
         pTag.putInt("purifier_block.max_progress", maxProgress);
         pTag.putInt("purifier_block.burn_time", burnTime);
         pTag.putInt("purifier_block.man_burn_time", maxBurnTime);
+        pTag.putBoolean("purifier_block.last_had_progress", lastHadProgress);
+        pTag.putBoolean("purifier_block.has_started_crafting", hasStartedCrafting);
+        pTag.putBoolean("purifier_block.last_had_input", lastHadInput);
         super.saveAdditional(pTag, pRegistries);
     }
 
@@ -122,6 +133,9 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
         maxProgress = pTag.getInt("purifier_block.max_progress");
         burnTime = pTag.getInt("purifier_block.burn_time");
         maxBurnTime = pTag.getInt("purifier_block.man_burn_time");
+        lastHadProgress = pTag.getBoolean("purifier_block.last_had_progress");
+        hasStartedCrafting = pTag.getBoolean("purifier_block.has_started_crafting");
+        lastHadInput = pTag.getBoolean("purifier_block.last_had_input");
     }
 
     public void tick(Level level, BlockPos blockPos, BlockState blockState) {
@@ -132,7 +146,20 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
             burnTime--;
         }
 
+        ItemStack inputStack = itemHandler.getStackInSlot(INPUT_SLOT);
         ItemStack fuelStack = itemHandler.getStackInSlot(FUEL_SLOT);
+
+        boolean hasInput = !inputStack.isEmpty();
+        boolean hadInputLastTick = lastHadInput;
+
+        // Check for mid-process input removal
+        if (hasStartedCrafting && hadInputLastTick && !hasInput && progress > 0) {
+            // Player yanked the input
+            createExplosion(level, blockPos, 6.0f);
+            hasStartedCrafting = false;
+            resetProgress();
+            return; // stop tick logic after explosion
+        }
 
         // Start burning if needed
         if (burnTime == 0 && hasRecipe() && !fuelStack.isEmpty()) {
@@ -147,17 +174,85 @@ public class PurifierBlockEntity extends BlockEntity implements MenuProvider {
 
         if (isBurning && hasRecipe()) {
             increaseCraftingProgress();
+            hasStartedCrafting = true;
             if (hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
+                hasStartedCrafting = false;
             }
-        } else {
-            resetProgress();
         }
+        else {
+            // progress decay when fuel is gone but not done
+            if (!isBurning && progress > 0 && progress < maxProgress && hasStartedCrafting) {
+                progress -= 2; // decay speed
+                // Every few ticks, show smoke and warning sounds
+                if ((level.getGameTime() % 10 == 0)) {
+                    spawnWarningEffects(level, blockPos);
+                }
+                // Trigger explosion if it decays to zero
+                if (progress <= 0 && lastHadProgress) {
+                    // Explosion when progress just hit 0 from >0
+                    if (inputStack.isEmpty() || hasStartedCrafting) {
+                        hasStartedCrafting = false;
+                        createExplosion(level, blockPos, 5.0f);
+                    }
+                }
+            }
+        }
+
+        lastHadProgress = progress > 0;
+        lastHadInput = hasInput;
 
         if (stateChanged) {
             setChanged(level, blockPos, blockState);
         }
+    }
+
+    private void createExplosion(Level level, BlockPos blockPos, float explosionStrength) {
+        level.playSound(
+                null,
+                blockPos,
+                SoundEvents.FIRE_EXTINGUISH,
+                SoundSource.BLOCKS,
+                2.0F,
+                0.7F + level.random.nextFloat() * 0.3F
+        );
+        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, itemHandler.getStackInSlot(i));
+        }
+        Containers.dropContents(level, blockPos, inventory);
+        level.removeBlock(blockPos, false);
+        level.explode(
+                null,
+                blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5,
+                explosionStrength,
+                true,
+                Level.ExplosionInteraction.MOB
+        );
+    }
+
+    private void spawnWarningEffects(Level level, BlockPos pos) {
+        if (level.isClientSide()) return;
+
+        // Smoke particle
+        ((ServerLevel) level).sendParticles(
+                ParticleTypes.SMOKE,               // Smoke effect
+                pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
+                10,                                 // Count
+                0.2, 0.1, 0.2,                     // Spread
+                0.01                               // Speed
+        );
+
+        // Warning sound (fizzing / bubbling)
+        level.playSound(
+                null,
+                pos,
+                SoundEvents.FIRE_AMBIENT,
+                SoundSource.BLOCKS,
+                2.0F,
+                0.7F + level.random.nextFloat() * 0.3F
+        );
     }
 
     private int getFuelTime(ItemStack stack) {

@@ -126,7 +126,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("CLC")
                 .define('#', Items.WARPED_WART_BLOCK)
                 .define('E', ModItems.INDIGO_BRICK)
-                .define('S', ModBlocks.INDIGO_BRICKS)
+                .define('S', Blocks.WAXED_OXIDIZED_CUT_COPPER)
                 .define('U', ModItems.IMPURE_EYE.get())
                 .define('C', Items.CRYING_OBSIDIAN)
                 .define('L', Items.LAPIS_BLOCK)
@@ -448,7 +448,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" / ")
                 .define('/', ModItems.MYSTERIOUS_STRING.get())
                 .define('M', ModItems.INDIGO_BRICK.get())
-                .unlockedBy(getHasName(ModItems.MYSTERIOUS_STRING.get()), has(ModItems.MYSTERIOUS_STRING.get()))
+                .unlockedBy(getHasName(ModItems.INDIGO_BRICK.get()), has(ModItems.INDIGO_BRICK.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":woven_indigo_brick_from_indigo_brick_item");
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOVEN_INDIGO_BRICK.get(), 4)
                 .pattern("///")

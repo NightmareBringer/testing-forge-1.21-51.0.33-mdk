@@ -1,6 +1,7 @@
 package net.nbc.thetestermod.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -88,6 +89,8 @@ public class PurifierBlock extends BaseEntityBlock {
     @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         pTooltipComponents.add(Component.translatable("tooltip.testermod.purifier_block.tooltip"));
+        pTooltipComponents.add(Component.translatable("tooltip.testermod.transform_block_warn1").withStyle(ChatFormatting.RED));
+        pTooltipComponents.add(Component.translatable("tooltip.testermod.transform_block_warn2").withStyle(ChatFormatting.RED));
         //for a new line in the tooltip, copy the same line as above and just replace the pKey
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
