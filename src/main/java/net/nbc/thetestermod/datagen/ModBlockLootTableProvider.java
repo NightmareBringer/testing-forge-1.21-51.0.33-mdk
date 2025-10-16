@@ -77,6 +77,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.STORM_LAMP.get());
 
+        dropSelf(ModBlocks.GOLDEN_MELON_BLOCK.get());
+
         dropSelf(ModBlocks.RED_GAMING_CHAIR.get());
         dropSelf(ModBlocks.BLUE_GAMING_CHAIR.get());
 

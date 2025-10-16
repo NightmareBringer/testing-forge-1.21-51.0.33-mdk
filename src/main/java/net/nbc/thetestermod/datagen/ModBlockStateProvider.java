@@ -272,6 +272,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.STEELIUM_VAULT_WALL.get(), blockTexture(ModBlocks.STEELIUM_BLOCK.get()));
         wallBlock(ModBlocks.NEPTOCHROME_VAULT_WALL.get(), blockTexture(ModBlocks.NEPTOCHROME_BLOCK.get()));
 
+        blockWithTopBottom(ModBlocks.GOLDEN_MELON_BLOCK,
+                modLoc("block/golden_melon_side"),
+                modLoc("block/golden_melon_top"),
+                modLoc("block/golden_melon_top"));
+
 
     }
 

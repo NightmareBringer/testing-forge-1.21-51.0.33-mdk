@@ -508,6 +508,9 @@ public class ModBlocks
     public static final DeferredBlock<CopperBulbBlock> NEPTOCHROME_LAMP = registerBlock("neptochrome_bulb",
             () -> new CopperBulbBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BULB).sound(SoundType.COPPER_BULB).strength(255.5f)));
 
+    public static final DeferredBlock<Block> GOLDEN_MELON_BLOCK = registerBlock("golden_melon",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MELON).sound(SoundType.WOOD)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
         DeferredBlock<T> toReturn = (DeferredBlock<T>) BLOCKS.register(name, block);

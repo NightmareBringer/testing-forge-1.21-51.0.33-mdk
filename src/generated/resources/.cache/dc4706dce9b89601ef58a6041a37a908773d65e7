@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-12T20:30:26.4462152	Tags for minecraft:item mod id testermod
+// 1.21.1	2025-10-16T13:16:42.1077438	Tags for minecraft:item mod id testermod
 7b67bdc1e1b5d88f0f324e2b5944809083d05fc5 data/minecraft/tags/item/axes.json
 a09287d70abc53cb69f5ccaf96465da6fc2c0320 data/minecraft/tags/item/beacon_payment_items.json
 af59ed5cedff87e2532c8b23fb92de028ec93c15 data/minecraft/tags/item/enchantable/chest_armor.json
@@ -16,7 +16,8 @@ d9417f147e937abd511eec72b1cf7f747048fb7e data/minecraft/tags/item/enchantable/sw
 f73a24d5eb34c04d026011ebb5bb3929a5c364d1 data/minecraft/tags/item/hoes.json
 b452c1747036e07f62ef5411f54d35d21b415b69 data/minecraft/tags/item/logs_that_burn.json
 aa627f4ced7534dac57f39e9b430723a106a76a4 data/minecraft/tags/item/pickaxes.json
-b6a4658dd546cfa29920d3bbde3da9517cc75a80 data/minecraft/tags/item/piglin_repellents.json
+929ce4e820f50ce22358aef68f702fad19259bff data/minecraft/tags/item/piglin_food.json
+929ce4e820f50ce22358aef68f702fad19259bff data/minecraft/tags/item/piglin_loved.json
 5614dd4d1e6870abeed60a55694ccb3da04eb07a data/minecraft/tags/item/planks.json
 3c53900617e1c6ada6dc49329e6c83c2e9af0d9b data/minecraft/tags/item/shovels.json
 a57df072291f5e1607d9061269443f5ca5cbd92f data/minecraft/tags/item/swords.json

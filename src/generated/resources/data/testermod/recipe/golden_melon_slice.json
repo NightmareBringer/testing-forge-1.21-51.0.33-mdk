@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:melon_slice"
+    },
+    "M": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    " M ",
+    "M/M",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:golden_melon_slice"
+  }
+}

@@ -869,7 +869,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', Items.REDSTONE)
                 .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_CORE.get()), has(ModBlocks.NEPTOCHROME_CORE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GOLDEN_MELON_BLOCK.get())
+                .pattern("MMM")
+                .pattern("MMM")
+                .pattern("MMM")
+                .define('M', ModItems.GOLDEN_MELON_SLICE.get())
+                .unlockedBy(getHasName(Items.MELON_SLICE), has(Items.MELON_SLICE)).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLDEN_MELON_SLICE.get())
+                .pattern(" M ")
+                .pattern("M/M")
+                .pattern(" M ")
+                .define('/', Items.MELON_SLICE)
+                .define('M', Items.GOLD_NUGGET)
+                .unlockedBy(getHasName(Items.MELON_SLICE), has(Items.MELON_SLICE)).save(pRecipeOutput);
 
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GOLDEN_MELON_SLICE.get(), 9)
+                .requires(ModBlocks.GOLDEN_MELON_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.GOLDEN_MELON_BLOCK.get()), has(ModBlocks.GOLDEN_MELON_BLOCK.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":golden_melon_slice_from_golden_melon_block");
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NIGHTMARE_INGOT.get(), 9)
                 .requires(ModBlocks.NIGHTMARE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NIGHTMARE_BLOCK.get()), has(ModBlocks.NIGHTMARE_BLOCK.get()))

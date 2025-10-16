@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testermod:golden_melon"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "testermod:golden_melon_slice"
+  }
+}

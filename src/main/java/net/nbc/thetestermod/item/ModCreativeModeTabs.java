@@ -221,9 +221,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.ARMORED_ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.TESTER_SPAWN_EGG.get());
-                        output.accept(ModItems.CRIMSON_BLUE_BERRIES.get());
+                        output.accept(ModItems.GOLDEN_MELON_SLICE.get());
+                        output.accept(ModBlocks.GOLDEN_MELON_BLOCK.get());
                         output.accept(ModItems.WHITE_CARROT.get());
                         output.accept(ModItems.GLISTERING_CARROT.get());
+                        output.accept(ModItems.CRIMSON_BLUE_BERRIES.get());
                         output.accept(ModItems.DEVILS_SNATH.get());
                         output.accept(ModItems.DEVILS_BLADE.get());
                         output.accept(ModItems.DEVILSKNIFE.get());
@@ -231,7 +233,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RED_GAMING_CHAIR.get());
                         output.accept(ModBlocks.BLUE_GAMING_CHAIR.get());
                         output.accept(ModItems.CHISEL.get());
-                        output.accept(ModItems.KRABS.get());
+                        //output.accept(ModItems.KRABS.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_SAPLING.get());
                         output.accept(ModItems.VOID_MUSIC_DISK.get());
                     }).build());

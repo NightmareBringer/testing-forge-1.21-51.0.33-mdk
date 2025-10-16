@@ -353,7 +353,18 @@ public class ModItems
             });
 
     public static final DeferredItem<Item> WOVEN_INDIGO_BRICK = ITEMS.register("woven_indigo_brick",
-            () -> new FuelItem(new Item.Properties(), 47));
+            () -> new FuelItem(new Item.Properties(), 47){
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.woven_brick_info1").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.woven_brick_info2").withStyle(ChatFormatting.GRAY));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.woven_brick_info3").withStyle(ChatFormatting.GRAY));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
+
+    public static final DeferredItem<Item> GOLDEN_MELON_SLICE = ITEMS.register("golden_melon_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GOLDEN_MELON_SLICE)));
 
     public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
             () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0x000000, 0xfafafa, new Item.Properties()));

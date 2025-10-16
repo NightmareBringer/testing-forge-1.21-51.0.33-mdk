@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-09T20:51:25.3945347	Block States: testermod
+// 1.21.1	2025-10-16T13:16:42.110748	Block States: testermod
 215997a7997109d775aab79b09a30b6c1c544667 assets/testermod/blockstates/anti_magic_block.json
 6191d0174d29e0c93073a493d0ce9bd81447a387 assets/testermod/blockstates/corrupted_oak_button.json
 fecc9e252b1d6075120b95a2b4bf2083cfa708c2 assets/testermod/blockstates/corrupted_oak_door.json
@@ -16,6 +16,7 @@ d0297b786b86b43f82f42d374a7e2c253ac89837 assets/testermod/blockstates/corrupted_
 606ae5f58d3d7b1377f473e3de722b8f862ee8b5 assets/testermod/blockstates/crimson_blue_berry_bush.json
 04109f4194b9fb30e34f2245fb196a8633fb7143 assets/testermod/blockstates/false_nightmarite_block.json
 532bb5f5f41c2d30a8fcc9f1d9f3e27453c2b75f assets/testermod/blockstates/false_stormite_block.json
+021c265c69958a4f73f349981c7241e8d87bfd98 assets/testermod/blockstates/golden_melon.json
 390b22a4e75fff1c8c8ef5d9f2abcec3fa6a0191 assets/testermod/blockstates/impurifier_block.json
 51c0c9cfe830cd84eeab0b57480485712f27a435 assets/testermod/blockstates/indigo_bricks.json
 d016049549688775a0b554b7b9b74bedd4157237 assets/testermod/blockstates/indigo_brick_slab.json
@@ -152,6 +153,7 @@ bee170e33c192b697bd52486b363e74657fb0365 assets/testermod/models/block/crimson_b
 01dbebacf5270103f33f6ff993b9c73d08a4d7f4 assets/testermod/models/block/crimson_blue_berry_bush_stage3.json
 d0ad4b1fd9424ba502d05fab4deec76bcebc8840 assets/testermod/models/block/false_nightmarite_block.json
 43fa5d88f5f0c35322837e0435596ab91ac91020 assets/testermod/models/block/false_stormite_block.json
+583e9c776b21b14692a83ba6181cbd5aa1575b8e assets/testermod/models/block/golden_melon.json
 60df6b0c6749d3236903b58a65f71a98c99d88a0 assets/testermod/models/block/impurifier_block.json
 9a7f7991d9cc9d6c30cf8404f79e3a86ad9f923d assets/testermod/models/block/indigo_bricks.json
 fcadf916069c0ad39bf64e2a1137a329e2b5524c assets/testermod/models/block/indigo_brick_slab.json
@@ -368,6 +370,7 @@ faca5406c627f3dab513009e1c8172d582e5fd5b assets/testermod/models/item/corrupted_
 dcc2fd4bcc2651d0e7dd7b484aa7d45b8131b5bd assets/testermod/models/item/corrupted_oak_wood.json
 47db857302a16085d395d4508886445d885de3b3 assets/testermod/models/item/false_nightmarite_block.json
 92440d4c04e784c922984c771900676153a620fe assets/testermod/models/item/false_stormite_block.json
+4e1acdc041dfb5ee028f4b89d857944defd88c97 assets/testermod/models/item/golden_melon.json
 cdb0a6b187d86e02c583ef4dcfb743b97f46af9b assets/testermod/models/item/impurifier_block.json
 81430569beae1ca2ece648d491ad9295525422f4 assets/testermod/models/item/indigo_bricks.json
 6f29f3afccdedbf129b5df2ff4e85eda2adbbe9f assets/testermod/models/item/indigo_brick_slab.json

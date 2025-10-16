@@ -111,6 +111,8 @@
   "item.testermod.steelichrome_pickaxe": "Steelichrome Pickaxe",
   "item.testermod.steelichrome_keys": "Steelichrome Keys",
 
+  "item.testermod.golden_melon_slice": "Golden Melon Slice",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite Essence",
   "block.testermod.nightmarite_block": "Block of Nightmarite Essence",
   "block.testermod.nightmare_block": "Block of Nightmarite",
@@ -252,6 +254,8 @@
   "block.testermod.steelium_bulb": "Steelium Energy Bulb",
   "block.testermod.neptochrome_bulb": "Neptochrome Energy Bulb",
 
+  "block.testermod.golden_melon": "Golden Melon",
+
   "trim_pattern.testermod.nighten": "Nighten Armor Trim",
   "trim_material.testermod.nightmare_ingot": "Nightmarite Ingot Material",
   "trim_pattern.testermod.stormen": "Stormen Armor Trim",
@@ -321,6 +325,10 @@
   "tooltip.testermod.vault_wall_warm2": "Used for Neptochrome Vault only",
   "tooltip.testermod.transform_block_warn1": "Requires a certain fuel",
   "tooltip.testermod.transform_block_warn2": "Use with extreme cation",
+
+  "tooltip.testermod.woven_brick_info1": "A peculiar item with a strange",
+  "tooltip.testermod.woven_brick_info2": "energy, can be used as fuel,",
+  "tooltip.testermod.woven_brick_info3": "but provides a short cook time",
 
   "tooltip.testermod.red_gc1.tooltip": "An ordinary §cred§r gaming chair.",
   "tooltip.testermod.red_gc2.tooltip": "Apparently, a certain doctor §lcan§r",

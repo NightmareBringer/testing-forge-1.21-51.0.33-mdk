@@ -1,5 +1,6 @@
 package net.nbc.thetestermod.datagen;
 
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
@@ -29,7 +30,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CORRUPTED_OAK_DOOR.get())
                 .add(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get())
                 .add(ModBlocks.CORRUPTED_OAK_FENCE.get())
-                .add(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get());
+                .add(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get())
+                .add(ModBlocks.GOLDEN_MELON_BLOCK.get());
+
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.MYSTERIOUS_DUST_BLOCK.get())
+                .add(ModBlocks.MYSTERIOUS_DUST_SLAB.get());
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Blocks.REINFORCED_DEEPSLATE)
@@ -737,6 +746,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+
+        tag(BlockTags.PIGLIN_REPELLENTS)
+                .add(ModBlocks.INDIGO_BRICKS.get(),
+                     ModBlocks.INDIGO_BRICK_WALL.get(),
+                     ModBlocks.INDIGO_BRICK_SlAB.get(),
+                     ModBlocks.INDIGO_BRICK_STAIRS.get()
+                );
 
         tag(BlockTags.FENCES).add(ModBlocks.NIGHTMARE_FENCE.get());
         tag(BlockTags.FENCES).add(ModBlocks.REFINED_NIGHTMARE_FENCE.get());

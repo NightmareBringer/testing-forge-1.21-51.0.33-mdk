@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-12T20:30:26.4372156	Item Models: testermod
+// 1.21.1	2025-10-16T12:37:15.5680107	Item Models: testermod
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/alien_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/armored_alien_spawn_egg.json
 39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
@@ -110,6 +110,7 @@ d7255e804d928049248cff9cd61c8551237657fa assets/testermod/models/item/false_stor
 db1a6889b6c190727ce49a1ab3f527d584cb692f assets/testermod/models/item/false_stormite_shovel.json
 5b8f64a23db6a77167910d8daf77b0bcbccffdbd assets/testermod/models/item/false_stormite_sword.json
 14841aef3008742b0db0bc0f8023c1d8c17592ba assets/testermod/models/item/glistering_carrot.json
+2f2fc80e916f5922450a829ea68b7734e936d595 assets/testermod/models/item/golden_melon_slice.json
 89d2eeef9ea1e974e33a880dad94cc209ff8c4d7 assets/testermod/models/item/impure_eye.json
 23edb0b8070cad27929c8b2e15b9cfe57acbd2a9 assets/testermod/models/item/impure_nightmarite.json
 50a574476cf06804eff80724efe7f0e0d1a3a154 assets/testermod/models/item/impure_stick.json

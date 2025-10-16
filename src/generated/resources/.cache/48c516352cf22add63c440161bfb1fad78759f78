@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-12T16:52:10.1646722	Tags for minecraft:block mod id testermod
+// 1.21.1	2025-10-16T12:37:15.5490109	Tags for minecraft:block mod id testermod
 d5bac7e436aa9d566ba2d615a38f1f6947079302 data/minecraft/tags/block/fences.json
 0524ca1661a3a6cd4226023964c682555b590785 data/minecraft/tags/block/fence_gates.json
 378fbe4b38c6b88aeb04df46205b33025118c8bf data/minecraft/tags/block/incorrect_for_diamond_tool.json
@@ -9,10 +9,13 @@ e7254c23b87fad01d4377d7182661d2d94ac77df data/minecraft/tags/block/incorrect_for
 e7254c23b87fad01d4377d7182661d2d94ac77df data/minecraft/tags/block/incorrect_for_wooden_tool.json
 87ec7995e994e9b5161ed4023b326c924036e5d9 data/minecraft/tags/block/leaves.json
 b452c1747036e07f62ef5411f54d35d21b415b69 data/minecraft/tags/block/logs_that_burn.json
-a8319d6acc733d298b1c4b5acbbf7b1181a6996b data/minecraft/tags/block/mineable/axe.json
+4700202198d4cf3c5759d6ab134a05dc4af06b38 data/minecraft/tags/block/mineable/axe.json
+87ec7995e994e9b5161ed4023b326c924036e5d9 data/minecraft/tags/block/mineable/hoe.json
 3c35669621dd38d8aaebe0f2a86e7ac693b5f861 data/minecraft/tags/block/mineable/pickaxe.json
+b63d78d94aaa08a49b3cfd4cc200914b296d5687 data/minecraft/tags/block/mineable/shovel.json
 eda869f59e382d0a9a3a792c29bc29664286abc7 data/minecraft/tags/block/needs_iron_tool.json
 db9b254a9b59fe4e8419d5e308be3f607d2ae568 data/minecraft/tags/block/needs_stone_tool.json
+71467121c150cee548a5412c2727d852a47de617 data/minecraft/tags/block/piglin_repellents.json
 916f2a4a0568501e5087627d075994fdcc39248d data/minecraft/tags/block/walls.json
 f57a1c0d935679dbbcab3f2e8a06cae2238a6735 data/testermod/tags/block/incorrect_for_devilsknife_tool.json
 950a086f855d118e00d3fc9697663c7721c42db1 data/testermod/tags/block/incorrect_for_false_nightmare_tool.json

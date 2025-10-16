@@ -87,6 +87,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
         basicItem(ModItems.VOID_MUSIC_DISK.get());
+        basicItem(ModItems.GOLDEN_MELON_SLICE.get());
 
         // Block-derived items
         buttonItem(ModBlocks.NIGHTMARE_BUTTON, ModBlocks.NIGHTMARE_BLOCK);

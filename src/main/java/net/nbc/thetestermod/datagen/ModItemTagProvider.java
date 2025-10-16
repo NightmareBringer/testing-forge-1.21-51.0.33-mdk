@@ -308,11 +308,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(ModItems.NIGHTMARE_INGOT.get(),
-                        ModItems.STORM_INGOT.get()
+                     ModItems.STORM_INGOT.get()
                 );
 
-        tag(ItemTags.PIGLIN_REPELLENTS)
-                .add(ModItems.WOVEN_INDIGO_BRICK.get()
+        tag(ItemTags.PIGLIN_LOVED)
+                .add(ModItems.GOLDEN_MELON_SLICE.get(),
+                     ModBlocks.GOLDEN_MELON_BLOCK.get().asItem()
+                );
+
+        tag(ItemTags.PIGLIN_FOOD)
+                .add(ModItems.GOLDEN_MELON_SLICE.get(),
+                        ModBlocks.GOLDEN_MELON_BLOCK.get().asItem()
                 );
 
         tag(ItemTags.TRIM_MATERIALS)
