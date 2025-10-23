@@ -152,6 +152,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.CORRUPTED_OAK_FENCE_GATE);
         blockItem(ModBlocks.CORRUPTED_OAK_TRAPDOOR, "_bottom");
 
+        signBlock(ModBlocks.CORRUPTED_OAK_SIGN.get(), ModBlocks.CORRUPTED_OAK_WALL_SIGN.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+        hangingSignBlock(ModBlocks.CORRUPTED_OAK_HANGING_SIGN.get(), ModBlocks.CORRUPTED_OAK_HANGING_WALL_SIGN.get(), blockTexture(ModBlocks.CORRUPTED_OAK_PLANKS.get()));
+
         blockWithItem(ModBlocks.INDIGO_BRICKS);
 
         slabBlock(ModBlocks.MYSTERIOUS_DUST_SLAB.get(), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()));

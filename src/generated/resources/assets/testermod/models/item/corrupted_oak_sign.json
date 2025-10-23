@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "testermod:item/corrupted_oak_sign"
+  }
+}

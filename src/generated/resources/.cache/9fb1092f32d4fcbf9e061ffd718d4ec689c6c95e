@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-16T13:16:42.0597467	Recipes
+// 1.21.1	2025-10-23T01:50:23.9923304	Recipes
 f842d727088d442ee18daaf52ca2e50d1ef5672e data/minecraft/advancement/recipes/misc/false_nightmare_ingot_from_smithing.json
 cc2e94fc19a00851f49513e6ad7cfb76b45e42de data/minecraft/advancement/recipes/misc/false_storm_ingot_from_smithing.json
 b0a364454247ad87a777336b5b215bda3e247cfb data/minecraft/advancement/recipes/misc/nightmare_ingot_from_smithing.json
@@ -281,7 +281,7 @@ b98a36bd7de64a28c68dff3cb94b42f8f134224e data/testermod/recipe/nightmare_sword.j
 5152a56b5c7f2bf4e7977f4c526b6548b2f9eddb data/testermod/recipe/nightmarite_from_blasting_nightmarite_ore.json
 717c06765c25a8a84a0ee2c4011a07db85a9c2e2 data/testermod/recipe/nightmarite_from_smelting_nightmarite_deepslate_ore.json
 f222ced9f176920440ffb64920e85f2700cdde3d data/testermod/recipe/nightmarite_from_smelting_nightmarite_ore.json
-0590ec06f8fd4f2513cdc8d579f12326e64829f6 data/testermod/recipe/pedestal.json
+ae0caaf42afd1780ae783b32d953905186e81295 data/testermod/recipe/pedestal.json
 6094baf3aa69b25aaba87f3f9f5f203837bec111 data/testermod/recipe/pure_eye.json
 161233a776c4db6225636b7c38b98042fb7e8a31 data/testermod/recipe/pure_nightmare_axe.json
 f08b6236760c581737b00664456f73f329f64f21 data/testermod/recipe/pure_nightmare_hammer.json

@@ -526,8 +526,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_block_from_mysterious_slab");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PEDESTAL_BLOCK.get())
-                .pattern("/ /")
-                .pattern(" M ")
+                .pattern("/M/")
+                .pattern("MMM")
                 .pattern("   ")
                 .define('/', ModItems.STORM_INGOT.get())
                 .define('M', ModBlocks.REFINED_NIGHTMARE_BLOCK.get())

@@ -4,11 +4,15 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.material.PushReaction;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.custom.*;
+import net.nbc.thetestermod.block.entity.ModBlockEntities;
 import net.nbc.thetestermod.item.ModItems;
 import net.nbc.thetestermod.sound.ModSounds;
+import net.nbc.thetestermod.util.ModWoodTypes;
 import net.nbc.thetestermod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -196,17 +200,17 @@ public class ModBlocks
             () -> new CrimsonBlueBerryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
     public static final DeferredBlock<RotatedPillarBlock> CORRUPTED_OAK_LOG = registerBlock("corrupted_oak_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(2.0F, 3.0F)));
     public static final DeferredBlock<RotatedPillarBlock> CORRUPTED_OAK_WOOD = registerBlock("corrupted_oak_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).strength(2.0F, 3.0F)));
 
     public static final DeferredBlock<RotatedPillarBlock> STRIPPED_CORRUPTED_OAK_LOG = registerBlock("stripped_corrupted_oak_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_LOG)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_LOG).strength(2.0F, 3.0F)));
     public static final DeferredBlock<RotatedPillarBlock> STRIPPED_CORRUPTED_OAK_WOOD = registerBlock("stripped_corrupted_oak_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CHERRY_WOOD).strength(2.0F, 3.0F)));
 
     public static final DeferredBlock<Block> CORRUPTED_OAK_PLANKS = registerBlock("corrupted_oak_planks",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)) {
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).requiresCorrectToolForDrops().strength(2.0F, 3.0F)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return super.isFlammable(state, level, pos, direction);
@@ -250,36 +254,48 @@ public class ModBlocks
 
     public static final DeferredBlock<StairBlock> CORRUPTED_OAK_STAIRS = registerBlock("corrupted_oak_stairs",
             () -> new StairBlock(ModBlocks.CORRUPTED_OAK_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS).strength(2.0F, 3.0F)));
     public static final DeferredBlock<SlabBlock> CORRUPTED_OAK_SLAB = registerBlock("corrupted_oak_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB).strength(2.0F, 3.0F)));
 
     public static final DeferredBlock<PressurePlateBlock> CORRUPTED_OAK_PRESSURE_PLATE = registerBlock("corrupted_oak_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE)));
+            () -> new PressurePlateBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE).strength(1.0F, 1.0F)));
     public static final DeferredBlock<ButtonBlock> CORRUPTED_OAK_BUTTON = registerBlock("corrupted_oak_button",
-            () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON)));
+            () -> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON).strength(1.0F, 1.0F)));
 
     public static final DeferredBlock<FenceBlock> CORRUPTED_OAK_FENCE = registerBlock("corrupted_oak_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE)));
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE).strength(2.0F, 3.0F)));
     public static final DeferredBlock<FenceGateBlock> CORRUPTED_OAK_FENCE_GATE = registerBlock("corrupted_oak_fence_gate",
-            () -> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE_GATE)));
+            () -> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE_GATE).strength(2.0F, 3.0F)));
 
     public static final DeferredBlock<DoorBlock> CORRUPTED_OAK_DOOR = registerBlock("corrupted_oak_door",
-            () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_DOOR)));
+            () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_DOOR).strength(2.0F, 3.0F)));
     public static final DeferredBlock<TrapDoorBlock> CORRUPTED_OAK_TRAPDOOR = registerBlock("corrupted_oak_trapdoor",
-            () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_TRAPDOOR)));
+            () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_TRAPDOOR).strength(2.0F, 3.0F)));
+
+
+    public static final DeferredBlock<ModStandingSignBlock> CORRUPTED_OAK_SIGN = (DeferredBlock<ModStandingSignBlock>) BLOCKS.register("corrupted_oak_sign",
+            () -> new ModStandingSignBlock(ModWoodTypes.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SIGN).strength(1.0F, 2.0F)));
+    public static final DeferredBlock<ModWallSignBlock> CORRUPTED_OAK_WALL_SIGN = (DeferredBlock<ModWallSignBlock>) BLOCKS.register("corrupted_oak_wall_sign",
+            () -> new ModWallSignBlock(ModWoodTypes.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_WALL_SIGN).sound(SoundType.NETHER_WOOD).strength(1.0F, 2.0F)));
+
+    public static final DeferredBlock<ModHangingSignBlock> CORRUPTED_OAK_HANGING_SIGN = (DeferredBlock<ModHangingSignBlock>) BLOCKS.register("corrupted_oak_hanging_sign",
+            () -> new ModHangingSignBlock(ModWoodTypes.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_HANGING_SIGN).sound(SoundType.CHERRY_WOOD_HANGING_SIGN).strength(1.0F, 3.0F)));
+    public static final DeferredBlock<ModWallHangingSignBlock> CORRUPTED_OAK_HANGING_WALL_SIGN = (DeferredBlock<ModWallHangingSignBlock>) BLOCKS.register("corrupted_oak_hanging_wall_sign",
+            () -> new ModWallHangingSignBlock(ModWoodTypes.CORRUPTED_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_WALL_HANGING_SIGN).sound(SoundType.CHERRY_WOOD_HANGING_SIGN).strength(1.0F, 3.0F)));
+
 
     public static final DeferredBlock<Block> MYSTERIOUS_DUST_BLOCK = registerBlock("mysterious_dust_block",
-            () -> new MysteriousDustBlock((BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SAND).strength(0.35f))));
+            () -> new MysteriousDustBlock((BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SAND).strength(0.50f))));
 
     public static final DeferredBlock<FallingSlabBlock> MYSTERIOUS_DUST_SLAB = registerBlock("mysterious_dust_slab",
-            () -> new FallingSlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SAND).strength(0.15f)));
+            () -> new FallingSlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SAND).strength(0.25f)));
 
     public static final DeferredBlock<Block> RED_GAMING_CHAIR = registerBlock("gaming_chair_red",
-            () -> new GamingChairRedBlock(BlockBehaviour.Properties.of().strength(0.25f).noOcclusion()));
+            () -> new GamingChairRedBlock(BlockBehaviour.Properties.of().strength(1.5f).noOcclusion()));
 
     public static final DeferredBlock<Block> BLUE_GAMING_CHAIR = registerBlock("gaming_chair_blue",
-            () -> new GamingChairBlueBlock(BlockBehaviour.Properties.of().strength(0.25f).noOcclusion()));
+            () -> new GamingChairBlueBlock(BlockBehaviour.Properties.of().strength(1.5f).noOcclusion()));
 
     public static final DeferredBlock<Block> PEDESTAL_BLOCK = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().strength(10f).noOcclusion()));

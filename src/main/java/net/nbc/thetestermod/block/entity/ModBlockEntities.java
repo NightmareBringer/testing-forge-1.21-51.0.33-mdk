@@ -1,13 +1,12 @@
 package net.nbc.thetestermod.block.entity;
 
+import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.nbc.thetestermod.block.entity.custom.CodeVaultBlockEntity;
-import net.nbc.thetestermod.block.entity.custom.ImpurifierBlockEntity;
-import net.nbc.thetestermod.block.entity.custom.PedestalBlockEntity;
-import net.nbc.thetestermod.block.entity.custom.PurifierBlockEntity;
+import net.nbc.thetestermod.block.entity.custom.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -32,6 +31,16 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<CodeVaultBlockEntity>> VAULT_BLOCK_BE =
             BLOCK_ENTITIES.register("vault_block_be", () -> BlockEntityType.Builder.of(
                     CodeVaultBlockEntity::new, ModBlocks.STEELIUM_VAULT_BLOCK.get(), ModBlocks.NEPTOCHROME_VAULT_BLOCK.get()).build(null));
+
+    public static final Supplier<BlockEntityType<ModSignBlockEntity>> MOD_SIGN_ENTITY =
+            BLOCK_ENTITIES.register("mod_sign_entity",
+                    () -> BlockEntityType.Builder.of(ModSignBlockEntity::new,
+                            ModBlocks.CORRUPTED_OAK_SIGN.get(), ModBlocks.CORRUPTED_OAK_WALL_SIGN.get()).build(null));
+
+    public static final Supplier<BlockEntityType<ModHangingSignBlockEntity>> MOD_HANGING_SIGN_ENTITY =
+            BLOCK_ENTITIES.register("mod_hanging_sign_entity",
+                    () -> BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
+                            ModBlocks.CORRUPTED_OAK_HANGING_SIGN.get(), ModBlocks.CORRUPTED_OAK_HANGING_WALL_SIGN.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

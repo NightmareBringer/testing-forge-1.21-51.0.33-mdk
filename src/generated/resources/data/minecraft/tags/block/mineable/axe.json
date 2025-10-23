@@ -9,6 +9,10 @@
     "testermod:corrupted_oak_trapdoor",
     "testermod:corrupted_oak_fence",
     "testermod:corrupted_oak_fence_gate",
+    "testermod:corrupted_oak_sign",
+    "testermod:corrupted_oak_wall_sign",
+    "testermod:corrupted_oak_hanging_sign",
+    "testermod:corrupted_oak_hanging_wall_sign",
     "testermod:golden_melon"
   ]
 }

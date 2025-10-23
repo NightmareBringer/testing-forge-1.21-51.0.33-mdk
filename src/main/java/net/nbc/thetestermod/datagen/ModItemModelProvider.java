@@ -174,6 +174,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.CORRUPTED_OAK_FENCE, ModBlocks.CORRUPTED_OAK_PLANKS);
         simpleBlockItem(ModBlocks.CORRUPTED_OAK_DOOR);
 
+        basicItem(ModItems.CORRUPTED_OAK_SIGN.get());
+        basicItem(ModItems.CORRUPTED_OAK_HANGING_SIGN.get());
+
         buttonItem(ModBlocks.STEELIUM_BUTTON, ModBlocks.STEELIUM_BLOCK);
         wallItem(ModBlocks.STEELIUM_WALL, ModBlocks.STEELIUM_BLOCK);
         simpleBlockItem(ModBlocks.STEELIUM_DOOR);

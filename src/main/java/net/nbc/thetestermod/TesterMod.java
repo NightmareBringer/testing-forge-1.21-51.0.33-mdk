@@ -2,6 +2,7 @@ package net.nbc.thetestermod;
 
 import io.netty.util.Attribute;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.nbc.thetestermod.block.ModBlocks;
 import net.nbc.thetestermod.block.entity.ModBlockEntities;
 import net.nbc.thetestermod.block.entity.renderer.PedestalBlockEntityRenderer;
@@ -26,6 +27,7 @@ import net.nbc.thetestermod.screen.custom.VaultMenu;
 import net.nbc.thetestermod.screen.custom.VaultScreen;
 import net.nbc.thetestermod.sound.ModSounds;
 import net.nbc.thetestermod.util.ModItemProperties;
+import net.nbc.thetestermod.util.ModWoodTypes;
 import net.nbc.thetestermod.villager.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -119,6 +121,7 @@ public class TesterMod
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.CORRUPTED_OAK);
             ModItemProperties.addCustomItemProperties();
 
             EntityRenderers.register(ModEntities.TESTER_MOB.get(), TesterRenderer::new);

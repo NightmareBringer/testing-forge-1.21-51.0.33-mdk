@@ -150,6 +150,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get());
         dropSelf(ModBlocks.MYSTERIOUS_DUST_BLOCK.get());
 
+        this.add(ModBlocks.CORRUPTED_OAK_SIGN.get(), block ->
+            createSingleItemTable(ModItems.CORRUPTED_OAK_SIGN.get()));
+        this.add(ModBlocks.CORRUPTED_OAK_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CORRUPTED_OAK_SIGN.get()));
+        this.add(ModBlocks.CORRUPTED_OAK_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CORRUPTED_OAK_HANGING_SIGN.get()));
+        this.add(ModBlocks.CORRUPTED_OAK_HANGING_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CORRUPTED_OAK_HANGING_SIGN.get()));
+
         this.add(ModBlocks.CORRUPTED_OAK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.CORRUPTED_OAK_SLAB.get()));
         this.add(ModBlocks.CORRUPTED_OAK_DOOR.get(),

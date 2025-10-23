@@ -366,6 +366,12 @@ public class ModItems
     public static final DeferredItem<Item> GOLDEN_MELON_SLICE = ITEMS.register("golden_melon_slice",
             () -> new Item(new Item.Properties().food(ModFoodProperties.GOLDEN_MELON_SLICE)));
 
+    public static final DeferredItem<Item> CORRUPTED_OAK_SIGN = ITEMS.register("corrupted_oak_sign",
+                    () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.CORRUPTED_OAK_SIGN.get(), ModBlocks.CORRUPTED_OAK_WALL_SIGN.get()));
+
+    public static final DeferredItem<Item> CORRUPTED_OAK_HANGING_SIGN = ITEMS.register("corrupted_oak_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.CORRUPTED_OAK_HANGING_SIGN.get(), ModBlocks.CORRUPTED_OAK_HANGING_WALL_SIGN.get(), new Item.Properties().stacksTo(16)));
+
     public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
             () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0x000000, 0xfafafa, new Item.Properties()));
 

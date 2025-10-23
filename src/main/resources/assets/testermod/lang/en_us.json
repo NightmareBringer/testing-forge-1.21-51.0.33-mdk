@@ -113,6 +113,9 @@
 
   "item.testermod.golden_melon_slice": "Golden Melon Slice",
 
+  "item.testermod.corrupted_oak_sign": "Corrupted Oak Sign",
+  "item.testermod.corrupted_oak_hanging_sign": "Corrupted Oak Hanging Sign",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite Essence",
   "block.testermod.nightmarite_block": "Block of Nightmarite Essence",
   "block.testermod.nightmare_block": "Block of Nightmarite",
@@ -181,6 +184,11 @@
   "block.testermod.corrupted_oak_fence_gate": "Corrupted Oak Fence Gate",
   "block.testermod.corrupted_oak_door": "Corrupted Oak Door",
   "block.testermod.corrupted_oak_trapdoor": "Corrupted Oak Trapdoor",
+
+  "block.testermod.corrupted_oak_sign": "Corrupted Oak Sign",
+  "block.testermod.corrupted_oak_wall_sign": "Corrupted Oak Wall Sign",
+  "block.testermod.corrupted_oak_hanging_sign": "Corrupted Oak Hanging Sign",
+  "block.testermod.corrupted_oak_hanging_wall_sign": "Corrupted Oak Hanging Wall Sign",
 
   "block.testermod.corrupted_oak_leaves": "Corrupted Oak Leaves",
   "block.testermod.corrupted_oak_sapling": "Corrupted Oak Sapling",

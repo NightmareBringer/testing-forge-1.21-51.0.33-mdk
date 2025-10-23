@@ -21,6 +21,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.CORRUPTED_OAK_PLANKS.get())
                 .add(ModBlocks.CORRUPTED_OAK_STAIRS.get())
@@ -31,10 +35,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CORRUPTED_OAK_TRAPDOOR.get())
                 .add(ModBlocks.CORRUPTED_OAK_FENCE.get())
                 .add(ModBlocks.CORRUPTED_OAK_FENCE_GATE.get())
+                .add(ModBlocks.CORRUPTED_OAK_SIGN.get())
+                .add(ModBlocks.CORRUPTED_OAK_WALL_SIGN.get())
+                .add(ModBlocks.CORRUPTED_OAK_HANGING_SIGN.get())
+                .add(ModBlocks.CORRUPTED_OAK_HANGING_WALL_SIGN.get())
                 .add(ModBlocks.GOLDEN_MELON_BLOCK.get());
-
-        tag(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.CORRUPTED_OAK_LEAVES.get());
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.MYSTERIOUS_DUST_BLOCK.get())
@@ -746,6 +751,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.CORRUPTED_OAK_LEAVES.get());
+
+        tag(BlockTags.PLANKS)
+                .add(ModBlocks.CORRUPTED_OAK_PLANKS.get());
 
         tag(BlockTags.PIGLIN_REPELLENTS)
                 .add(ModBlocks.INDIGO_BRICKS.get(),

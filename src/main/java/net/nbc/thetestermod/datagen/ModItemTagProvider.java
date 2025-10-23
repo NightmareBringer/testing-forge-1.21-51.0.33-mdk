@@ -331,14 +331,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NIGHTEN_SMITHING_TEMPLATE.get())
                 .add(ModItems.STORMEN_SMITHING_TEMPLATE.get());
 
-        tag(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.CORRUPTED_OAK_LOG.get().asItem())
-                .add(ModBlocks.CORRUPTED_OAK_WOOD.get().asItem())
-                .add(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_CORRUPTED_OAK_WOOD.get().asItem());
-
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.CORRUPTED_OAK_PLANKS.get().asItem());
+
+        tag(ItemTags.SIGNS)
+                .add(ModItems.CORRUPTED_OAK_SIGN.get());
+
+        tag(ItemTags.HANGING_SIGNS)
+                .add(ModItems.CORRUPTED_OAK_HANGING_SIGN.get());
 
     }
 }
