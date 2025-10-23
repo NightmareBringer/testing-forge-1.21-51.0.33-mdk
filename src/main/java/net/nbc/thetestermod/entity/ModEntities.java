@@ -34,6 +34,14 @@ public class ModEntities {
             ENTITY_TYPES.register("chair_entity", () -> EntityType.Builder.of(ChairEntity::new, MobCategory.MISC)
                     .sized(0.75f, 0.5f).build("chair_entity"));
 
+    public static final Supplier<EntityType<ModBoatEntity>> MOD_BOAT_ENT =
+            ENTITY_TYPES.register("mod_boat_entity", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375f, 0.5625f).build("mod_boat_entity"));
+
+    public static final Supplier<EntityType<ModChestBoatEntity>> MOD_CHEST_BOAT_ENT =
+            ENTITY_TYPES.register("mod_chest_boat_entity", () -> EntityType.Builder.<ModChestBoatEntity>of(ModChestBoatEntity::new, MobCategory.MISC)
+                    .sized(1.375f, 0.5625f).build("mod_chest_boat_entity"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

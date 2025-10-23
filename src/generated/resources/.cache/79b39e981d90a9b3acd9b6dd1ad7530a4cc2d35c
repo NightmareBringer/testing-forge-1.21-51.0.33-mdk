@@ -1,7 +1,9 @@
-// 1.21.1	2025-10-23T02:45:48.3862006	Item Models: testermod
+// 1.21.1	2025-10-23T10:11:41.2218126	Item Models: testermod
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/alien_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testermod/models/item/armored_alien_spawn_egg.json
+d030f4ad1a100461662cf993e13cbf9d9917fe15 assets/testermod/models/item/corrupted_oak_boat.json
 39b7a36d3a99f382c559ea81958b2f7ae124e125 assets/testermod/models/item/corrupted_oak_button.json
+505c539eb0b0f2ab5634974b4fa772f75db482e5 assets/testermod/models/item/corrupted_oak_chest_boat.json
 e8bf8fd1e98d6d9e85a968f3e69cf04abb106bfd assets/testermod/models/item/corrupted_oak_door.json
 dfabb4ca9230e75633bcf16ce427033c1dc86160 assets/testermod/models/item/corrupted_oak_fence.json
 a66b059bdecde288a4233027c4ca574cb9aa1916 assets/testermod/models/item/corrupted_oak_hanging_sign.json

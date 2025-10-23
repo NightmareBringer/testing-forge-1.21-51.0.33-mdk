@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "S": {
+      "item": "testermod:corrupted_oak_planks"
+    }
+  },
+  "pattern": [
+    "   ",
+    "SCS",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:corrupted_oak_chest_boat"
+  }
+}

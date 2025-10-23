@@ -350,11 +350,25 @@ public class ModBlocks
     public static final DeferredBlock<DoorBlock> STEELIUM_DOOR = registerBlock("steelium_door",
             () -> new SpecialDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().noOcclusion()) {
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn1").withStyle(ChatFormatting.RED));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn2").withStyle(ChatFormatting.RED));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
     public static final DeferredBlock<TrapDoorBlock> STEELIUM_TRAPDOOR = registerBlock("steelium_trapdoor",
             () -> new SpecialTrapdoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)
-                    .requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().noOcclusion()) {
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn1").withStyle(ChatFormatting.RED));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn2").withStyle(ChatFormatting.RED));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
     public static final DeferredBlock<PressurePlateBlock> STEELIUM_PRESSURE_PLATE = registerBlock("steelium_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE).strength(50f).sound(ModSounds.STEELIUM_BLOCK_SOUNDS)));
@@ -424,12 +438,26 @@ public class ModBlocks
     public static final DeferredBlock<DoorBlock> NEPTOCHROME_DOOR = registerBlock("neptochrome_door",
             () -> new SpecialDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(SoundType.COPPER)
-                    .requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().noOcclusion()) {
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn1").withStyle(ChatFormatting.RED));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn2").withStyle(ChatFormatting.RED));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
     public static final DeferredBlock<TrapDoorBlock> NEPTOCHROME_TRAPDOOR = registerBlock("neptochrome_trapdoor",
             () -> new SpecialTrapdoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3600000.0F)
                     .explosionResistance(3600000.0F).sound(SoundType.COPPER)
-                    .requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops().noOcclusion()) {
+                @Override
+                public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn1").withStyle(ChatFormatting.RED));
+                    pTooltipComponents.add(Component.translatable("tooltip.testermod.special_door_warn2").withStyle(ChatFormatting.RED));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
 
     public static final DeferredBlock<PressurePlateBlock> NEPTOCHROME_PRESSURE_PLATE = registerBlock("neptochrome_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON,

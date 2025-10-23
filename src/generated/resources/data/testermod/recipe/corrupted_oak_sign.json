@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "testermod:strange_stick"
+    },
+    "S": {
+      "item": "testermod:corrupted_oak_planks"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    " L "
+  ],
+  "result": {
+    "count": 6,
+    "id": "testermod:corrupted_oak_sign"
+  }
+}

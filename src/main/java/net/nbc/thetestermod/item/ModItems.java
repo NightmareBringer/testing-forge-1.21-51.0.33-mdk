@@ -3,7 +3,9 @@ package net.nbc.thetestermod.item;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.*;
+import net.nbc.thetestermod.entity.custom.ModBoatEntity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -371,6 +373,11 @@ public class ModItems
 
     public static final DeferredItem<Item> CORRUPTED_OAK_HANGING_SIGN = ITEMS.register("corrupted_oak_hanging_sign",
             () -> new HangingSignItem(ModBlocks.CORRUPTED_OAK_HANGING_SIGN.get(), ModBlocks.CORRUPTED_OAK_HANGING_WALL_SIGN.get(), new Item.Properties().stacksTo(16)));
+
+    public static final DeferredItem<Item> CORRUPTED_OAK_BOAT = ITEMS.register("corrupted_oak_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.CORRUPTED_OAK, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> CORRUPTED_OAK_CHEST_BOAT = ITEMS.register("corrupted_oak_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.CORRUPTED_OAK, new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> ALIEN_SPAWN_EGG = ITEMS.register("alien_spawn_egg",
             () -> new SpawnEggItem(ModEntities.ALIEN_MOB.get(), 0x000000, 0xfafafa, new Item.Properties()));

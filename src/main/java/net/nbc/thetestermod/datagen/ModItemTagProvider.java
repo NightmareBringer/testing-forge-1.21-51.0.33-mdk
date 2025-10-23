@@ -340,5 +340,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.HANGING_SIGNS)
                 .add(ModItems.CORRUPTED_OAK_HANGING_SIGN.get());
 
+        tag(ItemTags.BOATS)
+                .add(ModItems.CORRUPTED_OAK_BOAT.get())
+                .add(ModItems.CORRUPTED_OAK_CHEST_BOAT.get());
+
+        tag(ItemTags.CHEST_BOATS)
+                .add(ModItems.CORRUPTED_OAK_CHEST_BOAT.get());
     }
 }

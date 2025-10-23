@@ -129,6 +129,8 @@ public class TesterMod
             EntityRenderers.register(ModEntities.ARMORED_ALIEN_MOB.get(), ArmoredAlienRenderer::new);
             EntityRenderers.register(ModEntities.THROWING_KNIFE.get(), ThrowingKnifeProjectileRenderer::new);
             EntityRenderers.register(ModEntities.CHAIR_ENT.get(), ChairEntRenderer::new);
+            EntityRenderers.register(ModEntities.MOD_BOAT_ENT.get(), context -> new ModBoatRenderer(context, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT_ENT.get(), context -> new ModBoatRenderer(context, true));
         }
 
         @SubscribeEvent

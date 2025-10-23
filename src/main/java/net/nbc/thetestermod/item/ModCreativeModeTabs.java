@@ -34,6 +34,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CORRUPTED_OAK_BUTTON.get());
                         output.accept(ModItems.CORRUPTED_OAK_SIGN.get());
                         output.accept(ModItems.CORRUPTED_OAK_HANGING_SIGN.get());
+                        output.accept(ModItems.CORRUPTED_OAK_BOAT.get());
+                        output.accept(ModItems.CORRUPTED_OAK_CHEST_BOAT.get());
                         output.accept(ModBlocks.CORRUPTED_OAK_LEAVES.get());
                         output.accept(ModBlocks.MYSTERIOUS_DUST_SLAB.get());
                         output.accept(ModBlocks.MYSTERIOUS_DUST_BLOCK.get());

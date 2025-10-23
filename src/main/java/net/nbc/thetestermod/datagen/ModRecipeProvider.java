@@ -422,6 +422,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":sticks_from_corrupted_oak_planks");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_OAK_BOAT)
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("SSS")
+                .define('S', ModBlocks.CORRUPTED_OAK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_OAK_CHEST_BOAT)
+                .pattern("   ")
+                .pattern("SCS")
+                .pattern("SSS")
+                .define('S', ModBlocks.CORRUPTED_OAK_PLANKS.get())
+                .define('C', Blocks.CHEST)
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_chest_boat_the_right_way");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_OAK_SIGN, 6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" L ")
+                .define('S', ModBlocks.CORRUPTED_OAK_PLANKS.get())
+                .define('L', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CORRUPTED_OAK_HANGING_SIGN, 6)
+                .pattern("L L")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get())
+                .define('L', Items.CHAIN)
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRANGE_STICK.get())
                 .pattern("///")
                 .pattern("/M/")
@@ -541,14 +571,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LEAVES.get()), has(ModBlocks.CORRUPTED_OAK_LEAVES.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":mysterious_dust_block_from_corrupted_leaves");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_BARS.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_BARS.get(), 8)
                 .pattern(" / ")
                 .pattern(" / ")
                 .pattern(" / ")
                 .define('/', ModBlocks.STEELIUM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_BARS.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEPTOCHROME_BARS.get(), 8)
                 .pattern(" / ")
                 .pattern(" / ")
                 .pattern(" / ")
@@ -940,6 +970,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.STRIPPED_CORRUPTED_OAK_LOG.get())
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_LOG.get()), has(ModBlocks.CORRUPTED_OAK_LOG.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_planks_from_stripped_corrupted_log");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CORRUPTED_OAK_CHEST_BOAT.get())
+                .requires(Blocks.CHEST)
+                .requires(ModItems.CORRUPTED_OAK_BOAT.get())
+                .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":corrupted_oak_chest_boat_the_boring_way");
 
 
 

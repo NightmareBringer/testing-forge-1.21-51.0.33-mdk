@@ -116,6 +116,9 @@
   "item.testermod.corrupted_oak_sign": "Corrupted Oak Sign",
   "item.testermod.corrupted_oak_hanging_sign": "Corrupted Oak Hanging Sign",
 
+  "item.testermod.corrupted_oak_boat": "Corrupted Oak Boat",
+  "item.testermod.corrupted_oak_chest_boat": "Corrupted Oak Boat with Chest",
+
   "block.testermod.pure_nightmarite_block": "Block of Pure Nightmarite Essence",
   "block.testermod.nightmarite_block": "Block of Nightmarite Essence",
   "block.testermod.nightmare_block": "Block of Nightmarite",
@@ -306,6 +309,9 @@
   "entity.testermod.armored_alien_mob": "Armored Alien",
   "entity.testermod.throwing_knife": "Thrown Knife",
   "entity.testermod.chair_entity": "Gaming Chair",
+  "entity.testermod.mod_chest_boat_entity": "Corrupted Oak Boat with Chest",
+  "entity.testermod.mod_boat_entity": "Corrupted Oak Boat",
+
 
   "entity.minecraft.villager.testermod.gaming_villager_n": "Gaming Villager",
   "entity.minecraft.villager.testermod.gaming_villager_s": "Gaming Villager",
@@ -333,6 +339,9 @@
   "tooltip.testermod.vault_wall_warm2": "Used for Neptochrome Vault only",
   "tooltip.testermod.transform_block_warn1": "Requires a certain fuel",
   "tooltip.testermod.transform_block_warn2": "Use with extreme cation",
+
+  "tooltip.testermod.special_door_warn1": "Remember! This block will require",
+  "tooltip.testermod.special_door_warn2": "the Orb of Energy to open/close",
 
   "tooltip.testermod.woven_brick_info1": "A peculiar item with a strange",
   "tooltip.testermod.woven_brick_info2": "energy, can be used as fuel,",
