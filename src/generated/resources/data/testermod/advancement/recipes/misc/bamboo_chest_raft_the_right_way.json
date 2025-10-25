@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bamboo_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:bamboo_chest_raft_the_right_way"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bamboo_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:bamboo_chest_raft_the_right_way"
+    ]
+  }
+}

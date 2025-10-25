@@ -1,7 +1,9 @@
 package net.nbc.thetestermod.datagen;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
@@ -465,7 +467,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("   ")
                 .define('D', ModItems.MYSTERIOUS_DUST.get())
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTERIOUS_STRING.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTERIOUS_STRING.get(), 2)
                 .pattern(" / ")
                 .pattern("/M/")
                 .pattern(" / ")
@@ -1099,6 +1101,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         trimSmithing(pRecipeOutput, ModItems.NIGHTEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "nighten"));
         trimSmithing(pRecipeOutput, ModItems.STORMEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "stormen"));
 
+        chestBoat(Blocks.OAK_PLANKS, Items.OAK_CHEST_BOAT, "oak", pRecipeOutput);
+        chestBoat(Blocks.ACACIA_PLANKS, Items.ACACIA_CHEST_BOAT, "acacia", pRecipeOutput);
+        chestBoat(Blocks.BAMBOO_PLANKS, Items.BAMBOO_CHEST_RAFT, "bamboo", pRecipeOutput);
+        chestBoat(Blocks.BIRCH_PLANKS, Items.BIRCH_CHEST_BOAT, "birch", pRecipeOutput);
+        chestBoat(Blocks.CHERRY_PLANKS, Items.CHERRY_CHEST_BOAT, "cherry", pRecipeOutput);
+        chestBoat(Blocks.DARK_OAK_PLANKS, Items.DARK_OAK_CHEST_BOAT, "dark_oak", pRecipeOutput);
+        chestBoat(Blocks.JUNGLE_PLANKS, Items.JUNGLE_CHEST_BOAT, "jungle", pRecipeOutput);
+        chestBoat(Blocks.MANGROVE_PLANKS, Items.MANGROVE_CHEST_BOAT, "mangrove", pRecipeOutput);
+        chestBoat(Blocks.SPRUCE_PLANKS, Items.SPRUCE_CHEST_BOAT, "spruce", pRecipeOutput);
+
+    }
+
+    protected static void chestBoat(Block plank, Item boat, String woodName, RecipeOutput pRecipeOutput) {
+        // Since there is only 1 raft type, this should be fine
+        String boatType = woodName.equals("bamboo") ? "raft" : "boat";
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, boat)
+                .pattern("SCS")
+                .pattern("SSS")
+                .define('S', plank)
+                .define('C', Blocks.CHEST)
+                .unlockedBy(getHasName(plank), has(plank))
+                // I would do block.getName() but then the recipe output wouldn't be the same
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":" + woodName + "_chest_" + boatType + "_the_right_way");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

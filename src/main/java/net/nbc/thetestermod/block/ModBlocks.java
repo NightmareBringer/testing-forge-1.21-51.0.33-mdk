@@ -51,21 +51,21 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> NIGHTMARITE_ORE = registerBlock("nightmarite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
-                    .strength(5f).explosionResistance(5f)
+                    .strength(5f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> NIGHTMARITE_DEEPSLATE_ORE = registerBlock("nightmarite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(4,7), BlockBehaviour.Properties.of()
-                    .strength(10f).explosionResistance(15f)
+                    .strength(10f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> NIGHTMARITE_NETHER_ORE = registerBlock("nightmarite_nether_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
-                    .strength(5f).explosionResistance(5f)
+                    .strength(5f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
     public static final DeferredBlock<Block> NIGHTMARITE_END_ORE = registerBlock("nightmarite_end_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
-                    .strength(5f).explosionResistance(5f)
+                    .strength(5f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
@@ -110,21 +110,21 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> STORMITE_ORE = registerBlock("stormite_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of()
-                    .strength(8f).explosionResistance(1f)
+                    .strength(8f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> STORMITE_DEEPSLATE_ORE = registerBlock("stormite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(5,9), BlockBehaviour.Properties.of()
-                    .strength(16f).explosionResistance(10f)
+                    .strength(16f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> STORM_NETHER_ORE = registerBlock("stormite_nether_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
-                    .strength(8f).explosionResistance(5f)
+                    .strength(8f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
     public static final DeferredBlock<Block> STORM_END_ORE = registerBlock("stormite_end_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
-                    .strength(8f).explosionResistance(5f)
+                    .strength(8f).explosionResistance(3600000.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> STORM_BLOCK = registerBlock("storm_block",

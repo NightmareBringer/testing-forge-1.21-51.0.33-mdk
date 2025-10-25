@@ -69,6 +69,7 @@ public class ArmoredAlienEntity extends Animal {
                 .add(Attributes.ATTACK_KNOCKBACK, 1.3D)
                 .add(Attributes.ARMOR, 10.0D)
                 .add(Attributes.BURNING_TIME, 0.0D)
+                .add(Attributes.WATER_MOVEMENT_EFFICIENCY, 20.0D)
                 //.add(Attributes.ATTACK_SPEED, 4D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D);
     }

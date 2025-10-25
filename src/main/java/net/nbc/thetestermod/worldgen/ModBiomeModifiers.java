@@ -70,22 +70,17 @@ public class ModBiomeModifiers {
         context.register(ADD_CORRUPTED_OAK_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(
                         biomes.getOrThrow(Biomes.FOREST),
-                        biomes.getOrThrow(Biomes.DARK_FOREST),
-                        biomes.getOrThrow(Biomes.TAIGA),
-                        biomes.getOrThrow(Biomes.WINDSWEPT_FOREST)
+                        biomes.getOrThrow(Biomes.DARK_FOREST)
                 ),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CORRUPTED_OAK_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_CRIMSON_BLUE_BERRY_BUSH_OVERWORLD, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(
-                        biomes.getOrThrow(Biomes.FOREST),
                         biomes.getOrThrow(Biomes.DARK_FOREST),
                         biomes.getOrThrow(Biomes.TAIGA),
                         biomes.getOrThrow(Biomes.WINDSWEPT_FOREST),
-                        biomes.getOrThrow(Biomes.OLD_GROWTH_PINE_TAIGA),
-                        biomes.getOrThrow(Biomes.OLD_GROWTH_SPRUCE_TAIGA),
-                        biomes.getOrThrow(Biomes.FLOWER_FOREST)
+                        biomes.getOrThrow(Biomes.OLD_GROWTH_SPRUCE_TAIGA)
                 ),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRIMSON_BLUE_BERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));

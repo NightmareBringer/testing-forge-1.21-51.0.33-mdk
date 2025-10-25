@@ -30,7 +30,7 @@ public class AlienEntity extends Animal {
     private boolean isCooldownPaused = false;
     private int babiesSpawned = 0;
     private int maxBabiesToSpawn = this.getRandom().nextInt(2, 4);
-    private int maxBirthCooldown = 720;
+    private int maxBirthCooldown = 560;
     private int birthCooldown = maxBirthCooldown;
 
     @Override
@@ -65,6 +65,7 @@ public class AlienEntity extends Animal {
                 .add(Attributes.ATTACK_DAMAGE, 12.0D)
                 .add(Attributes.ATTACK_KNOCKBACK, 1.2D)
                 .add(Attributes.ARMOR, 5.0D)
+                .add(Attributes.WATER_MOVEMENT_EFFICIENCY, 20.0D)
                 //.add(Attributes.BURNING_TIME, 0.0D)
                 //.add(Attributes.ATTACK_SPEED, 4D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.35D);
