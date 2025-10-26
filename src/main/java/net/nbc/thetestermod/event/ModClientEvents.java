@@ -11,6 +11,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.monster.EnderMan;
@@ -86,24 +87,5 @@ public class ModClientEvents {
             player.sendSystemMessage(Component.literal("why"));
         }
     }
-
-    @SubscribeEvent
-    public static void onMobEffect(MobEffectEvent.Added event) {
-        if (event.getEntity() instanceof Player player) {
-            boolean hasPurification = player.getActiveEffects().stream()
-                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == ModEffects.PURIFICATION_EFFECT);
-
-            boolean hasImpurification = player.getActiveEffects().stream()
-                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == ModEffects.IMPURIFICATION_EFFECT);
-
-            if ((hasPurification) && (player.getActiveEffects().stream()
-                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == MobEffectCategory.BENEFICIAL))) {
-                player.removeEffect(event.getEffectInstance().getEffect());
-            } else if ((hasImpurification) && (player.getActiveEffects().stream()
-                    .anyMatch(mobEffectInstance -> mobEffectInstance.getEffect() == MobEffectCategory.BENEFICIAL))) {
-                player.removeEffect(event.getEffectInstance().getEffect());
-            }
-        }
-    } */
-
+     */
 }

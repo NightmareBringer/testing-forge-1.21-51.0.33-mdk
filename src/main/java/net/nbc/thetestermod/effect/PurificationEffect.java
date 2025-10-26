@@ -12,10 +12,25 @@ public class PurificationEffect extends MobEffect
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.getActiveEffects().removeIf(mobEffectInstance -> !(isBeneficial()));
+    public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+        // Cancel out if Impurification is active
+        if (entity.hasEffect(ModEffects.IMPURIFICATION_EFFECT)) {
+            entity.removeEffect(ModEffects.IMPURIFICATION_EFFECT);
+            entity.removeEffect(ModEffects.PURIFICATION_EFFECT);
+            return false;
+        }
 
-        return super.applyEffectTick(pLivingEntity, pAmplifier);
+        // Remove all *harmful* effects
+        entity.getActiveEffects().removeIf(instance -> {
+            MobEffect effect = instance.getEffect().value();
+            boolean bool = !effect.isBeneficial() && effect != this;  // don't remove itself
+            if (bool) {
+                effect.removeAttributeModifiers(entity.getAttributes());
+            }
+            return bool;
+        });
+
+        return super.applyEffectTick(entity, amplifier);
     }
 
     @Override
