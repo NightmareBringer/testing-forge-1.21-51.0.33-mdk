@@ -17,39 +17,39 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.nbc.thetestermod.TesterMod;
 import net.nbc.thetestermod.block.ModBlocks;
-import net.nbc.thetestermod.recipe.PurifierBlockRecipe;
+import net.nbc.thetestermod.recipe.ImpurifierBlockRecipe;
 import org.jetbrains.annotations.Nullable;
 
-public class PurifierBlockRecipeCategory implements IRecipeCategory<PurifierBlockRecipe> {
-    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "purifier_block");
+public class ImpurifierBlockRecipeCategory implements IRecipeCategory<ImpurifierBlockRecipe> {
+    public static final ResourceLocation UID = ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "impurifier_block");
     public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
-            "textures/gui/purifier_block/purifier_block_gui_jei.png");
+            "textures/gui/purifier_block/impurifier_block_gui_jei.png");
     public static final ResourceLocation ARROW = ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID,
             "textures/gui/arrow_progress_jei.png");
 
-    public static final RecipeType<PurifierBlockRecipe> PURIFIER_BLOCK_RECIPE_RECIPE_TYPE =
-            RecipeType.create(TesterMod.MOD_ID, "purifier_block", PurifierBlockRecipe.class);
+    public static final RecipeType<ImpurifierBlockRecipe> IMPURIFIER_BLOCK_RECIPE_RECIPE_TYPE =
+            RecipeType.create(TesterMod.MOD_ID, "impurifier_block", ImpurifierBlockRecipe.class);
 
     private final IDrawable background;
     private final IDrawable arrow_overlay;
     private final IDrawable icon;
 
-    public PurifierBlockRecipeCategory(IGuiHelper helper) {
+    public ImpurifierBlockRecipeCategory(IGuiHelper helper) {
         IDrawableStatic arrowStatic = helper.createDrawable(ARROW, 41, 34, 22, 16);
 
         this.background = helper.createDrawable(TEXTURE, 0, 0, 104, 81);
-        this.arrow_overlay = helper.createAnimatedDrawable(arrowStatic, 225, IDrawableAnimated.StartDirection.LEFT, false);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.PURIFIER_BLOCK.get()));
+        this.arrow_overlay = helper.createAnimatedDrawable(arrowStatic, 350, IDrawableAnimated.StartDirection.LEFT, false);
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.IMPURIFIER_BLOCK.get()));
     }
 
     @Override
-    public RecipeType<PurifierBlockRecipe> getRecipeType() {
-        return PURIFIER_BLOCK_RECIPE_RECIPE_TYPE;
+    public RecipeType<ImpurifierBlockRecipe> getRecipeType() {
+        return IMPURIFIER_BLOCK_RECIPE_RECIPE_TYPE;
     }
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.testermod.purifier_block");
+        return Component.translatable("block.testermod.impurifier_block");
     }
 
     @Override
@@ -70,15 +70,15 @@ public class PurifierBlockRecipeCategory implements IRecipeCategory<PurifierBloc
     }
 
     @Override
-    public void draw(PurifierBlockRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+    public void draw(ImpurifierBlockRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         IRecipeCategory.super.draw(recipe, recipeSlotsView, guiGraphics, mouseX, mouseY);
         background.draw(guiGraphics);
         arrow_overlay.draw(guiGraphics, 41, 34);
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder iRecipeLayoutBuilder, PurifierBlockRecipe purifierBlockRecipe, IFocusGroup iFocusGroup) {
-        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 21, 19).addIngredients(purifierBlockRecipe.getIngredients().get(0));
-        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 71, 33).addItemStack(purifierBlockRecipe.getResultItem(null));
+    public void setRecipe(IRecipeLayoutBuilder iRecipeLayoutBuilder, ImpurifierBlockRecipe impurifierBlockRecipe, IFocusGroup iFocusGroup) {
+        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.INPUT, 21, 19).addIngredients(impurifierBlockRecipe.getIngredients().get(0));
+        iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 71, 33).addItemStack(impurifierBlockRecipe.getResultItem(null));
     }
 }

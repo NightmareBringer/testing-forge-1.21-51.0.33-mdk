@@ -52,9 +52,9 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress     = 0;
-    private int maxProgress  = 225;
+    private int maxProgress  = 350;
     private int burnTime     = 0;
-    private int maxBurnTime  = 225;
+    private int maxBurnTime  = 350;
     private boolean lastHadProgress = false;
     private boolean hasStartedCrafting = false;
     private boolean lastHadInput = false;
