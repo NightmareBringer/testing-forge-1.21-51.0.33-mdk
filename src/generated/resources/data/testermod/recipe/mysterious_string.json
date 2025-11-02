@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "/": {
-      "item": "testermod:mysterious_dust"
+      "item": "minecraft:string"
     },
     "M": {
-      "item": "minecraft:string"
+      "item": "testermod:mysterious_dust"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     " / "
   ],
   "result": {
-    "count": 2,
+    "count": 4,
     "id": "testermod:mysterious_string"
   }
 }

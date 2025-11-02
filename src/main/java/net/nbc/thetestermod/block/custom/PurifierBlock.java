@@ -52,8 +52,22 @@ public class PurifierBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof PurifierBlockEntity growthChamberBlockEntity) {
-                growthChamberBlockEntity.drops();
+            if (blockEntity instanceof PurifierBlockEntity purifierBE) {
+                purifierBE.drops();
+
+                boolean shouldExplode = purifierBE.hasProgress() || purifierBE.isMeltingDown();
+                if (shouldExplode && !pLevel.isClientSide) {
+                    pLevel.removeBlock(pPos, false);
+                    pLevel.explode(
+                            null,
+                            pPos.getX() + 0.5,
+                            pPos.getY() + 0.5,
+                            pPos.getZ() + 0.5,
+                            5.5F,
+                            true,
+                            Level.ExplosionInteraction.MOB
+                    );
+                }
             }
         }
 

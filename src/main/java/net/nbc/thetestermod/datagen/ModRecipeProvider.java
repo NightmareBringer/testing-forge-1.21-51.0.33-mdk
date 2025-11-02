@@ -455,24 +455,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.CORRUPTED_OAK_PLANKS.get()), has(ModBlocks.CORRUPTED_OAK_PLANKS.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STRANGE_STICK.get())
-                .pattern("///")
+                .pattern(" / ")
                 .pattern("/M/")
-                .pattern("///")
+                .pattern(" / ")
                 .define('/', ModItems.MYSTERIOUS_DUST.get())
                 .define('M', Items.STICK)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.INDIGO_DUST.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.INDIGO_DUST.get(), 2)
                 .pattern("DD ")
                 .pattern("DD ")
                 .pattern("   ")
                 .define('D', ModItems.MYSTERIOUS_DUST.get())
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTERIOUS_STRING.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MYSTERIOUS_STRING.get(), 4)
                 .pattern(" / ")
                 .pattern("/M/")
                 .pattern(" / ")
-                .define('/', ModItems.MYSTERIOUS_DUST.get())
-                .define('M', Items.STRING)
+                .define('M', ModItems.MYSTERIOUS_DUST.get())
+                .define('/', Items.STRING)
                 .unlockedBy(getHasName(ModItems.MYSTERIOUS_DUST.get()), has(ModItems.MYSTERIOUS_DUST.get())).save(pRecipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOVEN_INDIGO_BRICK.get())
                 .pattern(" / ")

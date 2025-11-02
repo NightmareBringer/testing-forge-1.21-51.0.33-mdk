@@ -58,6 +58,7 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
     private boolean lastHadProgress = false;
     private boolean hasStartedCrafting = false;
     private boolean lastHadInput = false;
+    private final float explosionSize = 6.0f;
 
     public ImpurifierBlockEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.IMPURIFIER_BLOCK_BE.get(), pos, blockState);
@@ -154,7 +155,7 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
         // Check for mid-process input removal
         if (hasStartedCrafting && hadInputLastTick && !hasInput && progress > 0) {
             // Player yanked the input
-            createExplosion(level, blockPos, 7.0f);
+            createExplosion(level, blockPos, explosionSize*1.2f);
             hasStartedCrafting = false;
             resetProgress();
             return; // stop tick logic after explosion
@@ -193,7 +194,7 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
                     // Explosion when progress just hit 0 from >0
                     if (inputStack.isEmpty() || hasStartedCrafting) {
                         hasStartedCrafting = false;
-                        createExplosion(level, blockPos, 6.0f);
+                        createExplosion(level, blockPos, explosionSize);
                     }
                 }
             }
@@ -205,6 +206,14 @@ public class ImpurifierBlockEntity extends BlockEntity implements MenuProvider {
         if (stateChanged) {
             setChanged(level, blockPos, blockState);
         }
+    }
+
+    public boolean hasProgress() {
+        return progress > 0;
+    }
+
+    public boolean isMeltingDown() {
+        return hasStartedCrafting && burnTime == 0 && progress > 0 && progress < maxProgress;
     }
 
     private void createExplosion(Level level, BlockPos blockPos, float explosionStrength) {
