@@ -1,5 +1,15 @@
 {
   "values": [
+    "testermod:chiseled_steelium_block",
+    "testermod:smooth_steelium_block",
+    "testermod:smooth_steelium_stairs",
+    "testermod:smooth_steelium_slab",
+    "testermod:smooth_steelium_wall",
+    "testermod:chiseled_neptochrome_block",
+    "testermod:smooth_neptochrome_block",
+    "testermod:smooth_neptochrome_stairs",
+    "testermod:smooth_neptochrome_slab",
+    "testermod:smooth_neptochrome_wall",
     "testermod:steelium_vault_block",
     "testermod:steelium_vault_wall",
     "testermod:neptochrome_vault_block",

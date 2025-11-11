@@ -180,6 +180,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STEELIUM_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.STEELIUM_BUTTON.get());
                         output.accept(ModBlocks.STEELIUM_BARS.get());
+                        output.accept(ModBlocks.CHISELED_STEELIUM_BLOCK.get());
+                        output.accept(ModBlocks.SMOOTH_STEELIUM_BLOCK.get());
+                        output.accept(ModBlocks.SMOOTH_STEELIUM_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_STEELIUM_SlAB.get());
+                        output.accept(ModBlocks.SMOOTH_STEELIUM_WALL.get());
                         output.accept(ModBlocks.STEELIUM_CONSOLE.get());
                         output.accept(ModBlocks.STEELIUM_CORE.get());
                         output.accept(ModBlocks.STEELIUM_ENERGY_TUBE_VERT.get());
@@ -205,6 +210,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEPTOCHROME_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.NEPTOCHROME_BUTTON.get());
                         output.accept(ModBlocks.NEPTOCHROME_BARS.get());
+                        output.accept(ModBlocks.CHISELED_NEPTOCHROME_BLOCK.get());
+                        output.accept(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get());
+                        output.accept(ModBlocks.SMOOTH_NEPTOCHROME_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_NEPTOCHROME_SLAB.get());
+                        output.accept(ModBlocks.SMOOTH_NEPTOCHROME_WALL.get());
                         output.accept(ModBlocks.NEPTOCHROME_CONSOLE.get());
                         output.accept(ModBlocks.NEPTOCHROME_CORE.get());
                         output.accept(ModBlocks.NEPTOCHROME_ENERGY_TUBE_VERT.get());
@@ -225,6 +235,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.ARMORED_ALIEN_SPAWN_EGG.get());
                         output.accept(ModItems.TESTER_SPAWN_EGG.get());
+                        output.accept(ModBlocks.STEELICHROME_BLOCK.get());
+                        output.accept(ModBlocks.STEELICHROME_STAIRS.get());
+                        output.accept(ModBlocks.STEELICHROME_SLAB.get());
+                        output.accept(ModBlocks.STEELICHROME_WALL.get());
+                        output.accept(ModBlocks.STEELICHROME_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.STEELICHROME_BUTTON.get());
+                        output.accept(ModBlocks.STEELICHROME_BARS.get());
                         output.accept(ModItems.GOLDEN_MELON_SLICE.get());
                         output.accept(ModBlocks.GOLDEN_MELON_BLOCK.get());
                         output.accept(ModItems.WHITE_CARROT.get());

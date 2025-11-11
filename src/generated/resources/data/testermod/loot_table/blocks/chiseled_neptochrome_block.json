@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "testermod:chiseled_neptochrome_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "testermod:blocks/chiseled_neptochrome_block"
+}

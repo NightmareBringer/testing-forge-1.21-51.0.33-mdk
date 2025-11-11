@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-23T11:39:00.8867216	Tags for minecraft:item mod id testermod
+// 1.21.1	2025-11-10T19:17:29.9493354	Tags for minecraft:item mod id testermod
 7b67bdc1e1b5d88f0f324e2b5944809083d05fc5 data/minecraft/tags/item/axes.json
 a09287d70abc53cb69f5ccaf96465da6fc2c0320 data/minecraft/tags/item/beacon_payment_items.json
 468807a7e210a484753101da2457532c502b7fa3 data/minecraft/tags/item/boats.json
@@ -27,4 +27,4 @@ a57df072291f5e1607d9061269443f5ca5cbd92f data/minecraft/tags/item/swords.json
 ccb3ad8b0b7e5b5ea1060965137a5d9f733e5ed8 data/minecraft/tags/item/trimmable_armor.json
 5cbd3479f1e6c37dcbdf58f51b7121c1b4ec7a01 data/minecraft/tags/item/trim_materials.json
 a332e1f5ef1d67c744936d2bf102cadd12d09b0f data/minecraft/tags/item/trim_templates.json
-9c7408d1728fbd54cd70cfd4f765a5fecfa7057f data/testermod/tags/item/transformable_items.json
+9e56e9987e98a4f7cd6305abe30deca08092eee6 data/testermod/tags/item/transformable_items.json

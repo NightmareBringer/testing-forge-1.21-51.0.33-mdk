@@ -55,6 +55,16 @@
     "testermod:neptochrome_vault_block",
     "testermod:neptochrome_vault_wall",
     "testermod:steelium_bulb",
-    "testermod:neptochrome_bulb"
+    "testermod:neptochrome_bulb",
+    "testermod:chiseled_steelium_block",
+    "testermod:smooth_steelium_block",
+    "testermod:smooth_steelium_stairs",
+    "testermod:smooth_steelium_slab",
+    "testermod:smooth_steelium_wall",
+    "testermod:chiseled_neptochrome_block",
+    "testermod:smooth_neptochrome_block",
+    "testermod:smooth_neptochrome_stairs",
+    "testermod:smooth_neptochrome_slab",
+    "testermod:smooth_neptochrome_wall"
   ]
 }

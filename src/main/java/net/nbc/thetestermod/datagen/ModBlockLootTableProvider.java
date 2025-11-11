@@ -241,6 +241,29 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.NEPTOCHROME_SLAB.get()));
         this.add(ModBlocks.NEPTOCHROME_DOOR.get(),
                 block -> createDoorTable(ModBlocks.NEPTOCHROME_DOOR.get()));
+
+        dropSelf(ModBlocks.CHISELED_STEELIUM_BLOCK.get());
+        dropSelf(ModBlocks.SMOOTH_STEELIUM_BLOCK.get());
+        dropSelf(ModBlocks.SMOOTH_STEELIUM_STAIRS.get());
+        dropSelf(ModBlocks.SMOOTH_STEELIUM_WALL.get());
+        this.add(ModBlocks.SMOOTH_STEELIUM_SlAB.get(),
+                block -> createSlabItemTable(ModBlocks.SMOOTH_STEELIUM_SlAB.get()));
+
+        dropSelf(ModBlocks.CHISELED_NEPTOCHROME_BLOCK.get());
+        dropSelf(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get());
+        dropSelf(ModBlocks.SMOOTH_NEPTOCHROME_STAIRS.get());
+        dropSelf(ModBlocks.SMOOTH_NEPTOCHROME_WALL.get());
+        this.add(ModBlocks.SMOOTH_NEPTOCHROME_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SMOOTH_NEPTOCHROME_SLAB.get()));
+
+        dropSelf(ModBlocks.STEELICHROME_BLOCK.get());
+        dropSelf(ModBlocks.STEELICHROME_STAIRS.get());
+        dropSelf(ModBlocks.STEELICHROME_WALL.get());
+        dropSelf(ModBlocks.STEELICHROME_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.STEELICHROME_BUTTON.get());
+        dropSelf(ModBlocks.STEELICHROME_BARS.get());
+        this.add(ModBlocks.STEELICHROME_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.STEELICHROME_SLAB.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

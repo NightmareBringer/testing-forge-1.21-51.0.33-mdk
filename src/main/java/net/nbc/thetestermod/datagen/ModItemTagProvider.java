@@ -33,6 +33,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.STRANGE_STICK.get())
                 .add(Items.LEATHER)
                 .add(Items.ROTTEN_FLESH)
+                .add(Items.SPIDER_EYE)
                 .add(Items.ENDER_PEARL);
 
         tag(ItemTags.TRIMMABLE_ARMOR)

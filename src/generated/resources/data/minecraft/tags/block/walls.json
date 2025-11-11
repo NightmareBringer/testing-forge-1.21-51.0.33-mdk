@@ -7,6 +7,9 @@
     "testermod:neptochrome_wall",
     "testermod:indigo_brick_wall",
     "testermod:steelium_vault_wall",
-    "testermod:neptochrome_vault_wall"
+    "testermod:neptochrome_vault_wall",
+    "testermod:smooth_steelium_wall",
+    "testermod:smooth_neptochrome_wall",
+    "testermod:steelichrome_wall"
   ]
 }

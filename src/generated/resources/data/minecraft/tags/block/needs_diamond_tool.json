@@ -1,0 +1,11 @@
+{
+  "values": [
+    "testermod:steelichrome_block",
+    "testermod:steelichrome_stairs",
+    "testermod:steelichrome_slab",
+    "testermod:steelichrome_wall",
+    "testermod:steelichrome_button",
+    "testermod:steelichrome_pressure_plate",
+    "testermod:steelichrome_bars"
+  ]
+}

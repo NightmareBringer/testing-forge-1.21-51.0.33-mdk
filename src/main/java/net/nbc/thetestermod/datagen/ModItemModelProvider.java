@@ -104,6 +104,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.STORM_WALL, ModBlocks.STORM_BLOCK);
         simpleBlockItem(ModBlocks.STORM_DOOR);
 
+        buttonItem(ModBlocks.STEELICHROME_BUTTON, ModBlocks.STEELICHROME_BLOCK);
+        wallItem(ModBlocks.SMOOTH_STEELIUM_WALL, ModBlocks.SMOOTH_STEELIUM_BLOCK);
+        wallItem(ModBlocks.SMOOTH_NEPTOCHROME_WALL, ModBlocks.SMOOTH_NEPTOCHROME_BLOCK);
+        wallItem(ModBlocks.STEELICHROME_WALL, ModBlocks.STEELICHROME_BLOCK);
+        basicItem(Item.byBlock(ModBlocks.STEELICHROME_BARS.get()));
+
         // Handheld tools
         handheldItem(ModItems.NIGHTMARE_SWORD);
         handheldItem(ModItems.NIGHTMARE_PICKAXE);

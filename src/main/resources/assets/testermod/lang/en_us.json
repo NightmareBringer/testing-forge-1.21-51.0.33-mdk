@@ -256,6 +256,26 @@
   "block.testermod.neptochrome_energy_tube_threeway_l": "Neptochrome Energy Tube Three-Way (Left)",
   "block.testermod.neptochrome_energy_tube_threeway_r": "Neptochrome Energy Tube Three-Way (Right)",
 
+  "block.testermod.chiseled_steelium_block": "Chiseled Steelium Block",
+  "block.testermod.smooth_steelium_block": "Smooth Steelium Block",
+  "block.testermod.smooth_steelium_stairs": "Smooth Steelium Stairs",
+  "block.testermod.smooth_steelium_slab": "Smooth Steelium Slab",
+  "block.testermod.smooth_steelium_wall": "Smooth Steelium Wall",
+
+  "block.testermod.chiseled_neptochrome_block": "Chiseled Neptochrome Block",
+  "block.testermod.smooth_neptochrome_block": "Smooth Neptochrome Block",
+  "block.testermod.smooth_neptochrome_stairs": "Smooth Neptochrome Stairs",
+  "block.testermod.smooth_neptochrome_slab": "Smooth Neptochrome Slab",
+  "block.testermod.smooth_neptochrome_wall": "Smooth Neptochrome Wall",
+
+  "block.testermod.steelichrome_block": "Block of Steelichrome",
+  "block.testermod.steelichrome_stairs": "Steelichrome Stairs",
+  "block.testermod.steelichrome_slab": "Steelichrome Slab",
+  "block.testermod.steelichrome_wall": "Steelichrome Wall",
+  "block.testermod.steelichrome_button": "Steelichrome Button",
+  "block.testermod.steelichrome_pressure_plate": "Steelichrome Pressure Plate",
+  "block.testermod.steelichrome_bars": "Steelichrome Bars",
+
   "block.testermod.steelium_vault_block": "Steelium Vault",
   "block.testermod.steelium_vault_wall": "Steelium Vault Wall",
 

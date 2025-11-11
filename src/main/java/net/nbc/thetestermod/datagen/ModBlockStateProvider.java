@@ -160,7 +160,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(ModBlocks.MYSTERIOUS_DUST_SLAB.get(), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()), blockTexture(ModBlocks.MYSTERIOUS_DUST_BLOCK.get()));
         blockItem(ModBlocks.MYSTERIOUS_DUST_SLAB);
 
-
         stairsBlock(ModBlocks.INDIGO_BRICK_STAIRS.get(), blockTexture(ModBlocks.INDIGO_BRICKS.get()));
         slabBlock(ModBlocks.INDIGO_BRICK_SlAB.get(), blockTexture(ModBlocks.INDIGO_BRICKS.get()), blockTexture(ModBlocks.INDIGO_BRICKS.get()));
 
@@ -280,7 +279,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/golden_melon_top"),
                 modLoc("block/golden_melon_top"));
 
+        blockWithItem(ModBlocks.SMOOTH_STEELIUM_BLOCK);
+        blockWithItem(ModBlocks.CHISELED_STEELIUM_BLOCK);
+        blockWithItem(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK);
+        blockWithItem(ModBlocks.CHISELED_NEPTOCHROME_BLOCK);
+        blockWithItem(ModBlocks.STEELICHROME_BLOCK);
 
+        stairsBlock(ModBlocks.SMOOTH_STEELIUM_STAIRS.get(), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()));
+        slabBlock(ModBlocks.SMOOTH_STEELIUM_SlAB.get(), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()));
+        wallBlock(ModBlocks.SMOOTH_STEELIUM_WALL.get(), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()));
+        blockItem(ModBlocks.SMOOTH_STEELIUM_STAIRS);
+        blockItem(ModBlocks.SMOOTH_STEELIUM_SlAB);
+
+        stairsBlock(ModBlocks.SMOOTH_NEPTOCHROME_STAIRS.get(), blockTexture(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get()));
+        slabBlock(ModBlocks.SMOOTH_NEPTOCHROME_SLAB.get(), blockTexture(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get()), blockTexture(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get()));
+        wallBlock(ModBlocks.SMOOTH_NEPTOCHROME_WALL.get(), blockTexture(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get()));
+        blockItem(ModBlocks.SMOOTH_NEPTOCHROME_STAIRS);
+        blockItem(ModBlocks.SMOOTH_NEPTOCHROME_SLAB);
+
+        stairsBlock(ModBlocks.STEELICHROME_STAIRS.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
+        slabBlock(ModBlocks.STEELICHROME_SLAB.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
+        wallBlock(ModBlocks.STEELICHROME_WALL.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
+        buttonBlock(ModBlocks.STEELICHROME_BUTTON.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.STEELICHROME_PRESSURE_PLATE.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
+        blockItem(ModBlocks.STEELICHROME_STAIRS);
+        blockItem(ModBlocks.STEELICHROME_SLAB);
+        blockItem(ModBlocks.STEELICHROME_PRESSURE_PLATE);
+
+        paneBlockWithRenderType(
+                ModBlocks.STEELICHROME_BARS.get(),
+                modLoc("block/steelichrome_bars"),
+                modLoc("block/steelichrome_bars"),
+                "cutout"
+        );
     }
 
     private void normalRotatableBlock(DeferredBlock<? extends Block> block, String name) {

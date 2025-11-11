@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testermod:block/steelichrome_slab"
+    },
+    "type=double": {
+      "model": "testermod:block/steelichrome_block"
+    },
+    "type=top": {
+      "model": "testermod:block/steelichrome_slab_top"
+    }
+  }
+}

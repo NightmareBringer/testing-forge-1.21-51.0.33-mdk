@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "testermod:block/smooth_steelium_block",
+    "side": "testermod:block/smooth_steelium_block",
+    "top": "testermod:block/smooth_steelium_block"
+  }
+}

@@ -187,8 +187,8 @@ public class ArmoredAlienEntity extends Animal {
 
         ArmoredAlienVariant variant = ArmoredAlienVariant.BLUE; // Default variant
 
-        if (this.random.nextInt(10) == 1) {
-            variant = ArmoredAlienVariant.GREEN; // Rare variant
+        if (this.random.nextInt(2) == 1) {
+            variant = ArmoredAlienVariant.GREEN; // Other variant
         }
 
         this.setVariant(variant);
