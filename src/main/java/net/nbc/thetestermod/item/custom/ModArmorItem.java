@@ -24,7 +24,11 @@ public class ModArmorItem extends ArmorItem
                             List.of(new MobEffectInstance(MobEffects.ABSORPTION, 300, 1, false, false)))
 
                     .put(ModArmorMaterials.STORM_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(ModEffects.IMPURIFICATION_EFFECT, 300, 0, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.UNLUCK, 300, 0, false, false)))
+
+                    .put(ModArmorMaterials.REFINED_STEELICHROME_MATERIAL,
+                            List.of(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 0, false, false)))
+
                     .build();
 
     public ModArmorItem(Holder<ArmorMaterial> pMaterial, Type pType, Properties pProperties) {

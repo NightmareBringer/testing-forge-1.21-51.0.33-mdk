@@ -37,7 +37,6 @@ public class SpecialPickaxeItem extends PickaxeItem {
             ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_T.get(),
             ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_L.get(),
             ModBlocks.STEELIUM_ENERGY_TUBE_THREEWAY_R.get(),
-            ModBlocks.STEELIUM_LAMP.get(),
             ModBlocks.NEPTOCHROME_BLOCK.get(),
             ModBlocks.NEPTOCHROME_STAIRS.get(),
             ModBlocks.NEPTOCHROME_CORE.get(),
@@ -54,7 +53,16 @@ public class SpecialPickaxeItem extends PickaxeItem {
             ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_T.get(),
             ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_L.get(),
             ModBlocks.NEPTOCHROME_ENERGY_TUBE_THREEWAY_R.get(),
-            ModBlocks.NEPTOCHROME_LAMP.get()
+            ModBlocks.CHISELED_STEELIUM_BLOCK.get(),
+            ModBlocks.SMOOTH_STEELIUM_BLOCK.get(),
+            ModBlocks.SMOOTH_STEELIUM_STAIRS.get(),
+            ModBlocks.SMOOTH_STEELIUM_SlAB.get(),
+            ModBlocks.SMOOTH_STEELIUM_WALL.get(),
+            ModBlocks.CHISELED_NEPTOCHROME_BLOCK.get(),
+            ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get(),
+            ModBlocks.SMOOTH_NEPTOCHROME_STAIRS.get(),
+            ModBlocks.SMOOTH_NEPTOCHROME_SLAB.get(),
+            ModBlocks.SMOOTH_NEPTOCHROME_WALL.get()
     );
 
     // Create set for Nightmarite and Stormite ores

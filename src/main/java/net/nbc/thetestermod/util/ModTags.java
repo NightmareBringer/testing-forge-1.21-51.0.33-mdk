@@ -42,6 +42,9 @@ public class ModTags
         public static final TagKey<Block> NEEDS_STEELIUM_TOOL = createTag("needs_steelium_tool");
         public static final TagKey<Block> INCORRECT_FOR_STEELIUM_TOOL = createTag("incorrect_for_steelium_tool");
 
+        public static final TagKey<Block> NEEDS_REFINED_STEELICHROME_TOOL = createTag("needs_refined_steelichrome_tool");
+        public static final TagKey<Block> INCORRECT_FOR_REFINED_STEELICHROME_TOOL = createTag("incorrect_for_refined_steelichrome_tool");
+
 
         private static TagKey<Block> createTag(String name)
         {

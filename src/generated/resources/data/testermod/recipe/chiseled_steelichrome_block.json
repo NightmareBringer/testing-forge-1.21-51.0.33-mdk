@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "testermod:steelichrome_slab"
+    }
+  },
+  "pattern": [
+    " / ",
+    " / "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testermod:chiseled_steelichrome_block"
+  }
+}

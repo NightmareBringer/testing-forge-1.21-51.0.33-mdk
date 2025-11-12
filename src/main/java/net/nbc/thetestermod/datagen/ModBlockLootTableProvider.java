@@ -262,6 +262,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STEELICHROME_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.STEELICHROME_BUTTON.get());
         dropSelf(ModBlocks.STEELICHROME_BARS.get());
+        dropSelf(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get());
+        dropSelf(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get());
+        dropSelf(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get());
+        dropSelf(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get());
+        this.add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get()));
         this.add(ModBlocks.STEELICHROME_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.STEELICHROME_SLAB.get()));
     }

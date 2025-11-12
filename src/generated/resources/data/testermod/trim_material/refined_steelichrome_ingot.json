@@ -1,0 +1,9 @@
+{
+  "asset_name": "refined_steelichrome_ingot",
+  "description": {
+    "color": "#4A8463",
+    "translate": "trim_material.testermod.refined_steelichrome_ingot"
+  },
+  "ingredient": "testermod:refined_steelichrome_ingot",
+  "item_model_index": 0.7
+}

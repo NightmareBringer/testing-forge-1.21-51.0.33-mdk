@@ -29,12 +29,16 @@ public class ModTrimMaterials
     public static final ResourceKey<TrimMaterial> FALSE_STORM_INGOT =
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "false_stormite_ingot"));
 
+    public static final ResourceKey<TrimMaterial> REFINED_STEELICHROME_INGOT =
+            ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(TesterMod.MOD_ID, "refined_steelichrome_ingot"));
+
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
         register(context, NIGHTMARE_INGOT, ModItems.NIGHTMARE_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#DB133F").getOrThrow()), 0.4F);
         register(context, STORM_INGOT, ModItems.STORM_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#34808E").getOrThrow()), 0.8F);
 
         register(context, FALSE_NIGHTMARE_INGOT, ModItems.FALSE_NIGHTMARITE_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#30E077").getOrThrow()), 0.7F);
         register(context, FALSE_STORM_INGOT, ModItems.FALSE_STORMITE_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#7328B0").getOrThrow()), 1.0F);
+        register(context, REFINED_STEELICHROME_INGOT, ModItems.REFINED_STEELICHROME_INGOT.get(), Style.EMPTY.withColor(TextColor.parseColor("#4A8463").getOrThrow()), 0.7F);
     }
 
     private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item,

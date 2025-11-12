@@ -284,6 +284,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK);
         blockWithItem(ModBlocks.CHISELED_NEPTOCHROME_BLOCK);
         blockWithItem(ModBlocks.STEELICHROME_BLOCK);
+        blockWithItem(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK);
+        blockWithItem(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK);
 
         stairsBlock(ModBlocks.SMOOTH_STEELIUM_STAIRS.get(), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()));
         slabBlock(ModBlocks.SMOOTH_STEELIUM_SlAB.get(), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()), blockTexture(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()));
@@ -302,9 +304,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.STEELICHROME_WALL.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
         buttonBlock(ModBlocks.STEELICHROME_BUTTON.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
         pressurePlateBlock(ModBlocks.STEELICHROME_PRESSURE_PLATE.get(), blockTexture(ModBlocks.STEELICHROME_BLOCK.get()));
+
+        stairsBlock(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get(), blockTexture(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get()));
+        slabBlock(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get(), blockTexture(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get()), blockTexture(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get()));
+        wallBlock(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get(), blockTexture(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get()));
+
         blockItem(ModBlocks.STEELICHROME_STAIRS);
         blockItem(ModBlocks.STEELICHROME_SLAB);
         blockItem(ModBlocks.STEELICHROME_PRESSURE_PLATE);
+
+        blockItem(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS);
+        blockItem(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB);
 
         paneBlockWithRenderType(
                 ModBlocks.STEELICHROME_BARS.get(),

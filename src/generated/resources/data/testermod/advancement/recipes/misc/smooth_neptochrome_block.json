@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_neptochrome_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:neptochrome_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:smooth_neptochrome_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_neptochrome_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:smooth_neptochrome_block"
+    ]
+  }
+}

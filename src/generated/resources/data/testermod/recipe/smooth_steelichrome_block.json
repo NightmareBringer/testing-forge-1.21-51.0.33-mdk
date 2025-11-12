@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "testermod:steelichrome_block"
+    }
+  },
+  "pattern": [
+    "// ",
+    "// "
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:smooth_steelichrome_block"
+  }
+}

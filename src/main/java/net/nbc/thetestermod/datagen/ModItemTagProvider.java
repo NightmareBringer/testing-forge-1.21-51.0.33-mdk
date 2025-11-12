@@ -52,7 +52,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.FALSE_STORM_HELMET.get())
                 .add(ModItems.FALSE_STORM_CHESTPLATE.get())
                 .add(ModItems.FALSE_STORM_LEGGINGS.get())
-                .add(ModItems.FALSE_STORM_BOOTS.get());
+                .add(ModItems.FALSE_STORM_BOOTS.get())
+                .add(ModItems.REFINED_STEELICHROME_HELMET.get())
+                .add(ModItems.REFINED_STEELICHROME_CHESTPLATE.get())
+                .add(ModItems.REFINED_STEELICHROME_LEGGINGS.get())
+                .add(ModItems.REFINED_STEELICHROME_BOOTS.get());
 
         tag(ItemTags.DURABILITY_ENCHANTABLE)
                 .add(
@@ -91,7 +95,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.STORM_HELMET.get(),
                         ModItems.STORM_CHESTPLATE.get(),
                         ModItems.STORM_LEGGINGS.get(),
-                        ModItems.STORM_BOOTS.get()
+                        ModItems.STORM_BOOTS.get(),
+
+                        ModItems.REFINED_STEELICHROME_SWORD.get(),
+                        ModItems.REFINED_STEELICHROME_PICKAXE.get(),
+                        ModItems.REFINED_STEELICHROME_AXE.get(),
+                        ModItems.REFINED_STEELICHROME_SHOVEL.get(),
+                        ModItems.REFINED_STEELICHROME_HOE.get(),
+                        ModItems.REFINED_STEELICHROME_HELMET.get(),
+                        ModItems.REFINED_STEELICHROME_CHESTPLATE.get(),
+                        ModItems.REFINED_STEELICHROME_LEGGINGS.get(),
+                        ModItems.REFINED_STEELICHROME_BOOTS.get()
 
                         /* False variants
                         ModItems.FALSE_NIGHTMARE_SWORD.get(),
@@ -112,7 +126,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.NIGHTMARE_SWORD.get(),
                         ModItems.STORM_SWORD.get(),
                         ModItems.PURE_NIGHTMARE_SWORD.get(),
-                        ModItems.PURE_STORM_SWORD.get()
+                        ModItems.PURE_STORM_SWORD.get(),
+                        ModItems.REFINED_STEELICHROME_SWORD.get()
                 );
 
         tag(ItemTags.SHARP_WEAPON_ENCHANTABLE)
@@ -128,7 +143,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.NIGHTMARE_HAMMER.get(),
                         ModItems.STORM_HAMMER.get(),
                         ModItems.PURE_NIGHTMARE_HAMMER.get(),
-                        ModItems.PURE_STORM_HAMMER.get()
+                        ModItems.PURE_STORM_HAMMER.get(),
+                        ModItems.REFINED_STEELICHROME_SWORD.get(),
+                        ModItems.REFINED_STEELICHROME_AXE.get()
                 );
 
         tag(ItemTags.WEAPON_ENCHANTABLE)
@@ -144,7 +161,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.NIGHTMARE_HAMMER.get(),
                         ModItems.STORM_HAMMER.get(),
                         ModItems.PURE_NIGHTMARE_HAMMER.get(),
-                        ModItems.PURE_STORM_HAMMER.get()
+                        ModItems.PURE_STORM_HAMMER.get(),
+                        ModItems.REFINED_STEELICHROME_SWORD.get()
                 );
 
         tag(ItemTags.FIRE_ASPECT_ENCHANTABLE)
@@ -152,7 +170,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.NIGHTMARE_SWORD.get(),
                         ModItems.STORM_SWORD.get(),
                         ModItems.PURE_NIGHTMARE_SWORD.get(),
-                        ModItems.PURE_STORM_SWORD.get()
+                        ModItems.PURE_STORM_SWORD.get(),
+                        ModItems.REFINED_STEELICHROME_SWORD.get()
                 );
 
         tag(ItemTags.MINING_ENCHANTABLE)
@@ -176,7 +195,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.NIGHTMARE_HAMMER.get(),
                         ModItems.STORM_HAMMER.get(),
                         ModItems.PURE_NIGHTMARE_HAMMER.get(),
-                        ModItems.PURE_STORM_HAMMER.get()
+                        ModItems.PURE_STORM_HAMMER.get(),
+                        ModItems.REFINED_STEELICHROME_PICKAXE.get(),
+                        ModItems.REFINED_STEELICHROME_AXE.get(),
+                        ModItems.REFINED_STEELICHROME_SHOVEL.get(),
+                        ModItems.REFINED_STEELICHROME_HOE.get()
                 );
 
         tag(ItemTags.MINING_LOOT_ENCHANTABLE)
@@ -196,7 +219,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.NIGHTMARE_HOE.get(),
                         ModItems.STORM_HOE.get(),
                         ModItems.PURE_NIGHTMARE_HOE.get(),
-                        ModItems.PURE_STORM_HOE.get()
+                        ModItems.PURE_STORM_HOE.get(),
+                        ModItems.REFINED_STEELICHROME_PICKAXE.get(),
+                        ModItems.REFINED_STEELICHROME_AXE.get(),
+                        ModItems.REFINED_STEELICHROME_SHOVEL.get(),
+                        ModItems.REFINED_STEELICHROME_HOE.get()
                 );
 
         // ========= SWORDS =========
@@ -207,7 +234,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.PURE_NIGHTMARE_SWORD.get(),
                         ModItems.PURE_STORM_SWORD.get(),
                         ModItems.FALSE_NIGHTMARE_SWORD.get(),
-                        ModItems.FALSE_STORM_SWORD.get()
+                        ModItems.FALSE_STORM_SWORD.get(),
+                        ModItems.REFINED_STEELICHROME_SWORD.get()
                 );
 
         // ========= PICKAXES =========
@@ -218,7 +246,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.PURE_NIGHTMARE_PICKAXE.get(),
                         ModItems.PURE_STORM_PICKAXE.get(),
                         ModItems.FALSE_NIGHTMARE_PICKAXE.get(),
-                        ModItems.FALSE_STORM_PICKAXE.get()
+                        ModItems.FALSE_STORM_PICKAXE.get(),
+                        ModItems.REFINED_STEELICHROME_PICKAXE.get()
                 );
 
         // ========= AXES =========
@@ -229,7 +258,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.PURE_NIGHTMARE_AXE.get(),
                         ModItems.PURE_STORM_AXE.get(),
                         ModItems.FALSE_NIGHTMARE_AXE.get(),
-                        ModItems.FALSE_STORM_AXE.get()
+                        ModItems.FALSE_STORM_AXE.get(),
+                        ModItems.REFINED_STEELICHROME_AXE.get()
                 );
 
         // ========= SHOVELS =========
@@ -240,7 +270,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.PURE_NIGHTMARE_SHOVEL.get(),
                         ModItems.PURE_STORM_SHOVEL.get(),
                         ModItems.FALSE_NIGHTMARE_SHOVEL.get(),
-                        ModItems.FALSE_STORM_SHOVEL.get()
+                        ModItems.FALSE_STORM_SHOVEL.get(),
+                        ModItems.REFINED_STEELICHROME_SHOVEL.get()
                 );
 
         // ========= HOES =========
@@ -251,7 +282,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.PURE_NIGHTMARE_HOE.get(),
                         ModItems.PURE_STORM_HOE.get(),
                         ModItems.FALSE_NIGHTMARE_HOE.get(),
-                        ModItems.FALSE_STORM_HOE.get()
+                        ModItems.FALSE_STORM_HOE.get(),
+                        ModItems.REFINED_STEELICHROME_HOE.get()
                 );
 
         // ========= ARMOR (EQUIPPABLE + SLOT-SPECIFIC) =========
@@ -265,7 +297,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.STORM_HELMET.get(),
                         ModItems.STORM_CHESTPLATE.get(),
                         ModItems.STORM_LEGGINGS.get(),
-                        ModItems.STORM_BOOTS.get()
+                        ModItems.STORM_BOOTS.get(),
+
+                        ModItems.REFINED_STEELICHROME_HELMET.get(),
+                        ModItems.REFINED_STEELICHROME_CHESTPLATE.get(),
+                        ModItems.REFINED_STEELICHROME_LEGGINGS.get(),
+                        ModItems.REFINED_STEELICHROME_BOOTS.get()
 
                         /*
                         ModItems.FALSE_NIGHTMARE_HELMET.get(),
@@ -281,28 +318,32 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.NIGHTMARE_HELMET.get(),
-                        ModItems.STORM_HELMET.get()
+                        ModItems.STORM_HELMET.get(),
+                        ModItems.REFINED_STEELICHROME_HELMET.get()
                         //ModItems.FALSE_NIGHTMARE_HELMET.get(),
                         //ModItems.FALSE_STORM_HELMET.get()
                 );
 
         tag(ItemTags.CHEST_ARMOR_ENCHANTABLE)
                 .add(ModItems.NIGHTMARE_CHESTPLATE.get(),
-                        ModItems.STORM_CHESTPLATE.get()
+                        ModItems.STORM_CHESTPLATE.get(),
+                        ModItems.REFINED_STEELICHROME_CHESTPLATE.get()
                         //ModItems.FALSE_NIGHTMARE_CHESTPLATE.get(),
                         //ModItems.FALSE_STORM_CHESTPLATE.get()
                 );
 
         tag(ItemTags.LEG_ARMOR_ENCHANTABLE)
                 .add(ModItems.NIGHTMARE_LEGGINGS.get(),
-                        ModItems.STORM_LEGGINGS.get()
+                        ModItems.STORM_LEGGINGS.get(),
+                        ModItems.REFINED_STEELICHROME_LEGGINGS.get()
                         //ModItems.FALSE_NIGHTMARE_LEGGINGS.get(),
                         //ModItems.FALSE_STORM_LEGGINGS.get()
                 );
 
         tag(ItemTags.FOOT_ARMOR_ENCHANTABLE)
                 .add(ModItems.NIGHTMARE_BOOTS.get(),
-                        ModItems.STORM_BOOTS.get()
+                        ModItems.STORM_BOOTS.get(),
+                        ModItems.REFINED_STEELICHROME_BOOTS.get()
                         //ModItems.FALSE_NIGHTMARE_BOOTS.get(),
                         //ModItems.FALSE_STORM_BOOTS.get()
                 );
@@ -326,7 +367,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NIGHTMARE_INGOT.get())
                 .add(ModItems.STORM_INGOT.get())
                 .add(ModItems.FALSE_NIGHTMARITE_INGOT.get())
-                .add(ModItems.FALSE_STORMITE_INGOT.get());
+                .add(ModItems.FALSE_STORMITE_INGOT.get())
+                .add(ModItems.REFINED_STEELICHROME_INGOT.get());
 
         tag(ItemTags.TRIM_TEMPLATES)
                 .add(ModItems.NIGHTEN_SMITHING_TEMPLATE.get())

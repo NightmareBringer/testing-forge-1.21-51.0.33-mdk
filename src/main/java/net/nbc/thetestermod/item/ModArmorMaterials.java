@@ -21,20 +21,20 @@ public class ModArmorMaterials {
     public static final Holder<ArmorMaterial> NIGHTMARE_ARMOR_MATERIAL = register("nightmare", Util.make(new EnumMap<>(ArmorItem.Type.class),
             attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 4);
-                attribute.put(ArmorItem.Type.LEGGINGS, 7);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
                 attribute.put(ArmorItem.Type.CHESTPLATE, 10);
                 attribute.put(ArmorItem.Type.HELMET, 5);
-                attribute.put(ArmorItem.Type.BODY, 15);
-            }), 15, 5f, 0.03f, ModItems.NIGHTMARE_INGOT);
+                attribute.put(ArmorItem.Type.BODY, 16);
+            }), 15, 5f, 0.0f, ModItems.NIGHTMARE_INGOT);
 
     public static final Holder<ArmorMaterial> STORM_ARMOR_MATERIAL = register("storm", Util.make(new EnumMap<>(ArmorItem.Type.class),
             attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 3);
-                attribute.put(ArmorItem.Type.LEGGINGS, 5);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
-                attribute.put(ArmorItem.Type.HELMET, 4);
-                attribute.put(ArmorItem.Type.BODY, 10);
-            }), 15, 10f, 0.05f, ModItems.STORM_INGOT);
+                attribute.put(ArmorItem.Type.BOOTS, 5);
+                attribute.put(ArmorItem.Type.LEGGINGS, 7);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 12);
+                attribute.put(ArmorItem.Type.HELMET, 6);
+                attribute.put(ArmorItem.Type.BODY, 13);
+            }), 15, 10f, 0.07f, ModItems.STORM_INGOT);
 
     // ===== FALSE NIGHTMARE ARMOR =====
     public static final Holder<ArmorMaterial> FALSE_NIGHTMARE_ARMOR_MATERIAL = register("false_nightmarite", Util.make(new EnumMap<>(ArmorItem.Type.class),
@@ -44,7 +44,7 @@ public class ModArmorMaterials {
                 attr.put(ArmorItem.Type.CHESTPLATE, 6);
                 attr.put(ArmorItem.Type.HELMET, 3);
                 attr.put(ArmorItem.Type.BODY, 7);
-            }), 10, 2f, 0f, ModItems.FALSE_NIGHTMARITE_INGOT);
+            }), 10, -5f, 0f, ModItems.FALSE_NIGHTMARITE_INGOT);
 
     // ===== FALSE STORM ARMOR =====
     public static final Holder<ArmorMaterial> FALSE_STORM_ARMOR_MATERIAL = register("false_stormite", Util.make(new EnumMap<>(ArmorItem.Type.class),
@@ -54,7 +54,16 @@ public class ModArmorMaterials {
                 attr.put(ArmorItem.Type.CHESTPLATE, 5);
                 attr.put(ArmorItem.Type.HELMET, 2);
                 attr.put(ArmorItem.Type.BODY, 6);
-            }), 10, 3f, 0f, ModItems.FALSE_STORMITE_INGOT);
+            }), 10, -5, 0f, ModItems.FALSE_STORMITE_INGOT);
+
+    public static final Holder<ArmorMaterial> REFINED_STEELICHROME_MATERIAL = register("refined_steelichrome", Util.make(new EnumMap<>(ArmorItem.Type.class),
+            attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 4);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 7);
+                attribute.put(ArmorItem.Type.HELMET, 5);
+                attribute.put(ArmorItem.Type.BODY, 11);
+            }), 15, 5.5f, 0.11f, ModItems.REFINED_STEELICHROME_INGOT);
 
 
 

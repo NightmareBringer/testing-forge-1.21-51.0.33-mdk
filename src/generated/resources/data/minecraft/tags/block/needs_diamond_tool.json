@@ -6,6 +6,11 @@
     "testermod:steelichrome_wall",
     "testermod:steelichrome_button",
     "testermod:steelichrome_pressure_plate",
-    "testermod:steelichrome_bars"
+    "testermod:steelichrome_bars",
+    "testermod:chiseled_steelichrome_block",
+    "testermod:smooth_steelichrome_block",
+    "testermod:smooth_steelichrome_stairs",
+    "testermod:smooth_steelichrome_slab",
+    "testermod:smooth_steelichrome_wall"
   ]
 }

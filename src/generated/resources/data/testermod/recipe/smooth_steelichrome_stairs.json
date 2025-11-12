@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "smooth_steelichrome_block",
+  "key": {
+    "#": {
+      "item": "testermod:smooth_steelichrome_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:smooth_steelichrome_stairs"
+  }
+}

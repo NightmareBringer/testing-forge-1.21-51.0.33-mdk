@@ -7,6 +7,10 @@
     "testermod:storm_helmet",
     "testermod:storm_chestplate",
     "testermod:storm_leggings",
-    "testermod:storm_boots"
+    "testermod:storm_boots",
+    "testermod:refined_steelichrome_helmet",
+    "testermod:refined_steelichrome_chestplate",
+    "testermod:refined_steelichrome_leggings",
+    "testermod:refined_steelichrome_boots"
   ]
 }

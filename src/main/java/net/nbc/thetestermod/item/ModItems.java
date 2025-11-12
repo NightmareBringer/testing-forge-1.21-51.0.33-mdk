@@ -354,6 +354,40 @@ public class ModItems
                 }
             });
 
+    public static final DeferredItem<Item> REFINED_STEELICHROME_INGOT = ITEMS.register("refined_steelichrome_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> REFINED_STEELICHROME_NUGGET = ITEMS.register("refined_steelichrome_nugget",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<SwordItem> REFINED_STEELICHROME_SWORD = ITEMS.register("refined_steelichrome_sword",
+            () -> new SwordItem(ModToolTiers.REFINED_STEELICHROME, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.REFINED_STEELICHROME, 0, -2.2f))));
+    public static final DeferredItem<PickaxeItem> REFINED_STEELICHROME_PICKAXE = ITEMS.register("refined_steelichrome_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.REFINED_STEELICHROME, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.REFINED_STEELICHROME, -1f, -2.6f))));
+    public static final DeferredItem<ShovelItem> REFINED_STEELICHROME_SHOVEL = ITEMS.register("refined_steelichrome_shovel",
+            () -> new ShovelItem(ModToolTiers.REFINED_STEELICHROME, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.REFINED_STEELICHROME, -2f, -2.9f))));
+    public static final DeferredItem<AxeItem> REFINED_STEELICHROME_AXE = ITEMS.register("refined_steelichrome_axe",
+            () -> new AxeItem(ModToolTiers.REFINED_STEELICHROME, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.REFINED_STEELICHROME, 1f, -3.0f))));
+    public static final DeferredItem<HoeItem> REFINED_STEELICHROME_HOE = ITEMS.register("refined_steelichrome_hoe",
+            () -> new HoeItem(ModToolTiers.REFINED_STEELICHROME, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.REFINED_STEELICHROME, -7.5f, 0.5f))));
+
+    public static final DeferredItem<ModArmorItem> REFINED_STEELICHROME_HELMET = ITEMS.register("refined_steelichrome_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.REFINED_STEELICHROME_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(30))));
+    public static final DeferredItem<ModArmorItem> REFINED_STEELICHROME_CHESTPLATE = ITEMS.register("refined_steelichrome_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.REFINED_STEELICHROME_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(30))));
+    public static final DeferredItem<ModArmorItem> REFINED_STEELICHROME_LEGGINGS = ITEMS.register("refined_steelichrome_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.REFINED_STEELICHROME_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(30))));
+    public static final DeferredItem<ModArmorItem> REFINED_STEELICHROME_BOOTS = ITEMS.register("refined_steelichrome_boots",
+            () -> new ModArmorItem(ModArmorMaterials.REFINED_STEELICHROME_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(30))));
+
     public static final DeferredItem<Item> WOVEN_INDIGO_BRICK = ITEMS.register("woven_indigo_brick",
             () -> new FuelItem(new Item.Properties(), 47){
                 @Override

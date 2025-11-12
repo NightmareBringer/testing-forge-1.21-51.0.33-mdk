@@ -80,6 +80,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FALSE_STORMITE_INGOT.get());
         basicItem(ModItems.FALSE_NIGHTMARITE_INGOT.get());
 
+        basicItem(ModItems.REFINED_STEELICHROME_INGOT.get());
+        basicItem(ModItems.REFINED_STEELICHROME_NUGGET.get());
+
         basicItem(ModItems.STEELICHROME_KEYS.get());
         basicItem(ModItems.WOVEN_INDIGO_BRICK.get());
 
@@ -108,6 +111,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.SMOOTH_STEELIUM_WALL, ModBlocks.SMOOTH_STEELIUM_BLOCK);
         wallItem(ModBlocks.SMOOTH_NEPTOCHROME_WALL, ModBlocks.SMOOTH_NEPTOCHROME_BLOCK);
         wallItem(ModBlocks.STEELICHROME_WALL, ModBlocks.STEELICHROME_BLOCK);
+        wallItem(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL, ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK);
         basicItem(Item.byBlock(ModBlocks.STEELICHROME_BARS.get()));
 
         // Handheld tools
@@ -151,6 +155,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.FALSE_STORM_AXE);
         handheldItem(ModItems.FALSE_STORM_HOE);
 
+        handheldItem(ModItems.REFINED_STEELICHROME_SWORD);
+        handheldItem(ModItems.REFINED_STEELICHROME_PICKAXE);
+        handheldItem(ModItems.REFINED_STEELICHROME_SHOVEL);
+        handheldItem(ModItems.REFINED_STEELICHROME_AXE);
+        handheldItem(ModItems.REFINED_STEELICHROME_HOE);
+
         handheldItem(ModItems.DEVILSKNIFE);
         handheldItem(ModItems.STEELICHROME_PICKAXE);
 
@@ -174,6 +184,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.FALSE_STORM_CHESTPLATE);
         trimmedArmorItem(ModItems.FALSE_STORM_LEGGINGS);
         trimmedArmorItem(ModItems.FALSE_STORM_BOOTS);
+
+        trimmedArmorItem(ModItems.REFINED_STEELICHROME_HELMET);
+        trimmedArmorItem(ModItems.REFINED_STEELICHROME_CHESTPLATE);
+        trimmedArmorItem(ModItems.REFINED_STEELICHROME_LEGGINGS);
+        trimmedArmorItem(ModItems.REFINED_STEELICHROME_BOOTS);
 
         // Other block-based item models
         buttonItem(ModBlocks.CORRUPTED_OAK_BUTTON, ModBlocks.CORRUPTED_OAK_PLANKS);

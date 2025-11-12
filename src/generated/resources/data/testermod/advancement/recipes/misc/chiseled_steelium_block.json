@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steelium_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testermod:steelium_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testermod:chiseled_steelium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steelium_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testermod:chiseled_steelium_block"
+    ]
+  }
+}

@@ -15,6 +15,10 @@
     "testermod:nightmare_hoe",
     "testermod:storm_hoe",
     "testermod:pure_nightmare_hoe",
-    "testermod:pure_storm_hoe"
+    "testermod:pure_storm_hoe",
+    "testermod:refined_steelichrome_pickaxe",
+    "testermod:refined_steelichrome_axe",
+    "testermod:refined_steelichrome_shovel",
+    "testermod:refined_steelichrome_hoe"
   ]
 }

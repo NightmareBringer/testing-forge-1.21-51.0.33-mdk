@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testermod:refined_steelichrome_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "testermod:refined_steelichrome_nugget"
+  }
+}

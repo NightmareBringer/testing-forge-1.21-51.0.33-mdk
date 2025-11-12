@@ -15,6 +15,10 @@
     "testermod:false_stormite_helmet",
     "testermod:false_stormite_chestplate",
     "testermod:false_stormite_leggings",
-    "testermod:false_stormite_boots"
+    "testermod:false_stormite_boots",
+    "testermod:refined_steelichrome_helmet",
+    "testermod:refined_steelichrome_chestplate",
+    "testermod:refined_steelichrome_leggings",
+    "testermod:refined_steelichrome_boots"
   ]
 }

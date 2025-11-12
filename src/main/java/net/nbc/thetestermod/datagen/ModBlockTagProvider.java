@@ -167,6 +167,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELICHROME_BUTTON.get())
                 .add(ModBlocks.STEELICHROME_PRESSURE_PLATE.get())
                 .add(ModBlocks.STEELICHROME_BARS.get())
+                .add(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get())
 
                 .add(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get())
                 .add(ModBlocks.FALSE_STORMITE_BLOCK.get())
@@ -194,6 +199,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELICHROME_BUTTON.get())
                 .add(ModBlocks.STEELICHROME_PRESSURE_PLATE.get())
                 .add(ModBlocks.STEELICHROME_BARS.get())
+                .add(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get())
                 .add(ModBlocks.STEELIUM_VAULT_BLOCK.get())
                 .add(ModBlocks.STEELIUM_VAULT_WALL.get())
                 .add(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())
@@ -270,6 +280,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELICHROME_BUTTON.get())
                 .add(ModBlocks.STEELICHROME_PRESSURE_PLATE.get())
                 .add(ModBlocks.STEELICHROME_BARS.get())
+                .add(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get())
                 .add(ModBlocks.STEELIUM_VAULT_BLOCK.get())
                 .add(ModBlocks.STEELIUM_VAULT_WALL.get())
                 .add(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())
@@ -346,6 +361,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELICHROME_BUTTON.get())
                 .add(ModBlocks.STEELICHROME_PRESSURE_PLATE.get())
                 .add(ModBlocks.STEELICHROME_BARS.get())
+                .add(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get())
                 .add(ModBlocks.STEELIUM_VAULT_BLOCK.get())
                 .add(ModBlocks.STEELIUM_VAULT_WALL.get())
                 .add(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())
@@ -422,6 +442,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELICHROME_BUTTON.get())
                 .add(ModBlocks.STEELICHROME_PRESSURE_PLATE.get())
                 .add(ModBlocks.STEELICHROME_BARS.get())
+                .add(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get())
                 .add(ModBlocks.STEELIUM_VAULT_BLOCK.get())
                 .add(ModBlocks.STEELIUM_VAULT_WALL.get())
                 .add(ModBlocks.NEPTOCHROME_VAULT_BLOCK.get())
@@ -657,7 +682,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STEELICHROME_WALL.get())
                 .add(ModBlocks.STEELICHROME_BUTTON.get())
                 .add(ModBlocks.STEELICHROME_PRESSURE_PLATE.get())
-                .add(ModBlocks.STEELICHROME_BARS.get());
+                .add(ModBlocks.STEELICHROME_BARS.get())
+                .add(ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get())
+                .add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get());
+
+        tag(ModTags.Blocks.NEEDS_REFINED_STEELICHROME_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_REFINED_STEELICHROME_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
 
         // FALSE NIGHTMARE behaves like iron
         tag(ModTags.Blocks.NEEDS_FALSE_NIGHTMARE_TOOL)
@@ -906,6 +942,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS).add(ModBlocks.SMOOTH_STEELIUM_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.SMOOTH_NEPTOCHROME_WALL.get());
         tag(BlockTags.WALLS).add(ModBlocks.STEELICHROME_WALL.get());
+        tag(BlockTags.WALLS).add(ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.CORRUPTED_OAK_LOG.get())

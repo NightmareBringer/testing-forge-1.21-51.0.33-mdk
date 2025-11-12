@@ -10,6 +10,7 @@
     "testermod:neptochrome_vault_wall",
     "testermod:smooth_steelium_wall",
     "testermod:smooth_neptochrome_wall",
-    "testermod:steelichrome_wall"
+    "testermod:steelichrome_wall",
+    "testermod:smooth_steelichrome_wall"
   ]
 }

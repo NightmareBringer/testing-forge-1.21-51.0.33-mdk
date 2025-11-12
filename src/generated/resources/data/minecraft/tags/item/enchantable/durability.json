@@ -31,6 +31,15 @@
     "testermod:storm_helmet",
     "testermod:storm_chestplate",
     "testermod:storm_leggings",
-    "testermod:storm_boots"
+    "testermod:storm_boots",
+    "testermod:refined_steelichrome_sword",
+    "testermod:refined_steelichrome_pickaxe",
+    "testermod:refined_steelichrome_axe",
+    "testermod:refined_steelichrome_shovel",
+    "testermod:refined_steelichrome_hoe",
+    "testermod:refined_steelichrome_helmet",
+    "testermod:refined_steelichrome_chestplate",
+    "testermod:refined_steelichrome_leggings",
+    "testermod:refined_steelichrome_boots"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "testermod:block/smooth_steelichrome_block",
+    "side": "testermod:block/smooth_steelichrome_block",
+    "top": "testermod:block/smooth_steelichrome_block"
+  }
+}

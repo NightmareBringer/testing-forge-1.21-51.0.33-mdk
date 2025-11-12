@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "testermod:neptochrome_block"
+    },
+    "a": {
+      "item": "testermod:steelium_block"
+    }
+  },
+  "pattern": [
+    "/a/",
+    "a a",
+    "/a/"
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:steelichrome_block"
+  }
+}

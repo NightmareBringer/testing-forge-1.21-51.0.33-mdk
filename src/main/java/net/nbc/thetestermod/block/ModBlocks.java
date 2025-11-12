@@ -575,17 +575,17 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> STEELICHROME_BLOCK = registerBlock("steelichrome_block",
             () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
-                    .strength(360.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+                    .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<StairBlock> STEELICHROME_STAIRS = registerBlock("steelichrome_stairs",
             () -> new StairBlock(ModBlocks.STEELICHROME_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.of().sound(SoundType.METAL)
-                            .strength(360.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+                            .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<SlabBlock> STEELICHROME_SLAB = registerBlock("steelichrome_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
                     .strength(125f).explosionResistance(360.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<WallBlock> STEELICHROME_WALL = registerBlock("steelichrome_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
-                    .strength(360.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+                    .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<PressurePlateBlock> STEELICHROME_PRESSURE_PLATE = registerBlock("steelichrome_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE)
@@ -597,6 +597,25 @@ public class ModBlocks
     public static final DeferredBlock<IronBarsBlock> STEELICHROME_BARS = registerBlock("steelichrome_bars",
             () -> new IronBarsBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
                     .strength(100f).explosionResistance(100f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final DeferredBlock<Block> CHISELED_REFINED_STEELICHROME_BLOCK = registerBlock("chiseled_steelichrome_block",
+            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SMOOTH_REFINED_STEELICHROME_BLOCK = registerBlock("smooth_steelichrome_block",
+            () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<StairBlock> SMOOTH_REFINED_STEELICHROME_STAIRS = registerBlock("smooth_steelichrome_stairs",
+            () -> new StairBlock(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                            .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<SlabBlock> SMOOTH_REFINED_STEELICHROME_SLAB = registerBlock("smooth_steelichrome_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(200.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<WallBlock> SMOOTH_REFINED_STEELICHROME_WALL = registerBlock("smooth_steelichrome_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(260.0F).explosionResistance(360.0F).requiresCorrectToolForDrops()));
+
+
 
 
     public static final DeferredBlock<Block> FALSE_STORMITE_BLOCK = registerBlock("false_stormite_block",

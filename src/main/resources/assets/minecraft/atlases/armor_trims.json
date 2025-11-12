@@ -68,7 +68,9 @@
         "false_nightmarite_ingot": "testermod:trims/color_palettes/false_nightmarite_ingot",
         "false_nightmarite_ingot_darker": "testermod:trims/color_palettes/false_nightmarite_ingot_darker",
         "false_stormite_ingot": "testermod:trims/color_palettes/false_stormite_ingot",
-        "false_stormite_ingot_darker": "testermod:trims/color_palettes/false_stormite_ingot_darker"
+        "false_stormite_ingot_darker": "testermod:trims/color_palettes/false_stormite_ingot_darker",
+        "refined_steelichrome_ingot": "testermod:trims/color_palettes/refined_steelichrome_ingot",
+        "refined_steelichrome_ingot_darker": "testermod:trims/color_palettes/refined_steelichrome_ingot_darker"
       }
     }
   ]

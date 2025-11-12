@@ -587,6 +587,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELICHROME_BARS.get(), 8)
+                .pattern(" / ")
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.STEELICHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_BLOCK.get()), has(ModBlocks.STEELICHROME_BLOCK.get())).save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STEELICHROME_PICKAXE.get())
                 .pattern("SSS")
                 .pattern(" / ")
@@ -882,6 +889,78 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.FALSE_STORMITE_INGOT.get()), has(ModItems.FALSE_STORMITE_INGOT.get()))
                 .save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_SWORD.get())
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" S ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .define('S', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_PICKAXE.get())
+                .pattern("###")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .define('S', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_SHOVEL.get())
+                .pattern(" # ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .define('S', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_AXE.get())
+                .pattern("## ")
+                .pattern("#S ")
+                .pattern(" S ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .define('S', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_HOE.get())
+                .pattern("## ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .define('S', ModItems.STRANGE_STICK.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_BOOTS.get())
+                .pattern("# #")
+                .pattern("# #")
+                .pattern("   ")
+                .define('#', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get()))
+                .save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELIUM_LAMP.get())
                 .pattern("MGM")
                 .pattern("GCG")
@@ -915,6 +994,61 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('M', Items.GOLD_NUGGET)
                 .unlockedBy(getHasName(Items.MELON_SLICE), has(Items.MELON_SLICE)).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_INGOT.get())
+                .pattern("MMM")
+                .pattern("MMM")
+                .pattern("MMM")
+                .define('M', ModItems.REFINED_STEELICHROME_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT), has(ModItems.REFINED_STEELICHROME_INGOT))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":steelichrome_ingot_from_nuggets");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHISELED_STEELIUM_BLOCK.get())
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.STEELIUM_SlAB.get())
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_STEELIUM_BLOCK.get(),4)
+                .pattern("// ")
+                .pattern("// ")
+                .define('/', ModBlocks.STEELIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.STEELIUM_BLOCK.get()), has(ModBlocks.STEELIUM_BLOCK.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHISELED_NEPTOCHROME_BLOCK.get())
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.NEPTOCHROME_SLAB.get())
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get(),4)
+                .pattern("// ")
+                .pattern("// ")
+                .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELICHROME_BLOCK.get(),4)
+                .pattern("/a/")
+                .pattern("a a")
+                .pattern("/a/")
+                .define('/', ModBlocks.NEPTOCHROME_BLOCK.get())
+                .define('a', ModBlocks.STEELIUM_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_BLOCK.get()), has(ModBlocks.STEELICHROME_BLOCK.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEELICHROME_BLOCK.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("AAA")
+                .define('A', ModItems.REFINED_STEELICHROME_INGOT.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":steelichrome_block_from_ingot");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CHISELED_REFINED_STEELICHROME_BLOCK.get())
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('/', ModBlocks.STEELICHROME_SLAB.get())
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_SLAB.get()), has(ModBlocks.STEELICHROME_SLAB.get())).save(pRecipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get(),4)
+                .pattern("// ")
+                .pattern("// ")
+                .define('/', ModBlocks.STEELICHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_BLOCK.get()), has(ModBlocks.STEELICHROME_BLOCK.get())).save(pRecipeOutput);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GOLDEN_MELON_SLICE.get(), 9)
                 .requires(ModBlocks.GOLDEN_MELON_BLOCK.get())
@@ -932,6 +1066,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get()), has(ModBlocks.FALSE_NIGHTMARITE_BLOCK.get()))
                 .save(pRecipeOutput, TesterMod.MOD_ID + ":false_nightmare_ingot_from_false_nightmare_block");
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_INGOT.get(), 8)
+                .requires(ModBlocks.STEELICHROME_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_BLOCK.get()), has(ModBlocks.STEELICHROME_BLOCK.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":refined_steelichrome_ingot_from_steelichrome_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REFINED_STEELICHROME_NUGGET.get(), 9)
+                .requires(ModItems.REFINED_STEELICHROME_INGOT.get())
+                .unlockedBy(getHasName(ModItems.REFINED_STEELICHROME_INGOT.get()), has(ModItems.REFINED_STEELICHROME_INGOT.get()))
+                .save(pRecipeOutput, TesterMod.MOD_ID + ":refined_steelichrome_nugget_from_steelichrome_ingot");
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STORM_INGOT.get(), 9)
                 .requires(ModBlocks.STORM_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.STORM_BLOCK.get()), has(ModBlocks.STORM_BLOCK.get()))
@@ -1088,6 +1230,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         trapdoorBuilder(ModBlocks.NEPTOCHROME_TRAPDOOR.get(), Ingredient.of(ModBlocks.NEPTOCHROME_BLOCK.get())).group("neptochrome_block")
                 .unlockedBy(getHasName(ModBlocks.NEPTOCHROME_BLOCK.get()), has(ModBlocks.NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
         wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NEPTOCHROME_WALL.get(), ModBlocks.NEPTOCHROME_BLOCK.get());
+
+        stairBuilder(ModBlocks.SMOOTH_STEELIUM_STAIRS.get(), Ingredient.of(ModBlocks.SMOOTH_STEELIUM_BLOCK.get())).group("smooth_steelium_block")
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_STEELIUM_BLOCK.get()), has(ModBlocks.SMOOTH_STEELIUM_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STEELIUM_SlAB.get(), ModBlocks.SMOOTH_STEELIUM_BLOCK.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STEELIUM_WALL.get(), ModBlocks.SMOOTH_STEELIUM_BLOCK.get());
+
+        stairBuilder(ModBlocks.SMOOTH_NEPTOCHROME_STAIRS.get(), Ingredient.of(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get())).group("smooth_neptochrome_block")
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get()), has(ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_NEPTOCHROME_SLAB.get(), ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_NEPTOCHROME_WALL.get(), ModBlocks.SMOOTH_NEPTOCHROME_BLOCK.get());
+
+        stairBuilder(ModBlocks.STEELICHROME_STAIRS.get(), Ingredient.of(ModBlocks.STEELICHROME_BLOCK.get())).group("steelichrome_block")
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_BLOCK.get()), has(ModBlocks.STEELICHROME_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEELICHROME_SLAB.get(), ModBlocks.STEELICHROME_BLOCK.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEELICHROME_WALL.get(), ModBlocks.STEELICHROME_BLOCK.get());
+        buttonBuilder(ModBlocks.STEELICHROME_BUTTON.get(), Ingredient.of(ModBlocks.STEELICHROME_BLOCK.get())).group("steelichrome_block")
+                .unlockedBy(getHasName(ModBlocks.STEELICHROME_BLOCK.get()), has(ModBlocks.STEELICHROME_BLOCK.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.STEELICHROME_PRESSURE_PLATE.get(), ModBlocks.STEELICHROME_BLOCK.get());
+
+        stairBuilder(ModBlocks.SMOOTH_REFINED_STEELICHROME_STAIRS.get(), Ingredient.of(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())).group("smooth_steelichrome_block")
+                .unlockedBy(getHasName(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get()), has(ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_REFINED_STEELICHROME_SLAB.get(), ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get());
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_REFINED_STEELICHROME_WALL.get(), ModBlocks.SMOOTH_REFINED_STEELICHROME_BLOCK.get());
 
         oreSmelting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.35f, 200, "nightmarite_smelt");
         oreBlasting(pRecipeOutput, NIGHTMARITE_SMELTABLES, RecipeCategory.MISC, ModItems.NIGHTMARITE.get(), 0.70f, 100, "nightmarite_blast");

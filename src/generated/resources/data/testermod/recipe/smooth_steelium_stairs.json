@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "smooth_steelium_block",
+  "key": {
+    "#": {
+      "item": "testermod:smooth_steelium_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "testermod:smooth_steelium_stairs"
+  }
+}

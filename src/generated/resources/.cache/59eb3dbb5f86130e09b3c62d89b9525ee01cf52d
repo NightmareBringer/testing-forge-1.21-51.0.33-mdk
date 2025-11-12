@@ -1,6 +1,7 @@
-// 1.21.1	2025-11-10T19:51:01.9974174	Loot Tables
+// 1.21.1	2025-11-12T05:00:24.6012534	Loot Tables
 aa7d4f37bfd6630abfc15869f8b322ecbba9e87e data/testermod/loot_table/blocks/anti_magic_block.json
 be66fc5d1e667d274eee099bfa184992d2b0a28a data/testermod/loot_table/blocks/chiseled_neptochrome_block.json
+c6802a1e7bb2a2ffd52d472c006f69e00295c6f0 data/testermod/loot_table/blocks/chiseled_steelichrome_block.json
 dcc96581a62238c12a3ed815376067baed66dc95 data/testermod/loot_table/blocks/chiseled_steelium_block.json
 406ffaa0c3d44cf7ae8e004de024aad4c32f6191 data/testermod/loot_table/blocks/corrupted_oak_button.json
 77124d7acb55ca277d9fbe7ae2fd4d075519cc45 data/testermod/loot_table/blocks/corrupted_oak_door.json
@@ -88,6 +89,10 @@ b146d72767ed682965996ecd5d647c40fc19dfdf data/testermod/loot_table/blocks/refine
 12550618f618a268fa549252f89721b0ab728727 data/testermod/loot_table/blocks/smooth_neptochrome_slab.json
 97a13893ede7d8d5866de27a392d571aa85313df data/testermod/loot_table/blocks/smooth_neptochrome_stairs.json
 1a3d93f3b7a3112e7d68e43ce8cde860546134f2 data/testermod/loot_table/blocks/smooth_neptochrome_wall.json
+03022b87e0f34dc286d1c8113b8ddd2cd46232bc data/testermod/loot_table/blocks/smooth_steelichrome_block.json
+6b4dd31391c078700dd2c45a3e01c18c9825324b data/testermod/loot_table/blocks/smooth_steelichrome_slab.json
+2ba209b59c208f84acab0f47748c5e24f7fdf45a data/testermod/loot_table/blocks/smooth_steelichrome_stairs.json
+3f33cf33f2c5073ce25ad198af9e032f0211ac8e data/testermod/loot_table/blocks/smooth_steelichrome_wall.json
 0c0c093e825e91716499b8f09580d185ca2e8856 data/testermod/loot_table/blocks/smooth_steelium_block.json
 6188fb0ae9f83ca3d3c706fe2a218156bb5357cd data/testermod/loot_table/blocks/smooth_steelium_slab.json
 730273db27f61f3b5257ef60b62260e24af7fb70 data/testermod/loot_table/blocks/smooth_steelium_stairs.json

@@ -94,6 +94,20 @@
   "item.testermod.false_stormite_leggings": "False Stormite Leggings",
   "item.testermod.false_stormite_boots": "False Stormite Boots",
 
+  "item.testermod.refined_steelichrome_ingot": "Refined Steelichrome Ingot",
+  "item.testermod.refined_steelichrome_nugget": "Refined Steelichrome Nugget",
+
+  "item.testermod.refined_steelichrome_sword": "Refined Steelichrome Sword",
+  "item.testermod.refined_steelichrome_pickaxe": "Refined Steelichrome Pickaxe",
+  "item.testermod.refined_steelichrome_shovel": "Refined Steelichrome Shovel",
+  "item.testermod.refined_steelichrome_axe": "Refined Steelichrome Axe",
+  "item.testermod.refined_steelichrome_hoe": "Refined Steelichrome Hoe",
+
+  "item.testermod.refined_steelichrome_helmet": "Refined Steelichrome Helmet",
+  "item.testermod.refined_steelichrome_chestplate": "Refined Steelichrome Chestplate",
+  "item.testermod.refined_steelichrome_leggings": "Refined Steelichrome Leggings",
+  "item.testermod.refined_steelichrome_boots": "Refined Steelichrome Boots",
+
   "item.testermod.mysterious_dust": "Mysterious Dust",
   "item.testermod.mysterious_string": "Mysterious String",
   "item.testermod.strange_stick": "Strange Stick",
@@ -268,13 +282,19 @@
   "block.testermod.smooth_neptochrome_slab": "Smooth Neptochrome Slab",
   "block.testermod.smooth_neptochrome_wall": "Smooth Neptochrome Wall",
 
-  "block.testermod.steelichrome_block": "Block of Steelichrome",
-  "block.testermod.steelichrome_stairs": "Steelichrome Stairs",
-  "block.testermod.steelichrome_slab": "Steelichrome Slab",
-  "block.testermod.steelichrome_wall": "Steelichrome Wall",
-  "block.testermod.steelichrome_button": "Steelichrome Button",
-  "block.testermod.steelichrome_pressure_plate": "Steelichrome Pressure Plate",
-  "block.testermod.steelichrome_bars": "Steelichrome Bars",
+  "block.testermod.steelichrome_block": "Block of Refined Steelichrome",
+  "block.testermod.steelichrome_stairs": "Refined Steelichrome Stairs",
+  "block.testermod.steelichrome_slab": "Refined Steelichrome Slab",
+  "block.testermod.steelichrome_wall": "Refined Steelichrome Wall",
+  "block.testermod.steelichrome_button": "Refined Steelichrome Button",
+  "block.testermod.steelichrome_pressure_plate": "Refined Steelichrome Pressure Plate",
+  "block.testermod.steelichrome_bars": "Refined Steelichrome Bars",
+
+  "block.testermod.chiseled_steelichrome_block": "Chiseled Refined Steelichrome Block",
+  "block.testermod.smooth_steelichrome_block": "Smooth Refined Steelichrome Block",
+  "block.testermod.smooth_steelichrome_stairs": "Smooth Refined Steelichrome Stairs",
+  "block.testermod.smooth_steelichrome_slab": "Smooth Refined Steelichrome Slab",
+  "block.testermod.smooth_steelichrome_wall": "Smooth Refined Steelichrome Wall",
 
   "block.testermod.steelium_vault_block": "Steelium Vault",
   "block.testermod.steelium_vault_wall": "Steelium Vault Wall",
@@ -294,6 +314,7 @@
 
   "trim_material.testermod.false_nightmarite_ingot": "False Nightmarite Ingot Material",
   "trim_material.testermod.false_stormite_ingot": "False Stormite Ingot Material",
+  "trim_material.testermod.refined_steelichrome_ingot": "Refined Steelichrome Ingot Material",
 
   "item.testermod.void_music_disc": "§bMusic Disc",
   "item.testermod.void_music_disc.desc": "NightmareBringa - Impending Void",
